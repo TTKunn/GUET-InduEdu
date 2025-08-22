@@ -12,7 +12,7 @@ ADAPTER_HOST = os.getenv("ADAPTER_HOST", "0.0.0.0")
 ADAPTER_PORT = int(os.getenv("ADAPTER_PORT", "8001"))
 
 # 现有PDF解析API配置 (支持Docker环境)
-PDF_PARSER_API_URL = os.getenv("PDF_PARSER_API_URL", "http://localhost:8000")
+PDF_PARSER_API_URL = os.getenv("PDF_PARSER_API_URL", "http://localhost:8002")
 
 # ==================== API Key管理 ====================
 # API Key到Collection的映射配置
@@ -24,7 +24,7 @@ API_KEY_MAPPING = {
         "description": "PDF文档知识库访问"
     },
     "dify-tech-docs-002": {
-        "collection": "technical_docs", 
+        "collection": "technical_docs",
         "permissions": ["read"],
         "rate_limit": 200,
         "description": "技术文档知识库访问"
@@ -36,6 +36,11 @@ API_KEY_MAPPING = {
         "description": "公司知识库访问"
     }
 }
+
+# 支持动态用户知识库的API Key模式
+# 格式: dify-user-{user_id} -> user_kb_{user_id}
+DYNAMIC_USER_KB_PREFIX = "dify-user-"
+DYNAMIC_USER_COLLECTION_PREFIX = "user_kb_"
 
 # 默认API Key（用于测试）
 DEFAULT_API_KEY = os.getenv("DEFAULT_API_KEY", "dify-pdf-docs-001")
@@ -69,7 +74,24 @@ LOG_FORMAT = "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
 # ==================== 辅助函数 ====================
 def validate_api_key(api_key: str) -> Optional[Dict]:
     """验证API Key并返回配置信息"""
-    return API_KEY_MAPPING.get(api_key)
+    # 检查静态配置的API Key
+    if api_key in API_KEY_MAPPING:
+        return API_KEY_MAPPING[api_key]
+
+    # 检查动态用户API Key格式: dify-user-{user_id}
+    if api_key.startswith(DYNAMIC_USER_KB_PREFIX):
+        user_id = api_key[len(DYNAMIC_USER_KB_PREFIX):]
+        if user_id and user_id.isalnum():  # 确保user_id只包含字母数字
+            return {
+                "collection": f"{DYNAMIC_USER_COLLECTION_PREFIX}{user_id}",
+                "permissions": ["read"],
+                "rate_limit": 100,
+                "description": f"用户{user_id}的个人知识库",
+                "user_id": user_id,
+                "is_dynamic": True
+            }
+
+    return None
 
 def get_allowed_collections(api_key: str) -> List[str]:
     """获取API Key允许访问的Collection列表"""

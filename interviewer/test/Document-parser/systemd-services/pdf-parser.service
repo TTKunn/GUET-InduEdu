@@ -1,0 +1,22 @@
+[Unit]
+Description=PDF Parser Interview System
+After=network.target docker.service
+Wants=network.target
+Requires=docker.service
+
+[Service]
+Type=forking
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/workspace/project/Document-parser
+ExecStartPre=/bin/bash -c 'cd /home/ubuntu/tool/milvus && ./manage-milvus.sh start'
+ExecStart=/bin/bash -c './manage-services.sh start'
+ExecStop=/bin/bash -c './manage-services.sh stop'
+ExecReload=/bin/bash -c './manage-services.sh restart'
+Restart=on-failure
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
