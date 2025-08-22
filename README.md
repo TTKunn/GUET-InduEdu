@@ -132,49 +132,172 @@ git branch -a
 git checkout develop
 ```
 
-### 开发流程
+## 📋 开发规范
 
-==push代码的时候注意在哪个分支！记得先pull一下解决冲突==
+### 团队分工
 
-1. **功能开发**
-   
-   ```bash
-   # 从对应子系统分支创建功能分支
-   git checkout club-management-dev
-   git checkout -b feature/club-new-feature
-   
-   # 开发完成后推送
-   git push origin feature/club-new-feature
-   ```
-   
-2. **代码集成**
-   ```bash
-   # 合并到子系统开发分支
-   git checkout club-management-dev
-   git merge feature/club-new-feature
-   
-   # 定期合并到develop分支
-   git checkout develop
-   git merge club-management-dev
-   ```
+| 团队 | 负责系统 | 主要分支 | 成员数量 |
+|------|----------|----------|----------|
+| **项目负责人** | 整体架构和进度管理 | `main`, `develop` | 1人 |
+| **院校管理团队** | 社团管理系统 | `club-management-dev` | 2-3人 |
+| **项目平台团队** | 揭榜挂帅系统 | `ProjectBid-dev` | 2-3人 |
+| **AI面试团队** | 智能面试系统 | `Interviewer-dev` | 2-3人 |
 
+### 分支管理规范
 
+#### 🌿 分支命名规范
 
-## 👥 团队协作
+```plaintext
+分支类型和命名：
+===============
 
-### 开发团队
+主要分支：
+├── main                    # 生产环境，禁止直接推送
+├── develop                 # 集成开发主线
+├── {system}-dev           # 子系统开发分支
+└── hotfix/{bug-name}      # 紧急修复分支
 
-- **项目负责人**: 整体架构和进度管理
-- **院校管理团队**: 社团管理系统开发
-- **项目平台团队**: 揭榜挂帅系统开发
-- **AI面试团队**: 智能面试系统开发
+功能分支：
+├── feature/{system}-{function}     # 功能开发
+├── bugfix/{system}-{bug-name}      # Bug修复
+├── test/{system}-{test-name}       # 测试分支
+└── docs/{doc-name}                 # 文档更新
+
+示例：
+├── feature/club-user-management    # 院校系统用户管理
+├── feature/bid-project-publish     # 项目系统发布功能
+├── feature/ai-voice-interaction    # AI系统语音交互
+├── bugfix/club-login-error         # 院校系统登录Bug
+└── test/ai-interview-flow          # AI面试流程测试
+```
+
+#### 🔄 标准开发流程
+
+#### ⚠️ 重要注意事项
+
+```plaintext
+常见误操作防范：
+===============
+
+❌ 错误操作：
+├── 直接在main分支开发
+├── 忘记pull就push导致冲突
+├── 在错误的分支上开发
+├── 提交信息不规范
+└── 删除了重要分支
+
+✅ 正确做法：
+├── 开发前确认当前分支：git branch
+├── 推送前先拉取：git pull origin {branch}
+├── 提交前检查状态：git status
+├── 合并前备份分支：git branch backup-{branch}
+└── 重要操作前先沟通
+```
+
+### Git操作规范
+
+#### 📝 提交信息规范
+
+```bash
+# 提交信息格式：{type类型}({scope影响模块}): {description描述}
+
+# type类型说明：
+feat:     新功能
+fix:      Bug修复
+docs:     文档更新
+style:    代码格式调整
+refactor: 代码重构
+test:     测试相关
+chore:    构建/工具相关
+
+# 示例：
+git commit -m "feat(club): 添加社团注册功能"
+git commit -m "fix(ai): 修复语音识别异常问题"
+git commit -m "docs: 更新API文档"
+git commit -m "refactor(bid): 重构项目发布模块"
+```
+
+#### 🔍 代码提交检查清单
+
+```plaintext
+提交前必检项：
+=============
+
+□ 确认当前分支正确
+□ 代码已测试无明显错误
+□ 提交信息符合规范
+□ 没有提交敏感信息（密码、密钥等）
+□ 没有提交临时文件和调试代码
+□ 大文件已添加到.gitignore
+
+推送前必检项：
+=============
+
+□ 执行 git pull 获取最新代码
+□ 解决所有合并冲突
+□ 本地测试通过
+□ 确认推送到正确分支
+```
+
+#### 🚨 冲突解决流程
+
+```bash
+# 当出现合并冲突时：
+
+# 1. 拉取最新代码
+git pull origin {branch}
+# 如果有冲突，Git会提示冲突文件
+
+# 2. 手动解决冲突
+# 编辑冲突文件，删除冲突标记：
+# <<<<<<< HEAD
+# 你的代码
+# =======
+# 别人的代码
+# >>>>>>> commit-hash
+
+# 3. 标记冲突已解决
+git add {conflict-file}
+
+# 4. 完成合并
+git commit -m "resolve: 解决合并冲突"
+
+# 5. 推送
+git push origin {branch}
+```
 
 ### 协作规范
 
-1. **分支命名**: `feature/系统前缀-功能描述`
-2. **提交信息**: 使用语义化提交规范
-3. **代码审查**: 所有PR需要至少1人审查
-4. **测试要求**: 新功能必须包含单元测试
+#### 👥 代码审查规范
+
+```plaintext
+Pull Request规范：
+=================
+
+PR标题格式：
+[{system}] {type}: {description}
+
+PR描述模板：
+## 功能描述
+- 实现了什么功能
+- 解决了什么问题
+
+## 修改内容
+- [ ] 前端界面
+- [ ] 后端API
+- [ ] 数据库结构
+- [ ] 文档更新
+
+## 测试情况
+- [ ] 单元测试通过
+- [ ] 功能测试通过
+- [ ] 兼容性测试通过
+
+## 注意事项
+- 需要特别关注的地方
+- 可能的风险点
+```
+
 
 ## 📊 项目进展
 
@@ -194,7 +317,7 @@ git checkout develop
 - **Phase 4**: 系统集成与优化
 - **Phase 5**: 生产环境部署
 
-## 📝 文档链接
+## 📝 文档链接（待补充）
 
 - [项目架构文档](./docs/architecture.md)
 - [开发规范](./docs/development-guide.md)
