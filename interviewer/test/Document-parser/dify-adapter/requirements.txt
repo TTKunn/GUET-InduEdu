@@ -1,0 +1,23 @@
+# Dify适配器服务依赖
+# 基于现有PDF_ANALYSER环境，只添加必要的新依赖
+
+# Web框架
+fastapi>=0.104.1
+uvicorn[standard]>=0.24.0
+
+# HTTP客户端
+requests>=2.31.0
+
+# 数据验证和序列化
+pydantic>=2.5.0
+
+# CORS支持
+python-multipart>=0.0.6
+
+# 日志和监控
+python-json-logger>=2.0.7
+
+# 开发和测试工具（可选）
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+httpx>=0.25.0  # 用于测试异步HTTP客户端
