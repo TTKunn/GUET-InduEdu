@@ -6,13 +6,13 @@ set -e
 
 echo "🚀 启动PDF解析和Dify适配器服务..."
 
-# 等待Milvus服务就绪
-echo "⏳ 等待Milvus服务启动..."
-while ! curl -s http://milvus:19530/health > /dev/null 2>&1; do
-    echo "等待Milvus服务..."
+# 等待全局Milvus服务就绪
+echo "⏳ 等待全局Milvus服务启动..."
+while ! curl -s http://host.docker.internal:9091/healthz > /dev/null 2>&1; do
+    echo "等待全局Milvus服务..."
     sleep 5
 done
-echo "✅ Milvus服务已就绪"
+echo "✅ 全局Milvus服务已就绪"
 
 # 启动PDF解析API服务（后台运行）
 echo "🔧 启动PDF解析API服务..."

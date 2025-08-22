@@ -1,6 +1,28 @@
 # PDF_ANALYSER API
 
-一个基于FastAPI的PDF文档解析服务，提供REST API接口用于PDF文档解析和向量存储。
+一个基于FastAPI的PDF文档解析服务，提供REST API接口用于PDF文档解析和向量存储，支持Dify外部知识库集成。
+
+## 📋 目录
+
+- [功能特性](#功能特性)
+- [项目结构](#项目结构)
+- [快速开始](#快速开始)
+- [🚀 服务管理](#-服务管理)
+  - [服务架构](#服务架构)
+  - [启动服务](#启动服务)
+  - [关闭服务](#关闭服务)
+  - [服务监控](#服务监控)
+  - [故障排除](#故障排除)
+- [使用API](#使用api)
+- [API接口文档](#api接口文档)
+- [👥 用户知识库管理](#-用户知识库管理)
+  - [创建用户知识库](#创建用户知识库)
+  - [Dify工作流集成](#dify工作流集成)
+  - [API密钥管理](#api密钥管理)
+- [性能优化建议](#性能优化建议)
+- [部署指南](#部署指南)
+- [测试](#测试)
+- [常见问题](#常见问题)
 
 ## 功能特性
 
@@ -93,8 +115,174 @@ python start_api.py
 ```
 
 服务启动后，API文档可在以下地址访问：
-- Swagger UI: http://localhost:8000/docs
-- ReDoc: http://localhost:8000/redoc
+- Swagger UI: http://localhost:8002/docs
+- ReDoc: http://localhost:8002/redoc
+
+## 🚀 服务管理
+
+### 服务架构
+
+本项目包含以下服务组件：
+
+1. **全局Milvus向量数据库** - 端口 19530 (共享服务)
+2. **PDF解析API服务** - 端口 8002 (主要API服务)
+3. **Dify适配器服务** - 端口 8001 (外部知识库接口)
+
+### 启动服务
+
+#### 方法一：使用管理脚本（推荐）
+
+```bash
+# 进入项目目录
+cd /path/to/Document-parser
+
+# 启动所有服务
+./manage-services.sh start
+
+# 查看服务状态
+./manage-services.sh status
+```
+
+#### 方法二：手动启动
+
+```bash
+# 1. 确保全局Milvus已启动
+cd /home/ubuntu/tool/milvus
+./manage-milvus.sh start
+
+# 2. 启动PDF解析API服务 (端口8002)
+cd /path/to/Document-parser
+python3 -c "
+import uvicorn
+from api.main import app
+uvicorn.run(app, host='0.0.0.0', port=8002)
+" &
+
+# 3. 启动Dify适配器服务 (端口8001)
+cd dify-adapter
+python3 start_adapter.py &
+```
+
+### 关闭服务
+
+#### 使用管理脚本
+
+```bash
+# 停止所有服务
+./manage-services.sh stop
+
+# 重启所有服务
+./manage-services.sh restart
+```
+
+#### 手动关闭
+
+```bash
+# 查找并关闭相关进程
+pkill -f "api.main"
+pkill -f "start_adapter.py"
+
+# 或者使用进程ID
+ps aux | grep -E "(api.main|start_adapter)" | grep -v grep
+kill <进程ID>
+```
+
+### 服务监控
+
+#### 健康检查
+
+```bash
+# 检查PDF解析API
+curl http://localhost:8002/health
+
+# 检查Dify适配器
+curl http://localhost:8001/health
+
+# 检查Milvus连接
+curl http://localhost:9091/healthz
+```
+
+#### 查看日志
+
+```bash
+# 查看PDF API日志
+./manage-services.sh logs pdf
+
+# 查看Dify适配器日志
+./manage-services.sh logs dify
+
+# 实时监控日志
+tail -f logs/pdf_api.log
+tail -f logs/dify_adapter.log
+```
+
+#### 端口检查
+
+```bash
+# 检查服务端口占用情况
+netstat -tlnp | grep -E "(8001|8002|19530)"
+
+# 检查具体端口
+lsof -i :8002  # PDF API
+lsof -i :8001  # Dify适配器
+lsof -i :19530 # Milvus
+```
+
+### 服务访问地址
+
+| 服务 | 地址 | 用途 |
+|------|------|------|
+| PDF解析API | http://localhost:8002 | PDF文档解析和向量化 |
+| PDF解析API文档 | http://localhost:8002/docs | API接口文档 |
+| Dify适配器 | http://localhost:8001 | Dify外部知识库接口 |
+| Dify适配器文档 | http://localhost:8001/docs | 适配器API文档 |
+| Milvus数据库 | localhost:19530 | 向量数据库连接 |
+| MinIO控制台 | http://localhost:9001 | 对象存储管理界面 |
+
+### 开机自启动
+
+**注意**：当前项目默认不是开机自启动的，需要手动启动服务。
+
+如需配置开机自启动，可以：
+
+1. **创建systemd服务文件**
+2. **配置服务依赖关系**
+3. **设置环境变量**
+4. **启用服务**
+
+推荐在开发环境中使用手动启动方式，便于调试和控制。
+
+### 故障排除
+
+#### 常见问题
+
+1. **端口冲突**
+   ```bash
+   # 检查端口占用
+   netstat -tlnp | grep <端口号>
+   # 杀死占用进程
+   sudo kill -9 <进程ID>
+   ```
+
+2. **服务无法启动**
+   ```bash
+   # 检查日志
+   tail -f logs/pdf_api.log
+   tail -f logs/dify_adapter.log
+
+   # 检查Python依赖
+   pip list | grep -E "(fastapi|uvicorn|pymilvus)"
+   ```
+
+3. **Milvus连接失败**
+   ```bash
+   # 检查Milvus状态
+   cd /home/ubuntu/tool/milvus
+   ./manage-milvus.sh status
+
+   # 重启Milvus
+   ./manage-milvus.sh restart
+   ```
 
 ### 4. 使用API
 
@@ -102,14 +290,15 @@ python start_api.py
 
 ```bash
 # 解析PDF文件
-curl -X POST "http://localhost:8000/parse" \
+curl -X POST "http://localhost:8002/parse-and-store" \
   -H "Content-Type: multipart/form-data" \
   -F "file=@your_file.pdf" \
+  -F "collection_name=pdf_documents" \
   -F "chunk_size=1000" \
-  -F "split_text=true"
+  -F "embedding_model=zhipuai"
 
 # 搜索文档（需要先存储）
-curl -X GET "http://localhost:8000/search?query=你的查询&k=5"
+curl -X GET "http://localhost:8002/search?query=你的查询&collection_name=pdf_documents&k=5"
 ```
 
 #### 方式二：Python客户端
@@ -118,28 +307,28 @@ curl -X GET "http://localhost:8000/search?query=你的查询&k=5"
 from api.client import PDFAnalyserClient
 
 # 创建客户端
-client = PDFAnalyserClient("http://localhost:8000")
+client = PDFAnalyserClient("http://localhost:8002")
 
 # 解析PDF
 result = client.parse_pdf("path/to/your.pdf")
 print(result)
 
 # 解析并存储到Milvus
-result = client.parse_and_store_pdf("path/to/your.pdf")
+result = client.parse_and_store_pdf("path/to/your.pdf", collection_name="pdf_documents")
 
 # 搜索文档
-search_result = client.search_documents("查询内容")
+search_result = client.search_documents("查询内容", collection_name="pdf_documents")
 ```
 
 ## API接口文档
 
 ### 基础信息
 
-- **Base URL**: `http://localhost:8000`
+- **Base URL**: `http://localhost:8002`
 - **Content-Type**: `application/json` (除文件上传接口)
 - **API文档**:
-  - Swagger UI: http://localhost:8000/docs
-  - ReDoc: http://localhost:8000/redoc
+  - Swagger UI: http://localhost:8002/docs
+  - ReDoc: http://localhost:8002/redoc
 
 ### 接口概览
 
@@ -147,9 +336,9 @@ search_result = client.search_documents("查询内容")
 |------|------|------|------|
 | `/` | GET | 根路径 | 服务状态检查 |
 | `/health` | GET | 健康检查 | 详细的服务状态信息 |
-| `/parse` | POST | PDF解析 | 解析PDF文件，返回文档内容 |
 | `/parse-and-store` | POST | 解析并存储 | 解析PDF并存储到向量数据库 |
 | `/search` | GET | 语义搜索 | 在向量数据库中搜索相关文档 |
+| `/collections` | GET | 集合列表 | 获取所有可用的向量集合 |
 
 ---
 
@@ -523,6 +712,243 @@ curl -X GET "http://localhost:8000/search" \
   -d "query=技术栈" \
   -d "collection_name=my_docs" \
   -d "k=5"
+```
+
+## 👥 用户知识库管理
+
+### 概述
+
+本项目支持为每个用户创建独立的个人知识库，实现多租户知识库管理。每个用户拥有独立的Milvus集合和API访问密钥。
+
+### 用户知识库架构
+
+```
+用户ID: user123
+├── Milvus集合: user_kb_user123
+├── API密钥: dify-user-user123
+└── Dify配置: 自动匹配对应知识库
+```
+
+### 创建用户知识库
+
+#### 使用管理工具
+
+```bash
+# 为用户创建知识库
+python user_manager.py create user123
+
+# 输出示例:
+{
+  "success": true,
+  "user_id": "user123",
+  "collection_name": "user_kb_user123",
+  "api_key": "dify-user-user123",
+  "dify_config": {
+    "api_url": "http://localhost:8001/retrieval",
+    "api_key": "dify-user-user123",
+    "knowledge_id": "user_kb_user123"
+  }
+}
+```
+
+#### 上传用户文档
+
+```bash
+# 为用户上传简历或文档
+python user_manager.py upload user123 /path/to/resume.pdf
+
+# 支持的文档格式
+- PDF文件 (.pdf)
+- 文本文件 (.txt)
+- Word文档 (.docx) - 需要额外配置
+```
+
+#### 测试用户检索
+
+```bash
+# 测试用户知识库检索功能
+python user_manager.py test user123 "我的工作经验"
+
+# 输出示例:
+{
+  "success": true,
+  "user_id": "user123",
+  "query": "我的工作经验",
+  "results": {
+    "records": [
+      {
+        "content": "5年Java开发经验，熟悉Spring框架...",
+        "score": 0.85,
+        "title": "简历-工作经验.pdf"
+      }
+    ]
+  }
+}
+```
+
+### Dify工作流集成
+
+#### 动态知识库匹配
+
+在Dify工作流中使用HTTP请求节点，实现用户ID与知识库的自动匹配：
+
+```json
+{
+  "节点类型": "HTTP请求",
+  "配置": {
+    "方法": "POST",
+    "URL": "http://localhost:8001/retrieval",
+    "Headers": {
+      "Authorization": "Bearer dify-user-{{user_id}}",
+      "Content-Type": "application/json"
+    },
+    "Body": {
+      "knowledge_id": "user_kb_{{user_id}}",
+      "query": "{{query}}",
+      "retrieval_setting": {
+        "top_k": 5,
+        "score_threshold": 0.6
+      }
+    }
+  }
+}
+```
+
+#### 工作流变量配置
+
+在Dify工作流开始节点设置：
+
+| 变量名 | 类型 | 必填 | 说明 |
+|--------|------|------|------|
+| `user_id` | 文本 | 是 | 用户唯一标识符 |
+| `query` | 文本 | 是 | 用户查询内容 |
+| `question` | 文本 | 否 | 面试问题（面试场景） |
+
+#### LLM节点提示词示例
+
+```text
+你是一位专业的面试官。以下是候选人的简历信息：
+
+=== 候选人简历信息 ===
+{{HTTP请求.records}}
+
+=== 面试场景 ===
+面试问题：{{question}}
+候选人回答：{{query}}
+
+=== 任务要求 ===
+请基于候选人的简历背景，对其回答进行专业评估：
+1. 回答是否与简历中的经验相符
+2. 回答的技术深度是否匹配其声称的经验水平
+3. 提出1-2个针对性的追问问题
+4. 给出这轮回答的评分（1-10分）
+
+请以专业、客观的语气进行评估。
+```
+
+### API密钥管理
+
+#### 支持的API密钥格式
+
+```python
+# 静态配置的API密钥
+"dify-pdf-docs-001"     # 对应 pdf_documents 集合
+"dify-tech-docs-002"    # 对应 technical_docs 集合
+"dify-company-kb-003"   # 对应 company_knowledge 集合
+
+# 动态用户API密钥
+"dify-user-{user_id}"   # 对应 user_kb_{user_id} 集合
+```
+
+#### 权限控制
+
+每个API密钥具有以下权限配置：
+
+```python
+{
+  "collection": "user_kb_user123",    # 允许访问的集合
+  "permissions": ["read"],            # 权限列表
+  "rate_limit": 100,                 # 请求频率限制
+  "description": "用户123的个人知识库", # 描述信息
+  "user_id": "user123",              # 关联用户ID
+  "is_dynamic": true                 # 是否为动态生成
+}
+```
+
+### 批量用户管理
+
+#### 批量创建用户知识库
+
+```python
+# 批量创建脚本示例
+from user_manager import UserKnowledgeManager
+
+manager = UserKnowledgeManager()
+user_ids = ["user001", "user002", "user003"]
+
+for user_id in user_ids:
+    result = manager.create_user_knowledge_base(user_id)
+    if result["success"]:
+        print(f"✅ 用户 {user_id} 知识库创建成功")
+    else:
+        print(f"❌ 用户 {user_id} 知识库创建失败: {result['error']}")
+```
+
+#### 批量文档上传
+
+```python
+# 批量上传用户简历
+import os
+
+resume_dir = "/path/to/resumes"
+for filename in os.listdir(resume_dir):
+    if filename.endswith('.pdf'):
+        user_id = filename.replace('.pdf', '')  # 假设文件名就是用户ID
+        file_path = os.path.join(resume_dir, filename)
+
+        result = manager.upload_user_document(user_id, file_path)
+        if result["success"]:
+            print(f"✅ 用户 {user_id} 简历上传成功")
+```
+
+### 最佳实践
+
+#### 1. 用户ID命名规范
+
+```python
+# 推荐的用户ID格式
+"user001"           # 数字编号
+"john_doe"          # 用户名格式
+"emp_12345"         # 员工编号
+"candidate_001"     # 候选人编号
+
+# 避免的格式
+"user@email.com"    # 包含特殊字符
+"用户123"           # 包含中文
+"user 123"          # 包含空格
+```
+
+#### 2. 文档管理建议
+
+- **文档大小**: 建议单个PDF文件不超过10MB
+- **文档格式**: 优先使用PDF格式，确保文本可提取
+- **文档命名**: 使用有意义的文件名，便于识别
+- **定期清理**: 定期清理无用的文档和集合
+
+#### 3. 性能优化
+
+```python
+# 优化检索参数
+retrieval_setting = {
+    "top_k": 3,              # 减少返回结果数量
+    "score_threshold": 0.7,  # 提高相似度阈值
+}
+
+# 优化文档分块
+chunk_config = {
+    "chunk_size": 800,       # 适中的分块大小
+    "chunk_overlap": 100,    # 适当的重叠
+}
 ```
 
 ---
