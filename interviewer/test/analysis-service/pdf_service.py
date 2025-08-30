@@ -21,8 +21,8 @@ class PDFService:
     """PDF解析服务类"""
     
     def __init__(self):
-        # Document-parser服务的URL - 修正路径
-        self.document_parser_url = os.getenv("DOCUMENT_PARSER_URL", "http://localhost:8002")
+        # PDF解析服务的URL - 使用新的pdf-parser-service
+        self.pdf_parser_url = os.getenv("DOCUMENT_PARSER_URL", "http://localhost:8003")
         self.max_file_size = PDF_MAX_FILE_SIZE * 1024 * 1024  # 转换为字节
         
     def validate_file(self, file: UploadFile) -> bool:
@@ -51,54 +51,50 @@ class PDFService:
             logger.error(f"文件验证失败: {e}")
             raise HTTPException(status_code=400, detail=f"文件验证失败: {str(e)}")
     
-    def parse_pdf_with_document_parser(self, file: UploadFile) -> str:
-        """使用Document-parser服务解析PDF"""
+    def parse_pdf_with_parser_service(self, file: UploadFile) -> str:
+        """使用pdf-parser-service解析PDF"""
         try:
             logger.info(f"开始解析PDF文件: {file.filename}")
-            
+
             # 准备请求数据
             files = {
                 'file': (file.filename, file.file, file.content_type)
             }
-            
+
             data = {
                 'chunk_size': PDF_CHUNK_SIZE,
                 'chunk_overlap': PDF_CHUNK_OVERLAP,
-                'return_content': True
+                'split_text': True
             }
-            
-            # 调用Document-parser服务
+
+            # 调用pdf-parser-service的/parse-text接口
             response = requests.post(
-                f"{self.document_parser_url}/parse",
+                f"{self.pdf_parser_url}/parse-text",
                 files=files,
                 data=data,
                 timeout=60
             )
             
             if response.status_code != 200:
-                error_msg = f"Document-parser服务调用失败: {response.status_code}"
+                error_msg = f"PDF解析服务调用失败: {response.status_code}"
                 logger.error(error_msg)
                 raise HTTPException(status_code=500, detail=error_msg)
-            
-            result = response.json()
-            
-            # 提取文本内容
-            logger.info(f"Document-parser返回结果: {result}")
-            if 'documents' in result and result['documents'] is not None and len(result['documents']) > 0:
-                # 合并所有文档块的内容
-                text_content = ""
-                for doc in result['documents']:
-                    if 'content' in doc:
-                        text_content += doc['content'] + "\n"
 
+            result = response.json()
+
+            # 提取文本内容 - 适配新的pdf-parser-service响应格式
+            logger.info(f"PDF解析服务返回结果: {result}")
+            if result.get('success') and 'text_content' in result:
+                text_content = result['text_content']
                 logger.info(f"PDF解析完成: {file.filename}, 内容长度: {len(text_content)}")
                 return text_content.strip()
             else:
-                logger.warning(f"Document-parser返回空结果，尝试本地解析: {result}")
-                raise HTTPException(status_code=503, detail="Document-parser服务返回空结果")
+                error_msg = result.get('message', 'PDF解析服务返回空结果')
+                logger.warning(f"PDF解析失败: {error_msg}")
+                raise HTTPException(status_code=503, detail=f"PDF解析失败: {error_msg}")
                 
         except requests.exceptions.RequestException as e:
-            error_msg = f"Document-parser服务连接失败: {str(e)}"
+            error_msg = f"PDF解析服务连接失败: {str(e)}"
             logger.error(error_msg)
             raise HTTPException(status_code=503, detail=error_msg)
         except HTTPException:
@@ -176,42 +172,42 @@ class PDFService:
             if use_local:
                 return self.parse_pdf_local(file)
             else:
-                return self.parse_pdf_with_document_parser(file)
+                return self.parse_pdf_with_parser_service(file)
         except (HTTPException, Exception) as e:
-            # 如果Document-parser服务失败，尝试本地解析
+            # 如果PDF解析服务失败，尝试本地解析
             if not use_local:
-                logger.warning(f"Document-parser解析失败: {str(e)}，尝试本地解析")
+                logger.warning(f"PDF解析服务失败: {str(e)}，尝试本地解析")
                 file.file.seek(0)  # 重置文件指针
                 return self.parse_pdf_local(file)
             else:
                 raise
     
-    def check_document_parser_service(self) -> Dict[str, Any]:
-        """检查Document-parser服务状态"""
+    def check_pdf_parser_service(self) -> Dict[str, Any]:
+        """检查PDF解析服务状态"""
         try:
             response = requests.get(
-                f"{self.document_parser_url}/health",
+                f"{self.pdf_parser_url}/health",
                 timeout=5
             )
-            
+
             if response.status_code == 200:
                 return {
                     "available": True,
                     "status": "healthy",
-                    "url": self.document_parser_url
+                    "url": self.pdf_parser_url
                 }
             else:
                 return {
                     "available": False,
                     "status": f"unhealthy (status: {response.status_code})",
-                    "url": self.document_parser_url
+                    "url": self.pdf_parser_url
                 }
-                
+
         except requests.exceptions.RequestException as e:
             return {
                 "available": False,
                 "status": f"connection_failed ({str(e)})",
-                "url": self.document_parser_url
+                "url": self.pdf_parser_url
             }
 
 # 全局PDF服务实例
