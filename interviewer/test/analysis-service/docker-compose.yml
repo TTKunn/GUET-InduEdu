@@ -1,44 +1,7 @@
 version: '3.8'
 
 services:
-  # MongoDB数据库
-  mongodb:
-    image: mongo:7.0
-    container_name: analysis_mongodb
-    restart: unless-stopped
-    ports:
-      - "27017:27017"
-    environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password123
-      MONGO_INITDB_DATABASE: interview_analysis
-    volumes:
-      - mongodb_data:/data/db
-    networks:
-      - analysis_network
-    healthcheck:
-      test: ["CMD", "mongosh", "--eval", "db.adminCommand('ping')"]
-      interval: 30s
-      timeout: 10s
-      retries: 3
-
-  # MongoDB管理界面
-  mongo-express:
-    image: mongo-express:1.0.0
-    container_name: analysis_mongo_express
-    restart: unless-stopped
-    ports:
-      - "8081:8081"
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-      ME_CONFIG_MONGODB_ADMINPASSWORD: password123
-      ME_CONFIG_MONGODB_URL: mongodb://admin:password123@mongodb:27017/
-      ME_CONFIG_BASICAUTH_USERNAME: admin
-      ME_CONFIG_BASICAUTH_PASSWORD: admin123
-    depends_on:
-      - mongodb
-    networks:
-      - analysis_network
+  # 注释：使用本机MongoDB，不需要Docker部署MongoDB服务
 
   # 简历分析服务
   analysis-service:
@@ -50,8 +13,8 @@ services:
     ports:
       - "8004:8004"
     environment:
-      # 数据库配置
-      MONGO_URI: mongodb://admin:password123@mongodb:27017/interview_analysis?authSource=admin
+      # 数据库配置 - 连接本机MongoDB
+      MONGO_URI: mongodb://localhost:27017/interview_analysis
       MONGO_DB: interview_analysis
       MONGO_COLLECTION: candidate_profiles
       
@@ -60,8 +23,8 @@ services:
       OPENAI_API_KEY: ${OPENAI_API_KEY}
       DEFAULT_LLM_PROVIDER: zhipuai
       
-      # PDF解析服务配置 - 修正路径
-      DOCUMENT_PARSER_URL: http://host.docker.internal:8002
+      # PDF解析服务配置 - 使用新的pdf-parser-service
+      DOCUMENT_PARSER_URL: http://localhost:8003
       
       # 服务配置
       API_HOST: 0.0.0.0
@@ -72,19 +35,8 @@ services:
       CORS_ORIGINS: "*"
       ENABLE_AUTH: false
       
-    depends_on:
-      - mongodb
-    networks:
-      - analysis_network
+    # 移除MongoDB依赖，使用本机MongoDB
+    network_mode: "host"  # 使用主机网络模式以访问本机MongoDB
     volumes:
       - ./logs:/app/logs
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
-
-volumes:
-  mongodb_data:
-    driver: local
-
-networks:
-  analysis_network:
-    driver: bridge
+    # 使用主机网络，不需要额外的host配置和网络

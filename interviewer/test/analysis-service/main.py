@@ -111,7 +111,7 @@ async def health_check():
         llm_available = llm_service.is_available()
         
         # 检查PDF服务
-        pdf_status = pdf_service.check_document_parser_service()
+        pdf_status = pdf_service.check_pdf_parser_service()
         
         # 获取统计信息
         stats = None
@@ -136,7 +136,7 @@ async def health_check():
             dependencies={
                 "mongodb": "connected" if db_connected else "disconnected",
                 "llm_service": llm_service.provider if llm_available else "unavailable",
-                "document_parser": "available" if pdf_status["available"] else "unavailable"
+                "pdf_parser_service": "available" if pdf_status["available"] else "unavailable"
             },
             stats=stats
         )
@@ -346,6 +346,35 @@ async def get_keywords_for_dify(user_id: str):
             "user_id": user_id,
             "message": "获取分组关键词失败: " + str(e)
         }
+
+@app.post("/parse-pdf")
+async def parse_pdf_only(file: UploadFile = File(...)):
+    """
+    仅解析PDF文件，返回文本内容
+    """
+    try:
+        logger.info(f"开始解析PDF文件: {file.filename}")
+
+        # 验证文件类型
+        if not file.filename.lower().endswith('.pdf'):
+            raise HTTPException(status_code=400, detail="只支持PDF文件")
+
+        # 解析PDF文件
+        resume_text = pdf_service.parse_pdf(file, use_local=False)  # 使用pdf-parser-service
+
+        return {
+            "success": True,
+            "filename": file.filename,
+            "text_content": resume_text,
+            "content_length": len(resume_text),
+            "message": "PDF解析成功"
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"PDF解析失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"PDF解析失败: {str(e)}")
 
 @app.get("/")
 async def root():
