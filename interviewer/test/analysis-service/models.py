@@ -76,9 +76,9 @@ class CandidateProfile(BaseModel):
     education: List[Education] = Field(default_factory=list)
     work_experience: List[WorkExperience] = Field(default_factory=list)
     projects: List[Project] = Field(default_factory=list)
-    technical_skills: TechnicalSkills = Field(default_factory=TechnicalSkills)
+    technical_skills_detail: TechnicalSkills = Field(default_factory=TechnicalSkills, description="详细技术技能结构")
     additional_info: AdditionalInfo = Field(default_factory=AdditionalInfo)
-    
+
     # 简化的关键词结构（用于Dify工作流检索）
     technical_skills: List[str] = Field(default_factory=list, description="个人技术点")
     projects_keywords: List[Dict[str, Any]] = Field(default_factory=list, description="个人项目信息")
@@ -169,6 +169,40 @@ def profile_to_dict(profile: CandidateProfile) -> Dict[str, Any]:
     return data
 
 def dict_to_profile(data: Dict[str, Any]) -> CandidateProfile:
-    """将字典转换为Profile模型（从MongoDB读取）"""
+    """将字典转换为Profile模型（兼容MongoDB和MySQL）"""
+    import json
+
+    # 移除MongoDB的_id字段
     data.pop('_id', None)
+
+    # 处理MySQL返回的JSON字符串字段
+    json_fields = ['education', 'work_experience', 'projects', 'technical_skills', 'additional_info']
+    for field in json_fields:
+        if field in data and isinstance(data[field], str):
+            try:
+                # 如果是空字符串或'[]'，设置为默认值
+                if data[field] in ['', '[]', '{}']:
+                    if field in ['education', 'work_experience', 'projects']:
+                        data[field] = []
+                    else:
+                        data[field] = {}
+                else:
+                    data[field] = json.loads(data[field])
+            except (json.JSONDecodeError, TypeError):
+                # 解析失败时设置默认值
+                if field in ['education', 'work_experience', 'projects']:
+                    data[field] = []
+                else:
+                    data[field] = {}
+
+    # 处理personal_info字段
+    if 'personal_info' in data and isinstance(data['personal_info'], str):
+        try:
+            if data['personal_info'] in ['', '{}']:
+                data['personal_info'] = {}
+            else:
+                data['personal_info'] = json.loads(data['personal_info'])
+        except (json.JSONDecodeError, TypeError):
+            data['personal_info'] = {}
+
     return CandidateProfile(**data)

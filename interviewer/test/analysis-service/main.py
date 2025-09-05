@@ -24,7 +24,7 @@ from models import (
     ProfileQueryRequest, ProfileQueryResponse, HealthCheckResponse,
     CandidateProfile, ExtractionMode
 )
-from database import db_service
+from mysql_database import DatabaseService
 from llm_service import llm_service
 from pdf_service import pdf_service
 
@@ -49,6 +49,9 @@ def setup_logging():
 # 设置日志
 setup_logging()
 logger = logging.getLogger(__name__)
+
+# 创建MySQL数据库服务实例
+db_service = DatabaseService()
 
 # 应用启动和关闭处理
 @asynccontextmanager
@@ -117,7 +120,7 @@ async def health_check():
         stats = None
         if db_connected:
             try:
-                profile_count = db_service.get_profile_count()
+                profile_count = db_service.get_user_count()
                 stats = {
                     "total_profiles": profile_count,
                     "database_status": "connected",
@@ -134,7 +137,7 @@ async def health_check():
             database_connected=db_connected,
             llm_available=llm_available,
             dependencies={
-                "mongodb": "connected" if db_connected else "disconnected",
+                "mysql": "connected" if db_connected else "disconnected",
                 "llm_service": llm_service.provider if llm_available else "unavailable",
                 "pdf_parser_service": "available" if pdf_status["available"] else "unavailable"
             },
@@ -376,6 +379,28 @@ async def parse_pdf_only(file: UploadFile = File(...)):
         logger.error(f"PDF解析失败: {str(e)}")
         raise HTTPException(status_code=500, detail=f"PDF解析失败: {str(e)}")
 
+@app.get("/analyze/status/{user_id}")
+async def get_analysis_status(user_id: str):
+    """
+    查询分析状态（简单实现）
+    """
+    try:
+        # 检查用户是否存在
+        profile_exists = db_service.profile_exists(user_id)
+
+        return {
+            "user_id": user_id,
+            "status": "completed" if profile_exists else "not_found",
+            "message": "分析已完成" if profile_exists else "用户档案不存在或分析未完成"
+        }
+    except Exception as e:
+        logger.error(f"查询分析状态失败: {e}")
+        return {
+            "user_id": user_id,
+            "status": "error",
+            "message": f"查询失败: {str(e)}"
+        }
+
 @app.get("/")
 async def root():
     """根路径"""
@@ -397,5 +422,7 @@ if __name__ == "__main__":
         port=API_PORT,
         workers=API_WORKERS,
         reload=False,
-        log_level=LOG_LEVEL.lower()
+        log_level=LOG_LEVEL.lower(),
+        timeout_keep_alive=600,  # 10分钟保持连接
+        timeout_graceful_shutdown=30
     )

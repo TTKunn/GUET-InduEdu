@@ -24,7 +24,7 @@ PDF简历 → PDF解析服务 → LLM结构化提取 → MongoDB存储 → 关�
 analysis-service/
 ├── config.py              # 配置文件（环境变量配置）
 ├── models.py              # 数据模型定义
-├── database.py            # MongoDB数据库服务
+├── mysql_database.py      # MySQL数据库服务
 ├── llm_service.py         # LLM服务（智谱AI/OpenAI）
 ├── pdf_service.py         # PDF解析服务
 ├── main.py               # 主API服务
@@ -55,9 +55,12 @@ nano .env
 在 `.env` 文件中设置以下关键配置：
 
 ```bash
-# 数据库配置
-MONGO_URI=mongodb://localhost:27017
-MONGO_DB=interview_analysis
+# MySQL数据库配置
+MYSQL_HOST=localhost
+MYSQL_PORT=3306
+MYSQL_USER=root
+MYSQL_PASSWORD=your_password
+MYSQL_DATABASE=interview_analysis
 
 # LLM配置（至少设置一个）
 ZHIPUAI_API_KEY=your_zhipuai_api_key_here
@@ -73,7 +76,7 @@ DOCUMENT_PARSER_URL=http://localhost:8002
 #### 方式一：Docker Compose（推荐）
 
 ```bash
-# 启动所有服务（包括MongoDB）
+# 启动所有服务（包括MySQL）
 docker-compose up -d
 
 # 查看服务状态
@@ -89,7 +92,7 @@ docker-compose logs -f analysis-service
 # 安装依赖
 pip install -r requirements.txt
 
-# 启动MongoDB（需要单独安装）
+# 启动MySQL（需要单独安装）
 # 启动Document-parser服务（需要单独启动）
 
 # 启动分析服务
@@ -113,9 +116,11 @@ curl http://localhost:8004/health
 **文件位置**: `config.py`
 
 **环境变量配置**:
-- `MONGO_URI`: MongoDB连接字符串
-- `MONGO_DB`: 数据库名称
-- `MONGO_COLLECTION`: 集合名称
+- `MYSQL_HOST`: MySQL服务器地址
+- `MYSQL_PORT`: MySQL端口（默认3306）
+- `MYSQL_USER`: MySQL用户名
+- `MYSQL_PASSWORD`: MySQL密码
+- `MYSQL_DATABASE`: 数据库名称
 
 ### 大模型配置位置
 
