@@ -10,14 +10,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # ==================== 数据库配置 ====================
-# MongoDB配置
-MONGO_URI = os.getenv("MONGO_URI", "mongodb://localhost:27017")
-MONGO_DB = os.getenv("MONGO_DB", "interview_analysis")
-MONGO_COLLECTION = os.getenv("MONGO_COLLECTION", "candidate_profiles")
+# MySQL配置
+MYSQL_URL = os.getenv("MYSQL_URL", "mysql+pymysql://root:password@43.142.157.145:3306/interview_analysis")
+MYSQL_POOL_SIZE = int(os.getenv("MYSQL_POOL_SIZE", "10"))
+MYSQL_MAX_OVERFLOW = int(os.getenv("MYSQL_MAX_OVERFLOW", "20"))
+MYSQL_POOL_TIMEOUT = int(os.getenv("MYSQL_POOL_TIMEOUT", "30"))
 
-# MongoDB连接参数
-MONGO_CONNECT_TIMEOUT = int(os.getenv("MONGO_CONNECT_TIMEOUT", "5000"))
-MONGO_SERVER_SELECTION_TIMEOUT = int(os.getenv("MONGO_SERVER_SELECTION_TIMEOUT", "5000"))
+# 已迁移到MySQL，MongoDB配置已移除
 
 # ==================== 大模型配置 ====================
 # 智谱AI配置
@@ -82,17 +81,17 @@ MAX_CONCURRENT_REQUESTS = int(os.getenv("MAX_CONCURRENT_REQUESTS", "10"))
 def validate_config():
     """验证必要的配置项"""
     errors = []
-    
+
     # 检查数据库配置
-    if not MONGO_URI:
-        errors.append("MONGO_URI is required")
-    
+    if not MYSQL_URL:
+        errors.append("MYSQL_URL is required")
+
     # 检查LLM配置
     if DEFAULT_LLM_PROVIDER == "zhipuai" and not ZHIPUAI_API_KEY:
         errors.append("ZHIPUAI_API_KEY is required when using zhipuai provider")
     elif DEFAULT_LLM_PROVIDER == "openai" and not OPENAI_API_KEY:
         errors.append("OPENAI_API_KEY is required when using openai provider")
-    
+
     if errors:
         raise ValueError(f"Configuration errors: {', '.join(errors)}")
 
@@ -101,9 +100,9 @@ def get_config_info() -> dict:
     """获取配置信息（隐藏敏感信息）"""
     return {
         "database": {
-            "mongo_db": MONGO_DB,
-            "mongo_collection": MONGO_COLLECTION,
-            "connection_timeout": MONGO_CONNECT_TIMEOUT
+            "mysql_url": MYSQL_URL.split('@')[1] if '@' in MYSQL_URL else "43.142.157.145:3306/interview_analysis",
+            "pool_size": MYSQL_POOL_SIZE,
+            "max_overflow": MYSQL_MAX_OVERFLOW
         },
         "llm": {
             "provider": DEFAULT_LLM_PROVIDER,
