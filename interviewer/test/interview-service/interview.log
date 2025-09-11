@@ -1,0 +1,478 @@
+nohup: ignoring input
+2025-09-10 23:51:26,338 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:51:26,360 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-10 23:51:26,391 - database - INFO - ✅ MySQL连接初始化成功
+INFO:     Started server process [25546]
+INFO:     Waiting for application startup.
+2025-09-10 23:51:26,409 - main - INFO - 🚀 启动面试记录服务...
+2025-09-10 23:51:26,409 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:51:26,415 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:51:26,423 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-10 23:51:26,426 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-10 23:51:26,426 - main - INFO - 🎉 服务启动完成
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8006 (Press CTRL+C to quit)
+2025-09-10 23:51:55,804 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+INFO:     127.0.0.1:59844 - "GET /health HTTP/1.1" 200 OK
+INFO:     111.59.124.159:15502 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-10 23:56:12,459 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     111.59.124.159:15502 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-10 23:57:11,558 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     111.59.124.159:15502 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     121.41.165.89:58338 - "GET / HTTP/1.1" 200 OK
+INFO:     121.41.165.89:58344 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     5.34.216.33:35565 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:30:59,781 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:35565 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:31:05,447 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:35565 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:31:06,953 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:35565 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     129.211.166.163:41370 - "GET / HTTP/1.1" 200 OK
+INFO:     180.101.245.251:50324 - "GET / HTTP/1.1" 200 OK
+2025-09-11 11:35:18,400 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     220.196.160.75:25242 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     5.34.216.33:38225 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:42:32,704 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:38225 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:46:00,848 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:29173 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:48:53,438 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:17285 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:50:36,449 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:18487 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:50:37,497 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:18487 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:50:39,470 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:18487 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:50:41,795 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:18487 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 11:50:44,363 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:18487 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     159.75.199.224:39211 - "GET / HTTP/1.1" 200 OK
+INFO:     5.34.216.33:25557 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 12:56:55,877 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:25557 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     5.34.216.33:26751 - "OPTIONS /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:26751 - "POST /dify/interview/create HTTP/1.1" 422 Unprocessable Entity
+2025-09-11 13:05:02,653 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:26751 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 13:05:26,238 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:26751 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     5.34.216.33:26751 - "POST /dify/interview/create HTTP/1.1" 422 Unprocessable Entity
+INFO:     5.34.216.33:26751 - "POST /dify/interview/create HTTP/1.1" 422 Unprocessable Entity
+INFO:     5.34.216.33:37657 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 13:29:35,077 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:37657 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     5.34.216.33:37657 - "OPTIONS /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 13:29:38,718 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=个人简历面试 - 2025/9/11 13:29:40
+2025-09-11 13:29:38,724 - database - INFO - ✅ 创建面试会话成功: session_20250911_132938_bbbb80a9
+INFO:     5.34.216.33:37657 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 13:29:43,099 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=个人简历面试 - 2025/9/11 13:29:45
+2025-09-11 13:29:43,100 - database - INFO - ✅ 创建面试会话成功: session_20250911_132943_155c4910
+INFO:     5.34.216.33:37657 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:31043 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 13:49:31,062 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:31043 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.82.78.100:60202 - "GET / HTTP/1.1" 200 OK
+INFO:     45.82.78.114:56398 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:42888 - "GET / HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     110.40.39.111:49600 - "GET / HTTP/1.1" 200 OK
+INFO:     110.40.39.111:49610 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+2025-09-11 18:33:24,415 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 18:33:24,419 - database - INFO - ✅ 创建面试会话成功: session_20250911_183324_faa26159
+INFO:     3.214.24.53:16498 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 18:33:26,273 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 18:33:26,275 - database - INFO - ✅ 创建面试会话成功: session_20250911_183326_75c8555b
+INFO:     3.214.24.53:61242 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:35933 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:33:54,777 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:35933 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:34:16,144 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:34:16,146 - database - INFO - ✅ 创建面试会话成功: session_20250911_183416_9a3ea36c
+INFO:     3.214.24.53:22564 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 18:38:59,812 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:30987 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:39:15,081 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:39:15,083 - database - INFO - ✅ 创建面试会话成功: session_20250911_183915_4d73414e
+INFO:     3.214.24.53:8473 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:28275 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:55:07,193 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:28275 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:55:34,037 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:55:34,039 - database - INFO - ✅ 创建面试会话成功: session_20250911_185534_f1b034d9
+INFO:     3.214.24.53:24496 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 18:57:26,166 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 18:57:26,168 - database - INFO - ✅ 创建面试会话成功: session_20250911_185726_873dbb04
+INFO:     3.214.24.53:3577 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 18:58:40,313 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:38485 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:58:56,100 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:38485 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 18:58:58,717 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:58:58,720 - database - INFO - ✅ 创建面试会话成功: session_20250911_185858_f1c5661c
+INFO:     3.214.24.53:52699 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 18:58:59,632 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:38485 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:06:08,584 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:06:08,586 - database - INFO - ✅ 创建面试会话成功: session_20250911_190608_b2b281a6
+INFO:     3.214.24.53:64459 - "POST /dify/interview/create HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+INFO:     5.34.216.33:32037 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:26:38,950 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:32037 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:29:32,957 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.161:39425 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:32:20,162 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.161:29493 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     46.232.121.243:20349 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:37:20,393 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.243:20349 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:37:37,750 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.243:20349 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:37:39,313 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.243:26651 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 19:44:30,341 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:44:30,343 - database - INFO - ✅ 创建面试会话成功: session_20250911_194430_a07f5be3
+INFO:     3.214.24.53:13191 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 19:45:05,299 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:45:05,301 - database - INFO - ✅ 创建面试会话成功: session_20250911_194505_f60788f6
+INFO:     3.214.24.53:60199 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 19:47:25,867 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:47:25,869 - database - INFO - ✅ 创建面试会话成功: session_20250911_194725_b7c75f2d
+INFO:     3.214.24.53:37446 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     46.232.121.161:24609 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:10:58,796 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.161:24609 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:11:03,248 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.161:24609 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:11:40,966 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:11:40,968 - database - INFO - ✅ 创建面试会话成功: session_20250911_201140_df18eb5e
+INFO:     3.214.24.53:37181 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:17:57,082 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:17:57,084 - database - INFO - ✅ 创建面试会话成功: session_20250911_201757_3c707f87
+INFO:     3.214.24.53:60013 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:18:00,354 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:00,355 - database - INFO - ✅ 创建面试会话成功: session_20250911_201800_bdb33e70
+INFO:     3.214.24.53:35760 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:18:05,703 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:05,705 - database - INFO - ✅ 创建面试会话成功: session_20250911_201805_5aa6b35d
+INFO:     3.214.24.53:9464 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:18:26,171 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:26,173 - database - INFO - ✅ 创建面试会话成功: session_20250911_201826_e2c2f8e6
+INFO:     3.214.24.53:2522 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:18:30,833 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:30,834 - database - INFO - ✅ 创建面试会话成功: session_20250911_201830_3821347e
+INFO:     3.214.24.53:58860 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:18:37,049 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:37,052 - database - INFO - ✅ 创建面试会话成功: session_20250911_201837_98449101
+INFO:     3.214.24.53:3991 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:19:01,939 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:01,941 - database - INFO - ✅ 创建面试会话成功: session_20250911_201901_9e478cd3
+INFO:     3.214.24.53:62702 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:19:02,184 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:02,186 - database - INFO - ✅ 创建面试会话成功: session_20250911_201902_3ba60fab
+INFO:     3.214.24.53:60824 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:19:03,365 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:03,367 - database - INFO - ✅ 创建面试会话成功: session_20250911_201903_015d0b30
+INFO:     3.214.24.53:30612 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:19:04,149 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:04,151 - database - INFO - ✅ 创建面试会话成功: session_20250911_201904_5a01dc0a
+INFO:     3.214.24.53:45012 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:19:18,856 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:18,858 - database - INFO - ✅ 创建面试会话成功: session_20250911_201918_f7b7f877
+INFO:     3.214.24.53:54145 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:19:18,975 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:18,977 - database - INFO - ✅ 创建面试会话成功: session_20250911_201918_e00145dd
+INFO:     3.214.24.53:62812 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:20:01,316 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:20:01,319 - database - INFO - ✅ 创建面试会话成功: session_20250911_202001_42911986
+INFO:     3.214.24.53:43195 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:20:06,486 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:20:06,488 - database - INFO - ✅ 创建面试会话成功: session_20250911_202006_7f926f9b
+INFO:     3.214.24.53:39948 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:21:15,863 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:21:15,865 - database - INFO - ✅ 创建面试会话成功: session_20250911_202115_1d869b84
+INFO:     3.214.24.53:48860 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:21:53,175 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:21:53,177 - database - INFO - ✅ 创建面试会话成功: session_20250911_202153_8a6a2814
+INFO:     3.214.24.53:3622 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:38:54,385 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:38:54,389 - database - INFO - ✅ 创建面试会话成功: session_20250911_203854_46cdffe9
+INFO:     3.214.24.53:55340 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:41:44,859 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:41:44,867 - database - INFO - ✅ 创建面试会话成功: session_20250911_204144_4bc86246
+INFO:     3.214.24.53:3539 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:43:30,653 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:30,655 - database - INFO - ✅ 创建面试会话成功: session_20250911_204330_fa0925e0
+INFO:     3.214.24.53:19117 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:43:30,703 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:30,705 - database - INFO - ✅ 创建面试会话成功: session_20250911_204330_6a5472e9
+INFO:     3.214.24.53:3044 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:43:32,034 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:32,036 - database - INFO - ✅ 创建面试会话成功: session_20250911_204332_7dd84460
+INFO:     3.214.24.53:29866 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:43:34,584 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:34,586 - database - INFO - ✅ 创建面试会话成功: session_20250911_204334_8fad25d6
+INFO:     3.214.24.53:42284 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:14,151 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:14,152 - database - INFO - ✅ 创建面试会话成功: session_20250911_204514_f8524cbf
+INFO:     3.214.24.53:38290 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:17,092 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:17,094 - database - INFO - ✅ 创建面试会话成功: session_20250911_204517_8cea6b12
+INFO:     3.214.24.53:18636 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:17,344 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:17,346 - database - INFO - ✅ 创建面试会话成功: session_20250911_204517_50318fdc
+INFO:     3.214.24.53:30341 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:17,441 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:17,443 - database - INFO - ✅ 创建面试会话成功: session_20250911_204517_5ec5f504
+INFO:     3.214.24.53:57891 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:33,121 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:33,123 - database - INFO - ✅ 创建面试会话成功: session_20250911_204533_fc178862
+INFO:     3.214.24.53:5822 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:33,909 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:33,911 - database - INFO - ✅ 创建面试会话成功: session_20250911_204533_eb90730f
+INFO:     3.214.24.53:56731 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:34,319 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:34,321 - database - INFO - ✅ 创建面试会话成功: session_20250911_204534_3eee15d6
+INFO:     3.214.24.53:37537 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:45:37,170 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:37,173 - database - INFO - ✅ 创建面试会话成功: session_20250911_204537_23facd79
+INFO:     3.214.24.53:16172 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     46.232.121.161:27539 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:46:13,999 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.161:27539 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:46:19,831 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.243:35109 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:46:36,418 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:46:36,421 - database - INFO - ✅ 创建面试会话成功: session_20250911_204636_fbc8933e
+INFO:     3.214.24.53:41346 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:46:38,406 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:46:38,408 - database - INFO - ✅ 创建面试会话成功: session_20250911_204638_66d12caf
+INFO:     3.214.24.53:25570 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:46:46,157 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:46:46,159 - database - INFO - ✅ 创建面试会话成功: session_20250911_204646_9ea9a263
+INFO:     3.214.24.53:19064 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 20:47:04,423 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.243:35109 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 20:47:20,473 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:47:20,475 - database - INFO - ✅ 创建面试会话成功: session_20250911_204720_18932c95
+INFO:     3.214.24.53:30153 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:19,323 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:19,325 - database - INFO - ✅ 创建面试会话成功: session_20250911_210619_42f5fbeb
+INFO:     3.214.24.53:24355 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:34,559 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:34,561 - database - INFO - ✅ 创建面试会话成功: session_20250911_210634_f145c9e6
+INFO:     3.214.24.53:1812 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:35,237 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:35,239 - database - INFO - ✅ 创建面试会话成功: session_20250911_210635_76bc4adf
+INFO:     3.214.24.53:11498 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:40,259 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:40,261 - database - INFO - ✅ 创建面试会话成功: session_20250911_210640_fd6f6ede
+INFO:     3.214.24.53:6691 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:48,973 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:48,975 - database - INFO - ✅ 创建面试会话成功: session_20250911_210648_49ebb7e9
+INFO:     3.214.24.53:29876 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:50,072 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:50,074 - database - INFO - ✅ 创建面试会话成功: session_20250911_210650_5993d07f
+INFO:     3.214.24.53:57385 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:50,301 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:50,303 - database - INFO - ✅ 创建面试会话成功: session_20250911_210650_446e61fb
+INFO:     3.214.24.53:56084 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:06:52,864 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:52,867 - database - INFO - ✅ 创建面试会话成功: session_20250911_210652_5f144db5
+INFO:     3.214.24.53:2098 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 21:07:03,110 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:07:03,112 - database - INFO - ✅ 创建面试会话成功: session_20250911_210703_9cb4ae53
+INFO:     3.214.24.53:23870 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     46.232.121.161:24169 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 21:09:52,617 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     46.232.121.161:17007 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 21:10:12,106 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:10:12,108 - database - INFO - ✅ 创建面试会话成功: session_20250911_211012_614ac4dc
+INFO:     3.214.24.53:43266 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:02:39,191 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:02:39,195 - database - INFO - ✅ 创建面试会话成功: session_20250911_220239_71ddef7e
+INFO:     3.214.24.53:54065 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:02:54,684 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:02:54,686 - database - INFO - ✅ 创建面试会话成功: session_20250911_220254_3047b353
+INFO:     3.214.24.53:35543 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:22577 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:13:22,268 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:22577 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+INFO:     5.34.216.33:22577 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:14:09,181 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:22577 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:14:58,419 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:22577 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:15:00,606 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:22577 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:19:36,700 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:32257 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:19:40,195 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:32257 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:20:05,766 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:20:05,768 - database - INFO - ✅ 创建面试会话成功: session_20250911_222005_992829db
+INFO:     3.214.24.53:14499 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:20:08,545 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:20:08,547 - database - INFO - ✅ 创建面试会话成功: session_20250911_222008_d02afd00
+INFO:     3.214.24.53:29262 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:20:10,622 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:20:10,624 - database - INFO - ✅ 创建面试会话成功: session_20250911_222010_1384c9b9
+INFO:     3.214.24.53:17763 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:22:42,914 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:22:42,916 - database - INFO - ✅ 创建面试会话成功: session_20250911_222242_0f8a7370
+INFO:     3.214.24.53:16296 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:23:18,343 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:23:18,345 - database - INFO - ✅ 创建面试会话成功: session_20250911_222318_13556abe
+INFO:     3.214.24.53:2081 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:25:50,730 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     220.196.160.45:60904 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:26:34,207 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:26:34,209 - database - INFO - ✅ 创建面试会话成功: session_20250911_222634_ad6e6b86
+INFO:     3.214.24.53:54751 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:28:31,037 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 22:28:31,039 - database - INFO - ✅ 创建面试会话成功: session_20250911_222831_7c355bc4
+INFO:     3.214.24.53:56575 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:28:50,221 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 22:28:50,223 - database - INFO - ✅ 创建面试会话成功: session_20250911_222850_7d5c21b1
+INFO:     3.214.24.53:5870 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:31:58,182 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:31:58,184 - database - INFO - ✅ 创建面试会话成功: session_20250911_223158_c609fd8f
+INFO:     3.214.24.53:11055 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:32:04,131 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:04,133 - database - INFO - ✅ 创建面试会话成功: session_20250911_223204_78cda5cf
+INFO:     3.214.24.53:23099 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:32:20,197 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:20,199 - database - INFO - ✅ 创建面试会话成功: session_20250911_223220_b0c572cc
+INFO:     3.214.24.53:42875 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:32:22,024 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:22,026 - database - INFO - ✅ 创建面试会话成功: session_20250911_223222_a114960f
+INFO:     3.214.24.53:43021 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:32:23,923 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:23,925 - database - INFO - ✅ 创建面试会话成功: session_20250911_223223_06bc8886
+INFO:     3.214.24.53:36255 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:27699 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:34:53,552 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:27699 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:35:53,533 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:35:53,539 - database - INFO - ✅ 创建面试会话成功: session_20250911_223553_28f4f108
+INFO:     3.214.24.53:11209 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:38:45,508 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:38:45,510 - database - INFO - ✅ 创建面试会话成功: session_20250911_223845_7d108e66
+INFO:     3.214.24.53:31473 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:38:47,917 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:38:47,919 - database - INFO - ✅ 创建面试会话成功: session_20250911_223847_d0adc50f
+INFO:     3.214.24.53:6708 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:15687 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:46:25,311 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:15687 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:47:20,430 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 22:47:20,432 - database - INFO - ✅ 创建面试会话成功: session_20250911_224720_9e3bd17b
+INFO:     3.214.24.53:52872 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:49:51,245 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:49:51,247 - database - INFO - ✅ 创建面试会话成功: session_20250911_224951_927e4d4b
+INFO:     3.214.24.53:3689 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:49:58,440 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:49:58,442 - database - INFO - ✅ 创建面试会话成功: session_20250911_224958_b05175d4
+INFO:     3.214.24.53:23042 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:50:15,009 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:50:15,011 - database - INFO - ✅ 创建面试会话成功: session_20250911_225015_193aee7f
+INFO:     3.214.24.53:25615 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:50:23,041 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:50:23,042 - database - INFO - ✅ 创建面试会话成功: session_20250911_225023_609130b6
+INFO:     3.214.24.53:4909 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:52:06,325 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:23823 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:52:16,961 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:52:16,963 - database - INFO - ✅ 创建面试会话成功: session_20250911_225216_b5f7ff07
+INFO:     3.214.24.53:51159 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:52:38,483 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:52:38,485 - database - INFO - ✅ 创建面试会话成功: session_20250911_225238_bfd82005
+INFO:     3.214.24.53:57663 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:54:51,615 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:54:51,617 - database - INFO - ✅ 创建面试会话成功: session_20250911_225451_598b0f56
+INFO:     3.214.24.53:25639 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:54:52,675 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:54:52,677 - database - INFO - ✅ 创建面试会话成功: session_20250911_225452_8af222b9
+INFO:     3.214.24.53:9772 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:55:19,228 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:55:19,230 - database - INFO - ✅ 创建面试会话成功: session_20250911_225519_f2f71ec9
+INFO:     3.214.24.53:6123 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:55:19,959 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:55:19,961 - database - INFO - ✅ 创建面试会话成功: session_20250911_225519_8aa76c64
+INFO:     3.214.24.53:6952 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:55:47,435 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:15269 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:55:58,305 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:55:58,307 - database - INFO - ✅ 创建面试会话成功: session_20250911_225558_172b401c
+INFO:     3.214.24.53:48265 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:56:20,078 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:56:20,080 - database - INFO - ✅ 创建面试会话成功: session_20250911_225620_a755c180
+INFO:     3.214.24.53:61238 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:57:42,842 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:57:42,844 - database - INFO - ✅ 创建面试会话成功: session_20250911_225742_3c5a2e13
+INFO:     3.214.24.53:50646 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:57:43,818 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:57:43,820 - database - INFO - ✅ 创建面试会话成功: session_20250911_225743_3ff40ea0
+INFO:     3.214.24.53:2337 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:58:04,856 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:04,858 - database - INFO - ✅ 创建面试会话成功: session_20250911_225804_1cd92f21
+INFO:     3.214.24.53:40593 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:58:07,362 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:07,365 - database - INFO - ✅ 创建面试会话成功: session_20250911_225807_a73a1793
+INFO:     3.214.24.53:60005 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:58:23,568 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:58:23,570 - database - INFO - ✅ 创建面试会话成功: session_20250911_225823_ed7ebc3f
+INFO:     3.214.24.53:32694 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:58:23,679 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:58:23,681 - database - INFO - ✅ 创建面试会话成功: session_20250911_225823_6233f2e7
+INFO:     3.214.24.53:7419 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:58:44,519 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:44,521 - database - INFO - ✅ 创建面试会话成功: session_20250911_225844_d61a61cc
+INFO:     3.214.24.53:41809 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:58:45,341 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:45,343 - database - INFO - ✅ 创建面试会话成功: session_20250911_225845_8be256e3
+INFO:     3.214.24.53:16056 - "POST /dify/interview/create HTTP/1.1" 200 OK
+INFO:     5.34.216.33:20247 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:59:09,650 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:20247 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 22:59:24,779 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:59:24,780 - database - INFO - ✅ 创建面试会话成功: session_20250911_225924_f8c27132
+INFO:     3.214.24.53:2814 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 22:59:46,662 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:59:46,664 - database - INFO - ✅ 创建面试会话成功: session_20250911_225946_09fef9f2
+INFO:     3.214.24.53:35513 - "POST /dify/interview/create HTTP/1.1" 200 OK
+2025-09-11 23:00:30,649 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:00:30,684 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q001
+INFO:     3.214.24.53:14436 - "POST /dify/interview/add-qa HTTP/1.1" 200 OK
+2025-09-11 23:03:39,090 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:03:39,102 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q002
+INFO:     3.214.24.53:10193 - "POST /dify/interview/add-qa HTTP/1.1" 200 OK
+INFO:     220.196.160.75:24148 - "GET /dify/interview/add-qa HTTP/1.1" 405 Method Not Allowed
+2025-09-11 23:04:35,922 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:04:35,934 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q003
+INFO:     3.214.24.53:51712 - "POST /dify/interview/add-qa HTTP/1.1" 200 OK
+2025-09-11 23:05:19,196 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:05:19,211 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q004
+INFO:     3.214.24.53:17494 - "POST /dify/interview/add-qa HTTP/1.1" 200 OK
+2025-09-11 23:10:54,994 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:10:55,004 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q005
+INFO:     3.214.24.53:55801 - "POST /dify/interview/add-qa HTTP/1.1" 200 OK
+INFO:     5.34.216.33:15521 - "OPTIONS /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 23:11:27,402 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:39171 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK
+2025-09-11 23:11:33,643 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+INFO:     5.34.216.33:39171 - "GET /interview/sessions/test_user_010 HTTP/1.1" 200 OK

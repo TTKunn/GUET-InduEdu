@@ -1,0 +1,1409 @@
+# 日志文件已清理，移除了包含敏感信息的调试日志
+2025-09-04 22:29:11,352 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-04 22:39:14,766 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-04 22:53:29,063 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-04 22:53:29,148 - main - INFO - 🚀 启动面试记录服务...
+2025-09-04 22:53:29,148 - main - INFO - ✅ 配置验证通过
+2025-09-04 22:53:29,627 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 22:53:29,627 - main - INFO - 🎉 服务启动完成
+2025-09-04 22:54:44,515 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-04 22:54:44,580 - main - INFO - 🚀 启动面试记录服务...
+2025-09-04 22:54:44,581 - main - INFO - ✅ 配置验证通过
+2025-09-04 22:54:45,101 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 22:54:45,101 - main - INFO - 🎉 服务启动完成
+2025-09-04 22:54:58,522 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-04 22:54:58,522 - main - INFO - ✅ 服务已关闭
+2025-09-04 22:55:02,154 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-04 22:55:02,213 - main - INFO - 🚀 启动面试记录服务...
+2025-09-04 22:55:02,214 - main - INFO - ✅ 配置验证通过
+2025-09-04 22:55:02,764 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 22:55:02,764 - main - INFO - 🎉 服务启动完成
+2025-09-04 22:57:00,582 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-04 23:02:43,084 - main - INFO - Dify创建面试记录: user_id=candidate_001, session_name=Java后端开发技术面试
+2025-09-04 23:02:43,214 - database - INFO - ✅ 创建面试会话成功: session_20250904_230243_9df2893c
+2025-09-04 23:05:35,751 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230001_abc12345
+2025-09-04 23:06:03,955 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-04 23:06:04,464 - database - ERROR - 更新会话统计失败: name 'func' is not defined
+2025-09-04 23:06:04,465 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q001
+2025-09-04 23:07:17,871 - main - INFO - Dify获取最新面试信息: user_id=candidate_001
+2025-09-04 23:08:11,746 - main - INFO - Dify获取面试总结: session_id=candidate_001
+2025-09-04 23:08:29,515 - main - INFO - Dify获取面试总结: session_id=session_20250904_230243_9df2893c
+2025-09-05 10:36:58,828 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 10:46:17,753 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 10:47:19,505 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 10:47:19,516 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-05 10:47:20,449 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 10:47:20,455 - main - INFO - 🚀 启动面试记录服务...
+2025-09-05 10:47:20,455 - main - INFO - ✅ 配置验证通过
+2025-09-05 10:47:20,989 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 10:47:20,989 - main - INFO - 🎉 服务启动完成
+2025-09-05 10:53:59,193 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-05 10:53:59,193 - main - INFO - ✅ 服务已关闭
+2025-09-05 13:29:38,464 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 13:29:38,474 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-05 13:29:38,503 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 13:29:38,511 - main - INFO - 🚀 启动面试记录服务...
+2025-09-05 13:29:38,511 - main - INFO - ✅ 配置验证通过
+2025-09-05 13:29:38,517 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 13:29:38,517 - main - INFO - 🎉 服务启动完成
+2025-09-05 13:30:44,523 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 13:32:19,695 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 13:32:19,700 - main - INFO - Dify创建面试记录: user_id=apifox_test_user_001, session_name=完整功能测试面试
+2025-09-05 13:32:19,717 - database - INFO - ✅ 创建面试会话成功: session_20250905_133219_0a1f0199
+2025-09-05 13:32:19,734 - main - INFO - Dify添加题目和回答: session_id=session_20250905_133219_0a1f0199
+2025-09-05 13:32:19,767 - database - INFO - ✅ 添加题目和回答成功: session_20250905_133219_0a1f0199_q001
+2025-09-05 13:32:19,778 - main - INFO - Dify添加题目和回答: session_id=session_20250905_133219_0a1f0199
+2025-09-05 13:32:19,790 - database - INFO - ✅ 添加题目和回答成功: session_20250905_133219_0a1f0199_q002
+2025-09-05 13:32:19,798 - main - INFO - Dify添加题目和回答: session_id=session_20250905_133219_0a1f0199
+2025-09-05 13:32:19,809 - database - INFO - ✅ 添加题目和回答成功: session_20250905_133219_0a1f0199_q003
+2025-09-05 13:32:19,819 - main - INFO - Dify获取最新面试信息: user_id=apifox_test_user_001
+2025-09-05 13:32:19,825 - main - INFO - Dify获取面试总结: session_id=session_20250905_133219_0a1f0199
+2025-09-05 16:38:54,859 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 16:39:00,655 - main - INFO - Dify创建面试记录: user_id=candidate_001, session_name=Java后端开发技术面试
+2025-09-05 16:39:00,682 - database - INFO - ✅ 创建面试会话成功: session_20250905_163900_d033e770
+2025-09-05 16:39:05,928 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-05 16:39:05,959 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q002
+2025-09-05 16:39:13,633 - main - INFO - Dify获取最新面试信息: user_id=candidate_001
+2025-09-05 16:39:19,854 - main - INFO - Dify获取面试总结: session_id=session_20250904_230243_9df2893c
+2025-09-05 16:43:45,840 - main - INFO - Dify获取最新面试信息: user_id=candidate_001
+2025-09-05 16:43:48,166 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 16:46:09,511 - main - INFO - Dify获取面试总结: session_id=session_20250904_230243_9df2893c
+2025-09-05 21:01:49,146 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 21:01:49,158 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-05 21:01:49,191 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-05 21:01:49,199 - main - INFO - 🚀 启动面试记录服务...
+2025-09-05 21:01:49,199 - main - INFO - ✅ 配置验证通过
+2025-09-05 21:01:49,206 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 21:01:49,206 - main - INFO - 🎉 服务启动完成
+2025-09-05 21:02:05,116 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:02:21,975 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:02:47,929 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:09:37,334 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:10:02,848 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:10:13,075 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:10:38,560 - main - INFO - Dify获取面试总结: session_id=session_20250904_230243_9df2893c
+2025-09-05 21:10:46,006 - main - INFO - Dify创建面试记录: user_id=test_user_check, session_name=测试面试
+2025-09-05 21:10:46,029 - database - INFO - ✅ 创建面试会话成功: session_20250905_211046_2f62e128
+2025-09-05 21:11:07,965 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-05 21:11:07,999 - main - INFO - Dify获取最新面试信息: user_id=test_user_check
+2025-09-05 21:11:08,047 - main - INFO - Dify获取面试总结: session_id=session_20250905_211046_2f62e128
+2025-09-05 21:11:08,053 - interview_service - ERROR - Dify获取面试总结失败: '>=' not supported between instances of 'NoneType' and 'int'
+2025-09-05 21:19:12,045 - main - INFO - Dify创建面试记录: user_id=candidate_002, session_name=Java后端开发技术面试
+2025-09-05 21:19:12,048 - database - INFO - ✅ 创建面试会话成功: session_20250905_211912_ba55e46c
+2025-09-05 21:19:23,393 - main - INFO - Dify创建面试记录: user_id=candidate_004, session_name=
+2025-09-05 21:19:23,395 - database - INFO - ✅ 创建面试会话成功: session_20250905_211923_9220ee8e
+2025-09-06 11:21:43,410 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 11:21:43,422 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 11:21:43,458 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 11:21:43,466 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 11:21:43,466 - main - INFO - ✅ 配置验证通过
+2025-09-06 11:21:43,475 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 11:21:43,475 - main - INFO - 🎉 服务启动完成
+2025-09-06 11:22:32,976 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-06 11:23:04,131 - main - INFO - Dify创建面试记录: user_id=test_new_types, session_name=简历定制面试测试
+2025-09-06 11:23:04,200 - database - INFO - ✅ 创建面试会话成功: session_20250906_112304_5dd8b003
+2025-09-06 11:50:43,662 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-06 12:04:01,860 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:04:01,882 - database - INFO - ✅ 创建面试会话成功: session_20250906_120401_ccbf7505
+2025-09-06 12:11:15,047 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:11:15,062 - database - INFO - ✅ 创建面试会话成功: session_20250906_121115_2fe13d27
+2025-09-06 12:12:43,504 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:12:43,516 - database - INFO - ✅ 创建面试会话成功: session_20250906_121243_ff1c484d
+2025-09-06 12:14:14,057 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:14:14,059 - database - INFO - ✅ 创建面试会话成功: session_20250906_121414_3329bc59
+2025-09-06 12:21:55,373 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:21:55,393 - database - INFO - ✅ 创建面试会话成功: session_20250906_122155_4b9fcae2
+2025-09-06 12:24:14,709 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:24:14,714 - database - INFO - ✅ 创建面试会话成功: session_20250906_122414_b06a21a7
+2025-09-06 12:25:33,853 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:25:33,855 - database - INFO - ✅ 创建面试会话成功: session_20250906_122533_ac946bf0
+2025-09-06 12:28:29,882 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:28:29,902 - database - INFO - ✅ 创建面试会话成功: session_20250906_122829_b309f964
+2025-09-06 12:29:53,330 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:29:53,332 - database - INFO - ✅ 创建面试会话成功: session_20250906_122953_bb39ebe0
+2025-09-06 12:31:34,010 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:31:34,026 - database - INFO - ✅ 创建面试会话成功: session_20250906_123134_b3d53ab9
+2025-09-06 12:47:35,729 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 12:47:35,748 - database - INFO - ✅ 创建面试会话成功: session_20250906_124735_75293d73
+2025-09-06 13:03:02,499 - main - INFO - Dify获取最新面试信息: user_id=test_user_010
+2025-09-06 13:06:05,685 - main - INFO - Dify获取最新面试信息: user_id=test_user_010
+2025-09-06 13:11:58,082 - main - INFO - Dify获取面试总结: session_id=session_20250906_124735_75293d73
+2025-09-06 13:11:58,234 - interview_service - ERROR - Dify获取面试总结失败: '>=' not supported between instances of 'NoneType' and 'int'
+2025-09-06 13:16:32,899 - main - INFO - Dify获取面试总结: session_id=session_20250906_124735_75293d73
+2025-09-06 13:16:33,025 - interview_service - ERROR - Dify获取面试总结失败: '>=' not supported between instances of 'NoneType' and 'int'
+2025-09-06 13:16:34,655 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-06 13:16:44,744 - main - INFO - Dify获取面试总结: session_id=session_20250906_124735_75293d73
+2025-09-06 13:16:44,796 - interview_service - ERROR - Dify获取面试总结失败: '>=' not supported between instances of 'NoneType' and 'int'
+2025-09-06 13:18:36,734 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 13:18:36,746 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 13:18:36,833 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 13:18:36,842 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 13:18:36,842 - main - INFO - ✅ 配置验证通过
+2025-09-06 13:18:36,886 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 13:18:36,886 - main - INFO - 🎉 服务启动完成
+2025-09-06 13:19:13,760 - main - INFO - Dify获取面试总结: session_id=session_20250906_124735_75293d73
+2025-09-06 13:28:55,579 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 13:28:55,597 - database - INFO - ✅ 创建面试会话成功: session_20250906_132855_21739bdd
+2025-09-06 13:39:54,735 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-06 13:39:54,901 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q003
+2025-09-06 13:40:36,977 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-06 13:40:36,989 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q004
+2025-09-06 13:41:08,615 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-06 13:41:08,629 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q005
+2025-09-06 13:42:14,613 - main - INFO - Dify添加题目和回答: session_id=session_20250906_132855_21739bdd
+2025-09-06 13:42:14,708 - database - INFO - ✅ 添加题目和回答成功: session_20250906_132855_21739bdd_q001
+2025-09-06 13:42:51,256 - main - INFO - Dify添加题目和回答: session_id=session_20250906_132855_21739bdd
+2025-09-06 13:42:51,277 - database - INFO - ✅ 添加题目和回答成功: session_20250906_132855_21739bdd_q002
+2025-09-06 13:45:11,940 - main - INFO - Dify添加题目和回答: session_id=session_20250906_132855_21739bdd
+2025-09-06 13:45:12,091 - database - INFO - ✅ 添加题目和回答成功: session_20250906_132855_21739bdd_q003
+2025-09-06 13:45:35,399 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-06 13:45:35,410 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q006
+2025-09-06 13:46:47,798 - main - INFO - Dify添加题目和回答: session_id=session_20250906_132855_21739bdd
+2025-09-06 13:46:47,924 - database - INFO - ✅ 添加题目和回答成功: session_20250906_132855_21739bdd_q004
+2025-09-06 13:47:01,060 - main - INFO - Dify添加题目和回答: session_id=session_20250906_132855_21739bdd
+2025-09-06 13:47:01,074 - database - INFO - ✅ 添加题目和回答成功: session_20250906_132855_21739bdd_q005
+2025-09-06 13:47:17,899 - main - INFO - Dify添加题目和回答: session_id=session_20250906_132855_21739bdd
+2025-09-06 13:47:17,913 - database - INFO - ✅ 添加题目和回答成功: session_20250906_132855_21739bdd_q006
+2025-09-06 13:48:30,835 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 13:48:30,880 - database - INFO - ✅ 创建面试会话成功: session_20250906_134830_7119a562
+2025-09-06 13:48:51,351 - main - INFO - Dify添加题目和回答: session_id=session_20250906_134830_7119a562
+2025-09-06 13:48:51,391 - database - INFO - ✅ 添加题目和回答成功: session_20250906_134830_7119a562_q001
+2025-09-06 13:49:35,161 - main - INFO - Dify获取面试总结: session_id=session_20250906_134830_7119a562
+2025-09-06 13:53:49,386 - main - INFO - Dify获取面试总结: session_id=session_20250906_134830_7119a562
+2025-09-06 13:59:12,093 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-06 13:59:12,251 - database - INFO - ✅ 添加题目和回答成功: session_20250904_230243_9df2893c_q007
+2025-09-06 14:01:22,632 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-06 14:01:22,654 - database - INFO - ✅ 创建面试会话成功: session_20250906_140122_c0de7332
+2025-09-06 14:02:18,908 - main - INFO - Dify添加题目和回答: session_id=session_20250906_140122_c0de7332
+2025-09-06 14:02:18,988 - database - INFO - ✅ 添加题目和回答成功: session_20250906_140122_c0de7332_q001
+2025-09-06 14:03:55,442 - main - INFO - Dify获取面试总结: session_id=session_20250906_140122_c0de7332
+2025-09-06 14:07:14,763 - main - INFO - Dify添加题目和回答: session_id=session_20250906_140122_c0de7332
+2025-09-06 14:07:14,921 - database - INFO - ✅ 添加题目和回答成功: session_20250906_140122_c0de7332_q002
+2025-09-06 14:07:26,714 - main - INFO - Dify添加题目和回答: session_id=session_20250906_140122_c0de7332
+2025-09-06 14:07:26,729 - database - INFO - ✅ 添加题目和回答成功: session_20250906_140122_c0de7332_q003
+2025-09-06 14:08:28,546 - main - INFO - Dify获取面试总结: session_id=session_20250906_140122_c0de7332
+2025-09-06 14:08:49,893 - main - INFO - Dify添加题目和回答: session_id=session_20250906_140122_c0de7332
+2025-09-06 14:08:49,959 - database - INFO - ✅ 添加题目和回答成功: session_20250906_140122_c0de7332_q004
+2025-09-06 14:16:06,875 - main - INFO - Dify获取面试总结: session_id=session_20250906_140122_c0de7332
+2025-09-06 16:03:05,927 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 16:03:05,937 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 16:03:05,964 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 16:03:05,972 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 16:03:05,972 - main - INFO - ✅ 配置验证通过
+2025-09-06 16:03:05,981 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 16:03:05,982 - main - INFO - 🎉 服务启动完成
+2025-09-06 16:05:50,843 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-06 20:12:17,185 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 20:12:17,201 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 20:12:17,297 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 20:12:17,308 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 20:12:17,308 - main - INFO - ✅ 配置验证通过
+2025-09-06 20:12:17,430 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 20:12:17,436 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 20:12:17,437 - main - INFO - 🎉 服务启动完成
+2025-09-06 20:14:25,500 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-06 20:14:25,514 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=1
+2025-09-06 20:14:36,948 - main - INFO - 获取用户错题: user_id=test_user_002
+2025-09-06 20:14:36,953 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_002, count=2
+2025-09-06 20:19:33,984 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 20:19:33,997 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 20:19:34,020 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 20:19:34,031 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 20:19:34,031 - main - INFO - ✅ 配置验证通过
+2025-09-06 20:19:34,036 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 20:19:34,040 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 20:19:34,040 - main - INFO - 🎉 服务启动完成
+2025-09-06 20:21:46,414 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-06 20:23:20,059 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,074 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,078 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,082 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,087 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,089 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,093 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,097 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,102 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,106 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,110 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,113 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,117 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,120 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,124 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,127 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,130 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:23:20,132 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:23:20,135 - main - INFO - Dify获取用户错题: user_id=nonexistent_user
+2025-09-06 20:23:20,138 - database - INFO - ✅ 获取用户错题成功: user_id=nonexistent_user, count=0
+2025-09-06 20:24:21,387 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,390 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,395 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,397 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,401 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,403 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,406 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,409 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=2
+2025-09-06 20:24:21,413 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,415 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,418 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,420 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,424 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,426 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,431 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,433 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=0
+2025-09-06 20:24:21,436 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,439 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,442 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,444 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=1
+2025-09-06 20:24:21,447 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,449 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,452 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,454 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,458 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,460 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,464 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,466 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,469 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,471 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,475 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,478 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,481 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:21,485 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:24:21,489 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,491 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,495 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,497 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,500 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,502 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,505 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,508 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,510 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:24:21,512 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:24:21,515 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,517 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,520 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,522 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,526 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,529 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,533 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,536 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,539 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:24:21,542 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=0
+2025-09-06 20:24:21,545 - main - INFO - Dify获取用户错题: user_id=nonexistent_user
+2025-09-06 20:24:21,547 - database - INFO - ✅ 获取用户错题成功: user_id=nonexistent_user, count=0
+2025-09-06 20:24:40,120 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:24:40,124 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:37:11,828 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,832 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,836 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,840 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=3
+2025-09-06 20:37:11,844 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,847 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,851 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,855 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 20:37:11,859 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,862 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:11,867 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,870 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:11,876 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,878 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,883 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,886 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=2
+2025-09-06 20:37:11,890 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,893 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,899 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,902 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=2
+2025-09-06 20:37:11,907 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,910 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:11,915 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,918 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=1
+2025-09-06 20:37:11,923 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,927 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,930 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,933 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,936 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,938 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,942 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,944 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,948 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 20:37:11,951 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=5
+2025-09-06 20:37:11,955 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,957 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,960 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,963 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,966 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,969 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,972 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,975 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,978 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 20:37:11,981 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 20:37:11,984 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,987 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:11,989 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,991 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:11,994 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:11,997 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:12,000 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:12,002 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:12,005 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 20:37:12,007 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 20:37:12,010 - main - INFO - Dify获取用户错题: user_id=nonexistent_user
+2025-09-06 20:37:12,013 - database - INFO - ✅ 获取用户错题成功: user_id=nonexistent_user, count=0
+2025-09-06 21:53:25,501 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,506 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,510 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,512 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=3
+2025-09-06 21:53:25,515 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,518 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,521 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,524 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-06 21:53:25,527 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,529 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,532 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,535 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,538 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,541 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,545 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,548 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=3
+2025-09-06 21:53:25,552 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,555 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,559 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,562 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-06 21:53:25,566 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,569 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,573 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,577 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=2
+2025-09-06 21:53:25,581 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,584 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,587 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,589 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,592 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,594 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,597 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,600 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,604 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-06 21:53:25,606 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=7
+2025-09-06 21:53:25,610 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,612 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,616 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,619 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,622 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,624 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,627 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,630 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,633 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-06 21:53:25,636 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=8
+2025-09-06 21:53:25,639 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,641 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,644 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,646 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,649 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,651 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,654 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,656 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,659 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-06 21:53:25,662 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-06 21:53:25,665 - main - INFO - Dify获取用户错题: user_id=nonexistent_user
+2025-09-06 21:53:25,668 - database - INFO - ✅ 获取用户错题成功: user_id=nonexistent_user, count=0
+2025-09-06 21:53:42,513 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 21:53:42,526 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 21:53:42,526 - main - INFO - ✅ 配置验证通过
+2025-09-06 21:53:42,532 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 21:53:42,535 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 21:53:42,537 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 21:53:42,537 - main - INFO - 🎉 服务启动完成
+2025-09-06 21:53:42,538 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-06 21:53:42,538 - main - INFO - ✅ 服务已关闭
+2025-09-06 21:54:05,113 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 21:54:05,127 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 21:54:05,127 - main - INFO - ✅ 配置验证通过
+2025-09-06 21:54:05,133 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 21:54:05,136 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 21:54:05,138 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 21:54:05,138 - main - INFO - 🎉 服务启动完成
+2025-09-06 21:57:16,846 - main - INFO - Dify获取用户错题: user_id=测试用户A
+2025-09-06 21:57:16,859 - database - INFO - ✅ 获取用户错题成功: user_id=测试用户A, count=0
+2025-09-06 21:59:38,783 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 21:59:38,797 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 21:59:38,825 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 21:59:38,837 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 21:59:38,837 - main - INFO - ✅ 配置验证通过
+2025-09-06 21:59:38,844 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 21:59:38,848 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 21:59:38,850 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 21:59:38,850 - main - INFO - 🎉 服务启动完成
+2025-09-06 21:59:38,851 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-06 21:59:38,851 - main - INFO - ✅ 服务已关闭
+2025-09-06 22:01:10,068 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:01:10,082 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 22:01:10,106 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:01:10,119 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 22:01:10,119 - main - INFO - ✅ 配置验证通过
+2025-09-06 22:01:10,126 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 22:01:10,130 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 22:01:10,132 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 22:01:10,133 - main - INFO - 🎉 服务启动完成
+2025-09-06 22:01:10,133 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-06 22:01:10,134 - main - INFO - ✅ 服务已关闭
+2025-09-06 22:01:47,197 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:01:47,211 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 22:01:47,237 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:01:47,249 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 22:01:47,249 - main - INFO - ✅ 配置验证通过
+2025-09-06 22:01:47,255 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 22:01:47,258 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 22:01:47,260 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 22:01:47,260 - main - INFO - 🎉 服务启动完成
+2025-09-06 22:02:12,457 - main - INFO - 获取用户错题: user_id=test_candidate_001
+2025-09-06 22:02:12,472 - database - INFO - ✅ 获取用户错题成功: user_id=test_candidate_001, count=0
+2025-09-06 22:02:26,199 - main - INFO - Dify获取用户错题: user_id=test_candidate_001
+2025-09-06 22:02:26,202 - database - INFO - ✅ 获取用户错题成功: user_id=test_candidate_001, count=0
+2025-09-06 22:03:03,697 - main - INFO - 获取用户错题: user_id=test_user_wrong_questions
+2025-09-06 22:03:03,700 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=2
+2025-09-06 22:03:14,209 - main - INFO - Dify获取用户错题: user_id=test_user_wrong_questions
+2025-09-06 22:03:14,212 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=2
+2025-09-06 22:03:28,523 - main - INFO - 获取用户错题: user_id=test_user_wrong_questions
+2025-09-06 22:03:28,527 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=1
+2025-09-06 22:13:19,120 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:13:19,137 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 22:13:19,166 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:13:19,178 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 22:13:19,178 - main - INFO - ✅ 配置验证通过
+2025-09-06 22:13:19,183 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 22:13:19,186 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 22:13:19,188 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 22:13:19,188 - main - INFO - 🎉 服务启动完成
+2025-09-06 22:13:50,042 - main - INFO - Dify添加题目和回答: session_id=session_20250906_220249_473a6878
+2025-09-06 22:13:50,080 - database - INFO - ✅ 添加题目和回答成功: session_20250906_220249_473a6878_q004
+2025-09-06 22:14:03,259 - main - INFO - Dify获取用户错题: user_id=test_user_wrong_questions
+2025-09-06 22:14:03,264 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=3
+2025-09-06 22:15:43,718 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:15:43,734 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 22:15:43,759 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:15:43,769 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 22:15:43,770 - main - INFO - ✅ 配置验证通过
+2025-09-06 22:15:43,775 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 22:15:43,778 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 22:15:43,779 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 22:15:43,780 - main - INFO - 🎉 服务启动完成
+2025-09-06 22:16:09,347 - main - INFO - Dify获取用户错题: user_id=test_user_wrong_questions
+2025-09-06 22:16:09,361 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=3
+2025-09-06 22:33:24,824 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:33:24,839 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 22:33:24,870 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 22:33:24,885 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 22:33:24,885 - main - INFO - ✅ 配置验证通过
+2025-09-06 22:33:24,890 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 22:33:24,893 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 22:33:24,895 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 22:33:24,895 - main - INFO - 🎉 服务启动完成
+2025-09-06 22:33:48,258 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=3
+2025-09-06 22:33:48,274 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=3
+2025-09-06 22:34:01,843 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=5
+2025-09-06 22:34:01,846 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=3
+2025-09-06 22:34:18,542 - main - INFO - Dify添加题目和回答: session_id=session_20250906_220249_473a6878
+2025-09-06 22:34:18,567 - database - INFO - ✅ 添加题目和回答成功: session_20250906_220249_473a6878_q005
+2025-09-06 22:34:35,684 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=8
+2025-09-06 22:34:35,688 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=4
+2025-09-06 23:00:41,074 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=3
+2025-09-06 23:00:41,077 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=4
+2025-09-06 23:00:50,635 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=3
+2025-09-06 23:00:50,638 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=4
+2025-09-06 23:06:01,424 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 23:06:01,439 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 23:06:01,465 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 23:06:01,478 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 23:06:01,478 - main - INFO - ✅ 配置验证通过
+2025-09-06 23:06:01,484 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 23:06:01,489 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 23:06:01,491 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 23:06:01,493 - main - INFO - 🎉 服务启动完成
+2025-09-06 23:06:24,495 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=3
+2025-09-06 23:06:24,510 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=4
+2025-09-06 23:06:36,488 - main - INFO - Dify获取错题关键词: user_id=test_user_wrong_questions, count=2
+2025-09-06 23:06:36,492 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_wrong_questions, count=4
+2025-09-06 23:10:42,962 - main - INFO - Dify添加题目和回答: session_id=test_session_keywords
+2025-09-06 23:16:21,914 - main - INFO - Dify创建面试记录: user_id=test_user_keywords, session_name=None
+2025-09-06 23:16:21,918 - database - INFO - ✅ 创建面试会话成功: session_20250906_231621_1fa0adb3
+2025-09-06 23:16:21,927 - main - ERROR - Dify创建面试记录失败: 1 validation error for DifyCreateInterviewResponse
+session_name
+  Input should be a valid string [type=string_type, input_value=None, input_type=NoneType]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-09-06 23:19:33,648 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-06 23:19:33,649 - main - INFO - ✅ 服务已关闭
+2025-09-06 23:20:22,435 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 23:20:22,457 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-06 23:20:22,494 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-06 23:20:22,511 - main - INFO - 🚀 启动面试记录服务...
+2025-09-06 23:20:22,511 - main - INFO - ✅ 配置验证通过
+2025-09-06 23:20:22,517 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 23:20:22,521 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-06 23:20:22,522 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-06 23:20:22,522 - main - INFO - 🎉 服务启动完成
+2025-09-06 23:20:51,552 - main - INFO - Dify创建面试记录: user_id=test_user_keywords, session_name=None
+2025-09-06 23:20:51,564 - database - INFO - ✅ 创建面试会话成功: session_20250906_232051_cdc5a5cd
+2025-09-06 23:21:12,685 - main - INFO - Dify添加题目和回答: session_id=session_20250906_232051_cdc5a5cd
+2025-09-06 23:21:12,706 - database - INFO - ✅ 添加题目和回答成功: session_20250906_232051_cdc5a5cd_q001
+2025-09-06 23:21:31,964 - main - INFO - Dify添加题目和回答: session_id=session_20250906_232051_cdc5a5cd
+2025-09-06 23:21:31,974 - database - INFO - ✅ 添加题目和回答成功: session_20250906_232051_cdc5a5cd_q002
+2025-09-06 23:21:46,865 - main - INFO - Dify添加题目和回答: session_id=session_20250906_232051_cdc5a5cd
+2025-09-06 23:21:46,877 - database - INFO - ✅ 添加题目和回答成功: session_20250906_232051_cdc5a5cd_q003
+2025-09-07 09:27:02,253 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-07 09:27:02,254 - main - INFO - ✅ 服务已关闭
+2025-09-07 09:27:29,661 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-07 09:27:29,667 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=2
+2025-09-07 09:27:43,004 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=3
+2025-09-07 09:27:43,008 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=2
+2025-09-07 09:28:25,336 - main - INFO - Dify添加题目和回答: session_id=session_20250906_201501_7622198b
+2025-09-07 09:28:25,346 - database - INFO - ✅ 添加题目和回答成功: session_20250906_201501_7622198b_q002
+2025-09-07 09:28:41,103 - main - INFO - Dify添加题目和回答: session_id=session_20250906_201501_7622198b
+2025-09-07 09:28:41,113 - database - INFO - ✅ 添加题目和回答成功: session_20250906_201501_7622198b_q003
+2025-09-07 09:28:55,773 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-07 09:28:55,777 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 09:29:10,468 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=5
+2025-09-07 09:29:10,471 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 09:42:12,562 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-07 09:42:12,565 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 09:43:43,923 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-07 09:43:43,926 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 09:43:57,799 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-07 09:43:57,802 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 09:52:04,892 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 09:52:04,895 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:32:52,282 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:32:52,405 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:39:48,704 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:39:48,707 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:40:05,196 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 11:40:05,212 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-07 11:40:05,287 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 11:40:05,300 - main - INFO - 🚀 启动面试记录服务...
+2025-09-07 11:40:05,300 - main - INFO - ✅ 配置验证通过
+2025-09-07 11:40:05,312 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 11:40:05,318 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-07 11:40:05,322 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-07 11:40:05,323 - main - INFO - 🎉 服务启动完成
+2025-09-07 11:40:05,323 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-07 11:40:05,324 - main - INFO - ✅ 服务已关闭
+2025-09-07 11:40:23,688 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-07 11:40:23,688 - main - INFO - ✅ 服务已关闭
+2025-09-07 11:40:35,516 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 11:40:35,531 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-07 11:40:35,556 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 11:40:35,568 - main - INFO - 🚀 启动面试记录服务...
+2025-09-07 11:40:35,569 - main - INFO - ✅ 配置验证通过
+2025-09-07 11:40:35,576 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 11:40:35,583 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-07 11:40:35,585 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-07 11:40:35,586 - main - INFO - 🎉 服务启动完成
+2025-09-07 11:41:06,556 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:41:06,572 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:41:22,441 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:41:22,445 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:41:22,469 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:41:22,473 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:41:22,493 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:41:22,497 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:44:13,735 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-07 11:44:13,738 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=3
+2025-09-07 11:44:13,760 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 11:44:13,763 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 11:44:13,784 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=1
+2025-09-07 11:44:13,789 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 17:16:10,591 - main - INFO - Dify获取错题关键词: user_id=test_user_002, count=5
+2025-09-07 17:16:10,596 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_002, count=2
+2025-09-07 17:17:32,994 - main - INFO - Dify获取错题关键词: user_id=test_user_003, count=5
+2025-09-07 17:17:32,998 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_003, count=3
+2025-09-07 17:23:27,429 - main - INFO - Dify获取错题关键词: user_id=test_user_003, count=5
+2025-09-07 17:23:27,432 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_003, count=3
+2025-09-07 17:23:52,608 - main - INFO - Dify获取错题关键词: user_id=test_user_002, count=5
+2025-09-07 17:23:52,611 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_002, count=2
+2025-09-07 17:28:44,917 - main - INFO - Dify添加题目和回答: session_id=session_test_004_001
+2025-09-07 17:29:22,774 - main - INFO - Dify创建面试记录: user_id=test_user_004, session_name=Java后端开发基础面试
+2025-09-07 17:29:22,783 - database - INFO - ✅ 创建面试会话成功: session_20250907_172922_0718ddec
+2025-09-07 17:29:37,157 - main - INFO - Dify添加题目和回答: session_id=session_20250907_172922_0718ddec
+2025-09-07 17:29:37,184 - database - INFO - ✅ 添加题目和回答成功: session_20250907_172922_0718ddec_q001
+2025-09-07 17:31:07,530 - main - INFO - Dify添加题目和回答: session_id=session_20250907_172922_0718ddec
+2025-09-07 17:31:07,541 - database - INFO - ✅ 添加题目和回答成功: session_20250907_172922_0718ddec_q002
+2025-09-07 17:31:07,557 - main - INFO - Dify添加题目和回答: session_id=session_20250907_172922_0718ddec
+2025-09-07 17:31:07,567 - database - INFO - ✅ 添加题目和回答成功: session_20250907_172922_0718ddec_q003
+2025-09-07 17:31:07,583 - main - INFO - Dify添加题目和回答: session_id=session_20250907_172922_0718ddec
+2025-09-07 17:31:07,599 - database - INFO - ✅ 添加题目和回答成功: session_20250907_172922_0718ddec_q004
+2025-09-07 17:31:07,613 - main - INFO - Dify添加题目和回答: session_id=session_20250907_172922_0718ddec
+2025-09-07 17:31:07,623 - database - INFO - ✅ 添加题目和回答成功: session_20250907_172922_0718ddec_q005
+2025-09-07 17:31:07,637 - main - INFO - Dify添加题目和回答: session_id=session_20250907_172922_0718ddec
+2025-09-07 17:31:07,647 - database - INFO - ✅ 添加题目和回答成功: session_20250907_172922_0718ddec_q006
+2025-09-07 17:31:07,662 - main - INFO - Dify创建面试记录: user_id=test_user_004, session_name=微服务架构与分布式系统面试
+2025-09-07 17:31:07,664 - database - INFO - ✅ 创建面试会话成功: session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,685 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,703 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_a9feaf8f_q001
+2025-09-07 17:31:07,718 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,728 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_a9feaf8f_q002
+2025-09-07 17:31:07,741 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,752 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_a9feaf8f_q003
+2025-09-07 17:31:07,766 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,776 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_a9feaf8f_q004
+2025-09-07 17:31:07,791 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,802 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_a9feaf8f_q005
+2025-09-07 17:31:07,817 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_a9feaf8f
+2025-09-07 17:31:07,831 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_a9feaf8f_q006
+2025-09-07 17:31:07,847 - main - INFO - Dify创建面试记录: user_id=test_user_004, session_name=前端技术与项目经验面试
+2025-09-07 17:31:07,849 - database - INFO - ✅ 创建面试会话成功: session_20250907_173107_bf580dc4
+2025-09-07 17:31:07,867 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_bf580dc4
+2025-09-07 17:31:07,878 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_bf580dc4_q001
+2025-09-07 17:31:07,889 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_bf580dc4
+2025-09-07 17:31:07,899 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_bf580dc4_q002
+2025-09-07 17:31:07,914 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_bf580dc4
+2025-09-07 17:31:07,924 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_bf580dc4_q003
+2025-09-07 17:31:07,942 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_bf580dc4
+2025-09-07 17:31:07,956 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_bf580dc4_q004
+2025-09-07 17:31:07,971 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_bf580dc4
+2025-09-07 17:31:07,982 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_bf580dc4_q005
+2025-09-07 17:31:07,995 - main - INFO - Dify添加题目和回答: session_id=session_20250907_173107_bf580dc4
+2025-09-07 17:31:08,005 - database - INFO - ✅ 添加题目和回答成功: session_20250907_173107_bf580dc4_q006
+2025-09-07 17:31:21,697 - main - INFO - Dify获取用户错题: user_id=test_user_004
+2025-09-07 17:31:21,702 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:31:37,746 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=3
+2025-09-07 17:31:37,750 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:31:50,842 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=2
+2025-09-07 17:31:50,846 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:31:50,868 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=2
+2025-09-07 17:31:50,871 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:31:50,892 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=2
+2025-09-07 17:31:50,896 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:01,932 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=15
+2025-09-07 17:32:01,935 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:11,713 - main - INFO - Dify获取错题关键词: user_id=nonexistent_user, count=3
+2025-09-07 17:32:11,716 - database - INFO - ✅ 获取用户错题成功: user_id=nonexistent_user, count=0
+2025-09-07 17:32:41,141 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:41,145 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:49,862 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:49,865 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:51,171 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:51,175 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:51,926 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:51,930 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:52,491 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:52,494 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:52,920 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:52,924 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:53,319 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:53,322 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:53,735 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:53,738 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:54,118 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:54,122 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:32:54,528 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:32:54,531 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 17:36:56,635 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 17:36:56,639 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 18:10:50,263 - main - INFO - Dify获取错题关键词: user_id=luser_id}, count=5
+2025-09-07 18:10:50,266 - database - INFO - ✅ 获取用户错题成功: user_id=luser_id}, count=0
+2025-09-07 18:11:15,293 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 18:11:15,296 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 18:18:52,596 - main - INFO - Dify获取错题关键词: user_id=test_ueser_004, count=5
+2025-09-07 18:18:52,600 - database - INFO - ✅ 获取用户错题成功: user_id=test_ueser_004, count=0
+2025-09-07 18:19:07,260 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 18:19:07,264 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 18:24:12,045 - main - INFO - Dify获取错题关键词: user_id=test_ueser_004, count=5
+2025-09-07 18:24:12,048 - database - INFO - ✅ 获取用户错题成功: user_id=test_ueser_004, count=0
+2025-09-07 18:27:35,188 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 18:27:35,193 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:19:43,229 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:19:43,233 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:21:30,396 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:21:30,400 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:23:18,508 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:23:18,512 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:28:41,115 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:28:41,119 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:30:29,425 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:30:29,429 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:31:35,325 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:31:35,328 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:32:56,995 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:32:56,998 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:33:28,833 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:33:28,836 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:33:55,920 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:33:55,923 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:34:36,384 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:34:36,387 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:35:17,394 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:35:17,397 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:44:36,350 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:44:36,353 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:46:28,688 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:46:28,692 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:50:01,720 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:50:01,724 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:50:52,405 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:50:52,409 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:52:16,625 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:52:16,628 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:53:47,567 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:53:47,571 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:54:48,380 - main - INFO - Dify创建面试记录: user_id=test_user_004, session_name=
+2025-09-07 20:54:48,382 - database - INFO - ✅ 创建面试会话成功: session_20250907_205448_86433b6d
+2025-09-07 20:54:59,996 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 20:55:00,011 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-07 20:55:00,036 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 20:55:00,048 - main - INFO - 🚀 启动面试记录服务...
+2025-09-07 20:55:00,048 - main - INFO - ✅ 配置验证通过
+2025-09-07 20:55:00,056 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 20:55:00,059 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-07 20:55:00,061 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-07 20:55:00,061 - main - INFO - 🎉 服务启动完成
+2025-09-07 20:55:00,062 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-07 20:55:00,062 - main - INFO - ✅ 服务已关闭
+2025-09-07 20:55:10,301 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:55:10,304 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:55:40,894 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:55:40,897 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:55:55,541 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:55:55,544 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:56:38,130 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:56:38,134 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:58:00,961 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:58:00,964 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:58:36,514 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:58:36,518 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 20:59:55,775 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 20:59:55,779 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:00:17,482 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:00:17,485 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:00:37,930 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:00:37,933 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:00:52,643 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:00:52,647 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:01:11,745 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:01:11,748 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:01:58,133 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:01:58,136 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:04:11,917 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 21:04:11,937 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-07 21:04:11,974 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 21:04:11,995 - main - INFO - 🚀 启动面试记录服务...
+2025-09-07 21:04:11,995 - main - INFO - ✅ 配置验证通过
+2025-09-07 21:04:12,001 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 21:04:12,006 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-07 21:04:12,009 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-07 21:04:12,010 - main - INFO - 🎉 服务启动完成
+2025-09-07 21:04:12,011 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-07 21:04:12,011 - main - INFO - ✅ 服务已关闭
+2025-09-07 21:06:00,149 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:06:00,153 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:06:08,954 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-07 21:06:46,239 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:06:46,244 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:10:09,686 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 21:10:09,701 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-07 21:10:09,726 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 21:10:09,738 - main - INFO - 🚀 启动面试记录服务...
+2025-09-07 21:10:09,738 - main - INFO - ✅ 配置验证通过
+2025-09-07 21:10:09,744 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 21:10:09,747 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-07 21:10:09,749 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-07 21:10:09,749 - main - INFO - 🎉 服务启动完成
+2025-09-07 21:10:09,750 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-07 21:10:09,750 - main - INFO - ✅ 服务已关闭
+2025-09-07 21:44:05,979 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:44:05,984 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:45:41,704 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:45:41,707 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:49:54,804 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:49:54,807 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:50:19,448 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:50:19,451 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:50:38,599 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:50:38,603 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:51:37,178 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:51:37,181 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 21:59:47,637 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 21:59:47,641 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 22:17:37,348 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 22:17:37,353 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 22:20:28,381 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 22:20:28,385 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 22:31:58,849 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 22:31:58,853 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 22:34:01,600 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 22:34:01,603 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 22:40:58,427 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=5
+2025-09-07 22:40:58,431 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 22:41:48,992 - main - INFO - Dify创建面试记录: user_id=test_user_004, session_name=
+2025-09-07 22:41:48,994 - database - INFO - ✅ 创建面试会话成功: session_20250907_224148_03f08b90
+2025-09-07 23:36:27,173 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 23:36:27,188 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-07 23:36:27,213 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-07 23:36:27,225 - main - INFO - 🚀 启动面试记录服务...
+2025-09-07 23:36:27,225 - main - INFO - ✅ 配置验证通过
+2025-09-07 23:36:27,233 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 23:36:27,239 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-07 23:36:27,241 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-07 23:36:27,241 - main - INFO - 🎉 服务启动完成
+2025-09-07 23:37:11,200 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-07 23:37:19,417 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=3
+2025-09-07 23:37:19,440 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 23:37:29,177 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=1
+2025-09-07 23:37:29,181 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 23:37:37,192 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=5
+2025-09-07 23:37:37,195 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 23:40:02,985 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=1
+2025-09-07 23:40:02,989 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 23:40:03,011 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=2
+2025-09-07 23:40:03,014 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 23:40:03,040 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=10
+2025-09-07 23:40:03,043 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-07 23:40:16,468 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=4
+2025-09-07 23:40:16,472 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-07 23:44:24,933 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-07 23:44:24,941 - database - INFO - ✅ 创建面试会话成功: session_20250907_234424_4f4f05b0
+2025-09-07 23:46:19,862 - main - INFO - Dify获取错题关键词: user_id=test_user_004, count=4
+2025-09-07 23:46:19,867 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_004, count=9
+2025-09-09 08:39:53,351 - main - INFO - 获取用户面试会话列表: user_id=test_user_004
+2025-09-09 13:08:27,398 - main - INFO - Dify创建面试记录: user_id=user_demo_001, session_name=
+2025-09-09 13:08:27,417 - database - INFO - ✅ 创建面试会话成功: session_20250909_130827_82449a8f
+2025-09-09 13:08:53,920 - main - INFO - Dify创建面试记录: user_id=user_demo_001, session_name=
+2025-09-09 13:08:53,922 - database - INFO - ✅ 创建面试会话成功: session_20250909_130853_be741c74
+2025-09-09 13:09:51,848 - main - INFO - Dify创建面试记录: user_id=user_demo_001, session_name=
+2025-09-09 13:09:51,850 - database - INFO - ✅ 创建面试会话成功: session_20250909_130951_9d88fa6b
+2025-09-09 14:46:37,394 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-09 14:46:37,397 - database - INFO - ✅ 创建面试会话成功: session_20250909_144637_954d13f7
+2025-09-09 15:49:28,367 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 15:49:38,492 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=测试面试
+2025-09-09 15:49:38,494 - database - INFO - ✅ 创建面试会话成功: session_20250909_154938_74959f6f
+2025-09-09 16:00:38,207 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 16:00:47,536 - main - INFO - Dify创建面试记录: user_id=test_user_003, session_name=API测试面试
+2025-09-09 16:00:47,538 - database - INFO - ✅ 创建面试会话成功: session_20250909_160047_801536b2
+2025-09-09 16:02:57,318 - main - INFO - Dify添加题目和回答: session_id=session_20250909_160047_801536b2
+2025-09-09 16:02:57,367 - database - INFO - ✅ 添加题目和回答成功: session_20250909_160047_801536b2_q001
+2025-09-09 16:09:13,224 - main - INFO - Dify获取最新面试信息: user_id=test_user_001
+2025-09-09 16:09:22,773 - main - INFO - Dify获取面试总结: session_id=session_20250909_160047_801536b2
+2025-09-09 16:09:33,861 - main - INFO - Dify获取用户错题: user_id=test_user_001
+2025-09-09 16:09:33,870 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-09 16:12:17,693 - main - INFO - Dify获取错题关键词: user_id=test_user_001, count=5
+2025-09-09 16:12:17,696 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-09 16:13:40,866 - main - INFO - 获取用户面试会话列表: user_id=test_user_001
+2025-09-09 16:13:50,529 - main - INFO - 获取面试会话详情: session_id=session_20250909_160047_801536b2
+2025-09-09 16:15:00,515 - main - INFO - 开始面试: session_id=session_20250909_160047_801536b2
+2025-09-09 16:15:00,517 - database - INFO - ✅ 更新面试会话状态成功: session_20250909_160047_801536b2 -> in_progress
+2025-09-09 16:15:11,034 - main - INFO - 结束面试: session_id=session_20250909_160047_801536b2
+2025-09-09 16:15:11,038 - database - INFO - ✅ 更新面试会话状态成功: session_20250909_160047_801536b2 -> completed
+2025-09-09 16:15:20,243 - main - INFO - 获取用户错题: user_id=test_user_001
+2025-09-09 16:15:20,247 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_001, count=4
+2025-09-09 16:47:07,912 - main - INFO - 创建面试会话: user_id=test_user_001, session_name=API测试会话
+2025-09-09 16:47:07,914 - database - INFO - ✅ 创建面试会话成功: session_20250909_164707_5b7a45ed
+2025-09-09 21:53:34,269 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 21:54:08,091 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=None
+2025-09-09 21:54:08,103 - database - INFO - ✅ 创建面试会话成功: session_20250909_215408_a0edf6ce
+2025-09-09 21:54:18,131 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 21:54:26,665 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-09 21:54:26,667 - main - INFO - ✅ 服务已关闭
+2025-09-09 21:55:08,969 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 21:55:08,990 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-09 21:55:09,028 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 21:55:09,043 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 21:55:09,043 - main - INFO - ✅ 配置验证通过
+2025-09-09 21:55:09,049 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 21:55:09,052 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 21:55:09,054 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 21:55:09,054 - main - INFO - 🎉 服务启动完成
+2025-09-09 21:56:04,612 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 21:56:13,832 - main - INFO - Dify创建面试记录: user_id=test_restart, session_name=None
+2025-09-09 21:56:13,843 - database - INFO - ✅ 创建面试会话成功: session_20250909_215613_653f0adf
+2025-09-09 21:57:36,058 - main - INFO - Dify添加题目和回答: session_id=string
+2025-09-09 21:58:59,420 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-09 21:58:59,437 - database - ERROR - 数据库操作失败: (pymysql.err.DataError) (1264, "Out of range value for column 'overall_score' at row 1")
+[SQL: INSERT INTO interview_qa_records (session_id, question_id, question_text, question_type, question_category, difficulty_level, expected_duration, reference_answer, scoring_criteria, sort_order, is_required, candidate_answer, interviewer_feedback, answer_quality, technical_accuracy, communication_clarity, problem_solving, overall_score, answer_duration, status, is_wrong_question, knowledge_points, answered_at, reviewed_at) VALUES (%(session_id)s, %(question_id)s, %(question_text)s, %(question_type)s, %(question_category)s, %(difficulty_level)s, %(expected_duration)s, %(reference_answer)s, %(scoring_criteria)s, %(sort_order)s, %(is_required)s, %(candidate_answer)s, %(interviewer_feedback)s, %(answer_quality)s, %(technical_accuracy)s, %(communication_clarity)s, %(problem_solving)s, %(overall_score)s, %(answer_duration)s, %(status)s, %(is_wrong_question)s, %(knowledge_points)s, %(answered_at)s, %(reviewed_at)s)]
+[parameters: {'session_id': 'session_20250904_230243_9df2893c', 'question_id': 'session_20250904_230243_9df2893c_q001', 'question_text': 'string', 'question_type': 'technical', 'question_category': 'string', 'difficulty_level': 'medium', 'expected_duration': 10, 'reference_answer': None, 'scoring_criteria': None, 'sort_order': 1, 'is_required': 1, 'candidate_answer': 'string', 'interviewer_feedback': 'string', 'answer_quality': None, 'technical_accuracy': None, 'communication_clarity': None, 'problem_solving': None, 'overall_score': 10.0, 'answer_duration': None, 'status': 'reviewed', 'is_wrong_question': 0, 'knowledge_points': 'string', 'answered_at': datetime.datetime(2025, 9, 9, 21, 58, 59, 433625), 'reviewed_at': datetime.datetime(2025, 9, 9, 21, 58, 59, 433633)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-09-09 21:58:59,437 - database - ERROR - ❌ 添加题目和回答失败: (pymysql.err.DataError) (1264, "Out of range value for column 'overall_score' at row 1")
+[SQL: INSERT INTO interview_qa_records (session_id, question_id, question_text, question_type, question_category, difficulty_level, expected_duration, reference_answer, scoring_criteria, sort_order, is_required, candidate_answer, interviewer_feedback, answer_quality, technical_accuracy, communication_clarity, problem_solving, overall_score, answer_duration, status, is_wrong_question, knowledge_points, answered_at, reviewed_at) VALUES (%(session_id)s, %(question_id)s, %(question_text)s, %(question_type)s, %(question_category)s, %(difficulty_level)s, %(expected_duration)s, %(reference_answer)s, %(scoring_criteria)s, %(sort_order)s, %(is_required)s, %(candidate_answer)s, %(interviewer_feedback)s, %(answer_quality)s, %(technical_accuracy)s, %(communication_clarity)s, %(problem_solving)s, %(overall_score)s, %(answer_duration)s, %(status)s, %(is_wrong_question)s, %(knowledge_points)s, %(answered_at)s, %(reviewed_at)s)]
+[parameters: {'session_id': 'session_20250904_230243_9df2893c', 'question_id': 'session_20250904_230243_9df2893c_q001', 'question_text': 'string', 'question_type': 'technical', 'question_category': 'string', 'difficulty_level': 'medium', 'expected_duration': 10, 'reference_answer': None, 'scoring_criteria': None, 'sort_order': 1, 'is_required': 1, 'candidate_answer': 'string', 'interviewer_feedback': 'string', 'answer_quality': None, 'technical_accuracy': None, 'communication_clarity': None, 'problem_solving': None, 'overall_score': 10.0, 'answer_duration': None, 'status': 'reviewed', 'is_wrong_question': 0, 'knowledge_points': 'string', 'answered_at': datetime.datetime(2025, 9, 9, 21, 58, 59, 433625), 'reviewed_at': datetime.datetime(2025, 9, 9, 21, 58, 59, 433633)}]
+(Background on this error at: https://sqlalche.me/e/20/9h9h)
+2025-09-09 21:59:49,806 - main - INFO - Dify添加题目和回答: session_id=session_20250904_230243_9df2893c
+2025-09-09 21:59:49,811 - database - ERROR - 数据库操作失败: (pymysql.err.OperationalError) (3140, 'Invalid JSON text: "Invalid value." at position 0 in value for column \'interview_qa_records.knowledge_points\'.')
+[SQL: INSERT INTO interview_qa_records (session_id, question_id, question_text, question_type, question_category, difficulty_level, expected_duration, reference_answer, scoring_criteria, sort_order, is_required, candidate_answer, interviewer_feedback, answer_quality, technical_accuracy, communication_clarity, problem_solving, overall_score, answer_duration, status, is_wrong_question, knowledge_points, answered_at, reviewed_at) VALUES (%(session_id)s, %(question_id)s, %(question_text)s, %(question_type)s, %(question_category)s, %(difficulty_level)s, %(expected_duration)s, %(reference_answer)s, %(scoring_criteria)s, %(sort_order)s, %(is_required)s, %(candidate_answer)s, %(interviewer_feedback)s, %(answer_quality)s, %(technical_accuracy)s, %(communication_clarity)s, %(problem_solving)s, %(overall_score)s, %(answer_duration)s, %(status)s, %(is_wrong_question)s, %(knowledge_points)s, %(answered_at)s, %(reviewed_at)s)]
+[parameters: {'session_id': 'session_20250904_230243_9df2893c', 'question_id': 'session_20250904_230243_9df2893c_q001', 'question_text': '请介绍一下Spring Boot的自动配置原理，并说明@EnableAutoConfiguration注解的作用机制', 'question_type': 'technical', 'question_category': 'Spring框架', 'difficulty_level': 'medium', 'expected_duration': 10, 'reference_answer': None, 'scoring_criteria': None, 'sort_order': 1, 'is_required': 1, 'candidate_answer': 'Spring Boot的自动配置是通过@EnableAutoConfiguration注解实现的。该注解会导入AutoConfigurationImportSelector类，它会扫描META-INF/spring.factories文件中的自动配置类。这些配置类使用@ConditionalOnClass、@ConditionalOnMissingBean等条件注解，根据类路径中的依赖和已有的Bean来决定是否生效。例如，当检测到Tomcat在类路径中时，会自动配置嵌入式Tomcat服务器。', 'interviewer_feedback': '回答非常全面，准确描述了自动配置的核心机制。能够清楚解释条件注解的作用，并给出了具体的例子。理解深入，表达清晰。', 'answer_quality': None, 'technical_accuracy': None, 'communication_clarity': None, 'problem_solving': None, 'overall_score': 9.0, 'answer_duration': None, 'status': 'reviewed', 'is_wrong_question': 0, 'knowledge_points': 'string', 'answered_at': datetime.datetime(2025, 9, 9, 21, 59, 49, 810196), 'reviewed_at': datetime.datetime(2025, 9, 9, 21, 59, 49, 810201)}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-09 21:59:49,811 - database - ERROR - ❌ 添加题目和回答失败: (pymysql.err.OperationalError) (3140, 'Invalid JSON text: "Invalid value." at position 0 in value for column \'interview_qa_records.knowledge_points\'.')
+[SQL: INSERT INTO interview_qa_records (session_id, question_id, question_text, question_type, question_category, difficulty_level, expected_duration, reference_answer, scoring_criteria, sort_order, is_required, candidate_answer, interviewer_feedback, answer_quality, technical_accuracy, communication_clarity, problem_solving, overall_score, answer_duration, status, is_wrong_question, knowledge_points, answered_at, reviewed_at) VALUES (%(session_id)s, %(question_id)s, %(question_text)s, %(question_type)s, %(question_category)s, %(difficulty_level)s, %(expected_duration)s, %(reference_answer)s, %(scoring_criteria)s, %(sort_order)s, %(is_required)s, %(candidate_answer)s, %(interviewer_feedback)s, %(answer_quality)s, %(technical_accuracy)s, %(communication_clarity)s, %(problem_solving)s, %(overall_score)s, %(answer_duration)s, %(status)s, %(is_wrong_question)s, %(knowledge_points)s, %(answered_at)s, %(reviewed_at)s)]
+[parameters: {'session_id': 'session_20250904_230243_9df2893c', 'question_id': 'session_20250904_230243_9df2893c_q001', 'question_text': '请介绍一下Spring Boot的自动配置原理，并说明@EnableAutoConfiguration注解的作用机制', 'question_type': 'technical', 'question_category': 'Spring框架', 'difficulty_level': 'medium', 'expected_duration': 10, 'reference_answer': None, 'scoring_criteria': None, 'sort_order': 1, 'is_required': 1, 'candidate_answer': 'Spring Boot的自动配置是通过@EnableAutoConfiguration注解实现的。该注解会导入AutoConfigurationImportSelector类，它会扫描META-INF/spring.factories文件中的自动配置类。这些配置类使用@ConditionalOnClass、@ConditionalOnMissingBean等条件注解，根据类路径中的依赖和已有的Bean来决定是否生效。例如，当检测到Tomcat在类路径中时，会自动配置嵌入式Tomcat服务器。', 'interviewer_feedback': '回答非常全面，准确描述了自动配置的核心机制。能够清楚解释条件注解的作用，并给出了具体的例子。理解深入，表达清晰。', 'answer_quality': None, 'technical_accuracy': None, 'communication_clarity': None, 'problem_solving': None, 'overall_score': 9.0, 'answer_duration': None, 'status': 'reviewed', 'is_wrong_question': 0, 'knowledge_points': 'string', 'answered_at': datetime.datetime(2025, 9, 9, 21, 59, 49, 810196), 'reviewed_at': datetime.datetime(2025, 9, 9, 21, 59, 49, 810201)}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-09 22:00:05,056 - main - INFO - Dify获取最新面试信息: user_id=test_user
+2025-09-09 22:00:15,575 - main - INFO - Dify创建面试记录: user_id=test_user_spring, session_name=None
+2025-09-09 22:00:15,577 - database - INFO - ✅ 创建面试会话成功: session_20250909_220015_e4795321
+2025-09-09 22:00:32,260 - main - INFO - Dify添加题目和回答: session_id=session_20250909_220015_e4795321
+2025-09-09 22:00:32,265 - database - ERROR - 数据库操作失败: (pymysql.err.OperationalError) (3140, 'Invalid JSON text: "Invalid value." at position 0 in value for column \'interview_qa_records.knowledge_points\'.')
+[SQL: INSERT INTO interview_qa_records (session_id, question_id, question_text, question_type, question_category, difficulty_level, expected_duration, reference_answer, scoring_criteria, sort_order, is_required, candidate_answer, interviewer_feedback, answer_quality, technical_accuracy, communication_clarity, problem_solving, overall_score, answer_duration, status, is_wrong_question, knowledge_points, answered_at, reviewed_at) VALUES (%(session_id)s, %(question_id)s, %(question_text)s, %(question_type)s, %(question_category)s, %(difficulty_level)s, %(expected_duration)s, %(reference_answer)s, %(scoring_criteria)s, %(sort_order)s, %(is_required)s, %(candidate_answer)s, %(interviewer_feedback)s, %(answer_quality)s, %(technical_accuracy)s, %(communication_clarity)s, %(problem_solving)s, %(overall_score)s, %(answer_duration)s, %(status)s, %(is_wrong_question)s, %(knowledge_points)s, %(answered_at)s, %(reviewed_at)s)]
+[parameters: {'session_id': 'session_20250909_220015_e4795321', 'question_id': 'session_20250909_220015_e4795321_q001', 'question_text': '请介绍一下Spring Boot的自动配置原理，并说明@EnableAutoConfiguration注解的作用机制', 'question_type': 'technical', 'question_category': 'Spring框架', 'difficulty_level': 'medium', 'expected_duration': 10, 'reference_answer': None, 'scoring_criteria': None, 'sort_order': 1, 'is_required': 1, 'candidate_answer': 'Spring Boot的自动配置是通过@EnableAutoConfiguration注解实现的。该注解会导入AutoConfigurationImportSelector类，它会扫描META-INF/spring.factories文件中的自动配置类。这些配置类使用@ConditionalOnClass、@ConditionalOnMissingBean等条件注解，根据类路径中的依赖和已有的Bean来决定是否生效。例如，当检测到Tomcat在类路径中时，会自动配置嵌入式Tomcat服务器。', 'interviewer_feedback': '回答非常全面，准确描述了自动配置的核心机制。能够清楚解释条件注解的作用，并给出了具体的例子。理解深入，表达清晰。', 'answer_quality': None, 'technical_accuracy': None, 'communication_clarity': None, 'problem_solving': None, 'overall_score': 9.0, 'answer_duration': None, 'status': 'reviewed', 'is_wrong_question': 0, 'knowledge_points': 'Spring Boot,自动配置,条件注解', 'answered_at': datetime.datetime(2025, 9, 9, 22, 0, 32, 264055), 'reviewed_at': datetime.datetime(2025, 9, 9, 22, 0, 32, 264060)}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-09 22:00:32,265 - database - ERROR - ❌ 添加题目和回答失败: (pymysql.err.OperationalError) (3140, 'Invalid JSON text: "Invalid value." at position 0 in value for column \'interview_qa_records.knowledge_points\'.')
+[SQL: INSERT INTO interview_qa_records (session_id, question_id, question_text, question_type, question_category, difficulty_level, expected_duration, reference_answer, scoring_criteria, sort_order, is_required, candidate_answer, interviewer_feedback, answer_quality, technical_accuracy, communication_clarity, problem_solving, overall_score, answer_duration, status, is_wrong_question, knowledge_points, answered_at, reviewed_at) VALUES (%(session_id)s, %(question_id)s, %(question_text)s, %(question_type)s, %(question_category)s, %(difficulty_level)s, %(expected_duration)s, %(reference_answer)s, %(scoring_criteria)s, %(sort_order)s, %(is_required)s, %(candidate_answer)s, %(interviewer_feedback)s, %(answer_quality)s, %(technical_accuracy)s, %(communication_clarity)s, %(problem_solving)s, %(overall_score)s, %(answer_duration)s, %(status)s, %(is_wrong_question)s, %(knowledge_points)s, %(answered_at)s, %(reviewed_at)s)]
+[parameters: {'session_id': 'session_20250909_220015_e4795321', 'question_id': 'session_20250909_220015_e4795321_q001', 'question_text': '请介绍一下Spring Boot的自动配置原理，并说明@EnableAutoConfiguration注解的作用机制', 'question_type': 'technical', 'question_category': 'Spring框架', 'difficulty_level': 'medium', 'expected_duration': 10, 'reference_answer': None, 'scoring_criteria': None, 'sort_order': 1, 'is_required': 1, 'candidate_answer': 'Spring Boot的自动配置是通过@EnableAutoConfiguration注解实现的。该注解会导入AutoConfigurationImportSelector类，它会扫描META-INF/spring.factories文件中的自动配置类。这些配置类使用@ConditionalOnClass、@ConditionalOnMissingBean等条件注解，根据类路径中的依赖和已有的Bean来决定是否生效。例如，当检测到Tomcat在类路径中时，会自动配置嵌入式Tomcat服务器。', 'interviewer_feedback': '回答非常全面，准确描述了自动配置的核心机制。能够清楚解释条件注解的作用，并给出了具体的例子。理解深入，表达清晰。', 'answer_quality': None, 'technical_accuracy': None, 'communication_clarity': None, 'problem_solving': None, 'overall_score': 9.0, 'answer_duration': None, 'status': 'reviewed', 'is_wrong_question': 0, 'knowledge_points': 'Spring Boot,自动配置,条件注解', 'answered_at': datetime.datetime(2025, 9, 9, 22, 0, 32, 264055), 'reviewed_at': datetime.datetime(2025, 9, 9, 22, 0, 32, 264060)}]
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-09 22:02:04,234 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 22:05:25,345 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-09 22:05:25,345 - main - INFO - ✅ 服务已关闭
+2025-09-09 22:05:36,133 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:05:36,148 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-09 22:05:36,172 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:05:36,185 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 22:05:36,185 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:05:36,192 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:05:36,196 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 22:05:36,197 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 22:05:36,197 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:06:11,231 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:06:11,247 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-09 22:06:11,271 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:06:11,287 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 22:06:11,288 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:06:11,294 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:06:11,297 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 22:06:11,299 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 22:06:11,299 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:06:11,300 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-09 22:06:11,300 - main - INFO - ✅ 服务已关闭
+2025-09-09 22:06:26,048 - main - INFO - Dify添加题目和回答: session_id=session_20250909_220015_e4795321
+2025-09-09 22:06:26,085 - database - INFO - ✅ 添加题目和回答成功: session_20250909_220015_e4795321_q001
+2025-09-09 22:06:36,722 - main - INFO - Dify获取最新面试信息: user_id=test_user_spring
+2025-09-09 22:07:34,602 - main - INFO - Dify获取用户错题: user_id=test_user_spring
+2025-09-09 22:07:34,607 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_spring, count=0
+2025-09-09 22:15:45,240 - main - INFO - Dify创建面试记录: user_id=test_user_complete_flow, session_name=完整流程测试面试
+2025-09-09 22:15:45,243 - database - INFO - ✅ 创建面试会话成功: session_20250909_221545_1ab31123
+2025-09-09 22:16:00,578 - main - INFO - Dify添加题目和回答: session_id=session_20250909_221545_1ab31123
+2025-09-09 22:16:00,587 - database - INFO - ✅ 添加题目和回答成功: session_20250909_221545_1ab31123_q001
+2025-09-09 22:16:10,817 - main - INFO - Dify获取最新面试信息: user_id=test_user_complete_flow
+2025-09-09 22:17:30,621 - main - INFO - Dify获取用户错题: user_id=test_user_complete_flow
+2025-09-09 22:17:30,624 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_complete_flow, count=0
+2025-09-09 22:17:44,871 - main - INFO - Dify添加题目和回答: session_id=session_20250909_221545_1ab31123
+2025-09-09 22:17:44,883 - database - INFO - ✅ 添加题目和回答成功: session_20250909_221545_1ab31123_q002
+2025-09-09 22:17:53,007 - main - INFO - Dify获取用户错题: user_id=test_user_complete_flow
+2025-09-09 22:17:53,010 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_complete_flow, count=1
+2025-09-09 22:17:53,010 - main - ERROR - Dify获取用户错题失败: 1 validation error for DifyWrongQuestionResponse
+wrong_questions.0.knowledge_points
+  Input should be a valid string [type=string_type, input_value=['GIL', '多线程', 'Pyt...释器', '并发编程'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-09-09 22:20:42,420 - main - INFO - Dify获取用户错题: user_id=test_user_complete_flow
+2025-09-09 22:20:42,423 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_complete_flow, count=1
+2025-09-09 22:20:42,424 - main - ERROR - Dify获取用户错题失败: 1 validation error for DifyWrongQuestionResponse
+wrong_questions.0.knowledge_points
+  Input should be a valid string [type=string_type, input_value=['GIL', '多线程', 'Pyt...释器', '并发编程'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-09-09 22:20:44,361 - main - INFO - Dify创建面试记录: user_id=test_user_complete_flow, session_name=完整流程测试面试
+2025-09-09 22:20:44,363 - database - INFO - ✅ 创建面试会话成功: session_20250909_222044_799c010e
+2025-09-09 22:20:59,468 - main - INFO - Dify添加题目和回答: session_id=session_20250909_220015_e4795321
+2025-09-09 22:20:59,490 - database - INFO - ✅ 添加题目和回答成功: session_20250909_220015_e4795321_q002
+2025-09-09 22:21:31,898 - main - INFO - Dify获取用户错题: user_id=test_user_complete_flow
+2025-09-09 22:21:31,901 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_complete_flow, count=1
+2025-09-09 22:21:31,901 - main - ERROR - Dify获取用户错题失败: 1 validation error for DifyWrongQuestionResponse
+wrong_questions.0.knowledge_points
+  Input should be a valid string [type=string_type, input_value=['GIL', '多线程', 'Pyt...释器', '并发编程'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-09-09 22:21:40,714 - main - INFO - Dify获取最新面试信息: user_id=test_user_complete_flow
+2025-09-09 22:21:48,841 - main - INFO - 获取用户面试会话列表: user_id=session_20250909_221545_1ab31123
+2025-09-09 22:24:07,888 - main - INFO - Dify获取用户错题: user_id=test_user_complete_flow
+2025-09-09 22:24:07,891 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_complete_flow, count=1
+2025-09-09 22:24:07,892 - main - ERROR - Dify获取用户错题失败: 1 validation error for DifyWrongQuestionResponse
+wrong_questions.0.knowledge_points
+  Input should be a valid string [type=string_type, input_value=['GIL', '多线程', 'Pyt...释器', '并发编程'], input_type=list]
+    For further information visit https://errors.pydantic.dev/2.11/v/string_type
+2025-09-09 22:27:55,020 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:27:55,034 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 22:27:55,034 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:27:55,039 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:27:55,043 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 22:27:55,044 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 22:27:55,044 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:27:55,045 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-09 22:27:55,045 - main - INFO - ✅ 服务已关闭
+2025-09-09 22:28:23,905 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:28:23,922 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 22:28:23,922 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:28:23,929 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:28:23,933 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 22:28:23,934 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 22:28:23,935 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:28:47,635 - main - INFO - Dify获取用户错题: user_id=test_user_complete_flow
+2025-09-09 22:28:47,650 - database - INFO - ✅ 获取用户错题成功: user_id=test_user_complete_flow, count=1
+2025-09-09 22:41:57,588 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:41:57,603 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-09 22:41:57,626 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:41:57,638 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 22:41:57,638 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:41:57,643 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:41:57,647 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 22:41:57,648 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 22:41:57,649 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:42:20,642 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,662 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,666 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,670 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=3
+2025-09-09 22:42:20,673 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,676 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,679 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,681 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=3
+2025-09-09 22:42:20,684 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,688 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,694 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,698 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=3
+2025-09-09 22:42:20,703 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,707 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,711 - main - INFO - 获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,715 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=4
+2025-09-09 22:42:20,719 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,723 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,726 - main - INFO - 获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,729 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=4
+2025-09-09 22:42:20,732 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,735 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,738 - main - INFO - 获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,741 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=4
+2025-09-09 22:42:20,746 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,751 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,754 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,758 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,761 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,764 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,767 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,770 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,773 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_001
+2025-09-09 22:42:20,776 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_001, count=10
+2025-09-09 22:42:20,780 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,785 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,790 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,793 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,799 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,803 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,807 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,812 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,816 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_002
+2025-09-09 22:42:20,820 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_002, count=10
+2025-09-09 22:42:20,825 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,829 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,834 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,839 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,844 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,848 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,852 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,857 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,861 - main - INFO - Dify获取用户错题: user_id=comprehensive_user_003
+2025-09-09 22:42:20,865 - database - INFO - ✅ 获取用户错题成功: user_id=comprehensive_user_003, count=7
+2025-09-09 22:42:20,870 - main - INFO - Dify获取用户错题: user_id=nonexistent_user
+2025-09-09 22:42:20,873 - database - INFO - ✅ 获取用户错题成功: user_id=nonexistent_user, count=0
+2025-09-09 22:51:45,063 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:51:45,078 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-09 22:51:45,104 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:51:45,115 - main - INFO - 🚀 启动面试记录服务...
+2025-09-09 22:51:45,115 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:51:45,121 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:51:45,125 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-09 22:51:45,127 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-09 22:51:45,128 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:52:51,824 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-09 22:55:22,318 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-10 08:23:32,971 - main - INFO - Dify创建面试记录: user_id=test_user_complete_flow, session_name=完整流程测试面试
+2025-09-10 08:23:32,985 - database - INFO - ✅ 创建面试会话成功: session_20250910_082332_e0900a74
+2025-09-10 21:26:13,180 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-10 21:26:13,181 - main - INFO - ✅ 服务已关闭
+2025-09-10 22:29:20,244 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 22:29:20,264 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-10 22:29:20,297 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 22:29:20,316 - main - INFO - 🚀 启动面试记录服务...
+2025-09-10 22:29:20,316 - main - INFO - ✅ 配置验证通过
+2025-09-10 22:29:20,322 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 22:29:20,325 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-10 22:29:20,326 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-10 22:29:20,326 - main - INFO - 🎉 服务启动完成
+2025-09-10 22:31:28,792 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-10 22:32:14,127 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-10 22:46:58,778 - main - INFO - Dify获取面试总结: session_id=session_20250904_230243_9df2893c
+2025-09-10 22:47:56,522 - main - INFO - 获取用户面试会话列表: user_id=test_user_001
+2025-09-10 22:48:09,894 - main - INFO - 获取用户面试会话列表: user_id=test_user_001
+2025-09-10 22:53:06,947 - main - INFO - 获取用户面试会话列表: user_id=test_user_001
+2025-09-10 22:53:19,649 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-10 22:53:28,236 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-10 22:53:42,865 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-10 22:53:46,398 - main - INFO - 获取用户面试会话列表: user_id=test_user_001
+2025-09-10 23:06:46,094 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-10 23:30:24,616 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:30:24,639 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-10 23:30:24,668 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:30:24,687 - main - INFO - 🚀 启动面试记录服务...
+2025-09-10 23:30:24,687 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:30:24,694 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:30:24,700 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-10 23:30:24,701 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-10 23:30:24,702 - main - INFO - 🎉 服务启动完成
+2025-09-10 23:50:36,081 - main - INFO - 🛑 关闭面试记录服务...
+2025-09-10 23:50:36,086 - main - INFO - ✅ 服务已关闭
+2025-09-10 23:51:26,338 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:51:26,360 - __main__ - INFO - 启动服务: 0.0.0.0:8006
+2025-09-10 23:51:26,391 - database - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:51:26,409 - main - INFO - 🚀 启动面试记录服务...
+2025-09-10 23:51:26,409 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:51:26,415 - database - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:51:26,423 - database - INFO - ✅ interview_qa_records表已存在，跳过迁移
+2025-09-10 23:51:26,426 - database - INFO - ✅ knowledge_points字段已存在
+2025-09-10 23:51:26,426 - main - INFO - 🎉 服务启动完成
+2025-09-10 23:51:55,804 - httpx - INFO - HTTP Request: GET http://localhost:8004/health "HTTP/1.1 200 OK"
+2025-09-10 23:56:12,459 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-10 23:57:11,558 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:30:59,781 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:31:05,447 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:31:06,953 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:35:18,400 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:42:32,704 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:46:00,848 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:48:53,438 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:50:36,449 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:50:37,497 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:50:39,470 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:50:41,795 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 11:50:44,363 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 12:56:55,877 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 13:05:02,653 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 13:05:26,238 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 13:29:35,077 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 13:29:38,718 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=个人简历面试 - 2025/9/11 13:29:40
+2025-09-11 13:29:38,724 - database - INFO - ✅ 创建面试会话成功: session_20250911_132938_bbbb80a9
+2025-09-11 13:29:43,099 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=个人简历面试 - 2025/9/11 13:29:45
+2025-09-11 13:29:43,100 - database - INFO - ✅ 创建面试会话成功: session_20250911_132943_155c4910
+2025-09-11 13:49:31,062 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 18:33:24,415 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 18:33:24,419 - database - INFO - ✅ 创建面试会话成功: session_20250911_183324_faa26159
+2025-09-11 18:33:26,273 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 18:33:26,275 - database - INFO - ✅ 创建面试会话成功: session_20250911_183326_75c8555b
+2025-09-11 18:33:54,777 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 18:34:16,144 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:34:16,146 - database - INFO - ✅ 创建面试会话成功: session_20250911_183416_9a3ea36c
+2025-09-11 18:38:59,812 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 18:39:15,081 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:39:15,083 - database - INFO - ✅ 创建面试会话成功: session_20250911_183915_4d73414e
+2025-09-11 18:55:07,193 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 18:55:34,037 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:55:34,039 - database - INFO - ✅ 创建面试会话成功: session_20250911_185534_f1b034d9
+2025-09-11 18:57:26,166 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 18:57:26,168 - database - INFO - ✅ 创建面试会话成功: session_20250911_185726_873dbb04
+2025-09-11 18:58:40,313 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 18:58:56,100 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 18:58:58,717 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 18:58:58,720 - database - INFO - ✅ 创建面试会话成功: session_20250911_185858_f1c5661c
+2025-09-11 18:58:59,632 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:06:08,584 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:06:08,586 - database - INFO - ✅ 创建面试会话成功: session_20250911_190608_b2b281a6
+2025-09-11 19:26:38,950 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:29:32,957 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:32:20,162 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:37:20,393 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:37:37,750 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:37:39,313 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 19:44:30,341 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:44:30,343 - database - INFO - ✅ 创建面试会话成功: session_20250911_194430_a07f5be3
+2025-09-11 19:45:05,299 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:45:05,301 - database - INFO - ✅ 创建面试会话成功: session_20250911_194505_f60788f6
+2025-09-11 19:47:25,867 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 19:47:25,869 - database - INFO - ✅ 创建面试会话成功: session_20250911_194725_b7c75f2d
+2025-09-11 20:10:58,796 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 20:11:03,248 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 20:11:40,966 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:11:40,968 - database - INFO - ✅ 创建面试会话成功: session_20250911_201140_df18eb5e
+2025-09-11 20:17:57,082 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:17:57,084 - database - INFO - ✅ 创建面试会话成功: session_20250911_201757_3c707f87
+2025-09-11 20:18:00,354 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:00,355 - database - INFO - ✅ 创建面试会话成功: session_20250911_201800_bdb33e70
+2025-09-11 20:18:05,703 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:05,705 - database - INFO - ✅ 创建面试会话成功: session_20250911_201805_5aa6b35d
+2025-09-11 20:18:26,171 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:26,173 - database - INFO - ✅ 创建面试会话成功: session_20250911_201826_e2c2f8e6
+2025-09-11 20:18:30,833 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:30,834 - database - INFO - ✅ 创建面试会话成功: session_20250911_201830_3821347e
+2025-09-11 20:18:37,049 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:18:37,052 - database - INFO - ✅ 创建面试会话成功: session_20250911_201837_98449101
+2025-09-11 20:19:01,939 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:01,941 - database - INFO - ✅ 创建面试会话成功: session_20250911_201901_9e478cd3
+2025-09-11 20:19:02,184 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:02,186 - database - INFO - ✅ 创建面试会话成功: session_20250911_201902_3ba60fab
+2025-09-11 20:19:03,365 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:03,367 - database - INFO - ✅ 创建面试会话成功: session_20250911_201903_015d0b30
+2025-09-11 20:19:04,149 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:04,151 - database - INFO - ✅ 创建面试会话成功: session_20250911_201904_5a01dc0a
+2025-09-11 20:19:18,856 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:18,858 - database - INFO - ✅ 创建面试会话成功: session_20250911_201918_f7b7f877
+2025-09-11 20:19:18,975 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:19:18,977 - database - INFO - ✅ 创建面试会话成功: session_20250911_201918_e00145dd
+2025-09-11 20:20:01,316 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:20:01,319 - database - INFO - ✅ 创建面试会话成功: session_20250911_202001_42911986
+2025-09-11 20:20:06,486 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:20:06,488 - database - INFO - ✅ 创建面试会话成功: session_20250911_202006_7f926f9b
+2025-09-11 20:21:15,863 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:21:15,865 - database - INFO - ✅ 创建面试会话成功: session_20250911_202115_1d869b84
+2025-09-11 20:21:53,175 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:21:53,177 - database - INFO - ✅ 创建面试会话成功: session_20250911_202153_8a6a2814
+2025-09-11 20:38:54,385 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:38:54,389 - database - INFO - ✅ 创建面试会话成功: session_20250911_203854_46cdffe9
+2025-09-11 20:41:44,859 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:41:44,867 - database - INFO - ✅ 创建面试会话成功: session_20250911_204144_4bc86246
+2025-09-11 20:43:30,653 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:30,655 - database - INFO - ✅ 创建面试会话成功: session_20250911_204330_fa0925e0
+2025-09-11 20:43:30,703 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:30,705 - database - INFO - ✅ 创建面试会话成功: session_20250911_204330_6a5472e9
+2025-09-11 20:43:32,034 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:32,036 - database - INFO - ✅ 创建面试会话成功: session_20250911_204332_7dd84460
+2025-09-11 20:43:34,584 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:43:34,586 - database - INFO - ✅ 创建面试会话成功: session_20250911_204334_8fad25d6
+2025-09-11 20:45:14,151 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:14,152 - database - INFO - ✅ 创建面试会话成功: session_20250911_204514_f8524cbf
+2025-09-11 20:45:17,092 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:17,094 - database - INFO - ✅ 创建面试会话成功: session_20250911_204517_8cea6b12
+2025-09-11 20:45:17,344 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:17,346 - database - INFO - ✅ 创建面试会话成功: session_20250911_204517_50318fdc
+2025-09-11 20:45:17,441 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:17,443 - database - INFO - ✅ 创建面试会话成功: session_20250911_204517_5ec5f504
+2025-09-11 20:45:33,121 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:33,123 - database - INFO - ✅ 创建面试会话成功: session_20250911_204533_fc178862
+2025-09-11 20:45:33,909 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:33,911 - database - INFO - ✅ 创建面试会话成功: session_20250911_204533_eb90730f
+2025-09-11 20:45:34,319 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:34,321 - database - INFO - ✅ 创建面试会话成功: session_20250911_204534_3eee15d6
+2025-09-11 20:45:37,170 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:45:37,173 - database - INFO - ✅ 创建面试会话成功: session_20250911_204537_23facd79
+2025-09-11 20:46:13,999 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 20:46:19,831 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 20:46:36,418 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:46:36,421 - database - INFO - ✅ 创建面试会话成功: session_20250911_204636_fbc8933e
+2025-09-11 20:46:38,406 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:46:38,408 - database - INFO - ✅ 创建面试会话成功: session_20250911_204638_66d12caf
+2025-09-11 20:46:46,157 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:46:46,159 - database - INFO - ✅ 创建面试会话成功: session_20250911_204646_9ea9a263
+2025-09-11 20:47:04,423 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 20:47:20,473 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 20:47:20,475 - database - INFO - ✅ 创建面试会话成功: session_20250911_204720_18932c95
+2025-09-11 21:06:19,323 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:19,325 - database - INFO - ✅ 创建面试会话成功: session_20250911_210619_42f5fbeb
+2025-09-11 21:06:34,559 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:34,561 - database - INFO - ✅ 创建面试会话成功: session_20250911_210634_f145c9e6
+2025-09-11 21:06:35,237 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:35,239 - database - INFO - ✅ 创建面试会话成功: session_20250911_210635_76bc4adf
+2025-09-11 21:06:40,259 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:40,261 - database - INFO - ✅ 创建面试会话成功: session_20250911_210640_fd6f6ede
+2025-09-11 21:06:48,973 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:48,975 - database - INFO - ✅ 创建面试会话成功: session_20250911_210648_49ebb7e9
+2025-09-11 21:06:50,072 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:50,074 - database - INFO - ✅ 创建面试会话成功: session_20250911_210650_5993d07f
+2025-09-11 21:06:50,301 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:50,303 - database - INFO - ✅ 创建面试会话成功: session_20250911_210650_446e61fb
+2025-09-11 21:06:52,864 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:06:52,867 - database - INFO - ✅ 创建面试会话成功: session_20250911_210652_5f144db5
+2025-09-11 21:07:03,110 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:07:03,112 - database - INFO - ✅ 创建面试会话成功: session_20250911_210703_9cb4ae53
+2025-09-11 21:09:52,617 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 21:10:12,106 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 21:10:12,108 - database - INFO - ✅ 创建面试会话成功: session_20250911_211012_614ac4dc
+2025-09-11 22:02:39,191 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:02:39,195 - database - INFO - ✅ 创建面试会话成功: session_20250911_220239_71ddef7e
+2025-09-11 22:02:54,684 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:02:54,686 - database - INFO - ✅ 创建面试会话成功: session_20250911_220254_3047b353
+2025-09-11 22:13:22,268 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:14:09,181 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:14:58,419 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:15:00,606 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:19:36,700 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:19:40,195 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:20:05,766 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:20:05,768 - database - INFO - ✅ 创建面试会话成功: session_20250911_222005_992829db
+2025-09-11 22:20:08,545 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:20:08,547 - database - INFO - ✅ 创建面试会话成功: session_20250911_222008_d02afd00
+2025-09-11 22:20:10,622 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:20:10,624 - database - INFO - ✅ 创建面试会话成功: session_20250911_222010_1384c9b9
+2025-09-11 22:22:42,914 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:22:42,916 - database - INFO - ✅ 创建面试会话成功: session_20250911_222242_0f8a7370
+2025-09-11 22:23:18,343 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:23:18,345 - database - INFO - ✅ 创建面试会话成功: session_20250911_222318_13556abe
+2025-09-11 22:25:50,730 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:26:34,207 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:26:34,209 - database - INFO - ✅ 创建面试会话成功: session_20250911_222634_ad6e6b86
+2025-09-11 22:28:31,037 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 22:28:31,039 - database - INFO - ✅ 创建面试会话成功: session_20250911_222831_7c355bc4
+2025-09-11 22:28:50,221 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 22:28:50,223 - database - INFO - ✅ 创建面试会话成功: session_20250911_222850_7d5c21b1
+2025-09-11 22:31:58,182 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:31:58,184 - database - INFO - ✅ 创建面试会话成功: session_20250911_223158_c609fd8f
+2025-09-11 22:32:04,131 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:04,133 - database - INFO - ✅ 创建面试会话成功: session_20250911_223204_78cda5cf
+2025-09-11 22:32:20,197 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:20,199 - database - INFO - ✅ 创建面试会话成功: session_20250911_223220_b0c572cc
+2025-09-11 22:32:22,024 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:22,026 - database - INFO - ✅ 创建面试会话成功: session_20250911_223222_a114960f
+2025-09-11 22:32:23,923 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:32:23,925 - database - INFO - ✅ 创建面试会话成功: session_20250911_223223_06bc8886
+2025-09-11 22:34:53,552 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:35:53,533 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:35:53,539 - database - INFO - ✅ 创建面试会话成功: session_20250911_223553_28f4f108
+2025-09-11 22:38:45,508 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:38:45,510 - database - INFO - ✅ 创建面试会话成功: session_20250911_223845_7d108e66
+2025-09-11 22:38:47,917 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:38:47,919 - database - INFO - ✅ 创建面试会话成功: session_20250911_223847_d0adc50f
+2025-09-11 22:46:25,311 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:47:20,430 - main - INFO - Dify创建面试记录: user_id=test_user_001, session_name=
+2025-09-11 22:47:20,432 - database - INFO - ✅ 创建面试会话成功: session_20250911_224720_9e3bd17b
+2025-09-11 22:49:51,245 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:49:51,247 - database - INFO - ✅ 创建面试会话成功: session_20250911_224951_927e4d4b
+2025-09-11 22:49:58,440 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:49:58,442 - database - INFO - ✅ 创建面试会话成功: session_20250911_224958_b05175d4
+2025-09-11 22:50:15,009 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:50:15,011 - database - INFO - ✅ 创建面试会话成功: session_20250911_225015_193aee7f
+2025-09-11 22:50:23,041 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:50:23,042 - database - INFO - ✅ 创建面试会话成功: session_20250911_225023_609130b6
+2025-09-11 22:52:06,325 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:52:16,961 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:52:16,963 - database - INFO - ✅ 创建面试会话成功: session_20250911_225216_b5f7ff07
+2025-09-11 22:52:38,483 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:52:38,485 - database - INFO - ✅ 创建面试会话成功: session_20250911_225238_bfd82005
+2025-09-11 22:54:51,615 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:54:51,617 - database - INFO - ✅ 创建面试会话成功: session_20250911_225451_598b0f56
+2025-09-11 22:54:52,675 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:54:52,677 - database - INFO - ✅ 创建面试会话成功: session_20250911_225452_8af222b9
+2025-09-11 22:55:19,228 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:55:19,230 - database - INFO - ✅ 创建面试会话成功: session_20250911_225519_f2f71ec9
+2025-09-11 22:55:19,959 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:55:19,961 - database - INFO - ✅ 创建面试会话成功: session_20250911_225519_8aa76c64
+2025-09-11 22:55:47,435 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:55:58,305 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:55:58,307 - database - INFO - ✅ 创建面试会话成功: session_20250911_225558_172b401c
+2025-09-11 22:56:20,078 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:56:20,080 - database - INFO - ✅ 创建面试会话成功: session_20250911_225620_a755c180
+2025-09-11 22:57:42,842 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:57:42,844 - database - INFO - ✅ 创建面试会话成功: session_20250911_225742_3c5a2e13
+2025-09-11 22:57:43,818 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:57:43,820 - database - INFO - ✅ 创建面试会话成功: session_20250911_225743_3ff40ea0
+2025-09-11 22:58:04,856 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:04,858 - database - INFO - ✅ 创建面试会话成功: session_20250911_225804_1cd92f21
+2025-09-11 22:58:07,362 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:07,365 - database - INFO - ✅ 创建面试会话成功: session_20250911_225807_a73a1793
+2025-09-11 22:58:23,568 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:58:23,570 - database - INFO - ✅ 创建面试会话成功: session_20250911_225823_ed7ebc3f
+2025-09-11 22:58:23,679 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:58:23,681 - database - INFO - ✅ 创建面试会话成功: session_20250911_225823_6233f2e7
+2025-09-11 22:58:44,519 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:44,521 - database - INFO - ✅ 创建面试会话成功: session_20250911_225844_d61a61cc
+2025-09-11 22:58:45,341 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:58:45,343 - database - INFO - ✅ 创建面试会话成功: session_20250911_225845_8be256e3
+2025-09-11 22:59:09,650 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 22:59:24,779 - main - INFO - Dify创建面试记录: user_id=test_user, session_name=
+2025-09-11 22:59:24,780 - database - INFO - ✅ 创建面试会话成功: session_20250911_225924_f8c27132
+2025-09-11 22:59:46,662 - main - INFO - Dify创建面试记录: user_id=test_user_010, session_name=
+2025-09-11 22:59:46,664 - database - INFO - ✅ 创建面试会话成功: session_20250911_225946_09fef9f2
+2025-09-11 23:00:30,649 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:00:30,684 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q001
+2025-09-11 23:03:39,090 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:03:39,102 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q002
+2025-09-11 23:04:35,922 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:04:35,934 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q003
+2025-09-11 23:05:19,196 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:05:19,211 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q004
+2025-09-11 23:10:54,994 - main - INFO - Dify添加题目和回答: session_id=session_20250911_225946_09fef9f2
+2025-09-11 23:10:55,004 - database - INFO - ✅ 添加题目和回答成功: session_20250911_225946_09fef9f2_q005
+2025-09-11 23:11:27,402 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
+2025-09-11 23:11:33,643 - main - INFO - 获取用户面试会话列表: user_id=test_user_010
