@@ -73,13 +73,14 @@ main (初始提交)
 
 ### 分支说明
 
-| 分支名称 | 用途 |
-|---------|------|
-| `main` | 生产环境稳定版本 |
-| `develop` | 集成开发主线 |
-| `club-management-dev` | 院校社团管理系统开发 |
-| `ProjectBid-dev` | 揭榜挂帅项目系统开发 |
-| `Interviewer-dev` | 企业AI面试官系统开发 |
+| 分支名称               | 用途                     |
+| ---------------------- | ------------------------ |
+| `main`                 | 生产环境稳定版本         |
+| `develop`              | 集成开发主线             |
+| `club-management-dev`  | 院校社团管理系统开发     |
+| `ProjectBid-dev`       | 揭榜挂帅项目系统开发     |
+| `Interviewer-dev`      | 企业AI面试官系统开发     |
+| `Interviewer_test_dev` | 企业AI面试官系统开发测试 |
 | `Interviewer_test_dev` | 企业AI面试官系统开发测试 |
 
 ### 当前开发状态
@@ -146,6 +147,7 @@ git checkout develop
 | **院校管理团队** | 社团管理系统 | `club-management-dev` |
 | **项目平台团队** | 揭榜挂帅系统 | `ProjectBid-dev` |
 | **AI面试团队** | 智能面试系统 | `Interviewer-dev` |
+
 
 ### 分支管理规范
 
