@@ -10,9 +10,10 @@ import logging
 from typing import Optional, List, Dict, Any
 from datetime import datetime
 import uuid
+import json
 
-from config import MYSQL_URL, MYSQL_POOL_SIZE, MYSQL_MAX_OVERFLOW, MYSQL_POOL_TIMEOUT
-from models import Base, InterviewSession, InterviewQuestion, InterviewAnswer
+from config import MYSQL_URL, MYSQL_POOL_SIZE, MYSQL_MAX_OVERFLOW, MYSQL_POOL_TIMEOUT, DEFAULT_WRONG_QUESTION_THRESHOLD
+from models import Base, InterviewSession, InterviewQARecord
 
 logger = logging.getLogger(__name__)
 
@@ -83,10 +84,136 @@ class DatabaseService:
         try:
             Base.metadata.create_all(bind=self.engine)
             logger.info("✅ 数据库表创建/验证完成")
+
+            # 执行表结构迁移
+            self.migrate_to_qa_records_table()
+
+            # 确保知识点字段存在
+            self.ensure_knowledge_points_field()
+
         except Exception as e:
             logger.error(f"❌ 数据库表创建失败: {e}")
             raise
-    
+
+    def migrate_to_qa_records_table(self):
+        """迁移到新的问答记录表结构"""
+        try:
+            with self.engine.connect() as conn:
+                # 检查是否需要迁移
+                result = conn.execute(text("SHOW TABLES LIKE 'interview_qa_records'"))
+                qa_table_exists = result.fetchone() is not None
+
+                result = conn.execute(text("SHOW TABLES LIKE 'interview_questions'"))
+                questions_table_exists = result.fetchone() is not None
+
+                result = conn.execute(text("SHOW TABLES LIKE 'interview_answers'"))
+                answers_table_exists = result.fetchone() is not None
+
+                if qa_table_exists:
+                    logger.info("✅ interview_qa_records表已存在，跳过迁移")
+                    return
+
+                if not questions_table_exists or not answers_table_exists:
+                    logger.info("✅ 旧表不存在，无需迁移数据")
+                    return
+
+                logger.info("🔄 开始迁移数据到interview_qa_records表...")
+
+                # 迁移数据：将interview_questions和interview_answers合并
+                migration_sql = """
+                INSERT INTO interview_qa_records (
+                    session_id, question_id, question_text, question_type, question_category,
+                    difficulty_level, expected_duration, reference_answer, scoring_criteria,
+                    sort_order, is_required, candidate_answer, interviewer_feedback,
+                    answer_quality, technical_accuracy, communication_clarity, problem_solving,
+                    overall_score, answer_duration, status, is_wrong_question,
+                    answered_at, reviewed_at, created_at, updated_at
+                )
+                SELECT
+                    q.session_id, q.question_id, q.question_text, q.question_type, q.question_category,
+                    q.difficulty_level, q.expected_duration, q.reference_answer, q.scoring_criteria,
+                    q.sort_order, q.is_required, a.candidate_answer, a.interviewer_feedback,
+                    a.answer_quality, a.technical_accuracy, a.communication_clarity, a.problem_solving,
+                    a.overall_score, a.answer_duration, a.status,
+                    CASE WHEN a.overall_score < %s THEN TRUE ELSE FALSE END as is_wrong_question,
+                    a.answered_at, a.reviewed_at, q.created_at, a.updated_at
+                FROM interview_questions q
+                LEFT JOIN interview_answers a ON q.question_id = a.question_id
+                """
+
+                conn.execute(text(migration_sql), (DEFAULT_WRONG_QUESTION_THRESHOLD,))
+
+                # 获取迁移的记录数
+                result = conn.execute(text("SELECT COUNT(*) FROM interview_qa_records"))
+                migrated_count = result.fetchone()[0]
+
+                logger.info(f"✅ 数据迁移完成，共迁移 {migrated_count} 条记录")
+
+                # 创建索引
+                try:
+                    conn.execute(text(
+                        "CREATE INDEX idx_qa_session_wrong ON interview_qa_records(session_id, is_wrong_question)"
+                    ))
+                    conn.execute(text(
+                        "CREATE INDEX idx_qa_question_type ON interview_qa_records(question_type, difficulty_level)"
+                    ))
+                    logger.info("✅ 创建索引成功")
+                except Exception as idx_e:
+                    logger.warning(f"⚠️  创建索引失败（可能已存在）: {idx_e}")
+
+                conn.commit()
+                logger.info("🎉 表结构迁移完成！")
+
+        except Exception as e:
+            logger.error(f"❌ 表结构迁移失败: {e}")
+            # 不抛出异常，避免影响服务启动
+            logger.warning("⚠️  迁移失败，将使用新表结构但可能缺少历史数据")
+
+    def ensure_knowledge_points_field(self):
+        """确保interview_qa_records表中存在knowledge_points字段"""
+        try:
+            with self.engine.connect() as conn:
+                # 检查字段是否存在
+                result = conn.execute(text("""
+                    SELECT COLUMN_NAME
+                    FROM INFORMATION_SCHEMA.COLUMNS
+                    WHERE TABLE_SCHEMA = DATABASE()
+                    AND TABLE_NAME = 'interview_qa_records'
+                    AND COLUMN_NAME = 'knowledge_points'
+                """))
+
+                field_exists = result.fetchone() is not None
+
+                if field_exists:
+                    logger.info("✅ knowledge_points字段已存在")
+                    return
+
+                logger.info("🔄 添加knowledge_points字段...")
+
+                # 添加字段
+                conn.execute(text("""
+                    ALTER TABLE interview_qa_records
+                    ADD COLUMN knowledge_points JSON COMMENT '题目具体知识点关键词，JSON格式存储'
+                """))
+
+                # 创建索引（可选，用于优化查询）
+                try:
+                    conn.execute(text("""
+                        CREATE INDEX idx_knowledge_points
+                        ON interview_qa_records((CAST(knowledge_points AS CHAR(255))))
+                    """))
+                    logger.info("✅ knowledge_points索引创建成功")
+                except Exception as idx_e:
+                    logger.warning(f"⚠️  knowledge_points索引创建失败（可能不支持）: {idx_e}")
+
+                conn.commit()
+                logger.info("🎉 knowledge_points字段添加完成！")
+
+        except Exception as e:
+            logger.error(f"❌ 添加knowledge_points字段失败: {e}")
+            # 不抛出异常，避免影响服务启动
+            logger.warning("⚠️  字段添加失败，新功能可能无法正常工作")
+
     def generate_session_id(self) -> str:
         """生成唯一的会话ID"""
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -222,10 +349,11 @@ class DatabaseService:
         try:
             with self.get_session() as session:
                 # 获取当前题目数量，用于生成题目ID和排序
-                current_count = session.query(InterviewQuestion).filter_by(session_id=session_id).count()
+                current_count = session.query(InterviewQARecord).filter_by(session_id=session_id).count()
                 question_id = self.generate_question_id(session_id, current_count + 1)
-                
-                question = InterviewQuestion(
+
+                # 创建问答记录（仅包含题目信息，回答部分为空）
+                qa_record = InterviewQARecord(
                     session_id=session_id,
                     question_id=question_id,
                     question_text=question_text,
@@ -235,10 +363,11 @@ class DatabaseService:
                     expected_duration=expected_duration,
                     reference_answer=reference_answer,
                     scoring_criteria=scoring_criteria,
-                    sort_order=current_count + 1
+                    sort_order=current_count + 1,
+                    status="pending"  # 等待回答
                 )
-                
-                session.add(question)
+
+                session.add(qa_record)
                 session.flush()
                 
                 # 更新会话的题目总数
@@ -257,8 +386,8 @@ class DatabaseService:
         """获取会话的所有题目"""
         try:
             with self.get_session() as session:
-                questions = session.query(InterviewQuestion).filter_by(session_id=session_id)\
-                    .order_by(InterviewQuestion.sort_order).all()
+                qa_records = session.query(InterviewQARecord).filter_by(session_id=session_id)\
+                    .order_by(InterviewQARecord.sort_order).all()
                 
                 return [
                     {
@@ -274,7 +403,7 @@ class DatabaseService:
                         "is_required": q.is_required,
                         "created_at": q.created_at
                     }
-                    for q in questions
+                    for q in qa_records
                 ]
                 
         except Exception as e:
@@ -287,33 +416,19 @@ class DatabaseService:
         """提交面试回答"""
         try:
             with self.get_session() as session:
-                # 获取题目信息
-                question = session.query(InterviewQuestion).filter_by(question_id=question_id).first()
-                if not question:
-                    logger.error(f"题目不存在: {question_id}")
+                # 获取问答记录
+                qa_record = session.query(InterviewQARecord).filter_by(question_id=question_id).first()
+                if not qa_record:
+                    logger.error(f"问答记录不存在: {question_id}")
                     return False
 
-                # 检查是否已有回答
-                existing_answer = session.query(InterviewAnswer).filter_by(question_id=question_id).first()
+                # 更新回答信息
+                qa_record.candidate_answer = candidate_answer
+                qa_record.answer_duration = answer_duration
+                qa_record.status = "answered"
+                qa_record.answered_at = datetime.now()
 
-                if existing_answer:
-                    # 更新现有回答
-                    existing_answer.candidate_answer = candidate_answer
-                    existing_answer.answer_duration = answer_duration
-                    existing_answer.status = "answered"
-                    existing_answer.answered_at = datetime.now()
-                else:
-                    # 创建新回答
-                    answer = InterviewAnswer(
-                        question_id=question_id,
-                        session_id=question.session_id,
-                        candidate_answer=candidate_answer,
-                        answer_duration=answer_duration,
-                        status="answered",
-                        answered_at=datetime.now()
-                    )
-                    session.add(answer)
-
+                session.commit()
                 logger.info(f"✅ 提交面试回答成功: {question_id}")
                 return True
 
@@ -327,24 +442,27 @@ class DatabaseService:
         """提交面试官反馈"""
         try:
             with self.get_session() as session:
-                answer = session.query(InterviewAnswer).filter_by(question_id=question_id).first()
+                qa_record = session.query(InterviewQARecord).filter_by(question_id=question_id).first()
 
-                if not answer:
-                    logger.error(f"回答不存在: {question_id}")
+                if not qa_record:
+                    logger.error(f"问答记录不存在: {question_id}")
                     return False
 
                 # 更新反馈信息
-                answer.interviewer_feedback = interviewer_feedback
-                answer.overall_score = overall_score
-                answer.technical_accuracy = technical_accuracy
-                answer.communication_clarity = communication_clarity
-                answer.problem_solving = problem_solving
-                answer.answer_quality = answer_quality
-                answer.status = "reviewed"
-                answer.reviewed_at = datetime.now()
+                qa_record.interviewer_feedback = interviewer_feedback
+                qa_record.overall_score = overall_score
+                qa_record.technical_accuracy = technical_accuracy
+                qa_record.communication_clarity = communication_clarity
+                qa_record.problem_solving = problem_solving
+                qa_record.answer_quality = answer_quality
+                qa_record.status = "reviewed"
+                qa_record.reviewed_at = datetime.now()
+
+                # 判定是否为错题
+                qa_record.is_wrong_question = overall_score < DEFAULT_WRONG_QUESTION_THRESHOLD
 
                 # 更新会话的完成题目数和平均分
-                self._update_session_stats(session, answer.session_id)
+                self._update_session_stats(session, qa_record.session_id)
 
                 logger.info(f"✅ 提交面试官反馈成功: {question_id}")
                 return True
@@ -355,37 +473,51 @@ class DatabaseService:
 
     def add_question_with_answer(self, session_id: str, question_text: str, question_type: str,
                                 question_category: Optional[str], candidate_answer: str,
-                                interviewer_feedback: str, overall_score: float) -> Optional[str]:
+                                interviewer_feedback: str, overall_score: float,
+                                difficulty_level: str = "medium",
+                                knowledge_points: Optional[str] = None) -> Optional[str]:
         """一次性添加题目和回答（Dify专用）"""
         try:
             with self.get_session() as session:
-                # 添加题目
-                current_count = session.query(InterviewQuestion).filter_by(session_id=session_id).count()
+                # 获取当前题目数量
+                current_count = session.query(InterviewQARecord).filter_by(session_id=session_id).count()
                 question_id = self.generate_question_id(session_id, current_count + 1)
 
-                question = InterviewQuestion(
+                # 判定是否为错题
+                is_wrong = overall_score < DEFAULT_WRONG_QUESTION_THRESHOLD
+
+                # 处理知识点字段 - 统一为字符串格式
+                processed_knowledge_points = None
+                if knowledge_points:
+                    if isinstance(knowledge_points, str):
+                        # 如果已经是字符串，直接使用
+                        processed_knowledge_points = knowledge_points
+                    elif isinstance(knowledge_points, list):
+                        # 如果是列表，转换为JSON字符串格式
+                        processed_knowledge_points = json.dumps(knowledge_points, ensure_ascii=False)
+                    else:
+                        # 其他类型，转换为字符串
+                        processed_knowledge_points = str(knowledge_points)
+
+                # 创建问答记录（合并题目和回答）
+                qa_record = InterviewQARecord(
                     session_id=session_id,
                     question_id=question_id,
                     question_text=question_text,
                     question_type=question_type,
                     question_category=question_category,
-                    sort_order=current_count + 1
-                )
-                session.add(question)
-                session.flush()
-
-                # 添加回答
-                answer = InterviewAnswer(
-                    question_id=question_id,
-                    session_id=session_id,
+                    difficulty_level=difficulty_level,
+                    sort_order=current_count + 1,
                     candidate_answer=candidate_answer,
                     interviewer_feedback=interviewer_feedback,
                     overall_score=overall_score,
                     status="reviewed",
+                    is_wrong_question=is_wrong,
+                    knowledge_points=processed_knowledge_points,
                     answered_at=datetime.now(),
                     reviewed_at=datetime.now()
                 )
-                session.add(answer)
+                session.add(qa_record)
                 session.flush()
 
                 # 更新会话统计
@@ -407,15 +539,15 @@ class DatabaseService:
         """更新会话统计信息"""
         try:
             # 计算平均分
-            avg_score = session.query(func.avg(InterviewAnswer.overall_score))\
+            avg_score = session.query(func.avg(InterviewQARecord.overall_score))\
                 .filter_by(session_id=session_id)\
-                .filter(InterviewAnswer.overall_score.isnot(None))\
+                .filter(InterviewQARecord.overall_score.isnot(None))\
                 .scalar()
 
             # 计算完成题目数
-            completed_count = session.query(InterviewAnswer)\
+            completed_count = session.query(InterviewQARecord)\
                 .filter_by(session_id=session_id)\
-                .filter(InterviewAnswer.status == "reviewed")\
+                .filter(InterviewQARecord.status == "reviewed")\
                 .count()
 
             # 更新会话
@@ -432,27 +564,27 @@ class DatabaseService:
         """获取回答详情"""
         try:
             with self.get_session() as session:
-                answer = session.query(InterviewAnswer).filter_by(question_id=question_id).first()
+                qa_record = session.query(InterviewQARecord).filter_by(question_id=question_id).first()
 
-                if not answer:
+                if not qa_record:
                     return None
 
                 return {
-                    "question_id": answer.question_id,
-                    "session_id": answer.session_id,
-                    "candidate_answer": answer.candidate_answer,
-                    "interviewer_feedback": answer.interviewer_feedback,
-                    "answer_quality": answer.answer_quality,
-                    "technical_accuracy": float(answer.technical_accuracy) if answer.technical_accuracy else None,
-                    "communication_clarity": float(answer.communication_clarity) if answer.communication_clarity else None,
-                    "problem_solving": float(answer.problem_solving) if answer.problem_solving else None,
-                    "overall_score": float(answer.overall_score) if answer.overall_score else None,
-                    "answer_duration": answer.answer_duration,
-                    "status": answer.status,
-                    "answered_at": answer.answered_at,
-                    "reviewed_at": answer.reviewed_at,
-                    "created_at": answer.created_at,
-                    "updated_at": answer.updated_at
+                    "question_id": qa_record.question_id,
+                    "session_id": qa_record.session_id,
+                    "candidate_answer": qa_record.candidate_answer,
+                    "interviewer_feedback": qa_record.interviewer_feedback,
+                    "answer_quality": qa_record.answer_quality,
+                    "technical_accuracy": float(qa_record.technical_accuracy) if qa_record.technical_accuracy else None,
+                    "communication_clarity": float(qa_record.communication_clarity) if qa_record.communication_clarity else None,
+                    "problem_solving": float(qa_record.problem_solving) if qa_record.problem_solving else None,
+                    "overall_score": float(qa_record.overall_score) if qa_record.overall_score else None,
+                    "answer_duration": qa_record.answer_duration,
+                    "status": qa_record.status,
+                    "answered_at": qa_record.answered_at,
+                    "reviewed_at": qa_record.reviewed_at,
+                    "created_at": qa_record.created_at,
+                    "updated_at": qa_record.updated_at
                 }
 
         except Exception as e:
@@ -496,31 +628,27 @@ class DatabaseService:
                 if not interview_session:
                     return None
 
-                # 获取所有题目和回答
-                questions_with_answers = session.query(InterviewQuestion, InterviewAnswer)\
-                    .outerjoin(InterviewAnswer, InterviewQuestion.question_id == InterviewAnswer.question_id)\
-                    .filter(InterviewQuestion.session_id == session_id)\
-                    .order_by(InterviewQuestion.sort_order)\
+                # 获取所有问答记录
+                qa_records = session.query(InterviewQARecord)\
+                    .filter_by(session_id=session_id)\
+                    .order_by(InterviewQARecord.sort_order)\
                     .all()
 
                 questions_summary = []
                 scores = []
 
-                for question, answer in questions_with_answers:
+                for qa_record in qa_records:
                     question_data = {
-                        "question_text": question.question_text,
-                        "question_type": question.question_type,
-                        "question_category": question.question_category
+                        "question_text": qa_record.question_text,
+                        "question_type": qa_record.question_type,
+                        "question_category": qa_record.question_category,
+                        "score": float(qa_record.overall_score) if qa_record.overall_score else None,
+                        "feedback": qa_record.interviewer_feedback,
+                        "answer_quality": qa_record.answer_quality
                     }
 
-                    if answer:
-                        question_data.update({
-                            "score": float(answer.overall_score) if answer.overall_score else None,
-                            "feedback": answer.interviewer_feedback,
-                            "answer_quality": answer.answer_quality
-                        })
-                        if answer.overall_score:
-                            scores.append(float(answer.overall_score))
+                    if qa_record.overall_score:
+                        scores.append(float(qa_record.overall_score))
 
                     questions_summary.append(question_data)
 
@@ -547,3 +675,54 @@ class DatabaseService:
         except Exception as e:
             logger.error(f"❌ 获取面试会话总结失败: {e}")
             return None
+
+    # ==================== 错题查询操作 ====================
+
+    def get_user_wrong_questions(self, user_id: str, question_type: Optional[str] = None,
+                                difficulty_level: Optional[str] = None, limit: int = 10) -> List[Dict[str, Any]]:
+        """获取用户的错题列表"""
+        try:
+            with self.get_session() as session:
+                # 构建查询：基于新的合并表，无需JOIN
+                query = session.query(InterviewQARecord)\
+                    .join(InterviewSession, InterviewQARecord.session_id == InterviewSession.session_id)\
+                    .filter(InterviewSession.user_id == user_id)\
+                    .filter(InterviewQARecord.is_wrong_question == True)
+
+                # 添加筛选条件
+                if question_type:
+                    query = query.filter(InterviewQARecord.question_type == question_type)
+
+                if difficulty_level:
+                    query = query.filter(InterviewQARecord.difficulty_level == difficulty_level)
+
+                # 按时间倒序排列并限制数量
+                results = query.order_by(InterviewQARecord.reviewed_at.desc()).limit(limit).all()
+
+                # 格式化返回结果
+                wrong_questions = []
+                for qa_record in results:
+                    # 处理知识点字段 - 现在统一为字符串格式
+                    knowledge_points_data = qa_record.knowledge_points if qa_record.knowledge_points else None
+
+                    wrong_questions.append({
+                        "question_id": qa_record.question_id,
+                        "session_id": qa_record.session_id,
+                        "question_text": qa_record.question_text,
+                        "question_type": qa_record.question_type,
+                        "question_category": qa_record.question_category,
+                        "difficulty_level": qa_record.difficulty_level,
+                        "candidate_answer": qa_record.candidate_answer,
+                        "interviewer_feedback": qa_record.interviewer_feedback,
+                        "overall_score": float(qa_record.overall_score) if qa_record.overall_score else None,
+                        "knowledge_points": knowledge_points_data,
+                        "answered_at": qa_record.answered_at.isoformat() if qa_record.answered_at else None,
+                        "reviewed_at": qa_record.reviewed_at.isoformat() if qa_record.reviewed_at else None
+                    })
+
+                logger.info(f"✅ 获取用户错题成功: user_id={user_id}, count={len(wrong_questions)}")
+                return wrong_questions
+
+        except Exception as e:
+            logger.error(f"❌ 获取用户错题失败: {e}")
+            return []

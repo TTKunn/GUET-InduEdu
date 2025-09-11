@@ -62,9 +62,10 @@ else:
 
 # 启动服务
 echo "🎉 启动面试记录服务..."
-echo "📍 服务地址: http://localhost:8006"
-echo "📖 API文档: http://localhost:8006/docs"
-echo "❤️  健康检查: http://localhost:8006/health"
+echo "📍 本地访问: http://localhost:8006"
+echo "🌐 外部访问: http://43.142.157.145:8006"
+echo "📖 API文档: http://43.142.157.145:8006/docs"
+echo "❤️  健康检查: http://43.142.157.145:8006/health"
 echo ""
 echo "按 Ctrl+C 停止服务"
 echo ""
