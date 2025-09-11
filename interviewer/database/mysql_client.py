@@ -151,8 +151,6 @@ class MySQLClient:
                 description=proj.get('description'),
                 technologies=proj.get('technologies'),
                 role=proj.get('role'),
-                start_date=proj.get('start_date'),
-                end_date=proj.get('end_date'),
                 achievements=proj.get('achievements'),
                 sort_order=i
             )
@@ -269,8 +267,6 @@ class MySQLClient:
                         'description': proj.description,
                         'technologies': proj.technologies,
                         'role': proj.role,
-                        'start_date': proj.start_date,
-                        'end_date': proj.end_date,
                         'achievements': proj.achievements
                     }
                     for proj in projects

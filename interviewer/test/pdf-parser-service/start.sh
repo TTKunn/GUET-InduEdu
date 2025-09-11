@@ -32,4 +32,12 @@ mkdir -p logs
 
 # 启动服务
 echo "🎯 启动PDF解析服务..."
+echo "📍 本地访问: http://localhost:8003"
+echo "🌐 外部访问: http://43.142.157.145:8003"
+echo "📖 API文档: http://43.142.157.145:8003/docs"
+echo "❤️  健康检查: http://43.142.157.145:8003/health"
+echo ""
+echo "按 Ctrl+C 停止服务"
+echo ""
+
 python main.py

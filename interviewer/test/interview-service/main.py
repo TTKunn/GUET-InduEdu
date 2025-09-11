@@ -25,7 +25,8 @@ from models import (
     DifyAddQARequest, DifyAddQAResponse,
     DifyLatestInterviewResponse, DifyInterviewSummaryResponse,
     CreateSessionRequest, InterviewSessionResponse,
-    HealthCheckResponse, BaseResponse
+    HealthCheckResponse, BaseResponse,
+    DifyWrongQuestionResponse, WrongQuestionResponse
 )
 from interview_service import InterviewService
 
@@ -188,7 +189,8 @@ async def dify_add_qa(request: DifyAddQARequest):
             question_category=request.question_category,
             candidate_answer=request.candidate_answer,
             interviewer_feedback=request.interviewer_feedback,
-            overall_score=request.overall_score
+            overall_score=request.overall_score,
+            knowledge_points=request.knowledge_points
         )
         
         if not result.get("success"):
@@ -342,6 +344,76 @@ async def finish_session(session_id: str, interviewer_notes: Optional[str] = Non
         logger.error(f"结束面试失败: {e}")
         raise HTTPException(status_code=500, detail=f"结束失败: {str(e)}")
 
+# ==================== 错题查询接口 ====================
+
+@app.get("/dify/interview/{user_id}/wrong-questions", response_model=DifyWrongQuestionResponse)
+async def dify_get_wrong_questions(
+    user_id: str,
+    question_type: Optional[str] = Query(None, description="题目类型筛选"),
+    limit: int = Query(10, ge=1, le=50, description="返回数量限制")
+):
+    """Dify专用：获取用户错题"""
+    try:
+        logger.info(f"Dify获取用户错题: user_id={user_id}")
+
+        result = interview_service.dify_get_wrong_questions(
+            user_id=user_id,
+            question_type=question_type,
+            limit=limit
+        )
+
+        return DifyWrongQuestionResponse(**result)
+
+    except Exception as e:
+        logger.error(f"Dify获取用户错题失败: {e}")
+        raise HTTPException(status_code=500, detail=f"获取失败: {str(e)}")
+
+@app.get("/interview/wrong-questions/{user_id}", response_model=WrongQuestionResponse)
+async def get_user_wrong_questions(
+    user_id: str,
+    question_type: Optional[str] = Query(None, description="题目类型筛选"),
+    difficulty_level: Optional[str] = Query(None, description="题目难度筛选"),
+    limit: int = Query(10, ge=1, le=50, description="返回数量限制")
+):
+    """获取用户错题列表"""
+    try:
+        logger.info(f"获取用户错题: user_id={user_id}")
+
+        result = interview_service.get_user_wrong_questions(
+            user_id=user_id,
+            question_type=question_type,
+            difficulty_level=difficulty_level,
+            limit=limit
+        )
+
+        return WrongQuestionResponse(**result)
+
+    except Exception as e:
+        logger.error(f"获取用户错题失败: {e}")
+        raise HTTPException(status_code=500, detail=f"获取失败: {str(e)}")
+
+@app.get("/dify/interview/{user_id}/wrong-question-keywords")
+async def dify_get_wrong_question_keywords(
+    user_id: str,
+    required_count: int = Query(5, ge=1, le=20, description="需要的关键词组数量（对应错题数量）"),
+    question_type: Optional[str] = Query(None, description="题目类型筛选")
+):
+    """Dify专用：获取错题关键词组合，返回m组关键词用于循环生成题目"""
+    try:
+        logger.info(f"Dify获取错题关键词: user_id={user_id}, count={required_count}")
+
+        result = interview_service.get_wrong_question_keywords_for_dify(
+            user_id=user_id,
+            required_count=required_count,
+            question_type=question_type
+        )
+
+        return result
+
+    except Exception as e:
+        logger.error(f"Dify获取错题关键词失败: {e}")
+        raise HTTPException(status_code=500, detail=f"获取关键词失败: {str(e)}")
+
 @app.get("/")
 async def root():
     """根路径"""
@@ -356,7 +428,12 @@ async def root():
             "create_interview": "/dify/interview/create",
             "add_qa": "/dify/interview/add-qa",
             "latest_interview": "/dify/interview/{user_id}/latest",
-            "interview_summary": "/dify/interview/{session_id}/summary"
+            "interview_summary": "/dify/interview/{session_id}/summary",
+            "wrong_questions": "/dify/interview/{user_id}/wrong-questions",
+            "wrong_question_keywords": "/dify/interview/{user_id}/wrong-question-keywords"
+        },
+        "standard_apis": {
+            "wrong_questions": "/interview/wrong-questions/{user_id}"
         }
     }
 

@@ -70,8 +70,6 @@ class Project(Base):
     description = Column(Text, comment='项目描述')
     technologies = Column(Text, comment='使用技术')
     role = Column(String(100), comment='担任角色')
-    start_date = Column(String(50), comment='开始时间')
-    end_date = Column(String(50), comment='结束时间')
     achievements = Column(Text, comment='项目成果')
     sort_order = Column(Integer, default=0, comment='排序序号')
     created_at = Column(TIMESTAMP, server_default=func.now())

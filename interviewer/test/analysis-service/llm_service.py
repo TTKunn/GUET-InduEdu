@@ -151,7 +151,6 @@ class LLMService:
             "name": "项目名称",
             "description": "项目详细描述",
             "role": "担任角色",
-            "duration": "项目时间",
             "technologies": ["项目中使用的技术栈"],
             "achievements": "项目成果和解决的问题",
             "team_size": "团队规模",

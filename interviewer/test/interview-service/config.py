@@ -11,7 +11,7 @@ load_dotenv()
 
 # ==================== 数据库配置 ====================
 # MySQL配置
-MYSQL_URL = os.getenv("MYSQL_URL", "mysql+pymysql://root:Xzk200411.@43.142.157.145:3306/interview_analysis")
+MYSQL_URL = os.getenv("MYSQL_URL", "mysql+pymysql://root:Xzk200411.@localhost:3306/interview_analysis")
 MYSQL_POOL_SIZE = int(os.getenv("MYSQL_POOL_SIZE", "10"))
 MYSQL_MAX_OVERFLOW = int(os.getenv("MYSQL_MAX_OVERFLOW", "20"))
 MYSQL_POOL_TIMEOUT = int(os.getenv("MYSQL_POOL_TIMEOUT", "30"))
@@ -56,6 +56,10 @@ DEFAULT_SESSION_DURATION = int(os.getenv("DEFAULT_SESSION_DURATION", "60"))  # �
 MAX_QUESTIONS_PER_SESSION = int(os.getenv("MAX_QUESTIONS_PER_SESSION", "20"))  # 每次面试最大题目数
 DEFAULT_QUESTION_DURATION = int(os.getenv("DEFAULT_QUESTION_DURATION", "10"))  # 默认题目回答时长（分钟）
 
+# 错题集配置
+DEFAULT_WRONG_QUESTION_THRESHOLD = float(os.getenv("WRONG_QUESTION_THRESHOLD", "6.0"))  # 错题判定阈值（0-10分）
+RECENT_WRONG_QUESTIONS_POOL_SIZE = int(os.getenv("RECENT_WRONG_QUESTIONS_POOL_SIZE", "20"))  # 最近错题池大小
+
 # ==================== 配置验证 ====================
 def validate_config():
     """验证必要的配置项"""
@@ -68,6 +72,10 @@ def validate_config():
     # 检查端口配置
     if not (1024 <= API_PORT <= 65535):
         errors.append("API_PORT must be between 1024 and 65535")
+
+    # 检查错题阈值配置
+    if not (0 <= DEFAULT_WRONG_QUESTION_THRESHOLD <= 10):
+        errors.append("WRONG_QUESTION_THRESHOLD must be between 0 and 10")
 
     if errors:
         raise ValueError(f"Configuration errors: {', '.join(errors)}")
@@ -92,7 +100,8 @@ def get_config_info() -> dict:
         "business": {
             "default_session_duration": DEFAULT_SESSION_DURATION,
             "max_questions_per_session": MAX_QUESTIONS_PER_SESSION,
-            "default_question_duration": DEFAULT_QUESTION_DURATION
+            "default_question_duration": DEFAULT_QUESTION_DURATION,
+            "wrong_question_threshold": DEFAULT_WRONG_QUESTION_THRESHOLD
         },
         "security": {
             "auth_enabled": ENABLE_AUTH

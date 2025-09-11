@@ -19,6 +19,9 @@ Dify工作流 → 面试记录服务 → MySQL数据库
 - **添加题目和回答**：原子操作记录完整问答
 - **获取最新面试信息**：查询用户最新面试状态
 - **获取面试总结**：生成结构化面试报告
+- **错题记录管理**：自动识别和管理错题记录
+- **错题查询**：获取用户错题列表，支持筛选
+- **错题关键词提取**：为Dify工作流提供错题关键词
 
 ### 标准API功能
 - **面试会话管理**：创建、开始、结束面试
@@ -169,6 +172,27 @@ config:
     - overall_evaluation
 ```
 
+### 4. 获取错题关键词（用于生成针对性题目）
+
+**选择策略**：在最近20道错题中随机选择指定数量的题目，兼顾时效性和随机性
+
+```yaml
+name: "获取错题关键词"
+type: "http"
+config:
+  url: "http://interview-service:8006/dify/interview/{{#start.user_id#}}/wrong-question-keywords"
+  method: "GET"
+  params:
+    required_count: 3
+    question_type: "technical"
+  output_variables:
+    - keywords
+    - question_details
+    - total_selected_questions
+    - recent_pool_size
+    - available_keywords_count
+```
+
 ## 📚 API接口说明
 
 ### Dify专用接口
@@ -179,6 +203,8 @@ config:
 | `/dify/interview/add-qa` | POST | 添加题目和回答 |
 | `/dify/interview/{user_id}/latest` | GET | 获取最新面试信息 |
 | `/dify/interview/{session_id}/summary` | GET | 获取面试总结 |
+| `/dify/interview/{user_id}/wrong-questions` | GET | 获取用户错题列表 |
+| `/dify/interview/{user_id}/wrong-question-keywords` | GET | 获取错题关键词组合 |
 
 ### 标准接口
 
@@ -189,6 +215,7 @@ config:
 | `/interview/sessions/{session_id}/detail` | GET | 获取会话详情 |
 | `/interview/sessions/{session_id}/start` | POST | 开始面试 |
 | `/interview/sessions/{session_id}/finish` | POST | 结束面试 |
+| `/interview/wrong-questions/{user_id}` | GET | 获取用户错题（标准版） |
 
 ## 📊 数据结构
 
@@ -227,6 +254,56 @@ config:
       "feedback": "理解深入但缺少实例"
     }
   ]
+}
+```
+
+### 错题查询数据
+```json
+{
+  "success": true,
+  "user_id": "test_user_001",
+  "wrong_questions": [
+    {
+      "question_id": "session_20250906_201501_7622198b_q003",
+      "session_id": "session_20250906_201501_7622198b",
+      "question_text": "请解释Java中的多态性，并给出一个实际的代码示例。",
+      "question_type": "technical",
+      "question_category": "Java编程",
+      "difficulty_level": "medium",
+      "candidate_answer": "多态就是一个对象有多种形态，但具体怎么实现我不太清楚。",
+      "interviewer_feedback": "理解基本概念，但缺乏具体实现细节，建议学习继承、重写、接口等相关知识。",
+      "overall_score": 4.0,
+      "knowledge_points": "[\"Java\", \"多态\", \"继承\", \"重写\", \"接口\", \"面向对象\", \"方法重载\"]",
+      "answered_at": "2025-09-07T09:28:41",
+      "reviewed_at": "2025-09-07T09:28:41"
+    }
+  ],
+  "total": 4,
+  "message": "错题获取成功"
+}
+```
+
+### 错题关键词数据
+```json
+{
+  "success": true,
+  "user_id": "test_user_001",
+  "keywords": [
+    ["数据库", "ACID", "原子性", "一致性", "隔离性", "持久性", "事务"],
+    ["Java", "多态", "继承", "重写", "接口", "面向对象", "方法重载"]
+  ],
+  "question_details": [
+    {
+      "question_id": "session_20250906_201501_7622198b_q002",
+      "question_text": "请解释数据库中的ACID特性，并说明每个特性的含义。",
+      "score": 3.0,
+      "keywords": ["数据库", "ACID", "原子性", "一致性", "隔离性", "持久性", "事务"],
+      "keywords_count": 7
+    }
+  ],
+  "total_selected_questions": 2,
+  "total_wrong_questions": 4,
+  "message": "成功提取2组关键词，每组对应一个错题"
 }
 ```
 
