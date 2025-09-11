@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  # PDF解析服务
+  pdf-parser-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pdf_parser_service
+    restart: unless-stopped
+    ports:
+      - "8003:8003"
+    environment:
+      # 服务配置
+      API_HOST: 0.0.0.0
+      API_PORT: 8003
+      LOG_LEVEL: INFO
+      
+      # PDF解析配置
+      PDF_CHUNK_SIZE: 1000
+      PDF_CHUNK_OVERLAP: 200
+      PDF_MAX_FILE_SIZE: 10
+      
+      # 安全配置
+      CORS_ORIGINS: "*"
+      ENABLE_AUTH: false
+      
+    volumes:
+      - ./logs:/app/logs
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8003/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+networks:
+  default:
+    name: pdf_parser_network

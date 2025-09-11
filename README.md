@@ -81,6 +81,7 @@ main (初始提交)
 | `ProjectBid-dev`       | 揭榜挂帅项目系统开发     |
 | `Interviewer-dev`      | 企业AI面试官系统开发     |
 | `Interviewer_test_dev` | 企业AI面试官系统开发测试 |
+| `Interviewer_test_dev` | 企业AI面试官系统开发测试 |
 
 ### 当前开发状态
 
@@ -140,12 +141,13 @@ git checkout develop
 
 ### 团队分工
 
-| 团队             | 负责系统           | 主要分支              |
-| ---------------- | ------------------ | --------------------- |
-| **项目负责人**   | 整体架构和进度管理 | `main`, `develop`     |
-| **院校管理团队** | 社团管理系统       | `club-management-dev` |
-| **项目平台团队** | 揭榜挂帅系统       | `ProjectBid-dev`      |
-| **AI面试团队**   | 智能面试系统       | `Interviewer-dev`     |
+| 团队 | 负责系统 | 主要分支 |
+|------|----------|----------|
+| **项目负责人** | 整体架构和进度管理 | `main`, `develop` |
+| **院校管理团队** | 社团管理系统 | `club-management-dev` |
+| **项目平台团队** | 揭榜挂帅系统 | `ProjectBid-dev` |
+| **AI面试团队** | 智能面试系统 | `Interviewer-dev` |
+
 
 ### 分支管理规范
 
