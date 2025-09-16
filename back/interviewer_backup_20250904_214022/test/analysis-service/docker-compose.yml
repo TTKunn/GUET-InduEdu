@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  # 注释：使用远程MySQL数据库，不需要Docker部署数据库服务
+
+  # 简历分析服务
+  analysis-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: analysis_service
+    restart: unless-stopped
+    ports:
+      - "8004:8004"
+    environment:
+      # 数据库配置 - 连接远程MySQL
+      MYSQL_URL: mysql+pymysql://root:Xzk200411.@43.142.157.145:3306/interview_analysis
+      MYSQL_POOL_SIZE: 10
+      MYSQL_MAX_OVERFLOW: 20
+      MYSQL_POOL_TIMEOUT: 30
+
+      # LLM配置
+      ZHIPUAI_API_KEY: ${ZHIPUAI_API_KEY}
+      OPENAI_API_KEY: ${OPENAI_API_KEY}
+      DEFAULT_LLM_PROVIDER: zhipuai
+
+      # PDF解析服务配置
+      DOCUMENT_PARSER_URL: http://43.142.157.145:8003
+
+      # 服务配置
+      API_HOST: 0.0.0.0
+      API_PORT: 8004
+      LOG_LEVEL: INFO
+
+      # 安全配置
+      CORS_ORIGINS: "*"
+      ENABLE_AUTH: false
+
+    # 使用主机网络模式以访问远程服务
+    network_mode: "host"
+    volumes:
+      - ./logs:/app/logs

@@ -1,0 +1,1783 @@
+2025-08-25 13:15:40,622 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 13:15:40,658 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 13:15:40,658 - main - ERROR - ❌ 服务启动失败: Configuration errors: ZHIPUAI_API_KEY is required when using zhipuai provider
+2025-08-25 13:18:55,405 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 13:18:55,434 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 13:18:55,434 - main - INFO - ✅ 配置验证通过
+2025-08-25 13:18:55,434 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 13:18:55,511 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 13:18:55,511 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 13:18:55,511 - main - INFO - 🎉 服务启动完成
+2025-08-25 13:33:47,646 - database - INFO - 档案不存在: user_id=test_user_001
+2025-08-25 13:33:58,917 - database - INFO - 档案不存在: user_id=test_user_001
+2025-08-25 13:34:27,885 - database - INFO - 档案不存在: user_id=test_user_001
+2025-08-25 13:39:16,775 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 13:39:16,776 - database - INFO - 数据库连接已断开
+2025-08-25 13:39:16,776 - main - INFO - ✅ 服务已关闭
+2025-08-25 13:39:27,541 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 13:39:27,566 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 13:39:27,566 - main - INFO - ✅ 配置验证通过
+2025-08-25 13:39:27,566 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 13:39:27,576 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 13:39:27,576 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 13:39:27,576 - main - INFO - 🎉 服务启动完成
+2025-08-25 13:43:06,712 - main - INFO - 开始分析简历: user_id=test_user_001, filename=test_resume.pdf
+2025-08-25 13:43:06,712 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:43:06,712 - pdf_service - INFO - 开始解析PDF文件: test_resume.pdf
+2025-08-25 13:43:06,856 - pdf_service - ERROR - PDF解析失败: object of type 'NoneType' has no len()
+2025-08-25 13:45:24,744 - main - INFO - 开始分析简历: user_id=test_user_002, filename=test_resume.pdf
+2025-08-25 13:45:24,744 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:45:24,744 - pdf_service - INFO - 开始解析PDF文件: test_resume.pdf
+2025-08-25 13:45:24,756 - pdf_service - ERROR - PDF解析失败: object of type 'NoneType' has no len()
+2025-08-25 13:46:20,342 - main - INFO - 开始分析简历: user_id=test_user_003, filename=test_resume.pdf
+2025-08-25 13:46:20,342 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:46:20,344 - pdf_service - INFO - 开始解析PDF文件: test_resume.pdf
+2025-08-25 13:46:20,354 - pdf_service - ERROR - PDF解析失败: object of type 'NoneType' has no len()
+2025-08-25 13:49:58,778 - main - INFO - 开始分析简历: user_id=test_user_004, filename=test_resume.pdf
+2025-08-25 13:49:58,778 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:49:58,778 - pdf_service - INFO - 开始解析PDF文件: test_resume.pdf
+2025-08-25 13:49:58,790 - pdf_service - ERROR - PDF解析失败: object of type 'NoneType' has no len()
+2025-08-25 13:51:02,106 - main - INFO - 开始分析简历: user_id=test_user_005, filename=test_resume.pdf
+2025-08-25 13:51:02,106 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:51:02,106 - pdf_service - INFO - 开始解析PDF文件: test_resume.pdf
+2025-08-25 13:51:02,116 - pdf_service - ERROR - PDF解析失败: object of type 'NoneType' has no len()
+2025-08-25 13:51:52,148 - main - INFO - 开始分析简历: user_id=test_user_006, filename=test_resume.pdf
+2025-08-25 13:51:52,148 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:51:52,148 - pdf_service - INFO - 开始解析PDF文件: test_resume.pdf
+2025-08-25 13:51:52,160 - pdf_service - ERROR - PDF解析失败: object of type 'NoneType' has no len()
+2025-08-25 13:52:25,618 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 13:52:25,619 - database - INFO - 数据库连接已断开
+2025-08-25 13:52:25,619 - main - INFO - ✅ 服务已关闭
+2025-08-25 13:52:52,871 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 13:52:52,899 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 13:52:52,899 - main - INFO - ✅ 配置验证通过
+2025-08-25 13:52:52,899 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 13:52:52,909 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 13:52:52,909 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 13:52:52,909 - main - INFO - 🎉 服务启动完成
+2025-08-25 13:53:28,058 - main - INFO - 开始分析简历: user_id=test_user_007, filename=test_resume.pdf
+2025-08-25 13:53:28,058 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:53:28,058 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 13:53:28,059 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 13:53:28,098 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 13:53:28,098 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 13:53:28,098 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 13:53:43,137 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 13:53:43,139 - llm_service - INFO - LLM提取完成，耗时: 15.04秒
+2025-08-25 13:53:43,139 - llm_service - WARNING - 直接JSON解析失败，尝试提取JSON部分
+2025-08-25 13:53:43,139 - main - INFO - 步骤3: 提取关键词
+2025-08-25 13:53:43,139 - llm_service - INFO - 关键词提取完成: technical=19, all=19
+2025-08-25 13:53:43,139 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 13:53:43,139 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 13:53:43,145 - database - INFO - 档案已保存: user_id=test_user_007
+2025-08-25 13:53:43,145 - main - INFO - 简历分析完成: user_id=test_user_007, 耗时=15.09秒
+2025-08-25 13:56:02,575 - database - INFO - 档案不存在: user_id=test_user_001
+2025-08-25 13:59:08,758 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-08-25 13:59:08,758 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 13:59:08,758 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 13:59:08,758 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 13:59:09,153 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 13:59:09,154 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 13:59:09,154 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 13:59:34,406 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 13:59:34,408 - llm_service - INFO - LLM提取完成，耗时: 25.25秒
+2025-08-25 13:59:34,409 - llm_service - WARNING - 直接JSON解析失败，尝试提取JSON部分
+2025-08-25 13:59:34,409 - main - INFO - 步骤3: 提取关键词
+2025-08-25 13:59:34,409 - llm_service - INFO - 关键词提取完成: technical=35, all=35
+2025-08-25 13:59:34,409 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 13:59:34,409 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 13:59:34,411 - database - INFO - 档案已保存: user_id=test_user_001
+2025-08-25 13:59:34,411 - main - INFO - 简历分析完成: user_id=test_user_001, 耗时=25.65秒
+2025-08-25 14:12:56,625 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 14:12:56,626 - database - INFO - 数据库连接已断开
+2025-08-25 14:12:56,626 - main - INFO - ✅ 服务已关闭
+2025-08-25 14:13:29,322 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 14:13:29,348 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 14:13:29,348 - main - INFO - ✅ 配置验证通过
+2025-08-25 14:13:29,348 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 14:13:29,359 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 14:13:29,359 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 14:13:29,359 - main - INFO - 🎉 服务启动完成
+2025-08-25 14:14:10,300 - main - INFO - 开始分析简历: user_id=test_user_new, filename=test_resume.pdf
+2025-08-25 14:14:10,300 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:14:10,301 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:14:10,301 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:14:10,337 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:14:10,338 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:14:10,338 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 14:14:29,216 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 14:14:29,218 - llm_service - INFO - LLM提取完成，耗时: 18.88秒
+2025-08-25 14:14:29,218 - main - INFO - 步骤3: 提取关键词
+2025-08-25 14:14:29,218 - llm_service - INFO - 关键词提取完成: basic_technical=18, project_technical=9, business_domain=0, all=18
+2025-08-25 14:14:29,218 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 14:14:29,218 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 14:14:29,220 - database - INFO - 档案已保存: user_id=test_user_new
+2025-08-25 14:14:29,220 - main - INFO - 简历分析完成: user_id=test_user_new, 耗时=18.92秒
+2025-08-25 14:16:56,193 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-25 14:16:56,193 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:16:56,193 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 14:16:56,194 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 14:16:56,582 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 14:16:56,583 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:16:56,583 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 14:17:33,234 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 14:17:33,235 - llm_service - INFO - LLM提取完成，耗时: 36.65秒
+2025-08-25 14:17:33,236 - llm_service - WARNING - 直接JSON解析失败，尝试提取JSON部分
+2025-08-25 14:17:33,236 - llm_service - ERROR - 提取的JSON解析失败: Expecting value: line 21 column 9 (char 463)
+2025-08-25 14:17:33,236 - llm_service - ERROR - 无法解析LLM返回的JSON，返回默认结构
+2025-08-25 14:17:33,236 - main - INFO - 步骤3: 提取关键词
+2025-08-25 14:17:33,236 - llm_service - INFO - 关键词提取完成: basic_technical=0, project_technical=0, business_domain=0, all=0
+2025-08-25 14:17:33,236 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 14:17:33,236 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 14:17:33,238 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-25 14:17:33,238 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=37.04秒
+2025-08-25 14:22:03,254 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 14:22:03,255 - database - INFO - 数据库连接已断开
+2025-08-25 14:22:03,255 - main - INFO - ✅ 服务已关闭
+2025-08-25 14:22:36,637 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 14:22:36,662 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 14:22:36,662 - main - INFO - ✅ 配置验证通过
+2025-08-25 14:22:36,663 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 14:22:36,719 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 14:22:36,719 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 14:22:36,719 - main - INFO - 🎉 服务启动完成
+2025-08-25 14:23:27,523 - main - INFO - 开始分析简历: user_id=test_user_debug, filename=test_resume.pdf
+2025-08-25 14:23:27,523 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:23:27,523 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:23:27,524 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:23:27,564 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:23:27,565 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:23:27,565 - main - ERROR - 简历分析失败: Invalid format specifier, 耗时=0.04秒
+2025-08-25 14:27:09,692 - main - INFO - 开始分析简历: user_id=test_user_debug2, filename=test_resume.pdf
+2025-08-25 14:27:09,692 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:27:09,692 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:27:09,692 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:27:09,696 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:27:09,696 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:27:09,696 - main - ERROR - 简历分析失败: Invalid format specifier, 耗时=0.00秒
+2025-08-25 14:35:15,209 - main - INFO - 开始分析简历: user_id=test_user_fixed, filename=test_resume.pdf
+2025-08-25 14:35:15,209 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:35:15,209 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:35:15,209 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:35:15,213 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:35:15,213 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:35:15,213 - main - ERROR - 简历分析失败: Invalid format specifier, 耗时=0.00秒
+2025-08-25 14:41:47,965 - main - INFO - 开始分析简历: user_id=test_user_final, filename=test_resume.pdf
+2025-08-25 14:41:47,965 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:41:47,965 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:41:47,966 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:41:47,970 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:41:47,970 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:41:47,970 - main - ERROR - 简历分析失败: Invalid format specifier, 耗时=0.01秒
+2025-08-25 14:44:03,945 - main - INFO - 开始分析简历: user_id=test_user_success, filename=test_resume.pdf
+2025-08-25 14:44:03,946 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:44:03,946 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:44:03,947 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:44:03,971 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:44:03,972 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:44:03,975 - main - ERROR - 简历分析失败: Invalid format specifier, 耗时=0.03秒
+2025-08-25 14:44:52,427 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 14:44:52,427 - database - INFO - 数据库连接已断开
+2025-08-25 14:44:52,428 - main - INFO - ✅ 服务已关闭
+2025-08-25 14:45:26,891 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 14:45:26,924 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 14:45:26,925 - main - INFO - ✅ 配置验证通过
+2025-08-25 14:45:26,925 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 14:45:26,935 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 14:45:26,935 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 14:45:26,935 - main - INFO - 🎉 服务启动完成
+2025-08-25 14:46:24,828 - main - INFO - 开始分析简历: user_id=test_user_restart, filename=test_resume.pdf
+2025-08-25 14:46:24,828 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:46:24,828 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 14:46:24,828 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 14:46:24,870 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 14:46:24,870 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:46:24,871 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 14:46:42,328 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 14:46:42,331 - llm_service - INFO - LLM提取完成，耗时: 17.46秒
+2025-08-25 14:46:42,331 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "张三",
+    "phone": "13800138000",
+    "email": "zhangsan@example.com",
+    "location": null,
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": null,
+      "degree": null,
+      "major": null,
+      "graduation_year": "2022",
+      "gpa": "3.8/4.0",
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": null,
+      "description": null,
+      "role": null,
+      "duration": "2022-2024",
+    ...
+2025-08-25 14:46:42,332 - main - INFO - 步骤3: 提取关键词
+2025-08-25 14:46:42,332 - llm_service - INFO - 关键词提取完成: basic_technical=18, project_technical=9, business_domain=0, all=18
+2025-08-25 14:46:42,332 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 14:46:42,332 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 14:46:42,335 - database - INFO - 档案已保存: user_id=test_user_restart
+2025-08-25 14:46:42,335 - main - INFO - 简历分析完成: user_id=test_user_restart, 耗时=17.51秒
+2025-08-25 14:54:55,475 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-25 14:54:55,475 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 14:54:55,475 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 14:54:55,476 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 14:54:55,866 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 14:54:55,866 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 14:54:55,867 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 14:55:30,135 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 14:55:30,138 - llm_service - INFO - LLM提取完成，耗时: 34.27秒
+2025-08-25 14:55:30,138 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-25 14:55:30,147 - main - INFO - 步骤3: 提取关键词
+2025-08-25 14:55:30,148 - llm_service - INFO - 关键词提取完成: basic_technical=17, project_technical=22, business_domain=6, all=42
+2025-08-25 14:55:30,148 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 14:55:30,148 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 14:55:30,180 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-25 14:55:30,180 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=34.70秒
+2025-08-25 15:02:12,559 - database - INFO - 档案不存在: user_id=test_user_001
+2025-08-25 15:14:36,956 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 15:14:36,957 - database - INFO - 数据库连接已断开
+2025-08-25 15:14:36,958 - main - INFO - ✅ 服务已关闭
+2025-08-25 15:15:01,313 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 15:15:01,341 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 15:15:01,341 - main - INFO - ✅ 配置验证通过
+2025-08-25 15:15:01,342 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 15:15:01,572 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 15:15:01,572 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 15:15:01,572 - main - INFO - 🎉 服务启动完成
+2025-08-25 15:16:13,502 - main - INFO - 开始分析简历: user_id=test_user_simplified, filename=test_resume.pdf
+2025-08-25 15:16:13,502 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 15:16:13,503 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 15:16:13,503 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 15:16:13,542 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 15:16:13,543 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 15:16:13,543 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 15:16:31,351 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 15:16:31,353 - llm_service - INFO - LLM提取完成，耗时: 17.81秒
+2025-08-25 15:16:31,353 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "张三",
+    "phone": "13800138000",
+    "email": "zhangsan@example.com",
+    "location": null,
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": null,
+      "degree": null,
+      "major": null,
+      "graduation_year": "2022",
+      "gpa": "3.8/4.0",
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": null,
+      "description": null,
+      "role": null,
+      "duration": "2022-2024",
+    ...
+2025-08-25 15:16:31,353 - main - INFO - 步骤3: 提取关键词
+2025-08-25 15:16:31,353 - llm_service - ERROR - 关键词提取失败: 'NoneType' object has no attribute 'strip'
+2025-08-25 15:16:31,353 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 15:16:31,353 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 15:16:31,359 - database - INFO - 档案已保存: user_id=test_user_simplified
+2025-08-25 15:16:31,360 - main - INFO - 简历分析完成: user_id=test_user_simplified, 耗时=17.86秒
+2025-08-25 15:22:21,418 - main - INFO - 开始分析简历: user_id=test_user_fixed2, filename=test_resume.pdf
+2025-08-25 15:22:21,418 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 15:22:21,418 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 15:22:21,418 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 15:22:21,424 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 15:22:21,424 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 15:22:21,424 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 15:22:40,571 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 15:22:40,573 - llm_service - INFO - LLM提取完成，耗时: 19.15秒
+2025-08-25 15:22:40,573 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "张三",
+    "phone": "13800138000",
+    "email": "zhangsan@example.com",
+    "location": null,
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": null,
+      "degree": null,
+      "major": null,
+      "graduation_year": "2022",
+      "gpa": "3.8/4.0",
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": null,
+      "description": null,
+      "role": null,
+      "duration": "2022-2024",
+    ...
+2025-08-25 15:22:40,573 - main - INFO - 步骤3: 提取关键词
+2025-08-25 15:22:40,573 - llm_service - ERROR - 关键词提取失败: 'NoneType' object has no attribute 'strip'
+2025-08-25 15:22:40,573 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 15:22:40,574 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 15:22:40,576 - database - INFO - 档案已保存: user_id=test_user_fixed2
+2025-08-25 15:22:40,576 - main - INFO - 简历分析完成: user_id=test_user_fixed2, 耗时=19.16秒
+2025-08-25 15:26:01,022 - main - INFO - 开始分析简历: user_id=test_user_backup, filename=test_resume.pdf
+2025-08-25 15:26:01,022 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 15:26:01,022 - pdf_service - INFO - 使用本地方法解析PDF: test_resume.pdf
+2025-08-25 15:26:01,022 - pdf_service - INFO - 读取文件内容: 2312 字节
+2025-08-25 15:26:01,026 - pdf_service - INFO - 本地PDF解析完成: test_resume.pdf, 内容长度: 520
+2025-08-25 15:26:01,026 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 15:26:01,026 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 15:26:19,532 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 15:26:19,534 - llm_service - INFO - LLM提取完成，耗时: 18.51秒
+2025-08-25 15:26:19,534 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "张三",
+    "phone": "13800138000",
+    "email": "zhangsan@example.com",
+    "location": null,
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": null,
+      "degree": null,
+      "major": null,
+      "graduation_year": "2022",
+      "gpa": "3.8/4.0",
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": null,
+      "description": null,
+      "role": null,
+      "duration": "2022-2024",
+    ...
+2025-08-25 15:26:19,534 - main - INFO - 步骤3: 提取关键词
+2025-08-25 15:26:19,534 - llm_service - ERROR - 关键词提取失败: 'NoneType' object has no attribute 'strip'
+2025-08-25 15:26:19,534 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 15:26:19,534 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 15:26:19,536 - database - INFO - 档案已保存: user_id=test_user_backup
+2025-08-25 15:26:19,536 - main - INFO - 简历分析完成: user_id=test_user_backup, 耗时=18.51秒
+2025-08-25 15:32:11,939 - main - INFO - 开始分析简历: user_id=test_real_resume, filename=xzk.pdf
+2025-08-25 15:32:11,939 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 15:32:11,939 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 15:32:11,940 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 15:32:12,507 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 15:32:12,508 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 15:32:12,508 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 15:32:46,026 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 15:32:46,028 - llm_service - INFO - LLM提取完成，耗时: 33.52秒
+2025-08-25 15:32:46,028 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-25 15:32:46,028 - main - INFO - 步骤3: 提取关键词
+2025-08-25 15:32:46,028 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3
+2025-08-25 15:32:46,028 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 15:32:46,028 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 15:32:46,030 - database - INFO - 档案已保存: user_id=test_real_resume
+2025-08-25 15:32:46,030 - main - INFO - 简历分析完成: user_id=test_real_resume, 耗时=34.09秒
+2025-08-25 15:35:32,513 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-25 15:35:32,513 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 15:35:32,513 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 15:35:32,513 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 15:35:32,907 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 15:35:32,907 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 15:35:32,907 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 15:36:13,435 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 15:36:13,437 - llm_service - INFO - LLM提取完成，耗时: 40.53秒
+2025-08-25 15:36:13,437 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-25 15:36:13,437 - main - INFO - 步骤3: 提取关键词
+2025-08-25 15:36:13,438 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3
+2025-08-25 15:36:13,438 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 15:36:13,438 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 15:36:13,441 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-25 15:36:13,441 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=40.93秒
+2025-08-25 16:08:42,465 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 16:08:42,492 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 16:08:42,492 - main - INFO - ✅ 配置验证通过
+2025-08-25 16:08:42,493 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 16:08:42,503 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 16:08:42,503 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 16:08:42,503 - main - INFO - 🎉 服务启动完成
+2025-08-25 16:10:14,006 - main - INFO - 开始分析简历: user_id=test_direction, filename=xzk.pdf
+2025-08-25 16:10:14,006 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 16:10:14,006 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 16:10:14,007 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 16:10:14,466 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 16:10:14,466 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 16:10:14,467 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 16:10:51,079 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 16:10:51,082 - llm_service - INFO - LLM提取完成，耗时: 36.62秒
+2025-08-25 16:10:51,082 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-25 16:10:51,082 - main - INFO - 步骤3: 提取关键词
+2025-08-25 16:10:51,083 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-25 16:10:51,083 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 16:10:51,083 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 16:10:51,085 - database - INFO - 档案已保存: user_id=test_direction
+2025-08-25 16:10:51,085 - main - INFO - 简历分析完成: user_id=test_direction, 耗时=37.08秒
+2025-08-25 16:16:45,408 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-25 16:16:45,408 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 16:16:45,408 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 16:16:45,408 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 16:16:45,792 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 16:16:45,792 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 16:16:45,792 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 16:17:18,897 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 16:17:18,899 - llm_service - INFO - LLM提取完成，耗时: 33.11秒
+2025-08-25 16:17:18,899 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-25 16:17:18,899 - main - INFO - 步骤3: 提取关键词
+2025-08-25 16:17:18,899 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-25 16:17:18,899 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 16:17:18,900 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 16:17:18,901 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-25 16:17:18,901 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=33.49秒
+2025-08-25 16:21:59,054 - main - ERROR - 获取分组关键词失败: user_id=test_direction, error='LLMService' object has no attribute 'group_technical_skills'
+2025-08-25 16:22:41,181 - main - ERROR - 获取分组关键词失败: user_id=test_direction, error='LLMService' object has no attribute 'group_technical_skills'
+2025-08-25 16:23:09,006 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-25 16:23:09,007 - database - INFO - 数据库连接已断开
+2025-08-25 16:23:09,007 - main - INFO - ✅ 服务已关闭
+2025-08-25 16:23:27,754 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-25 16:23:27,781 - main - INFO - 🚀 启动简历分析服务...
+2025-08-25 16:23:27,781 - main - INFO - ✅ 配置验证通过
+2025-08-25 16:23:27,781 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-25 16:23:27,792 - database - INFO - ✅ 数据库索引创建完成
+2025-08-25 16:23:27,793 - database - INFO - ✅ MongoDB连接成功
+2025-08-25 16:23:27,793 - main - INFO - 🎉 服务启动完成
+2025-08-25 17:19:08,187 - database - INFO - 档案不存在: user_id=test_user_id
+2025-08-25 17:23:48,568 - database - INFO - 档案不存在: user_id=test_user_id
+2025-08-25 20:14:46,330 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:15:52,393 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:21:01,376 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:25:28,282 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:36:47,936 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:46:19,164 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:48:10,791 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 20:59:19,418 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 21:01:04,554 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 21:02:07,401 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 21:03:33,937 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 21:05:42,141 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 21:09:58,166 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-25 21:10:41,831 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-25 21:10:41,831 - main - INFO - 步骤1: 解析PDF文件
+2025-08-25 21:10:41,831 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-25 21:10:41,832 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-25 21:10:42,251 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-25 21:10:42,251 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-25 21:10:42,251 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-25 21:11:12,512 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-25 21:11:12,514 - llm_service - INFO - LLM提取完成，耗时: 30.26秒
+2025-08-25 21:11:12,514 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-25 21:11:12,515 - main - INFO - 步骤3: 提取关键词
+2025-08-25 21:11:12,515 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-25 21:11:12,515 - main - INFO - 步骤4: 构建候选人档案
+2025-08-25 21:11:12,516 - main - INFO - 步骤5: 保存到数据库
+2025-08-25 21:11:12,538 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-25 21:11:12,538 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=30.71秒
+2025-08-26 09:40:23,402 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-26 09:40:23,451 - main - INFO - 🚀 启动简历分析服务...
+2025-08-26 09:40:23,451 - main - INFO - ✅ 配置验证通过
+2025-08-26 09:40:23,452 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-26 09:40:23,554 - database - INFO - ✅ 数据库索引创建完成
+2025-08-26 09:40:23,554 - database - INFO - ✅ MongoDB连接成功
+2025-08-26 09:40:23,554 - main - INFO - 🎉 服务启动完成
+2025-08-26 09:43:03,322 - main - INFO - 开始分析简历: user_id=test_updated_api, filename=xzk.pdf
+2025-08-26 09:43:03,323 - main - INFO - 步骤1: 解析PDF文件
+2025-08-26 09:43:03,323 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-26 09:43:03,323 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-26 09:43:03,747 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-26 09:43:03,748 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-26 09:43:03,748 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-26 09:43:37,823 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 09:43:37,826 - llm_service - INFO - LLM提取完成，耗时: 34.08秒
+2025-08-26 09:43:37,827 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-26 09:43:37,827 - main - INFO - 步骤3: 提取关键词
+2025-08-26 09:43:37,827 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-26 09:43:37,827 - main - INFO - 步骤4: 构建候选人档案
+2025-08-26 09:43:37,827 - main - INFO - 步骤5: 保存到数据库
+2025-08-26 09:43:37,829 - database - INFO - 档案已保存: user_id=test_updated_api
+2025-08-26 09:43:37,829 - main - INFO - 简历分析完成: user_id=test_updated_api, 耗时=34.51秒
+2025-08-26 09:50:40,020 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-26 09:50:40,021 - main - INFO - 步骤1: 解析PDF文件
+2025-08-26 09:50:40,021 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-26 09:50:40,021 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-26 09:50:40,539 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-26 09:50:40,539 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-26 09:50:40,539 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-26 09:51:09,738 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-26 09:51:09,740 - llm_service - INFO - LLM提取完成，耗时: 29.20秒
+2025-08-26 09:51:09,740 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-26 09:51:09,741 - main - INFO - 步骤3: 提取关键词
+2025-08-26 09:51:09,741 - llm_service - INFO - 关键词提取完成: technical_skills=18, projects=3, direction=C++
+2025-08-26 09:51:09,741 - main - INFO - 步骤4: 构建候选人档案
+2025-08-26 09:51:09,741 - main - INFO - 步骤5: 保存到数据库
+2025-08-26 09:51:09,743 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-26 09:51:09,743 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=29.72秒
+2025-08-28 22:27:17,492 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-28 22:27:17,534 - main - INFO - 🚀 启动简历分析服务...
+2025-08-28 22:27:17,535 - main - INFO - ✅ 配置验证通过
+2025-08-28 22:27:17,535 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-28 22:27:17,644 - database - INFO - ✅ 数据库索引创建完成
+2025-08-28 22:27:17,644 - database - INFO - ✅ MongoDB连接成功
+2025-08-28 22:27:17,644 - main - INFO - 🎉 服务启动完成
+2025-08-28 22:28:24,227 - main - INFO - 🚀 启动简历分析服务...
+2025-08-28 22:28:24,227 - main - INFO - ✅ 配置验证通过
+2025-08-28 22:28:24,228 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-28 22:28:24,237 - database - INFO - ✅ 数据库索引创建完成
+2025-08-28 22:28:24,237 - database - INFO - ✅ MongoDB连接成功
+2025-08-28 22:28:24,237 - main - INFO - 🎉 服务启动完成
+2025-08-28 22:38:17,621 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-08-28 22:38:17,622 - main - INFO - 步骤1: 解析PDF文件
+2025-08-28 22:38:17,622 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-28 22:38:17,622 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-28 22:38:18,051 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-28 22:38:18,051 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-28 22:38:18,051 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-28 22:38:18,232 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-08-28 22:38:18,233 - llm_service - ERROR - 智谱AI调用失败: Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}
+2025-08-28 22:38:18,233 - llm_service - ERROR - LLM调用失败: provider=zhipuai, error=Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}
+2025-08-28 22:38:18,233 - llm_service - ERROR - 简历信息提取失败: Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}
+2025-08-28 22:38:18,233 - main - ERROR - 简历分析失败: Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}, 耗时=0.61秒
+2025-08-28 22:45:24,602 - main - INFO - 🚀 启动简历分析服务...
+2025-08-28 22:45:24,603 - main - INFO - ✅ 配置验证通过
+2025-08-28 22:45:24,603 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-28 22:45:24,612 - database - INFO - ✅ 数据库索引创建完成
+2025-08-28 22:45:24,612 - database - INFO - ✅ MongoDB连接成功
+2025-08-28 22:45:24,612 - main - INFO - 🎉 服务启动完成
+2025-08-28 22:45:24,613 - main - INFO - 🛑 关闭简历分析服务...
+2025-08-28 22:45:24,614 - database - INFO - 数据库连接已断开
+2025-08-28 22:45:24,614 - main - INFO - ✅ 服务已关闭
+2025-08-28 22:46:04,485 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-28 22:46:04,509 - main - INFO - 🚀 启动简历分析服务...
+2025-08-28 22:46:04,510 - main - INFO - ✅ 配置验证通过
+2025-08-28 22:46:04,510 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-28 22:46:04,519 - database - INFO - ✅ 数据库索引创建完成
+2025-08-28 22:46:04,519 - database - INFO - ✅ MongoDB连接成功
+2025-08-28 22:46:04,520 - main - INFO - 🎉 服务启动完成
+2025-08-28 22:46:37,631 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-08-28 22:46:37,631 - main - INFO - 步骤1: 解析PDF文件
+2025-08-28 22:46:37,631 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-28 22:46:37,631 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-28 22:46:38,050 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-28 22:46:38,051 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-28 22:46:38,051 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-28 22:47:15,995 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-28 22:47:15,997 - llm_service - INFO - LLM提取完成，耗时: 37.95秒
+2025-08-28 22:47:15,997 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-28 22:47:15,997 - main - INFO - 步骤3: 提取关键词
+2025-08-28 22:47:15,998 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-28 22:47:15,998 - main - INFO - 步骤4: 构建候选人档案
+2025-08-28 22:47:15,998 - main - ERROR - 简历分析失败: 'COMPREHENSIVE' is not a valid ExtractionMode, 耗时=38.37秒
+2025-08-28 22:47:44,004 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-28 22:47:44,004 - main - INFO - 步骤1: 解析PDF文件
+2025-08-28 22:47:44,004 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-28 22:47:44,004 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-28 22:47:44,386 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-28 22:47:44,387 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-28 22:47:44,387 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-28 22:48:17,703 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-28 22:48:17,705 - llm_service - INFO - LLM提取完成，耗时: 33.32秒
+2025-08-28 22:48:17,705 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-28 22:48:17,706 - main - INFO - 步骤3: 提取关键词
+2025-08-28 22:48:17,706 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-28 22:48:17,706 - main - INFO - 步骤4: 构建候选人档案
+2025-08-28 22:48:17,706 - main - INFO - 步骤5: 保存到数据库
+2025-08-28 22:48:17,708 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-28 22:48:17,708 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=33.70秒
+2025-08-29 16:20:00,312 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-29 16:20:00,370 - main - INFO - 🚀 启动简历分析服务...
+2025-08-29 16:20:00,370 - main - INFO - ✅ 配置验证通过
+2025-08-29 16:20:00,370 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-29 16:20:00,530 - database - INFO - ✅ 数据库索引创建完成
+2025-08-29 16:20:00,530 - database - INFO - ✅ MongoDB连接成功
+2025-08-29 16:20:00,530 - main - INFO - 🎉 服务启动完成
+2025-08-29 16:20:31,298 - main - INFO - 开始解析PDF文件: xzk.pdf
+2025-08-29 16:20:31,299 - pdf_service - INFO - 开始解析PDF文件: xzk.pdf
+2025-08-29 16:20:31,305 - pdf_service - ERROR - PDF解析服务调用失败: 404
+2025-08-29 16:20:31,306 - pdf_service - WARNING - PDF解析服务失败: 500: PDF解析服务调用失败: 404，尝试本地解析
+2025-08-29 16:20:31,306 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-29 16:20:31,307 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-29 16:20:32,037 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-29 16:24:57,639 - main - INFO - 开始分析简历: user_id=final_test_user, filename=xzk.pdf
+2025-08-29 16:24:57,639 - main - INFO - 步骤1: 解析PDF文件
+2025-08-29 16:24:57,639 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-29 16:24:57,639 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-29 16:24:58,018 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-29 16:24:58,018 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-29 16:24:58,018 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-29 16:25:27,838 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-29 16:25:27,840 - llm_service - INFO - LLM提取完成，耗时: 29.82秒
+2025-08-29 16:25:27,840 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-29 16:25:27,840 - main - INFO - 步骤3: 提取关键词
+2025-08-29 16:25:27,840 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-29 16:25:27,841 - main - INFO - 步骤4: 构建候选人档案
+2025-08-29 16:25:27,841 - main - INFO - 步骤5: 保存到数据库
+2025-08-29 16:25:27,843 - database - INFO - 档案已保存: user_id=final_test_user
+2025-08-29 16:25:27,843 - main - INFO - 简历分析完成: user_id=final_test_user, 耗时=30.20秒
+2025-08-29 16:28:41,210 - main - INFO - 开始分析简历: user_id=final_test_user2, filename=xzk.pdf
+2025-08-29 16:28:41,210 - main - INFO - 步骤1: 解析PDF文件
+2025-08-29 16:28:41,210 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-29 16:28:41,210 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-29 16:28:41,588 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-29 16:28:41,588 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-29 16:28:41,588 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-29 16:29:13,300 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-29 16:29:13,302 - llm_service - INFO - LLM提取完成，耗时: 31.71秒
+2025-08-29 16:29:13,302 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-29 16:29:13,303 - main - INFO - 步骤3: 提取关键词
+2025-08-29 16:29:13,303 - llm_service - INFO - 关键词提取完成: technical_skills=15, projects=3, direction=C++
+2025-08-29 16:29:13,303 - main - INFO - 步骤4: 构建候选人档案
+2025-08-29 16:29:13,303 - main - INFO - 步骤5: 保存到数据库
+2025-08-29 16:29:13,305 - database - INFO - 档案已保存: user_id=final_test_user2
+2025-08-29 16:29:13,306 - main - INFO - 简历分析完成: user_id=final_test_user2, 耗时=32.10秒
+2025-08-29 16:34:45,130 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-29 16:34:45,130 - main - INFO - 步骤1: 解析PDF文件
+2025-08-29 16:34:45,130 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-29 16:34:45,130 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-29 16:34:45,554 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-29 16:34:45,554 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-29 16:34:45,554 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-29 16:35:21,572 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-29 16:35:21,576 - llm_service - INFO - LLM提取完成，耗时: 36.02秒
+2025-08-29 16:35:21,576 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-29 16:35:21,576 - main - INFO - 步骤3: 提取关键词
+2025-08-29 16:35:21,577 - llm_service - INFO - 关键词提取完成: technical_skills=15, projects=3, direction=C++
+2025-08-29 16:35:21,577 - main - INFO - 步骤4: 构建候选人档案
+2025-08-29 16:35:21,577 - main - INFO - 步骤5: 保存到数据库
+2025-08-29 16:35:21,579 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-29 16:35:21,580 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=36.45秒
+2025-08-29 17:44:52,610 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-29 17:45:01,700 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-08-29 17:45:01,701 - main - INFO - 步骤1: 解析PDF文件
+2025-08-29 17:45:01,701 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-29 17:45:01,701 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-29 17:45:02,540 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-29 17:45:02,542 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-29 17:45:02,542 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-29 17:45:31,854 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-29 17:45:31,858 - llm_service - INFO - LLM提取完成，耗时: 29.32秒
+2025-08-29 17:45:31,858 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-29 17:45:31,858 - main - INFO - 步骤3: 提取关键词
+2025-08-29 17:45:31,859 - llm_service - INFO - 关键词提取完成: technical_skills=18, projects=3, direction=C++
+2025-08-29 17:45:31,859 - main - INFO - 步骤4: 构建候选人档案
+2025-08-29 17:45:31,859 - main - INFO - 步骤5: 保存到数据库
+2025-08-29 17:45:31,892 - database - INFO - 档案已保存: user_id=test_user_002
+2025-08-29 17:45:31,892 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=30.19秒
+2025-08-30 20:55:19,824 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-30 20:55:19,868 - main - INFO - 🚀 启动简历分析服务...
+2025-08-30 20:55:19,868 - main - INFO - ✅ 配置验证通过
+2025-08-30 20:55:19,868 - database - INFO - 连接MongoDB: mongodb://localhost:27017
+2025-08-30 20:55:19,951 - database - INFO - ✅ 数据库索引创建完成
+2025-08-30 20:55:19,951 - database - INFO - ✅ MongoDB连接成功
+2025-08-30 20:55:19,951 - main - INFO - 🎉 服务启动完成
+2025-08-30 20:56:41,046 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-30 20:58:26,273 - database - INFO - 档案不存在: user_id=test_user_002
+2025-08-31 20:44:15,830 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 20:44:15,870 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 20:44:15,871 - main - INFO - ✅ 配置验证通过
+2025-08-31 20:44:15,871 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 20:44:15,946 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 20:44:15,959 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 20:44:15,959 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 20:44:15,959 - main - INFO - 🎉 服务启动完成
+2025-08-31 20:44:47,363 - mysql_database - INFO - 用户总数: 6
+2025-08-31 20:45:40,506 - main - INFO - 开始分析简历: user_id=test_xzk_mysql, filename=xzk.pdf
+2025-08-31 20:45:40,507 - main - INFO - 步骤1: 解析PDF文件
+2025-08-31 20:45:40,507 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-31 20:45:40,507 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-31 20:45:40,949 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-31 20:45:40,949 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-31 20:45:40,950 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-31 20:45:44,243 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 401 Unauthorized"
+2025-08-31 20:45:44,244 - llm_service - ERROR - 智谱AI调用失败: Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}
+2025-08-31 20:45:44,244 - llm_service - ERROR - LLM调用失败: provider=zhipuai, error=Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}
+2025-08-31 20:45:44,244 - llm_service - ERROR - 简历信息提取失败: Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}
+2025-08-31 20:45:44,244 - main - ERROR - 简历分析失败: Error code: 401, with error text {"error":{"code":"401","message":"令牌已过期或验证不正确"}}, 耗时=3.74秒
+2025-08-31 20:45:55,346 - mysql_database - INFO - 档案不存在: user_id=existing_user_id
+2025-08-31 20:46:18,447 - mysql_database - ERROR - 获取档案失败: user_id=test_complete_001, error=1 validation error for CandidateProfile
+education
+  Input should be a valid list [type=list_type, input_value='[]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-08-31 20:47:43,634 - mysql_database - ERROR - 获取档案失败: user_id=test_complete_001, error=1 validation error for CandidateProfile
+education
+  Input should be a valid list [type=list_type, input_value='[]', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.11/v/list_type
+2025-08-31 20:48:18,218 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 20:48:18,247 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 20:48:18,247 - main - INFO - ✅ 配置验证通过
+2025-08-31 20:48:18,247 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 20:48:18,319 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 20:48:18,329 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 20:48:18,329 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 20:48:18,329 - main - INFO - 🎉 服务启动完成
+2025-08-31 20:48:49,277 - mysql_database - INFO - 档案获取成功: user_id=test_complete_001
+2025-08-31 20:49:00,013 - mysql_database - INFO - 档案获取成功: user_id=test_complete_001
+2025-08-31 20:49:12,771 - mysql_database - INFO - 用户总数: 6
+2025-08-31 20:54:42,807 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 20:54:42,833 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 20:54:42,833 - main - INFO - ✅ 配置验证通过
+2025-08-31 20:54:42,833 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 20:54:42,894 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 20:54:42,903 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 20:54:42,903 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 20:54:42,903 - main - INFO - 🎉 服务启动完成
+2025-08-31 20:55:09,135 - main - INFO - 开始分析简历: user_id=xzk_mysql_test, filename=xzk.pdf
+2025-08-31 20:55:09,135 - main - INFO - 步骤1: 解析PDF文件
+2025-08-31 20:55:09,135 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-31 20:55:09,136 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-31 20:55:09,581 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-31 20:55:09,582 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-31 20:55:09,582 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-31 20:55:39,864 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-31 20:55:39,866 - llm_service - INFO - LLM提取完成，耗时: 30.28秒
+2025-08-31 20:55:39,866 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-31 20:55:39,867 - main - INFO - 步骤3: 提取关键词
+2025-08-31 20:55:39,867 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-31 20:55:39,867 - main - INFO - 步骤4: 构建候选人档案
+2025-08-31 20:55:39,868 - main - INFO - 步骤5: 保存到数据库
+2025-08-31 20:55:39,892 - database.mysql_client - ERROR - 数据库操作失败: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '), 'C++')' at line 1")
+[SQL: INSERT INTO candidate_profiles (user_id, name, phone, email, location, education, direction) VALUES (%(user_id)s, %(name)s, %(phone)s, %(email)s, %(location)s, %(education)s, %(direction)s)]
+[parameters: {'user_id': 'xzk_mysql_test', 'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-08-31 20:55:39,892 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (pymysql.err.ProgrammingError) (1064, "You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '), 'C++')' at line 1")
+[SQL: INSERT INTO candidate_profiles (user_id, name, phone, email, location, education, direction) VALUES (%(user_id)s, %(name)s, %(phone)s, %(email)s, %(location)s, %(education)s, %(direction)s)]
+[parameters: {'user_id': 'xzk_mysql_test', 'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++'}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-08-31 20:55:39,892 - mysql_database - ERROR - 档案保存失败: user_id=xzk_mysql_test
+2025-08-31 20:56:58,111 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 20:56:58,139 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 20:56:58,139 - main - INFO - ✅ 配置验证通过
+2025-08-31 20:56:58,139 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 20:56:58,205 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 20:56:58,216 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 20:56:58,216 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 20:56:58,217 - main - INFO - 🎉 服务启动完成
+2025-08-31 20:57:25,052 - main - INFO - 开始分析简历: user_id=xzk_mysql_test_2, filename=xzk.pdf
+2025-08-31 20:57:25,052 - main - INFO - 步骤1: 解析PDF文件
+2025-08-31 20:57:25,052 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-31 20:57:25,053 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-31 20:57:25,485 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-31 20:57:25,486 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-31 20:57:25,486 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-31 21:02:25,627 - zhipuai.core._http_client - INFO - Retrying request to /chat/completions in 0.823003 seconds
+2025-08-31 21:02:59,365 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-31 21:02:59,367 - llm_service - INFO - LLM提取完成，耗时: 333.88秒
+2025-08-31 21:02:59,368 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-31 21:02:59,368 - main - INFO - 步骤3: 提取关键词
+2025-08-31 21:02:59,368 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-08-31 21:02:59,368 - main - INFO - 步骤4: 构建候选人档案
+2025-08-31 21:02:59,368 - main - INFO - 步骤5: 保存到数据库
+2025-08-31 21:02:59,393 - database.mysql_client - INFO - ✅ 创建用户档案: xzk_mysql_test_2
+2025-08-31 21:02:59,445 - mysql_database - INFO - 档案已保存: user_id=xzk_mysql_test_2
+2025-08-31 21:02:59,445 - main - INFO - 简历分析完成: user_id=xzk_mysql_test_2, 耗时=334.39秒
+2025-08-31 21:03:10,830 - mysql_database - INFO - 档案获取成功: user_id=xzk_mysql_test_2
+2025-08-31 21:03:19,845 - mysql_database - INFO - 档案获取成功: user_id=xzk_mysql_test_2
+2025-08-31 21:03:28,747 - mysql_database - INFO - 用户总数: 7
+2025-08-31 21:11:23,775 - mysql_database - INFO - 用户总数: 7
+2025-08-31 21:11:33,908 - mysql_database - INFO - 档案获取成功: user_id=xzk_mysql_test_2
+2025-08-31 21:11:44,988 - main - INFO - 开始分析简历: user_id=test_remote_api, filename=xzk.pdf
+2025-08-31 21:11:44,988 - main - INFO - 步骤1: 解析PDF文件
+2025-08-31 21:11:44,988 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-31 21:11:44,989 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-31 21:11:45,388 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-31 21:11:45,389 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-31 21:11:45,389 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-31 21:12:17,152 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-31 21:12:17,154 - llm_service - INFO - LLM提取完成，耗时: 31.77秒
+2025-08-31 21:12:17,154 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-31 21:12:17,154 - main - INFO - 步骤3: 提取关键词
+2025-08-31 21:12:17,155 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-31 21:12:17,155 - main - INFO - 步骤4: 构建候选人档案
+2025-08-31 21:12:17,155 - main - INFO - 步骤5: 保存到数据库
+2025-08-31 21:12:17,161 - database.mysql_client - INFO - ✅ 创建用户档案: test_remote_api
+2025-08-31 21:12:17,192 - mysql_database - INFO - 档案已保存: user_id=test_remote_api
+2025-08-31 21:12:17,192 - main - INFO - 简历分析完成: user_id=test_remote_api, 耗时=32.20秒
+2025-08-31 21:18:04,923 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 21:18:04,951 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 21:18:04,952 - main - INFO - ✅ 配置验证通过
+2025-08-31 21:18:04,952 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 21:18:05,017 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 21:18:05,027 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 21:18:05,027 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 21:18:05,027 - main - INFO - 🎉 服务启动完成
+2025-08-31 21:24:21,436 - mysql_database - INFO - 档案获取成功: user_id=test_user_002
+2025-08-31 21:25:30,581 - mysql_database - INFO - 档案获取成功: user_id=test_user_002
+2025-08-31 21:26:50,684 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-08-31 21:53:07,466 - mysql_database - INFO - 用户总数: 8
+2025-08-31 21:53:30,399 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 21:53:30,440 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 21:53:30,440 - main - INFO - ✅ 配置验证通过
+2025-08-31 21:53:30,440 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 21:53:30,524 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 21:53:30,535 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 21:53:30,535 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 21:53:30,535 - main - INFO - 🎉 服务启动完成
+2025-08-31 21:53:56,766 - mysql_database - INFO - 用户总数: 8
+2025-08-31 21:55:16,190 - mysql_database - INFO - 用户总数: 8
+2025-08-31 21:58:40,441 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-08-31 21:58:40,476 - main - INFO - 🚀 启动简历分析服务...
+2025-08-31 21:58:40,476 - main - INFO - ✅ 配置验证通过
+2025-08-31 21:58:40,476 - mysql_database - INFO - 连接MySQL数据库...
+2025-08-31 21:58:40,542 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-08-31 21:58:40,550 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-08-31 21:58:40,551 - mysql_database - INFO - ✅ MySQL连接成功
+2025-08-31 21:58:40,551 - main - INFO - 🎉 服务启动完成
+2025-08-31 21:59:10,360 - mysql_database - INFO - 用户总数: 8
+2025-08-31 22:00:29,586 - mysql_database - INFO - 用户总数: 8
+2025-08-31 22:00:33,858 - main - INFO - 开始分析简历: user_id=, filename=xzk.pdf
+2025-08-31 22:00:33,858 - main - INFO - 步骤1: 解析PDF文件
+2025-08-31 22:00:33,858 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-08-31 22:00:33,859 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-08-31 22:00:34,439 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-08-31 22:00:34,439 - main - INFO - 步骤2: LLM结构化信息提取
+2025-08-31 22:00:34,439 - llm_service - INFO - 开始LLM简历信息提取...
+2025-08-31 22:01:05,417 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-08-31 22:01:05,420 - llm_service - INFO - LLM提取完成，耗时: 30.98秒
+2025-08-31 22:01:05,420 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-08-31 22:01:05,420 - main - INFO - 步骤3: 提取关键词
+2025-08-31 22:01:05,420 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-08-31 22:01:05,421 - main - INFO - 步骤4: 构建候选人档案
+2025-08-31 22:01:05,421 - main - INFO - 步骤5: 保存到数据库
+2025-08-31 22:01:05,432 - database.mysql_client - INFO - ✅ 创建用户档案: 
+2025-08-31 22:01:05,469 - mysql_database - INFO - 档案已保存: user_id=
+2025-08-31 22:01:05,469 - main - INFO - 简历分析完成: user_id=, 耗时=31.61秒
+2025-08-31 22:03:25,921 - mysql_database - INFO - 用户总数: 9
+2025-09-01 22:26:06,176 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-01 22:26:06,225 - main - INFO - 🚀 启动简历分析服务...
+2025-09-01 22:26:06,226 - main - INFO - ✅ 配置验证通过
+2025-09-01 22:26:06,226 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-01 22:26:06,264 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: No module named 'pymysql'
+2025-09-01 22:26:06,264 - mysql_database - ERROR - ❌ MySQL连接失败: No module named 'pymysql'
+2025-09-01 22:26:06,264 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-01 22:26:39,797 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-01 22:26:39,838 - main - INFO - 🚀 启动简历分析服务...
+2025-09-01 22:26:39,838 - main - INFO - ✅ 配置验证通过
+2025-09-01 22:26:39,838 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-01 22:26:49,893 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:26:49,893 - mysql_database - ERROR - ❌ MySQL连接失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:26:49,894 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-01 22:30:27,112 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-01 22:30:27,159 - main - INFO - 🚀 启动简历分析服务...
+2025-09-01 22:30:27,160 - main - INFO - ✅ 配置验证通过
+2025-09-01 22:30:27,160 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-01 22:30:37,203 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:30:37,203 - mysql_database - ERROR - ❌ MySQL连接失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:30:37,203 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-02 16:32:34,093 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-02 16:32:34,215 - main - INFO - 🚀 启动简历分析服务...
+2025-09-02 16:32:34,215 - main - INFO - ✅ 配置验证通过
+2025-09-02 16:32:34,216 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-02 16:32:41,742 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-02 16:32:43,063 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-02 16:32:43,063 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-02 16:32:43,063 - main - INFO - 🎉 服务启动完成
+2025-09-02 16:33:08,994 - mysql_database - INFO - 用户总数: 9
+2025-09-02 16:33:38,972 - mysql_database - INFO - 用户总数: 9
+2025-09-02 16:36:25,470 - mysql_database - INFO - 用户总数: 9
+2025-09-04 13:20:49,016 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:20:49,196 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:20:49,196 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:20:49,196 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:20:49,239 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: No module named 'pymysql'
+2025-09-04 13:20:49,239 - mysql_database - ERROR - ❌ MySQL连接失败: No module named 'pymysql'
+2025-09-04 13:20:49,239 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-04 13:21:38,801 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:21:38,860 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:21:38,861 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:21:38,861 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:21:41,310 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 13:21:42,078 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 13:21:42,078 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 13:21:42,078 - main - INFO - 🎉 服务启动完成
+2025-09-04 13:23:29,060 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:23:29,127 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:23:29,128 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:23:29,128 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:23:30,663 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 13:23:31,299 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 13:23:31,301 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 13:23:31,303 - main - INFO - 🎉 服务启动完成
+2025-09-04 13:24:20,385 - mysql_database - INFO - 用户总数: 9
+2025-09-04 13:25:46,977 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:25:47,033 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:25:47,034 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:25:47,034 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:25:50,585 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 13:25:51,299 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 13:25:51,300 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 13:25:51,300 - main - INFO - 🎉 服务启动完成
+2025-09-04 13:26:40,380 - mysql_database - INFO - 用户总数: 9
+2025-09-04 13:26:42,430 - main - INFO - 开始分析简历: user_id=test_mysql_user, filename=xzk.pdf
+2025-09-04 13:26:42,430 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 13:26:42,430 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 13:26:42,432 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 13:26:42,947 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 13:26:42,948 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 13:26:42,948 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 13:27:12,727 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 13:27:12,730 - llm_service - INFO - LLM提取完成，耗时: 29.78秒
+2025-09-04 13:27:12,731 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 13:27:12,731 - main - INFO - 步骤3: 提取关键词
+2025-09-04 13:27:12,731 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-04 13:27:12,732 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 13:27:12,732 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 13:27:13,124 - database.mysql_client - INFO - ✅ 创建用户档案: test_mysql_user
+2025-09-04 13:27:16,469 - mysql_database - INFO - 档案已保存: user_id=test_mysql_user
+2025-09-04 13:27:16,470 - main - INFO - 简历分析完成: user_id=test_mysql_user, 耗时=34.04秒
+2025-09-04 13:27:19,243 - mysql_database - INFO - 档案获取成功: user_id=test_mysql_user
+2025-09-04 13:27:21,997 - mysql_database - INFO - 档案获取成功: user_id=test_mysql_user
+2025-09-04 18:32:16,756 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 18:32:16,884 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 18:32:16,885 - main - INFO - ✅ 配置验证通过
+2025-09-04 18:32:16,885 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 18:32:23,222 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 18:32:23,926 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 18:32:23,926 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 18:32:23,927 - main - INFO - 🎉 服务启动完成
+2025-09-04 18:34:28,034 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 18:34:28,086 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 18:34:28,086 - main - INFO - ✅ 配置验证通过
+2025-09-04 18:34:28,086 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 18:34:33,045 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 18:34:33,748 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 18:34:33,748 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 18:34:33,749 - main - INFO - 🎉 服务启动完成
+2025-09-04 18:35:13,069 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 18:35:13,125 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 18:35:13,125 - main - INFO - ✅ 配置验证通过
+2025-09-04 18:35:13,126 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 18:35:15,245 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 18:35:16,016 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 18:35:16,016 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 18:35:16,016 - main - INFO - 🎉 服务启动完成
+2025-09-04 19:20:13,370 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 19:20:13,371 - main - INFO - ✅ 配置验证通过
+2025-09-04 19:20:13,371 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 19:20:16,693 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 19:20:17,319 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 19:20:17,319 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 19:20:17,319 - main - INFO - 🎉 服务启动完成
+2025-09-04 19:20:43,449 - mysql_database - INFO - 用户总数: 12
+2025-09-04 19:24:05,881 - main - INFO - 开始分析简历: user_id=, filename=xzk.pdf
+2025-09-04 19:24:05,882 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 19:24:05,882 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 19:24:05,883 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 19:24:06,574 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 19:24:06,575 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 19:24:06,576 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 19:24:35,687 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:24:35,691 - llm_service - INFO - LLM提取完成，耗时: 29.12秒
+2025-09-04 19:24:35,691 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 19:24:35,692 - main - INFO - 步骤3: 提取关键词
+2025-09-04 19:24:35,692 - llm_service - INFO - 关键词提取完成: technical_skills=18, projects=3, direction=C++
+2025-09-04 19:24:35,692 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 19:24:35,694 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 19:24:35,997 - database.mysql_client - INFO - ✅ JSON字段更新成功: 
+2025-09-04 19:24:36,159 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gdb\\", \\"git\\", \\"j\' at line 1')
+[SQL: UPDATE candidate_profiles SET education=%(education)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'education': [], 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "qt creator", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 9}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:24:36,160 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gdb\\", \\"git\\", \\"j\' at line 1')
+[SQL: UPDATE candidate_profiles SET education=%(education)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'education': [], 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "qt creator", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 9}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:24:36,160 - mysql_database - ERROR - 档案保存失败: user_id=
+2025-09-04 19:29:20,603 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 19:29:20,603 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 19:29:20,603 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 19:29:20,604 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 19:29:20,903 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 19:29:20,904 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 19:29:20,904 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 19:29:53,198 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:29:53,201 - llm_service - INFO - LLM提取完成，耗时: 32.30秒
+2025-09-04 19:29:53,201 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 19:29:53,202 - main - INFO - 步骤3: 提取关键词
+2025-09-04 19:29:53,202 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-04 19:29:53,202 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 19:29:53,203 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 19:29:53,496 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 19:29:53,647 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:29:53,647 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:29:53,647 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:06:21,576 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:06:21,576 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:06:21,577 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:06:21,578 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:06:21,943 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:06:21,944 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:06:21,944 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:06:56,517 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:06:56,518 - llm_service - INFO - LLM提取完成，耗时: 34.57秒
+2025-09-04 20:06:56,519 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:06:56,519 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:06:56,519 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-04 20:06:56,520 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:06:56,520 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:06:59,539 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:06:59,696 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:06:59,696 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:06:59,697 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:07:05,623 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-04 20:07:05,623 - mysql_database - INFO - MySQL连接已断开
+2025-09-04 20:07:05,623 - main - INFO - ✅ 服务已关闭
+2025-09-04 20:07:10,118 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 20:07:10,118 - main - INFO - ✅ 配置验证通过
+2025-09-04 20:07:10,119 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 20:07:12,282 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 20:07:13,012 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 20:07:13,012 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 20:07:13,012 - main - INFO - 🎉 服务启动完成
+2025-09-04 20:07:20,457 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:07:20,458 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:07:20,458 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:07:20,460 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:07:21,092 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:07:21,094 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:07:21,094 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:07:49,638 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:07:49,643 - llm_service - INFO - LLM提取完成，耗时: 28.55秒
+2025-09-04 20:07:49,643 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:07:49,643 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:07:49,644 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-04 20:07:49,644 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:07:49,644 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:07:49,967 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:07:50,122 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (79 characters truncated) ... 槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "缓存", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:07:50,122 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (79 characters truncated) ... 槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "缓存", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:07:50,123 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:11:11,054 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-04 20:11:11,054 - mysql_database - INFO - MySQL连接已断开
+2025-09-04 20:11:11,055 - main - INFO - ✅ 服务已关闭
+2025-09-04 20:11:15,042 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 20:11:15,043 - main - INFO - ✅ 配置验证通过
+2025-09-04 20:11:15,043 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 20:11:17,456 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 20:11:18,081 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 20:11:18,081 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 20:11:18,081 - main - INFO - 🎉 服务启动完成
+2025-09-04 20:11:24,007 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:11:24,008 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:11:24,008 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:11:24,009 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:11:24,489 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:11:24,490 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:11:24,490 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:11:56,530 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:11:56,536 - llm_service - INFO - LLM提取完成，耗时: 32.05秒
+2025-09-04 20:11:56,537 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:11:56,537 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:11:56,538 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-04 20:11:56,538 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:11:56,539 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:11:56,866 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:11:57,178 - database.mysql_client - INFO - ✅ JSON序列化成功: test_user_001
+2025-09-04 20:11:57,351 - database.mysql_client - ERROR - 数据库操作失败: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'test_user_001' for key 'candidate_profiles.user_id'")
+[SQL: INSERT INTO candidate_profiles (user_id, name, phone, email, location, education, direction, technical_skills_json, projects_keywords_json, education_json) VALUES (%(user_id)s, %(name)s, %(phone)s, %(email)s, %(location)s, %(education)s, %(direction)s, %(technical_skills_json)s, %(projects_keywords_json)s, %(education_json)s)]
+[parameters: {'user_id': 'test_user_001', 'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': '[]', 'direction': 'C++', 'technical_skills_json': '["c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-04 20:11:57,352 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'test_user_001' for key 'candidate_profiles.user_id'")
+[SQL: INSERT INTO candidate_profiles (user_id, name, phone, email, location, education, direction, technical_skills_json, projects_keywords_json, education_json) VALUES (%(user_id)s, %(name)s, %(phone)s, %(email)s, %(location)s, %(education)s, %(direction)s, %(technical_skills_json)s, %(projects_keywords_json)s, %(education_json)s)]
+[parameters: {'user_id': 'test_user_001', 'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': '[]', 'direction': 'C++', 'technical_skills_json': '["c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-04 20:11:57,352 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:16:40,507 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-04 20:16:40,508 - mysql_database - INFO - MySQL连接已断开
+2025-09-04 20:16:40,508 - main - INFO - ✅ 服务已关闭
+2025-09-04 20:21:01,522 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 20:21:01,522 - main - INFO - ✅ 配置验证通过
+2025-09-04 20:21:01,523 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 20:21:04,391 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 20:21:05,100 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 20:21:05,100 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 20:21:05,100 - main - INFO - 🎉 服务启动完成
+2025-09-04 20:21:08,536 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:21:08,537 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:21:08,537 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:21:08,538 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:21:09,030 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:21:09,030 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:21:09,031 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:21:38,822 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:21:38,825 - llm_service - INFO - LLM提取完成，耗时: 29.79秒
+2025-09-04 20:21:38,826 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:21:38,826 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:21:38,827 - llm_service - INFO - 关键词提取完成: technical_skills=14, projects=3, direction=C++
+2025-09-04 20:21:38,827 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:21:38,828 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:21:39,219 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:21:39,555 - database.mysql_client - INFO - ✅ 更新用户档案: test_user_001
+2025-09-04 20:21:42,511 - mysql_database - INFO - 档案已保存: user_id=test_user_001
+2025-09-04 20:21:42,511 - main - INFO - 简历分析完成: user_id=test_user_001, 耗时=33.98秒
+2025-09-04 20:27:03,176 - mysql_database - INFO - 用户总数: 12
+2025-09-04 20:44:06,310 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-04 20:44:06,419 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-04 20:46:48,128 - main - INFO - 开始分析简历: user_id=test_user_003, filename=xzk.pdf
+2025-09-04 20:46:48,128 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:46:48,128 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:46:48,129 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:46:48,515 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:46:48,516 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:46:48,516 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:47:17,085 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:47:17,088 - llm_service - INFO - LLM提取完成，耗时: 28.57秒
+2025-09-04 20:47:17,088 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:47:17,088 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:47:17,089 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-04 20:47:17,089 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:47:17,089 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:47:17,414 - database.mysql_client - INFO - ✅ JSON序列化成功: test_user_003
+2025-09-04 20:47:17,471 - database.mysql_client - INFO - ✅ 创建用户档案: test_user_003
+2025-09-04 20:47:20,623 - mysql_database - INFO - 档案已保存: user_id=test_user_003
+2025-09-04 20:47:20,624 - main - INFO - 简历分析完成: user_id=test_user_003, 耗时=32.50秒
+2025-09-04 20:48:17,927 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_003
+2025-09-04 20:48:18,036 - mysql_database - INFO - 档案获取成功: user_id=test_user_003
