@@ -20,17 +20,22 @@ class CandidateProfile(Base):
     user_id = Column(String(100), unique=True, nullable=False, comment='用户唯一标识')
     
     # 个人信息字段
-    name = Column(String(100), comment='姓名')
-    phone = Column(String(20), comment='电话')
-    email = Column(String(100), comment='邮箱')
-    location = Column(String(200), comment='地址')
+    name = Column(String(100), nullable=True, comment='姓名')
+    phone = Column(String(20), nullable=True, comment='电话')
+    email = Column(String(100), nullable=True, comment='邮箱')
+    location = Column(String(200), nullable=True, comment='地址')
     
     # 教育背景
-    education = Column(Text, comment='教育背景')
-    
+    education = Column(Text, nullable=True, comment='教育背景')
+
     # 技术方向
-    direction = Column(String(100), comment='技术方向')
-    
+    direction = Column(String(100), nullable=True, comment='技术方向')
+
+    # JSON存储字段（优化存储）
+    technical_skills_json = Column(Text, nullable=True, comment='技术技能JSON存储')
+    projects_keywords_json = Column(Text, nullable=True, comment='项目关键词JSON存储')
+    education_json = Column(Text, nullable=True, comment='教育背景JSON存储')
+
     # 时间字段
     created_at = Column(TIMESTAMP, server_default=func.now(), comment='创建时间')
     updated_at = Column(TIMESTAMP, server_default=func.now(), onupdate=func.now(), comment='更新时间')

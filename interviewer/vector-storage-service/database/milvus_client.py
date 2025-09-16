@@ -43,7 +43,7 @@ class MilvusVectorStore:
         self.client = None
 
         # 从环境变量获取Milvus配置
-        self.milvus_uri = os.getenv('MILVUS_URI', 'http://localhost:19530')
+        self.milvus_uri = os.getenv('MILVUS_URI', 'http://43.142.157.145:19530')
         self.milvus_token = os.getenv('MILVUS_TOKEN', '')
 
         logger.info(f"初始化Milvus向量存储 - 集合: {collection_name}, 模型: {embedding_model_type}")
