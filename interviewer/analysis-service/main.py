@@ -379,6 +379,48 @@ async def parse_pdf_only(file: UploadFile = File(...)):
         logger.error(f"PDF解析失败: {str(e)}")
         raise HTTPException(status_code=500, detail=f"PDF解析失败: {str(e)}")
 
+@app.post("/profile", response_model=ProfileQueryResponse)
+async def query_user_profile(request: ProfileQueryRequest):
+    """查询用户档案"""
+    try:
+        logger.info(f"查询用户档案: user_id={request.user_id}")
+
+        # 获取用户档案
+        profile = db_service.get_profile(request.user_id)
+
+        if not profile:
+            return ProfileQueryResponse(
+                success=False,
+                user_id=request.user_id,
+                exists=False,
+                message="用户档案不存在"
+            )
+
+        # 如果不需要关键词，清空相关字段以减少响应大小
+        if not request.include_keywords:
+            profile.technical_skills = []
+            profile.projects_keywords = []
+            profile.extracted_keywords = []
+            profile.technical_keywords = []
+            profile.domain_keywords = []
+
+        return ProfileQueryResponse(
+            success=True,
+            user_id=request.user_id,
+            profile=profile,
+            exists=True,
+            message="用户档案获取成功"
+        )
+
+    except Exception as e:
+        logger.error(f"查询用户档案失败: user_id={request.user_id}, error={e}")
+        return ProfileQueryResponse(
+            success=False,
+            user_id=request.user_id,
+            exists=False,
+            message=f"查询用户档案失败: {str(e)}"
+        )
+
 @app.get("/analyze/status/{user_id}")
 async def get_analysis_status(user_id: str):
     """

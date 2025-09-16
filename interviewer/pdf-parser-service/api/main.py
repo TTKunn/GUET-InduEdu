@@ -354,7 +354,7 @@ async def search_documents(
             }
 
             response = await client.post(
-                "http://localhost:8005/search",
+                "http://43.142.157.145:8005/search",
                 json=search_data,
                 timeout=60
             )

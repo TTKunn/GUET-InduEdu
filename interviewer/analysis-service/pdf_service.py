@@ -22,7 +22,7 @@ class PDFService:
     
     def __init__(self):
         # PDF解析服务的URL - 使用新的pdf-parser-service
-        self.pdf_parser_url = os.getenv("DOCUMENT_PARSER_URL", "http://localhost:8003")
+        self.pdf_parser_url = os.getenv("DOCUMENT_PARSER_URL", "http://43.142.157.145:8003")
         self.max_file_size = PDF_MAX_FILE_SIZE * 1024 * 1024  # 转换为字节
         
     def validate_file(self, file: UploadFile) -> bool:
