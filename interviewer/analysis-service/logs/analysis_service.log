@@ -1277,3 +1277,1433 @@ education
 2025-08-31 22:01:05,469 - mysql_database - INFO - 档案已保存: user_id=
 2025-08-31 22:01:05,469 - main - INFO - 简历分析完成: user_id=, 耗时=31.61秒
 2025-08-31 22:03:25,921 - mysql_database - INFO - 用户总数: 9
+2025-09-01 22:26:06,176 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-01 22:26:06,225 - main - INFO - 🚀 启动简历分析服务...
+2025-09-01 22:26:06,226 - main - INFO - ✅ 配置验证通过
+2025-09-01 22:26:06,226 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-01 22:26:06,264 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: No module named 'pymysql'
+2025-09-01 22:26:06,264 - mysql_database - ERROR - ❌ MySQL连接失败: No module named 'pymysql'
+2025-09-01 22:26:06,264 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-01 22:26:39,797 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-01 22:26:39,838 - main - INFO - 🚀 启动简历分析服务...
+2025-09-01 22:26:39,838 - main - INFO - ✅ 配置验证通过
+2025-09-01 22:26:39,838 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-01 22:26:49,893 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:26:49,893 - mysql_database - ERROR - ❌ MySQL连接失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:26:49,894 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-01 22:30:27,112 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-01 22:30:27,159 - main - INFO - 🚀 启动简历分析服务...
+2025-09-01 22:30:27,160 - main - INFO - ✅ 配置验证通过
+2025-09-01 22:30:27,160 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-01 22:30:37,203 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:30:37,203 - mysql_database - ERROR - ❌ MySQL连接失败: (pymysql.err.OperationalError) (2003, "Can't connect to MySQL server on '43.142.157.145' (timed out)")
+(Background on this error at: https://sqlalche.me/e/20/e3q8)
+2025-09-01 22:30:37,203 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-02 16:32:34,093 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-02 16:32:34,215 - main - INFO - 🚀 启动简历分析服务...
+2025-09-02 16:32:34,215 - main - INFO - ✅ 配置验证通过
+2025-09-02 16:32:34,216 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-02 16:32:41,742 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-02 16:32:43,063 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-02 16:32:43,063 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-02 16:32:43,063 - main - INFO - 🎉 服务启动完成
+2025-09-02 16:33:08,994 - mysql_database - INFO - 用户总数: 9
+2025-09-02 16:33:38,972 - mysql_database - INFO - 用户总数: 9
+2025-09-02 16:36:25,470 - mysql_database - INFO - 用户总数: 9
+2025-09-04 13:20:49,016 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:20:49,196 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:20:49,196 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:20:49,196 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:20:49,239 - database.mysql_client - ERROR - ❌ MySQL连接初始化失败: No module named 'pymysql'
+2025-09-04 13:20:49,239 - mysql_database - ERROR - ❌ MySQL连接失败: No module named 'pymysql'
+2025-09-04 13:20:49,239 - main - ERROR - ❌ 服务启动失败: 数据库连接失败
+2025-09-04 13:21:38,801 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:21:38,860 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:21:38,861 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:21:38,861 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:21:41,310 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 13:21:42,078 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 13:21:42,078 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 13:21:42,078 - main - INFO - 🎉 服务启动完成
+2025-09-04 13:23:29,060 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:23:29,127 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:23:29,128 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:23:29,128 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:23:30,663 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 13:23:31,299 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 13:23:31,301 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 13:23:31,303 - main - INFO - 🎉 服务启动完成
+2025-09-04 13:24:20,385 - mysql_database - INFO - 用户总数: 9
+2025-09-04 13:25:46,977 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 13:25:47,033 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 13:25:47,034 - main - INFO - ✅ 配置验证通过
+2025-09-04 13:25:47,034 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 13:25:50,585 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 13:25:51,299 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 13:25:51,300 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 13:25:51,300 - main - INFO - 🎉 服务启动完成
+2025-09-04 13:26:40,380 - mysql_database - INFO - 用户总数: 9
+2025-09-04 13:26:42,430 - main - INFO - 开始分析简历: user_id=test_mysql_user, filename=xzk.pdf
+2025-09-04 13:26:42,430 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 13:26:42,430 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 13:26:42,432 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 13:26:42,947 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 13:26:42,948 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 13:26:42,948 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 13:27:12,727 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 13:27:12,730 - llm_service - INFO - LLM提取完成，耗时: 29.78秒
+2025-09-04 13:27:12,731 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 13:27:12,731 - main - INFO - 步骤3: 提取关键词
+2025-09-04 13:27:12,731 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-04 13:27:12,732 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 13:27:12,732 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 13:27:13,124 - database.mysql_client - INFO - ✅ 创建用户档案: test_mysql_user
+2025-09-04 13:27:16,469 - mysql_database - INFO - 档案已保存: user_id=test_mysql_user
+2025-09-04 13:27:16,470 - main - INFO - 简历分析完成: user_id=test_mysql_user, 耗时=34.04秒
+2025-09-04 13:27:19,243 - mysql_database - INFO - 档案获取成功: user_id=test_mysql_user
+2025-09-04 13:27:21,997 - mysql_database - INFO - 档案获取成功: user_id=test_mysql_user
+2025-09-04 18:32:16,756 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 18:32:16,884 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 18:32:16,885 - main - INFO - ✅ 配置验证通过
+2025-09-04 18:32:16,885 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 18:32:23,222 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 18:32:23,926 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 18:32:23,926 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 18:32:23,927 - main - INFO - 🎉 服务启动完成
+2025-09-04 18:34:28,034 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 18:34:28,086 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 18:34:28,086 - main - INFO - ✅ 配置验证通过
+2025-09-04 18:34:28,086 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 18:34:33,045 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 18:34:33,748 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 18:34:33,748 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 18:34:33,749 - main - INFO - 🎉 服务启动完成
+2025-09-04 18:35:13,069 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-04 18:35:13,125 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 18:35:13,125 - main - INFO - ✅ 配置验证通过
+2025-09-04 18:35:13,126 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 18:35:15,245 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 18:35:16,016 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 18:35:16,016 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 18:35:16,016 - main - INFO - 🎉 服务启动完成
+2025-09-04 19:20:13,370 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 19:20:13,371 - main - INFO - ✅ 配置验证通过
+2025-09-04 19:20:13,371 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 19:20:16,693 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 19:20:17,319 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 19:20:17,319 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 19:20:17,319 - main - INFO - 🎉 服务启动完成
+2025-09-04 19:20:43,449 - mysql_database - INFO - 用户总数: 12
+2025-09-04 19:24:05,881 - main - INFO - 开始分析简历: user_id=, filename=xzk.pdf
+2025-09-04 19:24:05,882 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 19:24:05,882 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 19:24:05,883 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 19:24:06,574 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 19:24:06,575 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 19:24:06,576 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 19:24:35,687 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:24:35,691 - llm_service - INFO - LLM提取完成，耗时: 29.12秒
+2025-09-04 19:24:35,691 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 19:24:35,692 - main - INFO - 步骤3: 提取关键词
+2025-09-04 19:24:35,692 - llm_service - INFO - 关键词提取完成: technical_skills=18, projects=3, direction=C++
+2025-09-04 19:24:35,692 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 19:24:35,694 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 19:24:35,997 - database.mysql_client - INFO - ✅ JSON字段更新成功: 
+2025-09-04 19:24:36,159 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gdb\\", \\"git\\", \\"j\' at line 1')
+[SQL: UPDATE candidate_profiles SET education=%(education)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'education': [], 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "qt creator", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 9}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:24:36,160 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gdb\\", \\"git\\", \\"j\' at line 1')
+[SQL: UPDATE candidate_profiles SET education=%(education)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'education': [], 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "qt creator", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 9}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:24:36,160 - mysql_database - ERROR - 档案保存失败: user_id=
+2025-09-04 19:29:20,603 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 19:29:20,603 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 19:29:20,603 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 19:29:20,604 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 19:29:20,903 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 19:29:20,904 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 19:29:20,904 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 19:29:53,198 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 19:29:53,201 - llm_service - INFO - LLM提取完成，耗时: 32.30秒
+2025-09-04 19:29:53,201 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 19:29:53,202 - main - INFO - 步骤3: 提取关键词
+2025-09-04 19:29:53,202 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-04 19:29:53,202 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 19:29:53,203 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 19:29:53,496 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 19:29:53,647 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:29:53,647 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 19:29:53,647 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:06:21,576 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:06:21,576 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:06:21,577 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:06:21,578 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:06:21,943 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:06:21,944 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:06:21,944 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:06:56,517 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:06:56,518 - llm_service - INFO - LLM提取完成，耗时: 34.57秒
+2025-09-04 20:06:56,519 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:06:56,519 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:06:56,519 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-04 20:06:56,520 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:06:56,520 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:06:59,539 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:06:59,696 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:06:59,696 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:06:59,697 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:07:05,623 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-04 20:07:05,623 - mysql_database - INFO - MySQL连接已断开
+2025-09-04 20:07:05,623 - main - INFO - ✅ 服务已关闭
+2025-09-04 20:07:10,118 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 20:07:10,118 - main - INFO - ✅ 配置验证通过
+2025-09-04 20:07:10,119 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 20:07:12,282 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 20:07:13,012 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 20:07:13,012 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 20:07:13,012 - main - INFO - 🎉 服务启动完成
+2025-09-04 20:07:20,457 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:07:20,458 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:07:20,458 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:07:20,460 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:07:21,092 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:07:21,094 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:07:21,094 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:07:49,638 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:07:49,643 - llm_service - INFO - LLM提取完成，耗时: 28.55秒
+2025-09-04 20:07:49,643 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:07:49,643 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:07:49,644 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-04 20:07:49,644 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:07:49,644 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:07:49,967 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:07:50,122 - database.mysql_client - ERROR - 数据库操作失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (79 characters truncated) ... 槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "缓存", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:07:50,122 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (raised as a result of Query-invoked autoflush; consider using a session.no_autoflush block if this flush is occurring prematurely)
+(pymysql.err.ProgrammingError) (1064, 'You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near \'), direction=\'C++\', technical_skills_json=\'[\\"c/c++\\", \\"docker\\", \\"gcc\\", \\"gd\' at line 1')
+[SQL: UPDATE candidate_profiles SET name=%(name)s, phone=%(phone)s, email=%(email)s, location=%(location)s, education=%(education)s, direction=%(direction)s, technical_skills_json=%(technical_skills_json)s, projects_keywords_json=%(projects_keywords_json)s, education_json=%(education_json)s, updated_at=now() WHERE candidate_profiles.id = %(candidate_profiles_id)s]
+[parameters: {'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': [], 'direction': 'C++', 'technical_skills_json': '["c/c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (79 characters truncated) ... 槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "缓存", "页表映射", "高并发"]}]', 'education_json': '[]', 'candidate_profiles_id': 1}]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2025-09-04 20:07:50,123 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:11:11,054 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-04 20:11:11,054 - mysql_database - INFO - MySQL连接已断开
+2025-09-04 20:11:11,055 - main - INFO - ✅ 服务已关闭
+2025-09-04 20:11:15,042 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 20:11:15,043 - main - INFO - ✅ 配置验证通过
+2025-09-04 20:11:15,043 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 20:11:17,456 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 20:11:18,081 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 20:11:18,081 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 20:11:18,081 - main - INFO - 🎉 服务启动完成
+2025-09-04 20:11:24,007 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:11:24,008 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:11:24,008 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:11:24,009 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:11:24,489 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:11:24,490 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:11:24,490 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:11:56,530 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:11:56,536 - llm_service - INFO - LLM提取完成，耗时: 32.05秒
+2025-09-04 20:11:56,537 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:11:56,537 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:11:56,538 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-04 20:11:56,538 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:11:56,539 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:11:56,866 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:11:57,178 - database.mysql_client - INFO - ✅ JSON序列化成功: test_user_001
+2025-09-04 20:11:57,351 - database.mysql_client - ERROR - 数据库操作失败: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'test_user_001' for key 'candidate_profiles.user_id'")
+[SQL: INSERT INTO candidate_profiles (user_id, name, phone, email, location, education, direction, technical_skills_json, projects_keywords_json, education_json) VALUES (%(user_id)s, %(name)s, %(phone)s, %(email)s, %(location)s, %(education)s, %(direction)s, %(technical_skills_json)s, %(projects_keywords_json)s, %(education_json)s)]
+[parameters: {'user_id': 'test_user_001', 'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': '[]', 'direction': 'C++', 'technical_skills_json': '["c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-04 20:11:57,352 - database.mysql_client - ERROR - ❌ 保存用户档案失败: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'test_user_001' for key 'candidate_profiles.user_id'")
+[SQL: INSERT INTO candidate_profiles (user_id, name, phone, email, location, education, direction, technical_skills_json, projects_keywords_json, education_json) VALUES (%(user_id)s, %(name)s, %(phone)s, %(email)s, %(location)s, %(education)s, %(direction)s, %(technical_skills_json)s, %(projects_keywords_json)s, %(education_json)s)]
+[parameters: {'user_id': 'test_user_001', 'name': '徐泽坤', 'phone': '14748487395', 'email': '3293485673@qq.com', 'location': '广西桂林', 'education': '[]', 'direction': 'C++', 'technical_skills_json': '["c++", "docker", "gcc", "gdb", "git", "jsoncpp", "linux", "muduo网络库", "mysql", "nginx", "qt", "shell", "springboot", "stl", "vim", "vue3", "windows"]', 'projects_keywords_json': '[{"name": "基于C++/Linux实现的分布式RPC服务注册与调用系统", "keywords": ["c++", "json序列化", "linux", "muduo网络库", "rpc", "tcp", "并发编程", "异步操作"]}, {"name": "基于Qt/C++开发的多 ... (73 characters truncated) ... , "信号-槽机制", "自定义窗口框架"]}, {"name": "基于C++/Windows实现的高并发内存池", "keywords": ["c++", "windows系统库", "内存管理", "双向链表", "哈希表", "多级缓存", "并发编程", "页表映射", "高并发"]}]', 'education_json': '[]'}]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2025-09-04 20:11:57,352 - mysql_database - ERROR - 档案保存失败: user_id=test_user_001
+2025-09-04 20:16:40,507 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-04 20:16:40,508 - mysql_database - INFO - MySQL连接已断开
+2025-09-04 20:16:40,508 - main - INFO - ✅ 服务已关闭
+2025-09-04 20:21:01,522 - main - INFO - 🚀 启动简历分析服务...
+2025-09-04 20:21:01,522 - main - INFO - ✅ 配置验证通过
+2025-09-04 20:21:01,523 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-04 20:21:04,391 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-04 20:21:05,100 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-04 20:21:05,100 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-04 20:21:05,100 - main - INFO - 🎉 服务启动完成
+2025-09-04 20:21:08,536 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-04 20:21:08,537 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:21:08,537 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:21:08,538 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:21:09,030 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:21:09,030 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:21:09,031 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:21:38,822 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:21:38,825 - llm_service - INFO - LLM提取完成，耗时: 29.79秒
+2025-09-04 20:21:38,826 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:21:38,826 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:21:38,827 - llm_service - INFO - 关键词提取完成: technical_skills=14, projects=3, direction=C++
+2025-09-04 20:21:38,827 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:21:38,828 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:21:39,219 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_001
+2025-09-04 20:21:39,555 - database.mysql_client - INFO - ✅ 更新用户档案: test_user_001
+2025-09-04 20:21:42,511 - mysql_database - INFO - 档案已保存: user_id=test_user_001
+2025-09-04 20:21:42,511 - main - INFO - 简历分析完成: user_id=test_user_001, 耗时=33.98秒
+2025-09-04 20:27:03,176 - mysql_database - INFO - 用户总数: 12
+2025-09-04 20:44:06,310 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-04 20:44:06,419 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-04 20:46:48,128 - main - INFO - 开始分析简历: user_id=test_user_003, filename=xzk.pdf
+2025-09-04 20:46:48,128 - main - INFO - 步骤1: 解析PDF文件
+2025-09-04 20:46:48,128 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-04 20:46:48,129 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-04 20:46:48,515 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-04 20:46:48,516 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-04 20:46:48,516 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-04 20:47:17,085 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-04 20:47:17,088 - llm_service - INFO - LLM提取完成，耗时: 28.57秒
+2025-09-04 20:47:17,088 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-04 20:47:17,088 - main - INFO - 步骤3: 提取关键词
+2025-09-04 20:47:17,089 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-04 20:47:17,089 - main - INFO - 步骤4: 构建候选人档案
+2025-09-04 20:47:17,089 - main - INFO - 步骤5: 保存到数据库
+2025-09-04 20:47:17,414 - database.mysql_client - INFO - ✅ JSON序列化成功: test_user_003
+2025-09-04 20:47:17,471 - database.mysql_client - INFO - ✅ 创建用户档案: test_user_003
+2025-09-04 20:47:20,623 - mysql_database - INFO - 档案已保存: user_id=test_user_003
+2025-09-04 20:47:20,624 - main - INFO - 简历分析完成: user_id=test_user_003, 耗时=32.50秒
+2025-09-04 20:48:17,927 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_003
+2025-09-04 20:48:18,036 - mysql_database - INFO - 档案获取成功: user_id=test_user_003
+2025-09-04 22:55:13,124 - mysql_database - INFO - 用户总数: 13
+2025-09-04 22:57:00,579 - mysql_database - INFO - 用户总数: 13
+2025-09-05 13:13:34,896 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-05 13:13:34,925 - main - INFO - 🚀 启动简历分析服务...
+2025-09-05 13:13:34,925 - main - INFO - ✅ 配置验证通过
+2025-09-05 13:13:34,925 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-05 13:13:35,035 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-05 13:13:35,086 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 13:13:35,086 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-05 13:13:35,086 - main - INFO - 🎉 服务启动完成
+2025-09-05 13:14:02,332 - mysql_database - INFO - 用户总数: 13
+2025-09-05 13:14:23,248 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-05 13:14:23,274 - main - INFO - 🚀 启动简历分析服务...
+2025-09-05 13:14:23,274 - main - INFO - ✅ 配置验证通过
+2025-09-05 13:14:23,274 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-05 13:14:23,344 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-05 13:14:23,353 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 13:14:23,353 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-05 13:14:23,353 - main - INFO - 🎉 服务启动完成
+2025-09-05 13:15:12,263 - mysql_database - INFO - 用户总数: 13
+2025-09-05 13:15:30,017 - main - INFO - 开始分析简历: user_id=deployment_test_user, filename=xzk.pdf
+2025-09-05 13:15:30,017 - main - INFO - 步骤1: 解析PDF文件
+2025-09-05 13:15:30,017 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-05 13:15:30,017 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-05 13:15:30,511 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-05 13:15:30,512 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-05 13:15:30,512 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-05 13:16:04,453 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 13:16:04,455 - llm_service - INFO - LLM提取完成，耗时: 33.94秒
+2025-09-05 13:16:04,455 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-05 13:16:04,455 - main - INFO - 步骤3: 提取关键词
+2025-09-05 13:16:04,455 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-05 13:16:04,455 - main - INFO - 步骤4: 构建候选人档案
+2025-09-05 13:16:04,456 - main - INFO - 步骤5: 保存到数据库
+2025-09-05 13:16:04,462 - database.mysql_client - INFO - ✅ JSON序列化成功: deployment_test_user
+2025-09-05 13:16:04,486 - database.mysql_client - INFO - ✅ 创建用户档案: deployment_test_user
+2025-09-05 13:16:04,522 - mysql_database - INFO - 档案已保存: user_id=deployment_test_user
+2025-09-05 13:16:04,522 - main - INFO - 简历分析完成: user_id=deployment_test_user, 耗时=34.51秒
+2025-09-05 13:30:20,379 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-05 13:30:20,407 - main - INFO - 🚀 启动简历分析服务...
+2025-09-05 13:30:20,407 - main - INFO - ✅ 配置验证通过
+2025-09-05 13:30:20,407 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-05 13:30:20,468 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-05 13:30:20,478 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 13:30:20,478 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-05 13:30:20,478 - main - INFO - 🎉 服务启动完成
+2025-09-05 13:30:44,521 - mysql_database - INFO - 用户总数: 14
+2025-09-05 13:32:19,694 - mysql_database - INFO - 用户总数: 14
+2025-09-05 16:38:54,858 - mysql_database - INFO - 用户总数: 14
+2025-09-05 16:43:48,165 - mysql_database - INFO - 用户总数: 14
+2025-09-05 18:52:07,794 - mysql_database - INFO - 用户总数: 14
+2025-09-05 18:52:21,368 - main - INFO - 开始分析简历: user_id=test_xzk_user, filename=xzk.pdf
+2025-09-05 18:52:21,368 - main - INFO - 步骤1: 解析PDF文件
+2025-09-05 18:52:21,368 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-05 18:52:21,369 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-05 18:52:21,835 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-05 18:52:21,835 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-05 18:52:21,835 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-05 18:52:53,074 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-05 18:52:53,076 - llm_service - INFO - LLM提取完成，耗时: 31.24秒
+2025-09-05 18:52:53,076 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-05 18:52:53,076 - main - INFO - 步骤3: 提取关键词
+2025-09-05 18:52:53,076 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-05 18:52:53,076 - main - INFO - 步骤4: 构建候选人档案
+2025-09-05 18:52:53,077 - main - INFO - 步骤5: 保存到数据库
+2025-09-05 18:52:53,081 - database.mysql_client - INFO - ✅ JSON序列化成功: test_xzk_user
+2025-09-05 18:52:53,084 - database.mysql_client - INFO - ✅ 创建用户档案: test_xzk_user
+2025-09-05 18:52:53,122 - mysql_database - INFO - 档案已保存: user_id=test_xzk_user
+2025-09-05 18:52:53,123 - main - INFO - 简历分析完成: user_id=test_xzk_user, 耗时=31.75秒
+2025-09-05 18:55:11,410 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_xzk_user
+2025-09-05 18:55:11,411 - mysql_database - INFO - 档案获取成功: user_id=test_xzk_user
+2025-09-05 18:58:08,072 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_xzk_user
+2025-09-05 18:58:08,073 - mysql_database - INFO - 档案获取成功: user_id=test_xzk_user
+2025-09-05 19:03:49,957 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_xzk_user
+2025-09-05 19:03:49,958 - mysql_database - INFO - 档案获取成功: user_id=test_xzk_user
+2025-09-05 19:06:00,081 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_xzk_user
+2025-09-05 19:06:00,081 - mysql_database - INFO - 档案获取成功: user_id=test_xzk_user
+2025-09-05 19:06:12,399 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_xzk_user
+2025-09-05 19:06:12,400 - mysql_database - INFO - 档案获取成功: user_id=test_xzk_user
+2025-09-05 21:00:57,818 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-05 21:00:57,846 - main - INFO - 🚀 启动简历分析服务...
+2025-09-05 21:00:57,846 - main - INFO - ✅ 配置验证通过
+2025-09-05 21:00:57,846 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-05 21:00:58,000 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-05 21:00:58,051 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-05 21:00:58,051 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-05 21:00:58,051 - main - INFO - 🎉 服务启动完成
+2025-09-05 21:01:12,508 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:02:05,114 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:02:21,823 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:02:21,974 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:02:47,835 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:02:47,927 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:03:37,127 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:09:37,333 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:10:02,846 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:10:13,073 - mysql_database - INFO - 用户总数: 15
+2025-09-05 21:11:07,964 - mysql_database - INFO - 用户总数: 15
+2025-09-05 22:30:50,145 - mysql_database - INFO - 用户总数: 15
+2025-09-05 22:31:00,693 - main - INFO - 开始分析简历: user_id=test_user_010, filename=xzk.pdf
+2025-09-05 22:31:00,693 - main - INFO - 步骤1: 解析PDF文件
+2025-09-05 22:31:00,693 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-05 22:31:00,694 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-05 22:31:01,251 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-05 22:31:01,251 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-05 22:31:01,252 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-06 11:21:08,093 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-06 11:21:08,127 - main - INFO - 🚀 启动简历分析服务...
+2025-09-06 11:21:08,127 - main - INFO - ✅ 配置验证通过
+2025-09-06 11:21:08,128 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-06 11:21:08,258 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-06 11:21:08,306 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 11:21:08,306 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-06 11:21:08,307 - main - INFO - 🎉 服务启动完成
+2025-09-06 11:22:31,384 - mysql_database - INFO - 用户总数: 15
+2025-09-06 11:22:32,975 - mysql_database - INFO - 用户总数: 15
+2025-09-06 11:50:43,116 - mysql_database - INFO - 用户总数: 15
+2025-09-06 11:50:43,660 - mysql_database - INFO - 用户总数: 15
+2025-09-06 11:50:45,673 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_xzk_user
+2025-09-06 11:50:45,675 - mysql_database - INFO - 档案获取成功: user_id=test_xzk_user
+2025-09-06 11:55:30,758 - main - INFO - 开始分析简历: user_id=test_user_010, filename=xzk.pdf
+2025-09-06 11:55:30,760 - main - INFO - 步骤1: 解析PDF文件
+2025-09-06 11:55:30,760 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-06 11:55:30,761 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-06 11:55:31,329 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-06 11:55:31,329 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-06 11:55:31,330 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-06 11:56:02,198 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-06 11:56:02,221 - llm_service - INFO - LLM提取完成，耗时: 30.89秒
+2025-09-06 11:56:02,221 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-06 11:56:02,222 - main - INFO - 步骤3: 提取关键词
+2025-09-06 11:56:02,223 - llm_service - INFO - 关键词提取完成: technical_skills=15, projects=3, direction=C++
+2025-09-06 11:56:02,223 - main - INFO - 步骤4: 构建候选人档案
+2025-09-06 11:56:02,225 - main - INFO - 步骤5: 保存到数据库
+2025-09-06 11:56:02,330 - database.mysql_client - INFO - ✅ JSON序列化成功: test_user_010
+2025-09-06 11:56:02,352 - database.mysql_client - INFO - ✅ 创建用户档案: test_user_010
+2025-09-06 11:56:02,399 - mysql_database - INFO - 档案已保存: user_id=test_user_010
+2025-09-06 11:56:02,399 - main - INFO - 简历分析完成: user_id=test_user_010, 耗时=31.64秒
+2025-09-06 11:56:02,431 - main - INFO - 开始分析简历: user_id=test_user_001, filename=xzk.pdf
+2025-09-06 11:56:02,431 - main - INFO - 步骤1: 解析PDF文件
+2025-09-06 11:56:02,431 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-06 11:56:02,431 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-06 11:56:02,864 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-06 11:56:02,864 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-06 11:56:02,865 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-06 11:56:33,183 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-06 11:56:33,189 - llm_service - INFO - LLM提取完成，耗时: 30.32秒
+2025-09-06 11:56:33,189 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-06 11:56:33,190 - main - INFO - 步骤3: 提取关键词
+2025-09-06 11:56:33,190 - llm_service - INFO - 关键词提取完成: technical_skills=15, projects=3, direction=C++
+2025-09-06 11:56:33,190 - main - INFO - 步骤4: 构建候选人档案
+2025-09-06 11:56:33,190 - main - ERROR - 简历分析失败: 'detailed' is not a valid ExtractionMode, 耗时=30.76秒
+2025-09-06 12:03:42,598 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:03:42,607 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:11:01,791 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:11:01,795 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:12:30,151 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:12:30,152 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:14:00,640 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:14:00,641 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:21:42,175 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:21:42,183 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:25:21,629 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:25:21,630 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:28:16,684 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:28:16,696 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:29:41,862 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:29:41,863 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:31:21,450 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:31:21,451 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 12:47:17,429 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 12:47:17,439 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 13:16:34,649 - mysql_database - INFO - 用户总数: 16
+2025-09-06 13:28:37,173 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 13:28:37,182 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 13:48:12,583 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 13:48:12,591 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 14:01:02,199 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-06 14:01:02,212 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-06 16:02:45,747 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-06 16:02:45,775 - main - INFO - 🚀 启动简历分析服务...
+2025-09-06 16:02:45,775 - main - INFO - ✅ 配置验证通过
+2025-09-06 16:02:45,775 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-06 16:02:45,882 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-06 16:02:45,904 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 16:02:45,904 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-06 16:02:45,904 - main - INFO - 🎉 服务启动完成
+2025-09-06 16:05:11,434 - mysql_database - INFO - 用户总数: 16
+2025-09-06 16:05:50,842 - mysql_database - INFO - 用户总数: 16
+2025-09-06 20:20:15,477 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-06 20:20:15,507 - main - INFO - 🚀 启动简历分析服务...
+2025-09-06 20:20:15,507 - main - INFO - ✅ 配置验证通过
+2025-09-06 20:20:15,508 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-06 20:20:15,581 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-06 20:20:15,591 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-06 20:20:15,591 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-06 20:20:15,591 - main - INFO - 🎉 服务启动完成
+2025-09-06 20:21:46,412 - mysql_database - INFO - 用户总数: 16
+2025-09-06 20:21:46,436 - mysql_database - INFO - 用户总数: 16
+2025-09-06 23:19:33,634 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-06 23:19:33,635 - mysql_database - INFO - MySQL连接已断开
+2025-09-06 23:19:33,635 - main - INFO - ✅ 服务已关闭
+2025-09-07 20:53:19,083 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-07 20:53:19,115 - main - INFO - 🚀 启动简历分析服务...
+2025-09-07 20:53:19,116 - main - INFO - ✅ 配置验证通过
+2025-09-07 20:53:19,116 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-07 20:53:19,183 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-07 20:53:19,195 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 20:53:19,195 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-07 20:53:19,195 - main - INFO - 🎉 服务启动完成
+2025-09-07 20:53:53,916 - mysql_database - INFO - 用户总数: 16
+2025-09-07 20:54:30,203 - mysql_database - INFO - 档案不存在: user_id=test_user_004
+2025-09-07 21:05:45,573 - mysql_database - INFO - 档案不存在: user_id=test_user_004
+2025-09-07 21:06:08,952 - mysql_database - INFO - 用户总数: 16
+2025-09-07 23:36:13,120 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-07 23:36:13,147 - main - INFO - 🚀 启动简历分析服务...
+2025-09-07 23:36:13,148 - main - INFO - ✅ 配置验证通过
+2025-09-07 23:36:13,148 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-07 23:36:13,250 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-07 23:36:13,274 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-07 23:36:13,274 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-07 23:36:13,274 - main - INFO - 🎉 服务启动完成
+2025-09-07 23:36:56,304 - mysql_database - INFO - 用户总数: 16
+2025-09-07 23:37:11,199 - mysql_database - INFO - 用户总数: 16
+2025-09-07 23:44:05,896 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-07 23:44:05,897 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-07 23:55:58,772 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-07 23:55:58,773 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-09 13:08:09,006 - mysql_database - INFO - 档案不存在: user_id=user_demo_001
+2025-09-09 13:08:38,431 - mysql_database - INFO - 档案不存在: user_id=user_demo_001
+2025-09-09 13:09:38,178 - mysql_database - INFO - 档案不存在: user_id=user_demo_001
+2025-09-09 13:13:23,294 - mysql_database - INFO - 档案不存在: user_id=user_demo_001
+2025-09-09 14:46:16,997 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-09 14:46:16,998 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-09 14:55:25,551 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-09 14:55:25,552 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-09 15:49:28,366 - mysql_database - INFO - 用户总数: 16
+2025-09-09 15:50:20,916 - mysql_database - INFO - 用户总数: 16
+2025-09-09 15:56:39,620 - mysql_database - INFO - 用户总数: 16
+2025-09-09 15:56:48,275 - main - INFO - 开始分析简历: user_id=test_user_002, filename=xzk.pdf
+2025-09-09 15:56:48,275 - main - INFO - 步骤1: 解析PDF文件
+2025-09-09 15:56:48,275 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-09 15:56:48,275 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-09 15:56:48,747 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-09 15:56:48,748 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-09 15:56:48,748 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-09 15:57:21,918 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-09 15:57:21,920 - llm_service - INFO - LLM提取完成，耗时: 33.17秒
+2025-09-09 15:57:21,920 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-09 15:57:21,920 - main - INFO - 步骤3: 提取关键词
+2025-09-09 15:57:21,921 - llm_service - INFO - 关键词提取完成: technical_skills=17, projects=3, direction=C++
+2025-09-09 15:57:21,921 - main - INFO - 步骤4: 构建候选人档案
+2025-09-09 15:57:21,921 - main - INFO - 步骤5: 保存到数据库
+2025-09-09 15:57:21,925 - database.mysql_client - INFO - ✅ JSON字段更新成功: test_user_002
+2025-09-09 15:57:21,995 - database.mysql_client - INFO - ✅ 更新用户档案: test_user_002
+2025-09-09 15:57:22,027 - mysql_database - INFO - 档案已保存: user_id=test_user_002
+2025-09-09 15:57:22,027 - main - INFO - 简历分析完成: user_id=test_user_002, 耗时=33.75秒
+2025-09-09 15:58:02,100 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_002
+2025-09-09 15:58:02,101 - mysql_database - INFO - 档案获取成功: user_id=test_user_002
+2025-09-09 15:59:38,426 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_002
+2025-09-09 15:59:38,427 - mysql_database - INFO - 档案获取成功: user_id=test_user_002
+2025-09-09 16:00:38,206 - mysql_database - INFO - 用户总数: 16
+2025-09-09 21:53:19,134 - mysql_database - INFO - 用户总数: 16
+2025-09-09 21:53:34,268 - mysql_database - INFO - 用户总数: 16
+2025-09-09 21:54:18,130 - mysql_database - INFO - 用户总数: 16
+2025-09-09 21:54:26,675 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-09 21:54:26,675 - mysql_database - INFO - MySQL连接已断开
+2025-09-09 21:54:26,675 - main - INFO - ✅ 服务已关闭
+2025-09-09 21:54:54,265 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-09 21:54:54,292 - main - INFO - 🚀 启动简历分析服务...
+2025-09-09 21:54:54,292 - main - INFO - ✅ 配置验证通过
+2025-09-09 21:54:54,292 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-09 21:54:54,393 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-09 21:54:54,409 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 21:54:54,409 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-09 21:54:54,409 - main - INFO - 🎉 服务启动完成
+2025-09-09 21:55:49,300 - mysql_database - INFO - 用户总数: 16
+2025-09-09 21:56:04,611 - mysql_database - INFO - 用户总数: 16
+2025-09-09 22:02:04,233 - mysql_database - INFO - 用户总数: 16
+2025-09-09 22:05:25,346 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-09 22:05:25,346 - mysql_database - INFO - MySQL连接已断开
+2025-09-09 22:05:25,346 - main - INFO - ✅ 服务已关闭
+2025-09-09 22:50:46,880 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-09 22:50:46,909 - main - INFO - 🚀 启动简历分析服务...
+2025-09-09 22:50:46,910 - main - INFO - ✅ 配置验证通过
+2025-09-09 22:50:46,910 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-09 22:50:46,980 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-09 22:50:46,989 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-09 22:50:46,989 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-09 22:50:46,989 - main - INFO - 🎉 服务启动完成
+2025-09-09 22:52:51,519 - mysql_database - INFO - 用户总数: 16
+2025-09-09 22:52:51,823 - mysql_database - INFO - 用户总数: 16
+2025-09-09 22:55:22,230 - mysql_database - INFO - 用户总数: 16
+2025-09-09 22:55:22,317 - mysql_database - INFO - 用户总数: 16
+2025-09-10 21:26:13,244 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-10 21:26:13,245 - mysql_database - INFO - MySQL连接已断开
+2025-09-10 21:26:13,245 - main - INFO - ✅ 服务已关闭
+2025-09-10 22:29:01,752 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-10 22:29:01,787 - main - INFO - 🚀 启动简历分析服务...
+2025-09-10 22:29:01,787 - main - INFO - ✅ 配置验证通过
+2025-09-10 22:29:01,788 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-10 22:29:01,814 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-10 22:29:01,825 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 22:29:01,826 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-10 22:29:01,826 - main - INFO - 🎉 服务启动完成
+2025-09-10 22:29:33,171 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-10 22:29:50,255 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-10 22:30:14,287 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 22:31:10,578 - mysql_database - INFO - 用户总数: 16
+2025-09-10 22:31:28,790 - mysql_database - INFO - 用户总数: 16
+2025-09-10 22:32:14,052 - mysql_database - INFO - 用户总数: 16
+2025-09-10 22:32:14,126 - mysql_database - INFO - 用户总数: 16
+2025-09-10 22:33:36,987 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 22:42:07,883 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 22:47:57,306 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 22:52:42,183 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 22:53:21,100 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-10 22:53:37,605 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-10 22:53:54,146 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-10 23:30:07,609 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-10 23:30:07,651 - main - INFO - 🚀 启动简历分析服务...
+2025-09-10 23:30:07,651 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:30:07,651 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-10 23:30:07,712 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:30:07,735 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:30:07,735 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-10 23:30:07,735 - main - INFO - 🎉 服务启动完成
+2025-09-10 23:32:39,559 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-10 23:32:39,598 - main - INFO - 🚀 启动简历分析服务...
+2025-09-10 23:32:39,598 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:32:39,598 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-10 23:32:39,622 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:32:39,632 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:32:39,632 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-10 23:32:39,632 - main - INFO - 🎉 服务启动完成
+2025-09-10 23:50:24,030 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-10 23:50:24,142 - main - INFO - 🚀 启动简历分析服务...
+2025-09-10 23:50:24,142 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:50:24,142 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-10 23:50:24,293 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:50:24,344 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:50:24,344 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-10 23:50:24,345 - main - INFO - 🎉 服务启动完成
+2025-09-10 23:50:24,349 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-10 23:50:24,349 - mysql_database - INFO - MySQL连接已断开
+2025-09-10 23:50:24,349 - main - INFO - ✅ 服务已关闭
+2025-09-10 23:50:36,082 - main - INFO - 🛑 关闭简历分析服务...
+2025-09-10 23:50:36,084 - mysql_database - INFO - MySQL连接已断开
+2025-09-10 23:50:36,084 - main - INFO - ✅ 服务已关闭
+2025-09-10 23:51:08,063 - __main__ - INFO - 启动服务: 0.0.0.0:8004
+2025-09-10 23:51:08,106 - main - INFO - 🚀 启动简历分析服务...
+2025-09-10 23:51:08,107 - main - INFO - ✅ 配置验证通过
+2025-09-10 23:51:08,107 - mysql_database - INFO - 连接MySQL数据库...
+2025-09-10 23:51:08,201 - database.mysql_client - INFO - ✅ MySQL连接初始化成功
+2025-09-10 23:51:08,244 - database.mysql_client - INFO - ✅ 数据库表创建/验证完成
+2025-09-10 23:51:08,244 - mysql_database - INFO - ✅ MySQL连接成功
+2025-09-10 23:51:08,244 - main - INFO - 🎉 服务启动完成
+2025-09-10 23:51:55,204 - mysql_database - INFO - 用户总数: 16
+2025-09-10 23:51:55,803 - mysql_database - INFO - 用户总数: 16
+2025-09-10 23:52:12,132 - main - INFO - 查询用户档案: user_id=test_user_001
+2025-09-10 23:52:12,216 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 23:52:12,218 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-10 23:52:58,102 - main - INFO - 查询用户档案: user_id=test_user_001
+2025-09-10 23:52:58,201 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 23:52:58,204 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-10 23:52:58,213 - main - INFO - 查询用户档案: user_id=test_user_001
+2025-09-10 23:52:58,216 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-10 23:52:58,217 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-10 23:52:58,220 - main - INFO - 查询用户档案: user_id=nonexistent_user
+2025-09-10 23:52:58,226 - mysql_database - INFO - 档案不存在: user_id=nonexistent_user
+2025-09-10 23:56:17,051 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-10 23:56:17,095 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-10 23:56:17,099 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-10 23:56:17,107 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 00:02:02,360 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 00:02:02,494 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 00:02:02,499 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 00:02:02,509 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 11:28:12,115 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 11:28:12,130 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 11:28:12,134 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 11:28:12,142 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 11:33:03,115 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 11:42:35,885 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 11:42:35,889 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 11:42:35,889 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 11:42:35,896 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:04:43,753 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 13:04:43,758 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:04:43,758 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 13:04:44,719 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:05:04,958 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:05:05,156 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 13:05:05,159 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:05:05,160 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 13:16:18,563 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 13:16:18,601 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:18,602 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 13:16:18,605 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:18,621 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 13:16:18,624 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:18,624 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 13:16:19,247 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:19,345 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 13:16:19,349 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:19,349 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 13:16:19,720 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:19,972 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 13:16:19,975 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 13:16:19,975 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 13:16:20,066 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:33:07,195 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 18:33:07,196 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 18:33:58,162 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:33:58,162 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:33:59,803 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:33:59,804 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:35:50,738 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 18:35:50,739 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 18:38:55,188 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:38:55,188 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:38:56,818 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:38:56,819 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:43:17,625 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:43:17,626 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:55:11,966 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:55:11,967 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:55:14,581 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:55:14,581 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:57:10,648 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 18:57:10,649 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 18:58:42,221 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:58:42,221 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:58:43,899 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:58:43,900 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:58:46,049 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 18:58:46,052 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 18:58:46,053 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 18:58:46,674 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:05:37,663 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:05:37,663 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:05:40,402 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:05:40,403 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:06:25,232 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 19:06:25,233 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 19:14:26,073 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:14:26,074 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:38:06,089 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:38:06,090 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:44:03,957 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:44:03,957 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:44:08,770 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:44:08,770 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:44:43,427 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:44:43,428 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:44:45,962 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:44:45,963 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:46:59,689 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:46:59,690 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 19:47:02,492 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 19:47:02,493 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:11:16,316 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:11:16,317 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:17:35,255 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:17:35,256 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:17:36,120 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:17:36,121 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:17:47,348 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:17:47,349 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:11,243 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:11,243 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:15,099 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:15,099 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:15,238 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:15,238 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:42,203 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:42,204 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:42,383 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:42,383 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:43,156 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:43,157 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:18:43,505 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:18:43,505 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:19:00,269 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:19:00,270 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:19:00,346 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:19:00,347 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:19:43,287 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:19:43,288 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:19:48,850 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:19:48,851 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:20:59,263 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:20:59,264 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:21:37,656 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:21:37,656 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:38:26,819 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:38:26,819 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:41:26,052 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:41:26,053 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:43:09,045 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:43:09,045 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:43:09,641 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:43:09,642 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:43:09,980 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:43:09,981 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:43:10,101 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:43:10,101 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:44:53,599 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:44:53,600 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:44:53,677 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:44:53,678 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:44:53,694 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:44:53,694 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:44:53,983 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:44:53,984 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:45:14,128 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:45:14,129 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:45:14,133 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:45:14,134 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:45:14,190 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:45:14,191 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:45:14,497 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:45:14,497 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:46:18,324 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:46:18,325 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:46:19,485 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:46:19,486 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:46:21,901 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:46:21,901 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 20:47:03,380 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 20:47:03,381 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:05:49,142 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:05:49,142 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:14,228 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:14,229 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:14,397 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:14,398 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:14,418 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:14,418 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:30,616 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:30,617 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:30,666 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:30,667 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:31,006 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:31,006 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:31,073 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:31,073 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:06:45,407 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:06:45,408 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 21:09:55,313 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 21:09:55,314 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:02:12,119 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:02:12,120 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:02:31,706 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:02:31,706 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:19:39,893 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:19:39,893 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:19:40,330 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:19:40,330 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:19:49,546 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:19:49,547 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:22:25,822 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:22:25,822 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:23:01,092 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:23:01,093 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:26:11,869 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:26:11,870 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:28:12,329 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 22:28:12,330 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 22:28:36,142 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 22:28:36,142 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 22:31:38,465 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:31:38,466 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:31:38,607 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:31:38,607 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:31:38,656 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:31:38,657 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:31:59,330 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:31:59,331 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:31:59,551 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:31:59,552 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:31:59,786 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:31:59,787 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:35:34,978 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:35:34,979 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:38:24,890 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:38:24,891 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:38:25,626 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:38:25,627 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:47:01,262 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-11 22:47:01,263 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-11 22:49:54,039 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:49:54,040 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:50:01,347 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:50:01,348 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:52:20,763 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:52:20,764 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:54:54,542 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:54:54,543 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:54:56,786 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:54:56,787 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:56:00,836 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:56:00,837 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:57:46,503 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:57:46,504 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:57:47,058 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:57:47,059 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:58:26,035 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:58:26,036 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:58:26,317 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:58:26,318 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 22:59:27,305 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 22:59:27,306 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 23:15:45,134 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-11 23:15:45,138 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 23:15:45,139 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-11 23:15:45,157 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-11 23:23:51,052 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 01:16:27,681 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 01:16:27,683 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 01:16:27,685 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 01:16:27,685 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:03:57,134 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:03:57,139 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:03:57,140 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:03:57,166 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:04:14,448 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:04:14,448 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:04:39,096 - main - INFO - 查询用户档案: user_id=xzk_test_user
+2025-09-12 08:04:39,099 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:04:39,100 - mysql_database - INFO - 档案获取成功: user_id=xzk_test_user
+2025-09-12 08:04:39,422 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:05:17,392 - main - INFO - 开始分析简历: user_id=xzk_test_user, filename=xzk.pdf
+2025-09-12 08:05:17,392 - main - INFO - 步骤1: 解析PDF文件
+2025-09-12 08:05:17,392 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-12 08:05:17,392 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-12 08:05:17,866 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-12 08:05:17,867 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-12 08:05:17,867 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-12 08:05:50,497 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-12 08:05:50,501 - llm_service - INFO - LLM提取完成，耗时: 32.63秒
+2025-09-12 08:05:50,501 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-12 08:05:50,501 - main - INFO - 步骤3: 提取关键词
+2025-09-12 08:05:50,501 - llm_service - INFO - 关键词提取完成: technical_skills=16, projects=3, direction=C++
+2025-09-12 08:05:50,501 - main - INFO - 步骤4: 构建候选人档案
+2025-09-12 08:05:50,502 - main - INFO - 步骤5: 保存到数据库
+2025-09-12 08:05:50,505 - database.mysql_client - INFO - ✅ JSON字段更新成功: xzk_test_user
+2025-09-12 08:05:50,555 - database.mysql_client - INFO - ✅ 更新用户档案: xzk_test_user
+2025-09-12 08:05:50,585 - mysql_database - INFO - 档案已保存: user_id=xzk_test_user
+2025-09-12 08:05:50,586 - main - INFO - 简历分析完成: user_id=xzk_test_user, 耗时=33.19秒
+2025-09-12 08:05:50,589 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:06:11,551 - main - INFO - 查询用户档案: user_id=xzk_test_user
+2025-09-12 08:06:11,554 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:06:11,555 - mysql_database - INFO - 档案获取成功: user_id=xzk_test_user
+2025-09-12 08:06:11,584 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:07:36,696 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:07:36,699 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:07:36,699 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:09:04,805 - main - INFO - 查询用户档案: user_id=xzk_test_user
+2025-09-12 08:09:04,808 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:09:04,809 - mysql_database - INFO - 档案获取成功: user_id=xzk_test_user
+2025-09-12 08:09:41,319 - main - INFO - 查询用户档案: user_id=xzk_test_user
+2025-09-12 08:09:41,322 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:09:41,323 - mysql_database - INFO - 档案获取成功: user_id=xzk_test_user
+2025-09-12 08:09:41,329 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:10:50,312 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:10:50,314 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:10:50,316 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:10:50,317 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:11:06,684 - main - INFO - 查询用户档案: user_id=xzk_test_user
+2025-09-12 08:11:06,687 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:11:06,687 - mysql_database - INFO - 档案获取成功: user_id=xzk_test_user
+2025-09-12 08:11:06,690 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:12:52,754 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:13:00,055 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:13:00,058 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:13:00,059 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:13:00,070 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:13:14,336 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:13:14,336 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:13:26,655 - database.mysql_client - INFO - ✅ JSON数据读取成功: xzk_test_user
+2025-09-12 08:20:59,577 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:20:59,580 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:20:59,581 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:20:59,591 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:21:12,963 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:21:12,966 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:21:12,966 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:21:12,969 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:21:41,770 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:21:41,773 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:21:41,774 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:21:41,777 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:22:00,878 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:22:00,881 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:22:00,882 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:22:00,884 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:22:56,863 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:22:56,866 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:22:56,867 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:22:56,887 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:24:11,468 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:24:11,471 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:24:11,471 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:24:11,507 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:24:31,074 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:24:31,082 - main - INFO - 查询用户档案: user_id=test_user_010
+2025-09-12 08:24:31,085 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 08:24:31,085 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 08:37:29,610 - main - INFO - 查询用户档案: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:37:29,613 - mysql_database - INFO - 档案不存在: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:37:36,804 - main - INFO - 查询用户档案: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:37:36,806 - mysql_database - INFO - 档案不存在: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:39:35,067 - main - INFO - 开始分析简历: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac, filename=xzk.pdf
+2025-09-12 08:39:35,068 - main - INFO - 步骤1: 解析PDF文件
+2025-09-12 08:39:35,068 - pdf_service - INFO - 使用本地方法解析PDF: xzk.pdf
+2025-09-12 08:39:35,068 - pdf_service - INFO - 读取文件内容: 308191 字节
+2025-09-12 08:39:35,527 - pdf_service - INFO - 本地PDF解析完成: xzk.pdf, 内容长度: 2976
+2025-09-12 08:39:35,527 - main - INFO - 步骤2: LLM结构化信息提取
+2025-09-12 08:39:35,527 - llm_service - INFO - 开始LLM简历信息提取...
+2025-09-12 08:40:06,242 - httpx - INFO - HTTP Request: POST https://open.bigmodel.cn/api/paas/v4/chat/completions "HTTP/1.1 200 OK"
+2025-09-12 08:40:06,245 - llm_service - INFO - LLM提取完成，耗时: 30.72秒
+2025-09-12 08:40:06,245 - llm_service - INFO - LLM原始返回内容: {
+  "personal_info": {
+    "name": "徐泽坤",
+    "phone": "14748487395",
+    "email": "3293485673@qq.com",
+    "location": "广西桂林",
+    "age": null,
+    "gender": null
+  },
+  "education": [
+    {
+      "school": "桂林电子科技大学",
+      "degree": "本科",
+      "major": "软件工程",
+      "graduation_year": "2027",
+      "gpa": null,
+      "description": null
+    }
+  ],
+  "work_experience": [],
+  "projects": [
+    {
+      "name": "基于C++/Linux实现的分布式RPC服务注册与调用系统",
+      "description": "实现了基础的RPC远程调用功能，以及基于服务注册和发现的RP...
+2025-09-12 08:40:06,245 - main - INFO - 步骤3: 提取关键词
+2025-09-12 08:40:06,245 - llm_service - INFO - 关键词提取完成: technical_skills=15, projects=3, direction=C++
+2025-09-12 08:40:06,245 - main - INFO - 步骤4: 构建候选人档案
+2025-09-12 08:40:06,246 - main - INFO - 步骤5: 保存到数据库
+2025-09-12 08:40:06,248 - database.mysql_client - INFO - ✅ JSON序列化成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:06,254 - database.mysql_client - INFO - ✅ 创建用户档案: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:06,277 - mysql_database - INFO - 档案已保存: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:06,277 - main - INFO - 简历分析完成: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac, 耗时=31.21秒
+2025-09-12 08:40:06,279 - main - INFO - 查询用户档案: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:06,281 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:06,282 - mysql_database - INFO - 档案获取成功: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:06,284 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:14,218 - main - INFO - 查询用户档案: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:14,222 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:14,222 - mysql_database - INFO - 档案获取成功: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:14,234 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:27,721 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:27,733 - main - INFO - 查询用户档案: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:27,736 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:40:27,736 - mysql_database - INFO - 档案获取成功: user_id=00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 08:43:38,812 - database.mysql_client - INFO - ✅ JSON数据读取成功: 00516d12-a690-4c5f-be5c-07a7c5eb72ac
+2025-09-12 09:04:03,298 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 09:04:03,299 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 09:10:32,835 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-12 09:10:32,836 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-12 09:14:56,287 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-12 09:14:56,287 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-12 09:15:10,652 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 09:15:10,652 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 09:15:48,422 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_010
+2025-09-12 09:15:48,423 - mysql_database - INFO - 档案获取成功: user_id=test_user_010
+2025-09-12 09:53:00,914 - mysql_database - INFO - 用户总数: 17
+2025-09-12 10:04:27,918 - mysql_database - INFO - 用户总数: 17
+2025-09-12 10:13:04,778 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-12 10:13:04,782 - main - INFO - 查询用户档案: user_id=test_user_001
+2025-09-12 10:13:04,784 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-12 10:13:04,785 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-12 10:23:29,266 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-12 10:39:19,130 - main - INFO - 查询用户档案: user_id=test_user_001
+2025-09-12 10:39:19,134 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
+2025-09-12 10:39:19,135 - mysql_database - INFO - 档案获取成功: user_id=test_user_001
+2025-09-12 10:39:19,159 - database.mysql_client - INFO - ✅ JSON数据读取成功: test_user_001
