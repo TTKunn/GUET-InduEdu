@@ -115,6 +115,28 @@ class MySQLClient:
         # 序列化复杂字段为JSON字符串
         education_json = json.dumps(profile_data.get('education', []), ensure_ascii=False)
 
+        # JSON存储优化：序列化关键词数据
+        try:
+            technical_skills_json = json.dumps(
+                profile_data.get('technical_skills', []),
+                ensure_ascii=False
+            )
+            projects_keywords_json = json.dumps(
+                profile_data.get('projects_keywords', []),
+                ensure_ascii=False
+            )
+            education_json_optimized = json.dumps(
+                profile_data.get('education', []),
+                ensure_ascii=False
+            )
+            logger.info(f"✅ JSON序列化成功: {profile_data['user_id']}")
+        except Exception as e:
+            logger.error(f"⚠️  JSON序列化失败: {e}")
+            # 使用空JSON作为默认值
+            technical_skills_json = "[]"
+            projects_keywords_json = "[]"
+            education_json_optimized = "[]"
+
         profile = CandidateProfile(
             user_id=profile_data['user_id'],
             name=personal_info.get('name'),
@@ -122,7 +144,11 @@ class MySQLClient:
             email=personal_info.get('email'),
             location=personal_info.get('location'),
             education=education_json,
-            direction=profile_data.get('direction')
+            direction=profile_data.get('direction'),
+            # 新增JSON字段
+            technical_skills_json=technical_skills_json,
+            projects_keywords_json=projects_keywords_json,
+            education_json=education_json_optimized
         )
         session.add(profile)
         session.flush()  # 获取主键ID
@@ -196,14 +222,37 @@ class MySQLClient:
     
     def _update_profile(self, session: Session, existing_profile: CandidateProfile, profile_data: Dict[str, Any]):
         """更新现有用户档案"""
+        import json
+
         # 更新主表信息
         personal_info = profile_data.get('personal_info', {})
         existing_profile.name = personal_info.get('name')
         existing_profile.phone = personal_info.get('phone')
         existing_profile.email = personal_info.get('email')
         existing_profile.location = personal_info.get('location')
-        existing_profile.education = profile_data.get('education')
+        # 将education列表转换为JSON字符串
+        education_data = profile_data.get('education', [])
+        existing_profile.education = json.dumps(education_data, ensure_ascii=False) if education_data else None
         existing_profile.direction = profile_data.get('direction')
+
+        # JSON存储优化：更新JSON字段
+        try:
+            existing_profile.technical_skills_json = json.dumps(
+                profile_data.get('technical_skills', []),
+                ensure_ascii=False
+            )
+            existing_profile.projects_keywords_json = json.dumps(
+                profile_data.get('projects_keywords', []),
+                ensure_ascii=False
+            )
+            existing_profile.education_json = json.dumps(
+                profile_data.get('education', []),
+                ensure_ascii=False
+            )
+            logger.info(f"✅ JSON字段更新成功: {profile_data['user_id']}")
+        except Exception as e:
+            logger.error(f"⚠️  JSON序列化失败: {e}")
+            # 继续执行，不影响主流程
         
         # 删除旧的关联数据
         session.query(WorkExperience).filter_by(user_id=profile_data['user_id']).delete()
@@ -211,20 +260,86 @@ class MySQLClient:
         session.query(TechnicalSkill).filter_by(user_id=profile_data['user_id']).delete()
         session.query(ProjectKeyword).filter_by(user_id=profile_data['user_id']).delete()
         session.query(ExtractedKeyword).filter_by(user_id=profile_data['user_id']).delete()
-        
-        # 重新创建关联数据（复用创建逻辑）
-        session.flush()
-        self._create_profile(session, profile_data)
-    
+
+        # 重新创建关联数据（仅子表，不新建主表）
+        # 保存工作经验
+        work_experiences = profile_data.get('work_experience', [])
+        for i, work in enumerate(work_experiences):
+            work_exp = WorkExperience(
+                user_id=profile_data['user_id'],
+                company=work.get('company'),
+                position=work.get('position'),
+                start_date=work.get('start_date'),
+                end_date=work.get('end_date'),
+                description=work.get('description'),
+                technologies=work.get('technologies'),
+                sort_order=i
+            )
+            session.add(work_exp)
+
+        # 保存项目经验
+        projects = profile_data.get('projects', [])
+        for i, proj in enumerate(projects):
+            project = Project(
+                user_id=profile_data['user_id'],
+                name=proj.get('name', ''),
+                description=proj.get('description'),
+                technologies=proj.get('technologies'),
+                role=proj.get('role'),
+                achievements=proj.get('achievements'),
+                sort_order=i
+            )
+            session.add(project)
+
+        # 保存技术技能
+        technical_skills = profile_data.get('technical_skills', [])
+        for i, skill in enumerate(technical_skills):
+            if isinstance(skill, str):
+                skill_record = TechnicalSkill(
+                    user_id=profile_data['user_id'],
+                    skill_name=skill,
+                    sort_order=i
+                )
+                session.add(skill_record)
+
+        # 保存项目关键词
+        projects_keywords = profile_data.get('projects_keywords', [])
+        for proj_kw in projects_keywords:
+            if isinstance(proj_kw, dict):
+                project_name = proj_kw.get('name', '')
+                keywords = proj_kw.get('keywords', [])
+                for i, keyword in enumerate(keywords):
+                    kw_record = ProjectKeyword(
+                        user_id=profile_data['user_id'],
+                        project_name=project_name,
+                        keyword=keyword,
+                        sort_order=i
+                    )
+                    session.add(kw_record)
+
+        # 保存提取的关键词
+        extracted_keywords = profile_data.get('extracted_keywords', [])
+        for i, keyword in enumerate(extracted_keywords):
+            if isinstance(keyword, str):
+                kw_record = ExtractedKeyword(
+                    user_id=profile_data['user_id'],
+                    keyword=keyword,
+                    extraction_source='resume_analysis',
+                    sort_order=i
+                )
+                session.add(kw_record)
+
     def get_profile(self, user_id: str) -> Optional[Dict[str, Any]]:
-        """获取用户档案"""
+        """获取用户档案（JSON优化版）"""
+        import json
+
         try:
             with self.get_session() as session:
                 profile = session.query(CandidateProfile).filter_by(user_id=user_id).first()
-                
+
                 if not profile:
                     return None
-                
+
                 # 构建返回数据结构（保持与MongoDB格式一致）
                 result = {
                     'user_id': profile.user_id,
@@ -244,8 +359,69 @@ class MySQLClient:
                     'created_at': profile.created_at,
                     'updated_at': profile.updated_at
                 }
-                
-                # 获取工作经验
+
+                # JSON优化：优先从JSON字段读取数据
+                json_data_available = False
+
+                # 尝试从JSON字段读取技术技能
+                if profile.technical_skills_json:
+                    try:
+                        technical_skills = json.loads(profile.technical_skills_json)
+                        result['technical_skills'] = technical_skills
+                        result['extracted_keywords'] = technical_skills  # 兼容字段
+                        json_data_available = True
+                        logger.debug(f"✅ 从JSON读取技术技能: {len(technical_skills)}个")
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"⚠️  技术技能JSON解析失败: {e}")
+
+                # 尝试从JSON字段读取项目关键词
+                if profile.projects_keywords_json:
+                    try:
+                        projects_keywords = json.loads(profile.projects_keywords_json)
+                        result['projects_keywords'] = projects_keywords
+                        json_data_available = True
+                        logger.debug(f"✅ 从JSON读取项目关键词: {len(projects_keywords)}个项目")
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"⚠️  项目关键词JSON解析失败: {e}")
+
+                # 尝试从JSON字段读取教育背景
+                if profile.education_json:
+                    try:
+                        education = json.loads(profile.education_json)
+                        result['education'] = education
+                        logger.debug(f"✅ 从JSON读取教育背景: {len(education)}条记录")
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"⚠️  教育背景JSON解析失败: {e}")
+
+                # 如果JSON数据可用，直接返回（性能优化）
+                if json_data_available and result['technical_skills'] and result['projects_keywords']:
+                    logger.info(f"✅ JSON数据读取成功: {user_id}")
+                    return result
+
+                # 降级机制：从关键词表读取数据
+                logger.info(f"⚠️  降级到关键词表查询: {user_id}")
+
+                # 如果JSON中没有技术技能，从表中读取
+                if not result['technical_skills']:
+                    technical_skills = session.query(TechnicalSkill).filter_by(user_id=user_id).order_by(TechnicalSkill.sort_order).all()
+                    result['technical_skills'] = [skill.skill_name for skill in technical_skills]
+                    result['extracted_keywords'] = result['technical_skills']  # 兼容字段
+
+                # 如果JSON中没有项目关键词，从表中读取
+                if not result['projects_keywords']:
+                    project_keywords = session.query(ProjectKeyword).filter_by(user_id=user_id).order_by(ProjectKeyword.project_name, ProjectKeyword.sort_order).all()
+                    projects_kw_dict = {}
+                    for kw in project_keywords:
+                        if kw.project_name not in projects_kw_dict:
+                            projects_kw_dict[kw.project_name] = []
+                        projects_kw_dict[kw.project_name].append(kw.keyword)
+
+                    result['projects_keywords'] = [
+                        {'name': name, 'keywords': keywords}
+                        for name, keywords in projects_kw_dict.items()
+                    ]
+
+                # 获取工作经验（始终从表中读取，因为通常数据量不大）
                 work_experiences = session.query(WorkExperience).filter_by(user_id=user_id).order_by(WorkExperience.sort_order).all()
                 result['work_experience'] = [
                     {
@@ -258,8 +434,8 @@ class MySQLClient:
                     }
                     for work in work_experiences
                 ]
-                
-                # 获取项目经验
+
+                # 获取项目经验（始终从表中读取，因为通常数据量不大）
                 projects = session.query(Project).filter_by(user_id=user_id).order_by(Project.sort_order).all()
                 result['projects'] = [
                     {
@@ -271,28 +447,8 @@ class MySQLClient:
                     }
                     for proj in projects
                 ]
-                
-                # 获取技术技能
-                technical_skills = session.query(TechnicalSkill).filter_by(user_id=user_id).order_by(TechnicalSkill.sort_order).all()
-                result['technical_skills'] = [skill.skill_name for skill in technical_skills]
-                
-                # 获取项目关键词
-                project_keywords = session.query(ProjectKeyword).filter_by(user_id=user_id).order_by(ProjectKeyword.project_name, ProjectKeyword.sort_order).all()
-                projects_kw_dict = {}
-                for kw in project_keywords:
-                    if kw.project_name not in projects_kw_dict:
-                        projects_kw_dict[kw.project_name] = []
-                    projects_kw_dict[kw.project_name].append(kw.keyword)
-                
-                result['projects_keywords'] = [
-                    {'name': name, 'keywords': keywords}
-                    for name, keywords in projects_kw_dict.items()
-                ]
-                
-                # 获取提取的关键词
-                extracted_keywords = session.query(ExtractedKeyword).filter_by(user_id=user_id).order_by(ExtractedKeyword.sort_order).all()
-                result['extracted_keywords'] = [kw.keyword for kw in extracted_keywords]
-                
+
+                logger.info(f"✅ 用户档案读取完成: {user_id}")
                 return result
                 
         except Exception as e:

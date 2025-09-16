@@ -76,9 +76,9 @@ class CandidateProfile(BaseModel):
     education: List[Education] = Field(default_factory=list)
     work_experience: List[WorkExperience] = Field(default_factory=list)
     projects: List[Project] = Field(default_factory=list)
-    technical_skills: TechnicalSkills = Field(default_factory=TechnicalSkills)
+    technical_skills_detail: TechnicalSkills = Field(default_factory=TechnicalSkills, description="详细技术技能结构")
     additional_info: AdditionalInfo = Field(default_factory=AdditionalInfo)
-    
+
     # 简化的关键词结构（用于Dify工作流检索）
     technical_skills: List[str] = Field(default_factory=list, description="个人技术点")
     projects_keywords: List[Dict[str, Any]] = Field(default_factory=list, description="个人项目信息")

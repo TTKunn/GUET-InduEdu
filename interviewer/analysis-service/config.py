@@ -11,7 +11,7 @@ load_dotenv()
 
 # ==================== 数据库配置 ====================
 # MySQL配置
-MYSQL_URL = os.getenv("MYSQL_URL", "mysql+pymysql://root:password@localhost:3306/interview_analysis")
+MYSQL_URL = os.getenv("MYSQL_URL", "mysql+pymysql://root:Xzk200411.@localhost:3306/interview_analysis")
 MYSQL_POOL_SIZE = int(os.getenv("MYSQL_POOL_SIZE", "10"))
 MYSQL_MAX_OVERFLOW = int(os.getenv("MYSQL_MAX_OVERFLOW", "20"))
 MYSQL_POOL_TIMEOUT = int(os.getenv("MYSQL_POOL_TIMEOUT", "30"))
@@ -100,7 +100,7 @@ def get_config_info() -> dict:
     """获取配置信息（隐藏敏感信息）"""
     return {
         "database": {
-            "mysql_url": MYSQL_URL.split('@')[1] if '@' in MYSQL_URL else "localhost:3306/interview_analysis",
+            "mysql_url": MYSQL_URL.split('@')[1] if '@' in MYSQL_URL else "43.142.157.145:3306/interview_analysis",
             "pool_size": MYSQL_POOL_SIZE,
             "max_overflow": MYSQL_MAX_OVERFLOW
         },
