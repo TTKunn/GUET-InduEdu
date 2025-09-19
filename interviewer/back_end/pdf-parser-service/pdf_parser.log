@@ -1,0 +1,181 @@
+nohup: ignoring input
+INFO:     Started server process [24799]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8003 (Press CTRL+C to quit)
+✅ 配置验证通过
+📋 服务配置:
+  service:
+    host: 0.0.0.0
+    port: 8003
+    workers: 1
+  pdf:
+    chunk_size: 1000
+    chunk_overlap: 200
+    max_file_size_mb: 10
+  security:
+    auth_enabled: False
+    max_requests_per_minute: 60
+
+🚀 启动PDF解析服务...
+📍 服务地址: http://0.0.0.0:8003
+📖 API文档: http://0.0.0.0:8003/docs
+INFO:     127.0.0.1:32910 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32918 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32926 - "GET /health HTTP/1.1" 200 OK
+INFO:     121.40.46.218:55354 - "GET / HTTP/1.1" 404 Not Found
+INFO:     121.40.46.218:55362 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     172.105.128.13:57576 - "GET / HTTP/1.1" 404 Not Found
+INFO:     59.83.208.107:22548 - "GET / HTTP/1.1" 404 Not Found
+INFO:     129.211.167.182:25957 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     206.168.34.84:43586 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     42.193.132.157:6632 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.149.59.26:44568 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.149.59.26:49904 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.176:39332 - "GET / HTTP/1.1" 404 Not Found
+INFO:     167.94.138.176:43402 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     167.94.138.176:43494 - "GET /login HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     127.0.0.1:49022 - "GET /health HTTP/1.1" 200 OK
+INFO:     5.34.216.33:26479 - "GET /health HTTP/1.1" 200 OK
+INFO:     52.81.168.146:62394 - "HEAD /health HTTP/1.1" 405 Method Not Allowed
+INFO:     5.34.216.33:36425 - "GET /health HTTP/1.1" 200 OK
+INFO:     140.179.52.16:59468 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     5.34.216.33:32399 - "GET /docs HTTP/1.1" 200 OK
+INFO:     5.34.216.33:32399 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     54.222.220.137:44628 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     140.179.52.16:59586 - "HEAD /docs HTTP/1.1" 200 OK
+INFO:     5.34.216.33:18581 - "GET /docs HTTP/1.1" 200 OK
+INFO:     59.83.208.108:48850 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.53:49154 - "GET /docs HTTP/1.1" 200 OK
+INFO:     180.101.244.14:26762 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:38802 - "GET /docs HTTP/1.1" 200 OK
+INFO:     220.196.160.45:38802 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     180.101.244.15:31224 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40272 - "GET /health HTTP/1.1" 200 OK
+INFO:     182.90.207.15:11247 - "GET /docs HTTP/1.1" 200 OK
+INFO:     182.90.207.15:11247 - "GET /openapi.json HTTP/1.1" 200 OK
+INFO:     43.144.106.82:32873 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.131.215.38:57952 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.131.215.38:60488 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     220.196.160.53:47994 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.132:48416 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.132:60204 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.132:45906 - "GET /login HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.44:57862 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     91.231.89.14:49701 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.146:18876 - "GET / HTTP/1.1" 404 Not Found
+INFO:     91.231.89.141:58665 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     159.75.198.232:47809 - "GET /docs HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     66.132.153.124:47932 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.83:17582 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.73:36076 - "GET / HTTP/1.1" 404 Not Found
+INFO:     129.211.167.182:45126 - "GET / HTTP/1.1" 404 Not Found
+INFO:     112.4.101.23:36782 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     106.75.60.236:49278 - "GET / HTTP/1.1" 404 Not Found
+INFO:     106.75.60.236:49280 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     106.75.60.236:49284 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+INFO:     106.75.60.236:49282 - "GET /robots.txt HTTP/1.1" 404 Not Found
+INFO:     3.131.215.38:58102 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.131.215.38:39230 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     106.75.164.40:40730 - "POST /token HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     150.138.78.253:34906 - "GET / HTTP/1.1" 404 Not Found
+INFO:     150.138.78.253:34910 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     106.55.244.169:34237 - "GET / HTTP/1.1" 404 Not Found
+INFO:     180.101.245.246:20392 - "GET / HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:39044 - "GET / HTTP/1.1" 404 Not Found
+INFO:     59.83.208.104:33340 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.132.23.201:33194 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.132.23.201:55818 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     123.160.223.75:63438 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     66.132.153.112:50166 - "GET / HTTP/1.1" 404 Not Found
+INFO:     59.83.208.105:54008 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     45.79.207.252:37239 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     159.75.199.224:52772 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.134.148.59:48134 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.134.148.59:38660 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     220.196.160.144:42154 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.45:48940 - "GET / HTTP/1.1" 404 Not Found
+INFO:     180.101.245.248:28618 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.125:57314 - "GET / HTTP/1.1" 404 Not Found
+INFO:     162.142.125.125:56712 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.125:44756 - "GET /wiki HTTP/1.1" 404 Not Found
+INFO:     123.178.210.179:27099 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     220.196.160.53:17562 - "GET /wiki HTTP/1.1" 404 Not Found
+INFO:     52.81.168.146:52752 - "HEAD /docs HTTP/1.1" 200 OK
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     3.131.215.38:55562 - "GET / HTTP/1.1" 404 Not Found
+INFO:     180.163.30.27:34562 - "GET / HTTP/1.1" 404 Not Found
+INFO:     180.101.245.251:17530 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.144:33002 - "GET / HTTP/1.1" 404 Not Found
+INFO:     220.196.160.151:53682 - "GET / HTTP/1.1" 404 Not Found
+INFO:     3.131.215.38:36900 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.143:34096 - "GET / HTTP/1.1" 404 Not Found
+INFO:     199.45.154.143:40968 - "GET / HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+WARNING:  Invalid HTTP request received.
+INFO:     199.45.154.143:46198 - "GET /sitemap.xml HTTP/1.1" 404 Not Found
+WARNING:  Invalid HTTP request received.
+INFO:     162.142.125.200:33654 - "GET / HTTP/1.1" 404 Not Found
