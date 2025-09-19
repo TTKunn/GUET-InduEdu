@@ -1,0 +1,7 @@
+# 忽略所有环境变量配置文件
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+.augment/
