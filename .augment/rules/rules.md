@@ -118,7 +118,7 @@ type: "always_apply"
 4.GUET-InduEdu\interviewer\vector-storage-service这个路径下为将提取的信息进行向量化存储的服务。其中的内容仅供参考不允许修改。
 5.GUET-InduEdu\interviewer\pdf-parser-service路径下为部署好的pdf存储服务，主要用于智能化提取简历的关键词，原本是将这些提取的信息存入mongodb。其中的内容仅供参考不允许修改。
 6.一切功能模块都要完成在对应的文件夹路径下，要有微服务分模块的思想，便于分开部署。
-7./home/ubuntu/workspace/project/GUET-InduEdu/interviewer/test/interview-service路径下是面试过程记录相关的服务，提供添加面试记录等功能。目前准备进行错题集功能的开发。
+7.GUET-InduEdu/interviewer/test/interview-service路径下是面试过程记录相关的服务，提供添加面试记录等功能。目前准备进行错题集功能的开发。
 8.GUET-InduEdu\xzk.pdf为一个真实的pdf简历，你可以用它来进行测试。
 9.其他路径下的内容不重要，可以选择不查看。
 
