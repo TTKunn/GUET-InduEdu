@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.HDeptMapper">
+<!--  查询部门列表  -->
+    <select id="selectDeptList" resultType="com.guet.happy.domain.HDept">
+        SELECT
+            sys_dept.dept_id as deptId,
+            sys_dept.dept_name as deptName
+        FROM
+            sys_dept
+        WHERE
+            sys_dept.del_flag = 0
+    </select>
+</mapper>

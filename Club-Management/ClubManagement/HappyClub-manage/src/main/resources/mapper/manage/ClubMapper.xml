@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.manage.mapper.ClubMapper">
+    
+    <resultMap type="Club" id="ClubResult">
+        <result property="clubId"    column="club_id"    />
+        <result property="name"    column="name"    />
+        <result property="description"    column="description"    />
+        <result property="categoryId"    column="category_id"    />
+        <result property="leaderId"    column="leader_id"    />
+        <result property="deptId"    column="dept_id"    />
+        <result property="createdAt"    column="created_at"    />
+        <result property="status"    column="status"    />
+        <result property="logoUrl"    column="logo_url"    />
+        <result property="deletedAt"    column="deleted_at"    />
+    </resultMap>
+
+    <resultMap id="ClubVoResult" type="ClubVo">
+        <result property="clubId"    column="club_id"    />
+        <result property="clubName"    column="club_name"    />
+        <result property="description"    column="description"    />
+        <result property="categoryId"    column="category_id"    />
+        <result property="leaderId"    column="leader_id"    />
+        <result property="deptId"    column="dept_id"    />
+        <result property="createdAt"    column="created_at"    />
+        <result property="status"    column="status"    />
+        <result property="logoUrl"    column="logo_url"    />
+        <result property="deletedAt"    column="deleted_at"    />
+        <result property="memberCount" column="member_count"/>
+        <result property="name" column="category_name"/>
+        <association property="MCategory" javaType="com.guet.manage.domain.MCategory">
+    <id property="categoryId" column="category_id"/>
+    <result property="name" column="category_name"/>
+    <result property="description" column="category_description"/>
+</association>
+
+        <association property="sysDept" javaType="com.guet.common.core.domain.entity.SysDept" column="dept_id" select="com.guet.system.mapper.SysDeptMapper.selectDeptById"/>
+        <association property="sysUser" javaType="com.guet.common.core.domain.entity.SysUser"
+                     column="leader_id" select="com.guet.system.mapper.SysUserMapper.selectUserById"/>
+    </resultMap>
+
+    <resultMap id="UserVoResult" type="UserVo">
+        <result property="userId"    column="user_id"    />
+        <result property="userName"    column="user_name"    />
+        <result property="nickName"    column="nick_name"    />
+        <result property="sex" column="sex"/>
+        <result property="joinTime" column="join_time"/>
+        <result property="exitTime" column="exit_time"/>
+    </resultMap>
+
+    <sql id="selectClubVo">
+        select club_id, name, description, category_id, leader_id, dept_id, created_at, status, logo_url, deleted_at from tb_club
+    </sql>
+
+    <select id="selectClubList" parameterType="Club" resultMap="ClubResult">
+        <include refid="selectClubVo"/>
+        <where>  
+            <if test="name != null  and name != ''"> and name like concat('%', #{name}, '%')</if>
+            <if test="categoryId != null "> and category_id = #{categoryId}</if>
+            <if test="leaderId != null "> and leader_id = #{leaderId}</if>
+            <if test="deptId != null "> and dept_id = #{deptId}</if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != '' and params.endCreatedAt != null and params.endCreatedAt != ''"> and created_at between #{params.beginCreatedAt} and #{params.endCreatedAt}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+<!--     category_name       -->
+        </where>
+    </select>
+    
+    <select id="selectClubByClubId" parameterType="Long" resultMap="ClubResult">
+        <include refid="selectClubVo"/>
+        where club_id = #{clubId}
+    </select>
+    <select id="selectClubVoList" resultMap="ClubVoResult">
+        SELECT
+        c.club_id,
+        c.name as club_name,
+        c.description,
+        c.category_id,
+        cat.name AS category_name,
+        cat.description AS category_description,
+        c.leader_id,
+        c.dept_id,
+        c.logo_url,
+        c.created_at,
+        c.status,
+        COUNT(m.membership_id) AS member_count
+        FROM
+        tb_club c
+        LEFT JOIN
+        tb_category cat ON c.category_id = cat.category_id
+        left join tb_membership m ON c.club_id = m.club_id
+        <where>
+            <if test="name != null  and name != ''">and c.name like concat('%', #{name}, '%')</if>
+            <if test="categoryId != null ">and c.category_id = #{categoryId}</if>
+            <if test="leaderId != null ">and c.leader_id = #{leaderId}</if>
+            <if test="deptId != null ">and c.dept_id = #{deptId}</if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != '' and params.endCreatedAt != null and params.endCreatedAt != ''">
+                and c.created_at between #{params.beginCreatedAt} and #{params.endCreatedAt}
+            </if>
+            <if test="status != null  and status != ''">and c.status = #{status}</if>
+        </where>
+
+        GROUP BY
+        c.club_id
+    </select>
+
+    <select id="selectUserVoListByClubId" resultMap="UserVoResult">
+        SELECT
+            u.user_id,
+            u.user_name,
+            u.nick_name,
+            u.sex,
+            u.phonenumber,
+            m.`status`,
+            m.join_time,
+            m.exit_time
+        FROM
+            tb_membership m
+                JOIN sys_user u ON m.user_id = u.user_id
+        WHERE
+            m.club_id = #{clubId}
+          AND m.deleted_at IS NULL -- 排除已删除记录
+
+          AND m.STATUS IN ( 'active', 'probation' );
+    </select>
+
+    <insert id="insertClub" parameterType="Club" useGeneratedKeys="true" keyProperty="clubId">
+        insert into tb_club
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != ''">name,</if>
+            <if test="description != null and description != ''">description,</if>
+            <if test="categoryId != null">category_id,</if>
+            <if test="leaderId != null">leader_id,</if>
+            <if test="deptId != null">dept_id,</if>
+            <if test="createdAt != null">created_at,</if>
+            <if test="status != null">status,</if>
+            <if test="logoUrl != null">logo_url,</if>
+            <if test="deletedAt != null">deleted_at,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="description != null and description != ''">#{description},</if>
+            <if test="categoryId != null">#{categoryId},</if>
+            <if test="leaderId != null">#{leaderId},</if>
+            <if test="deptId != null">#{deptId},</if>
+            <if test="createdAt != null">#{createdAt},</if>
+            <if test="status != null">#{status},</if>
+            <if test="logoUrl != null">#{logoUrl},</if>
+            <if test="deletedAt != null">#{deletedAt},</if>
+         </trim>
+    </insert>
+
+    <update id="updateClub" parameterType="Club">
+        update tb_club
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="description != null and description != ''">description = #{description},</if>
+            <if test="categoryId != null">category_id = #{categoryId},</if>
+            <if test="leaderId != null">leader_id = #{leaderId},</if>
+            <if test="deptId != null">dept_id = #{deptId},</if>
+            <if test="createdAt != null">created_at = #{createdAt},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="logoUrl != null">logo_url = #{logoUrl},</if>
+            <if test="deletedAt != null">deleted_at = #{deletedAt},</if>
+        </trim>
+        where club_id = #{clubId}
+    </update>
+
+    <delete id="deleteClubByClubId" parameterType="Long">
+        delete from tb_club where club_id = #{clubId}
+    </delete>
+
+    <delete id="deleteClubByClubIds" parameterType="String">
+        delete from tb_club where club_id in 
+        <foreach item="clubId" collection="array" open="(" separator="," close=")">
+            #{clubId}
+        </foreach>
+    </delete>
+
+    <resultMap id="ClubLeaderVo" type="com.guet.manage.domain.vo.ClubLeaderVo">
+        <result property="leaderId" column="leader_id"/>
+        <result property="leaderName" column="leader_name"/>
+    </resultMap>
+<!--  查询社团负责人  -->
+    <select id="selectAllClubLeader" resultMap="ClubLeaderVo">
+        SELECT
+            sys_user.user_id as leader_id,
+            sys_user.user_name as leader_name
+        FROM
+            tb_club
+                INNER JOIN
+            sys_user
+            ON
+                tb_club.leader_id = sys_user.user_id
+    </select>
+</mapper>

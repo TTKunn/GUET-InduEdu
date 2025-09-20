@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.manage.mapper.AuditMapper">
+
+    <!-- ============================= 公告审核相关 ============================= -->
+
+    <!-- 公告审核结果映射 -->
+    <resultMap id="AuditAnnouncementVo" type="com.guet.manage.domain.vo.AnnouncementAuditVo">
+        <result property="announcementId" column="announcement_id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="leaderName" column="leader_name"/>
+        <result property="clubName" column="club_name"/>
+        <result property="auditId" column="audit_id"/>
+        <result property="createAt" column="created_at"/>
+        <result property="status" column="audit_status"/>
+        <result property="userRemark" column="user_remark"/>
+        <result property="auCreatedAt" column="au_created_at"/>
+    </resultMap>
+
+    <!-- 查询公告审核列表 -->
+    <select id="selectAuditAnnouncements" resultMap="AuditAnnouncementVo">
+        SELECT
+        a.announcement_id,
+        audit.audit_id,
+        a.title,
+        a.content,
+        u.user_name AS leader_name,
+        c.name AS club_name,
+        a.created_at,
+        audit.status AS audit_status,
+        audit.created_at AS au_created_at,
+        audit.user_remark
+        FROM tb_announcement a
+        JOIN sys_user u ON a.publisher_id = u.user_id
+        JOIN tb_club c ON a.publisher_id = c.leader_id
+        JOIN tb_audit audit ON audit.related_id = a.announcement_id
+        AND audit.type = 'announcement'
+        AND audit.audit_id = (
+        SELECT MAX(audit_id)
+        FROM tb_audit
+        WHERE related_id = a.announcement_id
+        AND type = 'announcement'
+        )
+        <where>
+            audit.status IN ('pending', 'rejected')
+            AND a.deleted_at IS NULL
+            AND c.deleted_at IS NULL
+
+            <if test="title != null and title != ''">
+                AND a.title LIKE CONCAT('%', #{title}, '%')
+            </if>
+            <if test="content != null and content != ''">
+                AND a.content LIKE CONCAT('%', #{content}, '%')
+            </if>
+            <if test="leaderName != null and leaderName != ''">
+                AND u.user_name LIKE CONCAT('%', #{leaderName}, '%')
+            </if>
+            <if test="clubName != null and clubName != ''">
+                AND c.name LIKE CONCAT('%', #{clubName}, '%')
+            </if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != ''
+              and params.endCreatedAt != null and params.endCreatedAt != ''">
+                AND a.created_at BETWEEN #{params.beginCreatedAt} AND #{params.endCreatedAt}
+            </if>
+        </where>
+        ORDER BY audit.created_at DESC
+    </select>
+
+    <!-- 审核通过公告 -->
+    <update id="approveAnnouncement">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'approved',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+    </update>
+
+    <!-- 公告状态变更为已发布 -->
+    <update id="approveAuditAnnouncement">
+        UPDATE tb_announcement
+        SET status = 'published'
+        WHERE announcement_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'announcement'
+        )
+    </update>
+
+    <!-- 审核驳回公告 -->
+    <update id="rejectAnnouncement">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'rejected',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+        AND status = 'pending'
+    </update>
+
+    <!-- 公告状态变更为驳回 -->
+    <update id="rejectAuditAnnouncement">
+        UPDATE tb_announcement
+        SET status = 'rejected'
+        WHERE announcement_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'announcement'
+        )
+          AND status = 'pending'
+    </update>
+
+
+    <!-- ============================= 活动审核相关 ============================= -->
+
+    <!-- 活动审核结果映射 -->
+    <resultMap id="AuditActivityResult" type="com.guet.manage.domain.vo.ActivityAuditVo">
+        <result property="auditId" column="audit_id"/>
+        <result property="activityId" column="activity_id"/>
+        <result property="clubName" column="club_name"/>
+        <result property="location" column="location"/>
+        <result property="activityName" column="activity_name"/>
+        <result property="leaderName" column="organizer"/>
+        <result property="activityDescription" column="description"/>
+        <result property="userRemark" column="user_remark"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="status" column="audit_status"/>
+    </resultMap>
+
+    <!-- 查询活动审核列表 -->
+    <select id="selectAuditActivities" resultMap="AuditActivityResult">
+        SELECT
+        ac.activity_id,
+        au.audit_id,
+        ac.name AS activity_name,
+        ac.description,
+        s.user_name AS organizer,
+        c.name AS club_name,
+        ac.start_time,
+        ac.end_time,
+        au.user_remark,
+        ac.location,
+        au.status AS audit_status
+        FROM tb_activity ac
+        JOIN sys_user s ON ac.organizer_id = s.user_id
+        JOIN tb_club c ON s.user_id = c.leader_id
+        JOIN tb_audit au ON au.related_id = ac.activity_id
+        AND au.type = 'activity'
+        AND au.audit_id = (
+        SELECT MAX(audit_id)
+        FROM tb_audit
+        WHERE related_id = ac.activity_id
+        AND type = 'activity'
+        )
+        <where>
+            ac.status IN ('pending', 'rejected')
+            AND ac.deleted_at IS NULL
+            AND c.deleted_at IS NULL
+
+            <if test="activityName != null and activityName != ''">
+                AND ac.name LIKE CONCAT('%', #{activityName}, '%')
+            </if>
+            <if test="location != null and location != ''">
+                AND ac.location LIKE CONCAT('%', #{location}, '%')
+            </if>
+            <if test="leaderName != null and leaderName != ''">
+                AND s.user_name LIKE CONCAT('%', #{leaderName}, '%')
+            </if>
+            <if test="clubName != null and clubName != ''">
+                AND c.name LIKE CONCAT('%', #{clubName}, '%')
+            </if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != ''
+              and params.endCreatedAt != null and params.endCreatedAt != ''">
+                AND ac.start_time BETWEEN #{params.beginCreatedAt} AND #{params.endCreatedAt}
+            </if>
+        </where>
+        ORDER BY ac.start_time ASC
+    </select>
+
+    <!-- 审核通过活动 -->
+    <update id="approveActivity">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'approved',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+    </update>
+
+    <!-- 活动状态变更为已发布 -->
+    <update id="approveAuditActivity">
+        UPDATE tb_activity
+        SET status = 'published'
+        WHERE activity_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'activity'
+        )
+    </update>
+
+    <!-- 审核驳回活动 -->
+    <update id="rejectActivity">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'rejected',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+        AND status = 'pending'
+    </update>
+
+    <!-- 活动状态变更为驳回 -->
+    <update id="rejectAuditActivity">
+        UPDATE tb_activity
+        SET status = 'rejected'
+        WHERE activity_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'activity'
+        )
+          AND status = 'pending'
+    </update>
+    <!-- ============================= 新社团审核相关 ============================= -->
+    <resultMap id="NewClubAuditResultMap" type="com.guet.manage.domain.vo.NewClubAuditVo">
+        <id property="auditId" column="audit_id"/>
+        <result property="clubId" column="club_id"/>
+        <result property="clubName" column="name"/>
+        <result property="description" column="description"/>
+        <result property="categoryName" column="category_name"/>
+        <result property="deptName" column="dept_name"/>
+        <result property="applicant" column="leader_name"/>
+        <result property="createAt" column="created_at"/>
+        <result property="userRemark" column="user_remark"/>
+        <result property="status" column="audit_status"/>
+    </resultMap>
+    <select id="selectAuditNewClub" resultMap="NewClubAuditResultMap">
+        SELECT
+            audit.audit_id,
+            club.club_id,
+            club.name,
+            club.description,
+            MCategory.name AS category_name,
+            d.dept_name,
+            s.user_name AS leader_name,
+            audit.created_at,
+            audit.user_remark,
+            audit.status AS audit_status
+        FROM tb_club club
+                 JOIN sys_user s ON club.leader_id = s.user_id
+                 JOIN tb_category MCategory ON MCategory.category_id = club.category_id
+                 JOIN tb_audit audit ON audit.related_id = club.club_id
+                 join sys_dept d on d.dept_id = club.dept_id
+            AND audit.type = 'club_register'
+            AND audit.audit_id = (
+                SELECT MAX(audit_id)
+                FROM tb_audit
+                WHERE related_id = club.club_id
+                  AND type = 'club_register'
+            )
+        <where>
+            club.status IN ('pending', 'inactive')
+            AND club.deleted_at IS NULL
+            <if test="clubName != null and clubName != ''">
+                AND club.name LIKE CONCAT('%', #{clubName}, '%')
+            </if>
+            <if test="categoryId != null and categoryId != ''">
+                AND c.category_id = #{categoryId}
+            </if>
+            <if test="deptId != null and deptId != ''">
+                AND club.dept_id = #{deptId}
+            </if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != ''
+                and params.endCreatedAt != null and params.endCreatedAt != ''">
+                AND audit.created_at BETWEEN #{params.beginCreatedAt} AND #{params.endCreatedAt}
+            </if>
+        </where>
+    </select>
+    <!-- 审核通过活动 -->
+    <update id="approveNewClub">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'approved',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+    </update>
+
+    <!-- 活动状态变更为已发布 -->
+    <update id="approveAuditNewClub">
+        UPDATE tb_club
+        SET status = 'active'
+        WHERE club_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'club_register'
+        )
+    </update>
+    <!-- 审核驳回社团申请注册 -->
+    <update id="rejectNewClub">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'rejected',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+        AND status = 'pending'
+    </update>
+
+    <!-- 新社团申请状态变更为驳回 -->
+    <update id="rejectAuditNewClub">
+        UPDATE tb_club
+        SET status = 'inactive'
+        WHERE club_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'club_register'
+        )
+          AND status = 'pending'
+    </update>
+<!-- ============================= 成果审核相关 =============================    -->
+    <!--  查询成果审核  -->
+    <resultMap id="AchievementAuditVoMap" type="com.guet.manage.domain.vo.AchievementAuditVo">
+        <id     property="achievementId" column="achievement_id"/>
+        <result property="title"         column="title"/>
+        <result property="description"   column="description"/>
+        <result property="leaderName"    column="user_name"/>
+        <result property="achieveDate"   column="achieve_date"/>
+        <result property="clubName"      column="name"/>
+        <result property="auditId"       column="audit_id"/>
+        <result property="status"        column="status"/>
+        <result property="userRemark"    column="user_remark"/>
+        <result property="certificateUrl" column="certificate_url"/>
+        <result property="type"         column="type"/>
+        <result property="createdAt"    column="created_at"/>
+    </resultMap>
+
+    <select id="selectAuditAchievements" resultMap="AchievementAuditVoMap">
+        SELECT
+        audit.audit_id,
+        tb_achievement.achievement_id,
+        sys_user.user_name,
+        tb_club.`name`,
+        tb_achievement.title,
+        tb_achievement.type,
+        tb_achievement.description,
+        tb_achievement.achieve_date,
+        tb_achievement.certificate_url,
+        tb_achievement.`status`,
+        audit.created_at,
+        audit.user_remark
+        FROM
+        tb_achievement
+        JOIN sys_user ON tb_achievement.publisher_id = sys_user.user_id
+        JOIN tb_club ON tb_achievement.club_id = tb_club.club_id
+        JOIN tb_audit audit ON audit.related_id = tb_achievement.achievement_id
+        AND audit.type = 'achievement'
+        AND audit.audit_id = (
+        SELECT
+        MAX( audit_id )
+        FROM
+        tb_audit
+        WHERE
+        related_id = tb_achievement.achievement_id
+        AND type = 'achievement'
+        )
+        <where>
+            tb_achievement.status IN ('pending','rejected')
+            AND tb_achievement.deleted_at IS NULL
+            <if test="achievementTitle != null and achievementTitle != ''">
+                AND tb_achievement.title LIKE CONCAT('%', #{achievementTitle}, '%')
+            </if>
+            <if test="leaderId != null and leaderId != ''">
+                AND tb_achievement.publisher_id = #{leaderId}
+            </if>
+            <if test="clubName != null and clubName != ''">
+                AND tb_club.name LIKE CONCAT('%', #{clubName}, '%')
+            </if>
+            <if test="type != null and type != ''">
+                AND tb_achievement.type = #{type}
+            </if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != ''
+                and params.endCreatedAt != null and params.endCreatedAt != ''">
+                AND tb_achievement.achieve_date BETWEEN #{params.beginCreatedAt} AND #{params.endCreatedAt}
+            </if>
+        </where>
+        order by audit.created_at asc
+    </select>
+    <update id="approveAuditAchievement">
+        UPDATE tb_achievement
+        SET status = 'published'
+        WHERE achievement_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'achievement'
+        )
+    </update>
+    <update id="approveAchievement">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'approved',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+    </update>
+    <update id="rejectAuditAchievement">
+        UPDATE tb_achievement
+        SET status = 'rejected'
+        WHERE achievement_id = (
+            SELECT related_id
+            FROM tb_audit
+            WHERE audit_id = #{auditId} AND type = 'achievement'
+        )
+    </update>
+    <update id="rejectAchievement">
+        UPDATE tb_audit
+        <set>
+            processor_id = #{processorId},
+            status = 'rejected',
+            processed_at = NOW(),
+            <if test="remark != null and remark != ''">
+                remark = #{remark},
+            </if>
+        </set>
+        WHERE audit_id = #{auditId}
+        AND status = 'pending'
+    </update>
+</mapper>

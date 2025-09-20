@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.HAttendanceMapper">
+
+    <!-- resultMap for HAttendance -->
+    <resultMap id="HAttendanceResultMap" type="com.guet.happy.domain.HAttendance">
+        <id property="attendanceId" column="attendance_id"/>
+        <result property="clubId" column="club_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="clockInTime" column="clock_in_time"/>
+        <result property="clockOutTime" column="clock_out_time"/>
+        <result property="studyDuration" column="study_duration"/>
+        <result property="status" column="status"/>
+        <result property="notes" column="notes"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="deletedAt" column="deleted_at"/>
+    </resultMap>
+
+    <!-- 根据社团id与userId获取考勤记录 -->
+    <select id="selectAttendanceByClubIdAndUserId" resultMap="HAttendanceResultMap">
+        select * from tb_attendance where club_id = #{clubId} and user_id = #{userId}
+        order by created_at desc
+    </select>
+<!--  新增考勤记录,先签到  -->
+    <insert id="insertAttendance">
+        insert into tb_attendance (club_id, user_id, clock_in_time, status) values (#{clubId}, #{userId}, NOW(), '正常')
+    </insert>
+<!--  查询本人最新的签到记录（未签退）  -->
+<select id="selectLatestUncheckedInAttendance" resultMap="HAttendanceResultMap">
+    SELECT attendance_id FROM tb_attendance
+    WHERE user_id = #{userId}
+      AND status = '正常'
+      AND clock_out_time IS NULL
+    ORDER BY clock_in_time DESC
+    LIMIT 1
+</select>
+<!--  签退  -->
+    <update id="updateAttendance">
+        update tb_attendance set clock_out_time = NOW(), notes = #{notes} where attendance_id = #{attendanceId}
+    </update>
+<!--  本月考勤记录统计  -->
+<select id="selectAttendanceStatsByMonth" resultType="com.guet.happy.domain.attendanceStats">
+    SELECT
+        COUNT(*) AS currentMonthCheckins,
+        COALESCE(SUM(study_duration), 0) AS currentMonthDuration
+    FROM tb_attendance
+    WHERE user_id = #{userId}
+      AND DATE_FORMAT(clock_in_time, '%Y-%m') = DATE_FORMAT(NOW(), '%Y-%m')
+</select>
+
+</mapper>

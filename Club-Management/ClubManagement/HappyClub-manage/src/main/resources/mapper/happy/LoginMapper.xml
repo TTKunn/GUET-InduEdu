@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.LoginMapper">
+<!-- 简单登录校验   -->
+    <select id="login" parameterType="HUser" resultType="HUser">
+        select user_name as username,
+            nick_name as nickName,
+            user_id as userId,
+            password
+            from sys_user where user_name = #{username} and password = #{password}
+    </select>
+    <!-- selectUserByUsername -->
+<select id="selectUserByUsername" parameterType="string" resultType="com.guet.happy.domain.HUser">
+    SELECT * FROM sys_user WHERE user_name = #{username}
+</select>
+
+<select id="selectByUsername" resultType="com.guet.happy.domain.HUser">
+    SELECT * FROM sys_user WHERE user_name = #{username}
+</select>
+
+<insert id="insertUser">
+    INSERT INTO sys_user (
+        user_name, nick_name, password, sex, dept_id, avatar, del_flag
+    ) VALUES (
+        #{username}, #{nickName}, #{password}, #{sex}, #{deptId}, '/profile/avatar/2025/04/18/39a82f8d0dbd46dc99efacdc8d87b825_20250418170452A003.png', 0
+    )
+</insert>
+
+</mapper>

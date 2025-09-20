@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.personal.mapper.PersonalAchievementMapper">
+    
+    <resultMap type="PersonalAchievementVo" id="PachievementResult">
+        <result property="achievementId"    column="achievement_id"    />
+        <result property="clubId"    column="club_id"    />
+        <result property="publisherId"    column="publisher_id"    />
+        <result property="title"    column="title"    />
+        <result property="type"    column="type"    />
+        <result property="description"    column="description"    />
+        <result property="achieveDate"    column="achieve_date"    />
+        <result property="certificateUrl"    column="certificate_url"    />
+        <result property="status"    column="status"    />
+        <result property="createdAt"    column="created_at"    />
+        <result property="deletedAt"    column="deleted_at"    />
+        <result property="userName" column="user_name"/>
+        <result property="clubName" column="club_name"/>
+        <result property="nickName" column="nick_name"/>
+        <collection property="participants" ofType="AchievementMemberVo">
+            <result property="membershipId" column="member_id"/>
+            <result property="nickName" column="member_nickname"/>
+            <result property="userName" column="member_username"/>
+        </collection>
+    </resultMap>
+
+    <sql id="selectPachievementVo">
+        SELECT
+            a.achievement_id,
+            a.club_id,
+            u.nick_name,
+            u.user_name,
+            a.title,
+            a.type,
+            a.description,
+            a.achieve_date,
+            a.certificate_url,
+            a.status,
+            m.user_id as member_id,
+            mu.nick_name as member_nickname,
+            mu.user_name as member_username
+        FROM tb_achievement a
+                 JOIN sys_user u ON a.publisher_id = u.user_id
+                 JOIN tb_club c ON a.club_id = c.club_id
+                 LEFT JOIN tb_achievement_member m ON a.achievement_id = m.achievement_id
+                 LEFT JOIN sys_user mu ON m.user_id = mu.user_id
+    </sql>
+
+    <select id="selectPachievementList" parameterType="PersonalAchievement" resultMap="PachievementResult">
+        <include refid="selectPachievementVo"/>
+        <where>
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%')</if>
+            <if test="type != null  and type != ''"> and type = #{type}</if>
+            <if test="params.beginAchieveDate != null and params.beginAchieveDate != '' and params.endAchieveDate != null and params.endAchieveDate != ''"> and achieve_date between #{params.beginAchieveDate} and #{params.endAchieveDate}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+
+            <if test="nickName != null and nickName != ''">
+                and sys_user.nick_name like concat('%', #{nickName}, '%')
+            </if>
+            <if test="clubName != null and clubName != ''">
+                and tb_club.name like concat('%', #{clubName}, '%')
+            </if>
+            <if test="userName != null and userName != ''">
+                and sys_user.user_name like concat('%', #{userName}, '%')
+            </if>
+            and a.club_id = #{clubId}
+        </where>
+    </select>
+    
+    <select id="selectPachievementByAchievementId" parameterType="Long" resultMap="PachievementResult">
+        <include refid="selectPachievementVo"/>
+        where a.achievement_id = #{achievementId}
+    </select>
+
+    <insert id="insertPachievement" parameterType="PersonalAchievement" useGeneratedKeys="true" keyProperty="achievementId">
+        insert into tb_achievement
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="clubId != null">club_id,</if>
+            <if test="publisherId != null">publisher_id,</if>
+            <if test="title != null and title != ''">title,</if>
+            <if test="type != null and type != ''">type,</if>
+            <if test="description != null and description != ''">description,</if>
+            <if test="achieveDate != null">achieve_date,</if>
+            <if test="certificateUrl != null">certificate_url,</if>
+            <if test="status != null">status,</if>
+            <if test="createdAt != null">created_at,</if>
+            <if test="deletedAt != null">deleted_at,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="clubId != null">#{clubId},</if>
+            <if test="publisherId != null">#{publisherId},</if>
+            <if test="title != null and title != ''">#{title},</if>
+            <if test="type != null and type != ''">#{type},</if>
+            <if test="description != null and description != ''">#{description},</if>
+            <if test="achieveDate != null">#{achieveDate},</if>
+            <if test="certificateUrl != null">#{certificateUrl},</if>
+            <if test="status != null">#{status},</if>
+            <if test="createdAt != null">#{createdAt},</if>
+            <if test="deletedAt != null">#{deletedAt},</if>
+         </trim>
+    </insert>
+
+    <update id="updatePachievement" parameterType="PersonalAchievement">
+        update tb_achievement
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="clubId != null">club_id = #{clubId},</if>
+            <if test="publisherId != null">publisher_id = #{publisherId},</if>
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="type != null and type != ''">type = #{type},</if>
+            <if test="description != null and description != ''">description = #{description},</if>
+            <if test="achieveDate != null">achieve_date = #{achieveDate},</if>
+            <if test="certificateUrl != null">certificate_url = #{certificateUrl},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="createdAt != null">created_at = #{createdAt},</if>
+            <if test="deletedAt != null">deleted_at = #{deletedAt},</if>
+        </trim>
+        where achievement_id = #{achievementId}
+    </update>
+
+    <delete id="deletePachievementByAchievementId" parameterType="Long">
+        delete from tb_achievement where achievement_id = #{achievementId}
+    </delete>
+
+    <delete id="deletePachievementByAchievementIds" parameterType="String">
+        delete from tb_achievement where achievement_id in 
+        <foreach item="achievementId" collection="array" open="(" separator="," close=")">
+            #{achievementId}
+        </foreach>
+    </delete>
+<!--    -->
+    <insert id="insertPachievementAudit" parameterType="PersonalAchievementAuditDto" useGeneratedKeys="true" keyProperty="auditId">
+        INSERT INTO tb_audit (type, applicant_id, related_id, status)
+        VALUES ('achievement', #{applicantId}, #{achievementId}, #{status})
+    </insert>
+</mapper>

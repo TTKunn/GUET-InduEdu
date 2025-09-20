@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.personal.mapper.PersonalAttendanceMapper">
+    
+    <resultMap type="PersonalAttendanceVo" id="PattendanceResult">
+        <result property="attendanceId" column="attendance_id"/>
+        <result property="clubId" column="club_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="clubName" column="club_name"/>
+        <result property="userName" column="user_name"/>
+        <result property="clockInTime" column="clock_in_time"/>
+        <result property="clockOutTime" column="clock_out_time"/>
+        <result property="studyDuration" column="study_duration"/>
+        <result property="status" column="status"/>
+        <result property="notes" column="notes"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="updatedAt" column="updated_at"/>
+        <result property="deletedAt" column="deleted_at"/>
+        <result property="nickName" column="nick_name"/>
+    </resultMap>
+
+    <sql id="selectPattendanceVo">
+        select attendance_id,
+               tb_attendance.club_id,
+               sys_user.user_id,
+               tb_club.name       as club_name,
+               sys_user.user_name as user_name,
+               clock_in_time,
+               clock_out_time,
+               study_duration,
+               tb_attendance.status,
+               notes,
+               tb_attendance.created_at,
+               updated_at,
+               sys_user.nick_name
+        from club_management.tb_attendance
+                 join tb_club on tb_attendance.club_id = tb_club.club_id
+                 join sys_user on tb_attendance.user_id = sys_user.user_id
+    </sql>
+
+    <select id="selectPattendanceList" parameterType="PersonalAttendanceDto" resultMap="PattendanceResult">
+        <include refid="selectPattendanceVo"/>
+        <where>
+            <if test="userName != null and userName != ''">
+                and sys_user.user_name like concat('%', #{userName}, '%')
+            </if>
+            <if test="nickName != null and nickName != ''">
+                and sys_user.nick_name like concat('%', #{nickName}, '%')
+            </if>
+            <if test="params.beginClockInTime != null and params.beginClockInTime != '' and params.endClockInTime != null and params.endClockOutTime != null and params.endClockOutTime != ''">
+                and clock_in_time between #{params.beginClockInTime} and #{params.endClockInTime}
+            </if>
+            <if test="params.beginClockOutTime != null and params.beginClockOutTime != '' and params.endClockOutTime != null and params.endClockOutTime != ''">
+                and clock_out_time between #{params.beginClockOutTime} and #{params.endClockOutTime}
+            </if>
+            <if test="params.beginClockInTime != null and params.beginClockInTime != '' and params.endClockInTime != null and params.endClockInTime != ''">
+                and clock_out_time between #{params.beginClockInTime} and #{params.endClockInTime}
+            </if>
+            <if test="status != null  and status != ''">and tb_attendance.status = #{status}</if>
+
+<!--            <if test="notes != null  and notes != ''"> and notes = #{notes}</if>-->
+<!--                -->
+            <if test="clubId != null and clubId != ''">and tb_attendance.club_id = #{clubId}</if>
+        </where>
+    </select>
+    
+    <select id="selectPattendanceByAttendanceId" parameterType="Long" resultMap="PattendanceResult">
+        <include refid="selectPattendanceVo"/>
+        where attendance_id = #{attendanceId}
+    </select>
+
+    <insert id="insertPattendance" parameterType="PersonalAttendance" useGeneratedKeys="true" keyProperty="attendanceId">
+        insert into tb_attendance
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="clubId != null">club_id,</if>
+            <if test="userId != null">user_id,</if>
+            <if test="clockInTime != null">clock_in_time,</if>
+            <if test="clockOutTime != null">clock_out_time,</if>
+            <if test="studyDuration != null">study_duration,</if>
+            <if test="status != null">status,</if>
+            <if test="notes != null">notes,</if>
+            <if test="createdAt != null">created_at,</if>
+            <if test="updatedAt != null">updated_at,</if>
+            <if test="deletedAt != null">deleted_at,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="clubId != null">#{clubId},</if>
+            <if test="userId != null">#{userId},</if>
+            <if test="clockInTime != null">#{clockInTime},</if>
+            <if test="clockOutTime != null">#{clockOutTime},</if>
+            <if test="studyDuration != null">#{studyDuration},</if>
+            <if test="status != null">#{status},</if>
+            <if test="notes != null">#{notes},</if>
+            <if test="createdAt != null">#{createdAt},</if>
+            <if test="updatedAt != null">#{updatedAt},</if>
+            <if test="deletedAt != null">#{deletedAt},</if>
+         </trim>
+    </insert>
+
+    <update id="updatePattendance" parameterType="PersonalAttendance">
+        update tb_attendance
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="clubId != null">club_id = #{clubId},</if>
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="clockInTime != null">clock_in_time = #{clockInTime},</if>
+            <if test="clockOutTime != null">clock_out_time = #{clockOutTime},</if>
+            <if test="studyDuration != null">study_duration = #{studyDuration},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="notes != null">notes = #{notes},</if>
+            <if test="createdAt != null">created_at = #{createdAt},</if>
+            <if test="updatedAt != null">updated_at = #{updatedAt},</if>
+            <if test="deletedAt != null">deleted_at = #{deletedAt},</if>
+        </trim>
+        where attendance_id = #{attendanceId}
+    </update>
+
+    <delete id="deletePattendanceByAttendanceId" parameterType="Long">
+        delete from tb_attendance where attendance_id = #{attendanceId}
+    </delete>
+
+    <delete id="deletePattendanceByAttendanceIds" parameterType="String">
+        delete from tb_attendance where attendance_id in 
+        <foreach item="attendanceId" collection="array" open="(" separator="," close=")">
+            #{attendanceId}
+        </foreach>
+    </delete>
+</mapper>

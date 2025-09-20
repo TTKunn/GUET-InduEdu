@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.personal.mapper.PersonalClubMapper">
+
+    <resultMap type="PersonalClubVo" id="PersonalClubResult">
+        <!-- 原有字段 -->
+        <result property="clubId"    column="club_id" />
+        <result property="name"      column="name" />
+        <result property="description" column="description" />
+        <result property="categoryId" column="category_id" />
+        <result property="leaderId"  column="leader_id" />
+        <result property="deptId"    column="dept_id" />
+        <result property="createdAt" column="created_at" />
+        <result property="status"    column="status" />
+        <result property="logoUrl"   column="logo_url" />
+        <result property="deletedAt" column="deleted_at" />
+
+        <!-- 新增字段 -->
+        <result property="userName"        column="user_name" />
+        <result property="nickName"        column="nick_name" />
+        <result property="clubName"        column="name" />
+        <result property="clubDescription" column="description" />
+        <result property="categoryName"    column="category_name" />
+        <result property="deptName"        column="dept_name" />
+
+        <!-- 新增指导老师相关字段 -->
+        <result property="advisorNames"    column="advisor_names" />
+        <result property="advisorIds"      column="advisor_ids" />
+    </resultMap>
+
+    <sql id="selectPersonalClubVo">
+        SELECT tb_club.club_id,
+               tb_club.status,
+               tb_club.logo_url,
+               sys_user.user_name,
+               sys_user.nick_name,
+               tb_club.`name`,
+               tb_club.description,
+               tb_category.`name` AS category_name,
+               sys_dept.dept_name,
+               tb_club.created_at,
+               GROUP_CONCAT(DISTINCT ta.name SEPARATOR ', ') AS advisor_names,
+               GROUP_CONCAT(DISTINCT ta.advisor_id SEPARATOR ',') AS advisor_ids
+        FROM tb_club
+                 INNER JOIN sys_user ON tb_club.leader_id = sys_user.user_id
+                 INNER JOIN tb_category ON tb_club.category_id = tb_category.category_id
+                 INNER JOIN sys_dept ON tb_club.dept_id = sys_dept.dept_id
+                 LEFT JOIN tb_club_advisor tca ON tb_club.club_id = tca.club_id AND tca.deleted_at IS NULL
+                 LEFT JOIN tb_advisor ta ON tca.advisor_id = ta.advisor_id AND ta.deleted_at IS NULL
+    </sql>
+
+    <select id="selectPersonalClubList" parameterType="PersonalClub" resultMap="PersonalClubResult">
+        <include refid="selectPersonalClubVo"/>
+        <where>
+<!--            clubId-->
+            <if test="clubId != null"> and tb_club.club_id = #{clubId}</if>
+        </where>
+        GROUP BY tb_club.club_id
+    </select>
+    
+    <select id="selectPersonalClubByClubId" parameterType="Long" resultMap="PersonalClubResult">
+        <include refid="selectPersonalClubVo"/>
+        where tb_club.club_id = #{clubId}
+    </select>
+
+    <insert id="insertPersonalClub" parameterType="PersonalClub" useGeneratedKeys="true" keyProperty="clubId">
+        insert into tb_club
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != ''">name,</if>
+            <if test="description != null">description,</if>
+            <if test="categoryId != null">category_id,</if>
+            <if test="leaderId != null">leader_id,</if>
+            <if test="deptId != null">dept_id,</if>
+            <if test="createdAt != null">created_at,</if>
+            <if test="status != null">status,</if>
+            <if test="logoUrl != null">logo_url,</if>
+            <if test="deletedAt != null">deleted_at,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="name != null and name != ''">#{name},</if>
+            <if test="description != null">#{description},</if>
+            <if test="categoryId != null">#{categoryId},</if>
+            <if test="leaderId != null">#{leaderId},</if>
+            <if test="deptId != null">#{deptId},</if>
+            <if test="createdAt != null">#{createdAt},</if>
+            <if test="status != null">#{status},</if>
+            <if test="logoUrl != null">#{logoUrl},</if>
+            <if test="deletedAt != null">#{deletedAt},</if>
+         </trim>
+    </insert>
+
+    <update id="updatePersonalClub" parameterType="PersonalClub">
+        update tb_club
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="name != null and name != ''">name = #{name},</if>
+            <if test="description != null">description = #{description},</if>
+            <if test="categoryId != null">category_id = #{categoryId},</if>
+            <if test="leaderId != null">leader_id = #{leaderId},</if>
+            <if test="deptId != null">dept_id = #{deptId},</if>
+            <if test="createdAt != null">created_at = #{createdAt},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="logoUrl != null">logo_url = #{logoUrl},</if>
+            <if test="deletedAt != null">deleted_at = #{deletedAt},</if>
+        </trim>
+        where tb_club.club_id = #{clubId}
+    </update>
+
+    <delete id="deletePersonalClubByClubId" parameterType="Long">
+        delete from tb_club where tb_club.club_id = #{clubId}
+    </delete>
+
+    <delete id="deletePersonalClubByClubIds" parameterType="String">
+        delete from tb_club where tb_club.club_id in
+        <foreach item="clubId" collection="array" open="(" separator="," close=")">
+            #{clubId}
+        </foreach>
+    </delete>
+</mapper>

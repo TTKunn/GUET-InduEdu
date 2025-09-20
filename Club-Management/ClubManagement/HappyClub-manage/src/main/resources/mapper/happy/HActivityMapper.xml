@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.HActivityMapper">
+
+    <!-- resultMap 定义 -->
+    <resultMap id="HActivityResultMap" type="com.guet.happy.domain.HActivity">
+        <id property="activityId" column="activity_id"/>
+        <result property="clubId" column="club_id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="startTime" column="start_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="location" column="location"/>
+        <result property="organizerId" column="organizer_id"/>
+        <result property="visibility" column="visibility"/>
+        <result property="status" column="status"/>
+        <result property="deletedAt" column="deleted_at"/>
+        <result property="publishTime" column="publish_time"/>
+        <result property="isUrgent" column="is_urgent"/>
+        <result property="participantCount" column="participantCount"/>
+        <!-- 额外字段 -->
+        <result property="nickName" column="nick_name"/>
+        <result property="clubName" column="club_name"/>
+        <!--    is_ended    -->
+        <result property="isEnded" column="is_ended"/>
+    </resultMap>
+
+    <!-- 获取公开活动信息列表（包括过去一个月内的活动） -->
+    <select id="selectPublicActivity" resultMap="HActivityResultMap">
+        SELECT activity_id,
+               tb_activity.name,
+               start_time,
+               end_time,
+               location,
+               tb_club.name as club_name,
+               sys_user.nick_name
+        FROM tb_activity
+                 INNER JOIN tb_club ON tb_activity.club_id = tb_club.club_id
+                 INNER JOIN sys_user ON tb_activity.organizer_id = sys_user.user_id
+        WHERE tb_activity.status = 'published'
+          and tb_activity.visibility = 'public'
+          AND tb_activity.end_time > DATE_SUB(NOW(), INTERVAL 1 MONTH)
+        ORDER BY tb_activity.start_time DESC
+    </select>
+
+
+    <!-- 根据id获取活动详情 -->
+    <select id="selectActivityById" resultMap="HActivityResultMap">
+        SELECT tb_activity.activity_id,
+               tb_activity.name,
+               tb_activity.description,
+               tb_activity.start_time,
+               tb_activity.end_time,
+               tb_activity.location,
+               tb_activity.organizer_id,
+               tb_activity.visibility,
+               tb_activity.status,
+               tb_activity.deleted_at,
+               tb_activity.publish_time,
+               tb_activity.is_urgent,
+               sys_user.nick_name,
+               tb_club.name               AS club_name,
+               tb_activity.is_ended,
+
+               -- 新增字段：参与人数
+               COUNT(participant.user_id) AS participantCount
+
+        FROM tb_activity
+                 INNER JOIN sys_user ON tb_activity.organizer_id = sys_user.user_id
+                 INNER JOIN tb_club ON tb_activity.club_id = tb_club.club_id
+            -- 新增 LEFT JOIN 获取参与记录
+                 LEFT JOIN tb_activity_participation participant ON tb_activity.activity_id = participant.activity_id
+
+        WHERE tb_activity.activity_id = #{activityId}
+
+        GROUP BY tb_activity.activity_id
+    </select>
+
+    <!-- 检查用户是否已经参加活动 -->
+    <select id="selectActivityUser" resultType="java.lang.Boolean">
+        SELECT EXISTS (SELECT 1
+                       FROM tb_activity_participation
+                       WHERE activity_id = #{activityId}
+                         AND user_id = #{userId})
+    </select>
+
+
+    <!--  参加活动  -->
+    <insert id="participateActivity">
+        insert into tb_activity_participation (activity_id, user_id, participation_time)
+        values (#{activityId}, #{userId}, NOW())
+    </insert>
+
+
+    <!-- 根据 userId 查看本人参加的活动 -->
+    <select id="selectActivitiesByUserId" resultMap="HActivityResultMap">
+        SELECT tb_activity.activity_id,
+               tb_activity.name,
+               tb_activity.description,
+               tb_activity.start_time,
+               tb_activity.end_time,
+               tb_activity.location,
+               tb_activity.club_id,
+               tb_activity.organizer_id,
+               tb_activity.visibility,
+               tb_activity.status,
+               tb_activity.deleted_at,
+               tb_activity.publish_time,
+               tb_activity.is_urgent,
+               tb_activity.is_ended,
+               sys_user.nick_name,
+               tb_club.name               AS club_name,
+
+               COUNT(participant.user_id) AS participantCount
+        FROM tb_activity_participation participation
+                 INNER JOIN tb_activity ON participation.activity_id = tb_activity.activity_id
+                 INNER JOIN sys_user ON tb_activity.organizer_id = sys_user.user_id
+                 INNER JOIN tb_club ON tb_activity.club_id = tb_club.club_id
+                 LEFT JOIN tb_activity_participation participant ON tb_activity.activity_id = participant.activity_id
+        WHERE participation.user_id = #{userId}
+        GROUP BY tb_activity.activity_id
+    </select>
+    <!--查看社团内部活动详情-->
+    <select id="selectInnerActivity" resultMap="HActivityResultMap">
+        SELECT tb_activity.`name`,
+               tb_activity.description,
+               tb_activity.start_time,
+               tb_activity.activity_id,
+               tb_activity.end_time,
+               tb_activity.location,
+               sys_user.user_id,
+               sys_user.user_name,
+               sys_user.nick_name,
+               tb_activity.is_ended,
+               tb_activity.publish_time,
+               -- 新增字段：参与人数
+               COUNT(participant.user_id) AS participantCount
+        FROM tb_activity
+                 INNER JOIN
+             sys_user
+             ON
+                 tb_activity.organizer_id = sys_user.user_id
+                 -- 新增 LEFT JOIN 获取参与记录
+                 LEFT JOIN tb_activity_participation participant ON tb_activity.activity_id = participant.activity_id
+        WHERE tb_activity.club_id = #{clubId}
+          AND tb_activity.visibility = 'internal'
+        order by tb_activity.publish_time desc
+    </select>
+<!-- 社团内部活动列表（仅显示近半年 + 未结束） -->
+<select id="selectInnerActivityList" resultMap="HActivityResultMap">
+    SELECT tb_activity.activity_id,
+           tb_activity.`name`,
+           tb_activity.publish_time,
+           tb_activity.is_ended
+    FROM tb_activity
+    WHERE tb_activity.club_id = #{clubId}
+      AND tb_activity.visibility = 'internal'
+      AND tb_activity.publish_time >= DATE_SUB(NOW(), INTERVAL 6 MONTH)
+      AND tb_activity.end_time >= NOW()
+    ORDER BY tb_activity.publish_time DESC
+</select>
+
+    <select id="selectPublicActivityList" resultMap="HActivityResultMap">
+        SELECT tb_activity.activity_id,
+               tb_activity.`name`,
+               tb_activity.publish_time,
+               tb_activity.is_ended
+        FROM tb_activity
+        WHERE tb_activity.club_id = #{clubId}
+          and tb_activity.visibility = 'public'
+        and tb_activity.status = 'published'
+        order by tb_activity.publish_time desc
+    </select>
+<select id="selectUserParticipatedActivities" resultMap="HActivityResultMap">
+    SELECT
+        tb_activity.activity_id,
+        tb_activity.name,
+        tb_club.club_id,
+        tb_club.`name` as club_name,
+        tb_activity.start_time,
+        tb_activity.end_time,
+        tb_activity.location,
+        tb_activity.is_ended
+    FROM
+        tb_activity_participation
+            INNER JOIN tb_activity ON tb_activity_participation.activity_id = tb_activity.activity_id
+            INNER JOIN tb_club ON tb_activity.club_id = tb_club.club_id
+    WHERE
+        tb_activity_participation.user_id = #{userId}
+</select>
+
+</mapper>

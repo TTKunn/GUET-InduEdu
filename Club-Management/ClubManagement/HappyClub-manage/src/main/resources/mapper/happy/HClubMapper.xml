@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.HClubMapper">
+
+    <!-- HClub 的 resultMap -->
+    <resultMap id="HClubResultMap" type="com.guet.happy.domain.HClub">
+        <id property="clubId" column="club_id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="categoryId" column="category_id"/>
+        <result property="leaderId" column="leader_id"/>
+        <result property="primaryAdvisorId" column="primary_advisor_id"/>
+        <result property="deptId" column="dept_id"/>
+        <result property="createdAt" column="created_at"/>
+        <result property="status" column="status"/>
+        <result property="logoUrl" column="logo_url"/>
+        <result property="deletedAt" column="deleted_at"/>
+        <result property="memberCount" column="member_count"/>
+        <result property="activeMemberCount" column="active_member_count"/>
+        <result property="activityCount" column="activity_count"/>
+        <result property="totalMembersEver" column="total_members_ever"/>
+    </resultMap>
+
+    <!-- 获取社团列表，使用 HClubResultMap，支持根据分类ID查询 -->
+    <select id="selectClubList" resultMap="HClubResultMap">
+        select * from tb_club
+        <where>
+            <!-- 固定条件：status 为 active -->
+            status = 'active'
+            <!-- 如果 categoryId 不为 null，则按分类ID查询 -->
+            <if test="categoryId != null">
+                and category_id = #{categoryId}
+            </if>
+        </where>
+        ORDER BY activity_count DESC
+    </select>
+
+
+    <!-- Category 的 resultMap -->
+    <resultMap id="CategoryResultMap" type="com.guet.happy.domain.HCategory">
+        <id property="categoryId" column="category_id"/>
+        <result property="name" column="name"/>
+        <result property="description" column="description"/>
+        <result property="deletedAt" column="deleted_at"/>
+    </resultMap>
+
+    <!-- 获取所有社团分类 -->
+    <select id="selectAllCategories" resultMap="CategoryResultMap">
+        select *
+        from tb_category
+    </select>
+<select id="selectClubById" parameterType="int" resultType="com.guet.happy.domain.HClub">
+    SELECT
+        tb_club.club_id AS clubId,
+        tb_club.name AS name,
+        tb_club.description AS description,
+        tb_club.category_id AS categoryId,
+        tb_club.leader_id AS leaderId,
+        tb_club.primary_advisor_id AS primaryAdvisorId,
+        tb_club.dept_id AS deptId,
+        tb_club.logo_url AS logoUrl,
+        tb_club.member_count AS memberCount,
+        tb_club.active_member_count AS activeMemberCount,
+        tb_club.activity_count AS activityCount,
+        tb_club.total_members_ever AS totalMembersEver,
+        sys_user.user_id AS userId,
+        sys_user.user_name AS username,
+        sys_user.nick_name AS nickName,
+        sys_dept.dept_id AS deptId,
+        sys_dept.dept_name AS deptName,
+        tb_category.category_id AS categoryId,
+        tb_category.name AS categoryName,
+        tb_club.created_at as createdAt
+    FROM tb_club
+    INNER JOIN sys_user ON tb_club.leader_id = sys_user.user_id
+    INNER JOIN sys_dept ON tb_club.dept_id = sys_dept.dept_id
+    INNER JOIN tb_category ON tb_club.category_id = tb_category.category_id
+    WHERE tb_club.club_id = #{clubId}
+</select>
+
+    <select id="selectClubCategory" resultType="java.lang.String"></select>
+
+<!--  申请新的社团  -->
+
+</mapper>

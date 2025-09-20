@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.personal.mapper.MembershipMapper">
+
+    <resultMap type="MembershipVo" id="MembershipResult">
+        <result property="membershipId" column="membership_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="clubId" column="club_id"/>
+        <result property="joinTime" column="join_time"/>
+        <result property="status" column="status"/>
+        <result property="exitTime" column="exit_time"/>
+        <result property="deletedAt" column="deleted_at"/>
+        <result property="totalStudyDuration" column="total_study_duration"/>
+        <!--        nickName-->
+        <result property="nickName" column="nick_name"/>
+        <!--        userName-->
+        <result property="userName" column="user_name"/>
+        <!--        activity_participation-->
+        <result property="activityParticipation" column="activity_participation"/>
+        <!--        achievement_count-->
+        <result property="achievementCount" column="achievement_count"/>
+    </resultMap>
+
+    <sql id="selectMembershipVo">
+        SELECT tb_membership.membership_id,
+               tb_membership.user_id,
+               tb_membership.club_id,
+               sys_user.user_id                              AS user_id,
+               sys_user.user_name,
+               sys_user.nick_name,
+               tb_membership.join_time,
+               tb_membership.`status`,
+               tb_membership.exit_time,
+               IFNULL(tb_membership.total_study_duration, 0) AS total_study_duration,
+               tb_membership.activity_participation,
+               tb_membership.achievement_count
+        FROM tb_membership
+                 INNER JOIN
+             sys_user ON tb_membership.user_id = sys_user.user_id
+    </sql>
+
+    <select id="selectMembershipList" parameterType="MembershipDto" resultMap="MembershipResult">
+        <include refid="selectMembershipVo"/>
+        <where>
+            <if test="clubId != null ">and club_id = #{clubId}</if>
+
+            <if test="userName != null and userName != ''">
+                and sys_user.user_name = #{userName}
+            </if>
+
+            <if test="nickName != null and nickName != ''">
+                and sys_user.nick_name like concat('%',#{nickName})
+            </if>
+
+            <if test="status != null and status != ''">
+                and tb_membership.status = #{status}
+            </if>
+
+            <if test="params.beginJoinTime != null and params.beginJoinTime != '' and params.endJoinTime != null and params.endJoinTime != ''">
+                and join_time between #{params.beginJoinTime} and #{params.endJoinTime}
+            </if>
+
+            <if test="params.beginExitTime != null and params.beginExitTime != '' and params.endExitTime != null and params.endExitTime != ''">
+                and exit_time between #{params.beginExitTime} and #{params.endExitTime}
+            </if>
+
+            <!-- 修改学习时长查询条件 -->
+            <if test="params.minStudyDuration != null">
+                and total_study_duration >= #{params.minStudyDuration}
+            </if>
+            <!--            -->
+            <if test="params.maxStudyDuration != null">
+                and total_study_duration <![CDATA[<=]]> #{params.maxStudyDuration}
+            </if>
+        </where>
+    </select>
+
+    <select id="selectMembershipByMembershipId" parameterType="Long" resultMap="MembershipResult">
+        <include refid="selectMembershipVo"/>
+        where membership_id = #{membershipId}
+    </select>
+
+
+    <insert id="insertMembership" parameterType="HMember" useGeneratedKeys="true" keyProperty="membershipId">
+        insert into tb_membership
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userId != null">user_id,</if>
+            <if test="clubId != null">club_id,</if>
+            <if test="joinTime != null">join_time,</if>
+            <if test="status != null and status != ''">status,</if>
+            <if test="exitTime != null">exit_time,</if>
+            <if test="deletedAt != null">deleted_at,</if>
+            <if test="totalStudyDuration != null">total_study_duration,</if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userId != null">#{userId},</if>
+            <if test="clubId != null">#{clubId},</if>
+            <if test="joinTime != null">#{joinTime},</if>
+            <if test="status != null and status != ''">#{status},</if>
+            <if test="exitTime != null">#{exitTime},</if>
+            <if test="deletedAt != null">#{deletedAt},</if>
+            <if test="totalStudyDuration != null">#{totalStudyDuration},</if>
+        </trim>
+    </insert>
+
+    <update id="updateMembership" parameterType="HMember">
+        update tb_membership
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userId != null">user_id = #{userId},</if>
+            <if test="clubId != null">club_id = #{clubId},</if>
+            <if test="joinTime != null">join_time = #{joinTime},</if>
+            <if test="status != null and status != ''">status = #{status},</if>
+            <if test="exitTime != null">exit_time = #{exitTime},</if>
+            <if test="deletedAt != null">deleted_at = #{deletedAt},</if>
+            <if test="totalStudyDuration != null">total_study_duration = #{totalStudyDuration},</if>
+        </trim>
+        where membership_id = #{membershipId}
+    </update>
+
+    <delete id="deleteMembershipByMembershipId" parameterType="Long">
+        delete
+        from tb_membership
+        where membership_id = #{membershipId}
+    </delete>
+
+    <delete id="deleteMembershipByMembershipIds" parameterType="String">
+        delete from tb_membership where membership_id in
+        <foreach item="membershipId" collection="array" open="(" separator="," close=")">
+            #{membershipId}
+        </foreach>
+    </delete>
+
+    <select id="selectMembersByClubId" resultType="com.guet.personal.domain.Vo.MembershipVo">
+        SELECT tb_membership.user_id AS userId, user_name AS userName, nick_name AS nickName
+        FROM tb_membership
+                 join sys_user on tb_membership.user_id = sys_user.user_id
+        WHERE club_id = #{clubId}
+    </select>
+    <select id="listActivitiesByMemberId" resultType="com.guet.personal.domain.Vo.MemberActivitiesVo">
+        SELECT tb_activity.`name` as name,
+               tb_activity.description as description,
+               tb_activity.start_time as startTime,
+               tb_activity.location as location ,
+               tb_activity.publish_time as publishTime ,
+               tb_activity.activity_id as activityId,
+               tb_activity_participation.participation_time as partcipationTime,
+               tb_activity.end_time as endTime
+        FROM tb_activity
+                 INNER JOIN
+             tb_activity_participation
+             ON
+                 tb_activity.activity_id = tb_activity_participation.activity_id
+        WHERE tb_activity_participation.user_id = #{memberId}
+    </select>
+    <select id="listAchievementsByMemberId" resultType="com.guet.personal.domain.Vo.MemberAchievementsVo">
+        SELECT a.achievement_id as achievementId,
+               a.title as title,
+               a.type as type,
+               a.description as description,
+               a.achieve_date as achieveDate,
+               a.certificate_url as certificateUrl,
+               a.STATUS as status,
+               a.created_at as createdAt,
+               am.role as role,
+               am.contribution as contribution
+        FROM club_management.tb_achievement_member am
+                 JOIN club_management.tb_achievement a ON am.achievement_id = a.achievement_id
+        WHERE am.user_id = #{memberId}
+    </select>
+
+</mapper>

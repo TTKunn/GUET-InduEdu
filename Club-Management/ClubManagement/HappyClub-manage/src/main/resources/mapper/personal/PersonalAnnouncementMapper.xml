@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.personal.mapper.PersonalAnnouncementMapper">
+    
+    <resultMap type="PersonalAnnouncementVo" id="PannouncementResult">
+        <result property="announcementId"    column="announcement_id"    />
+        <result property="title"    column="title"    />
+        <result property="content"    column="content"    />
+        <result property="publisherId"    column="publisher_id"    />
+        <result property="type"    column="type"    />
+        <result property="status"    column="status"    />
+        <result property="createdAt"    column="created_at"    />
+        <result property="deletedAt"    column="deleted_at"    />
+        <result property="userName" column="user_name"/>
+        <result property="clubName" column="name"/>
+        <result property="nickName" column="nick_name"/>
+        <result property="remark" column="remark"/>
+    </resultMap>
+
+    <sql id="selectPublicPannouncementVo">
+        select announcement_id,
+               title,
+               content,
+               publisher_id,
+               sys_user.user_name,
+               tb_announcement.type,
+               tb_announcement.status,
+               tb_announcement.created_at,
+               tb_club.name,
+               sys_user.nick_name,
+               tb_audit.remark
+        from tb_announcement
+                 join sys_user on tb_announcement.publisher_id = sys_user.user_id
+                 join tb_club on sys_user.user_id = tb_club.leader_id
+        join tb_audit on tb_announcement.announcement_id = tb_audit.related_id
+    </sql>
+
+    <sql id="selectPannouncementVo">
+        select announcement_id,
+               title,
+               content,
+               publisher_id,
+               sys_user.user_name,
+               tb_announcement.type,
+               tb_announcement.status,
+               tb_announcement.created_at,
+               tb_club.name,
+               sys_user.nick_name,
+               tb_audit.remark
+        from tb_announcement
+                 join sys_user on tb_announcement.publisher_id = sys_user.user_id
+                 join tb_club on sys_user.user_id = tb_club.leader_id
+                 join tb_audit on tb_announcement.announcement_id = tb_audit.related_id
+    </sql>
+
+    <sql id="selectInternalPannouncementVo">
+        select announcement_id,
+               title,
+               content,
+               publisher_id,
+               sys_user.user_name,
+               tb_announcement.type,
+               tb_announcement.status,
+               tb_announcement.created_at,
+               tb_club.name,
+               sys_user.nick_name
+
+        from tb_announcement
+                 join sys_user on tb_announcement.publisher_id = sys_user.user_id
+                 join tb_club on sys_user.user_id = tb_club.leader_id
+
+    </sql>
+
+    <select id="selectInternalPannouncementList" parameterType="PersonalAnnouncementDto" resultMap="PannouncementResult">
+        <include refid="selectInternalPannouncementVo"/>
+        <where>
+            <if test="clubId != null  and clubId != ''">tb_announcement.club_id = #{clubId}</if>
+<!--            类型-->
+            <if test="type != null  and type != ''"> and tb_announcement.type = #{type}</if>
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%')</if>
+            <if test="content != null  and content != ''"> and content like concat('%', #{content}, '%')</if>
+            <if test="status != null  and status != ''"> and tb_announcement.status = #{status}</if>
+            <if test="nickName != null  and nickName != ''"> and sys_user.nick_name like concat('%', #{nickName}, '%')</if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != '' and params.endCreatedAt != null and params.endCreatedAt != ''"> and tb_announcement.created_at between #{params.beginCreatedAt} and #{params.endCreatedAt}</if>
+            <if test="userName != null  and userName != ''"> and sys_user.user_name like concat('%', #{userName}, '%')</if>
+        </where>
+    </select>
+
+    <select id="selectPublicPannouncementList" parameterType="PersonalAnnouncementDto" resultMap="PannouncementResult">
+        <include refid="selectPublicPannouncementVo"/>
+        <where>
+            <if test="clubId != null  and clubId != ''">tb_announcement.club_id = #{clubId}</if>
+            <!--            类型-->
+            <if test="type != null  and type != ''"> and tb_announcement.type = #{type}</if>
+            <if test="title != null  and title != ''"> and title like concat('%', #{title}, '%')</if>
+            <if test="content != null  and content != ''"> and content like concat('%', #{content}, '%')</if>
+            <if test="status != null  and status != ''"> and tb_announcement.status = #{status}</if>
+            <if test="nickName != null  and nickName != ''"> and sys_user.nick_name like concat('%', #{nickName}, '%')</if>
+            <if test="params.beginCreatedAt != null and params.beginCreatedAt != '' and params.endCreatedAt != null and params.endCreatedAt != ''"> and tb_announcement.created_at between #{params.beginCreatedAt} and #{params.endCreatedAt}</if>
+            <if test="userName != null  and userName != ''"> and sys_user.user_name like concat('%', #{userName}, '%')</if>
+        </where>
+    </select>
+    
+    <select id="selectPublicPannouncementByAnnouncementId" parameterType="Long" resultMap="PannouncementResult">
+        <include refid="selectPublicPannouncementVo"/>
+        where announcement_id = #{announcementId}
+    </select>
+
+    <select id="selectInternalPannouncementByAnnouncementId" parameterType="Long" resultMap="PannouncementResult">
+        <include refid="selectInternalPannouncementVo"/>
+        where announcement_id = #{announcementId}
+    </select>
+
+<!--    查类型-->
+    <select id="selectPannouncementTypeByAnnouncementId" resultType="String">
+        select type from tb_announcement where announcement_id = #{announcementId}
+    </select>
+
+    <insert id="insertPannouncement" parameterType="PersonalAnnouncement" useGeneratedKeys="true" keyProperty="announcementId">
+        insert into tb_announcement
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="title != null and title != ''">title,</if>
+            <if test="content != null and content != ''">content,</if>
+            <if test="publisherId != null">publisher_id,</if>
+            <if test="type != null">type,</if>
+            <if test="status != null">status,</if>
+            <if test="createdAt != null">created_at,</if>
+            <if test="deletedAt != null">deleted_at,</if>
+#           clubId
+            <if test="clubId != null">club_id,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="title != null and title != ''">#{title},</if>
+            <if test="content != null and content != ''">#{content},</if>
+            <if test="publisherId != null">#{publisherId},</if>
+            <if test="type != null">#{type},</if>
+            <if test="status != null">#{status},</if>
+            <if test="createdAt != null">#{createdAt},</if>
+            <if test="deletedAt != null">#{deletedAt},</if>
+            <if test="clubId != null">#{clubId},</if>
+         </trim>
+    </insert>
+
+    <insert id="insertPannouncementAudit">
+        INSERT INTO tb_audit (type, applicant_id, related_id, status)
+        VALUES (#{type}, #{applicantId}, #{announcementId}, #{status})
+    </insert>
+
+    <insert id="insertAnnouncementVisibility">
+        INSERT INTO tb_announcement_visibility (announcement_id, club_id)
+        VALUES (#{announcementId}, #{clubId})
+    </insert>
+
+    <update id="updatePannouncement" parameterType="PersonalAnnouncement">
+        update tb_announcement
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="title != null and title != ''">title = #{title},</if>
+            <if test="content != null and content != ''">content = #{content},</if>
+            <if test="publisherId != null">publisher_id = #{publisherId},</if>
+            <if test="type != null">type = #{type},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="createdAt != null">created_at = #{createdAt},</if>
+            <if test="deletedAt != null">deleted_at = #{deletedAt},</if>
+        </trim>
+        where announcement_id = #{announcementId}
+    </update>
+
+    <delete id="deletePannouncementByAnnouncementId" parameterType="Long">
+        delete from tb_announcement where announcement_id = #{announcementId}
+    </delete>
+
+    <delete id="deletePannouncementByAnnouncementIds" parameterType="String">
+        delete from tb_announcement where announcement_id in 
+        <foreach item="announcementId" collection="array" open="(" separator="," close=")">
+            #{announcementId}
+        </foreach>
+    </delete>
+</mapper>

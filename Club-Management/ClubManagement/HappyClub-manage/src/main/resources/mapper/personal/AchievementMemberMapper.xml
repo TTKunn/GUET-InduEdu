@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.personal.mapper.AchievementMemberMapper">
+    <insert id="batchInsertAchievementMember">
+        INSERT INTO tb_achievement_member
+        (achievement_id, user_id, role, contribution)
+        VALUES
+        <foreach collection="memberIds" item="memberId" separator=",">
+            (#{achievementId}, #{memberId}, 'participant', '主要贡献')
+        </foreach>
+    </insert>
+</mapper>

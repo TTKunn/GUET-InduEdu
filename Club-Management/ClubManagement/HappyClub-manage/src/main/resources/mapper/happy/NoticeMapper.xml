@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.NoticeMapper">
+<!--查询公开公告-->
+    <resultMap id="NoticeResultMap" type="com.guet.happy.domain.Notice">
+    <id property="announcementId" column="announcement_id"/>
+    <result property="title" column="title"/>
+    <result property="content" column="content"/>
+    <result property="publisherId" column="publisher_id"/>
+    <result property="type" column="type"/>
+    <result property="status" column="status"/>
+    <result property="createdAt" column="created_at"/>
+    <result property="deletedAt" column="deleted_at"/>
+    <result property="clubId" column="club_id"/>
+<!--    userId    -->
+        <result property="userId" column="user_id"/>
+        <result property="userName" column="user_name"/>
+<!--clubId-->
+        <result property="clubId" column="club_id"/>
+        <result property="clubName" column="club_name"/>
+<!--        nickname-->
+        <result property="nickName" column="nick_name"/>
+</resultMap>
+
+    <select id="selectPublicNotice" resultMap="NoticeResultMap">
+        SELECT
+            announcement_id,
+            title,
+            content,
+            publisher_id,
+            type,
+            sys_user.user_id,
+            sys_user.user_name,
+            tb_club.club_id,
+            tb_club.`name` as club_name,
+            tb_announcement.created_at
+        FROM
+            tb_announcement
+                INNER JOIN sys_user ON tb_announcement.publisher_id = sys_user.user_id
+                INNER JOIN tb_club ON tb_announcement.club_id = tb_club.club_id
+        WHERE
+            type = 'public'
+          AND tb_announcement.`status` = 'published'
+          AND tb_announcement.deleted_at IS NULL
+        ORDER BY
+            tb_announcement.created_at DESC;-- 按发布时间倒序排列
+    </select>
+
+    <!-- 根据 ID 查询公告 -->
+    <select id="selectNoticeById" resultMap="NoticeResultMap">
+        SELECT
+            announcement_id,
+            title,
+            content,
+            publisher_id,
+            type,
+            sys_user.user_id,
+            sys_user.user_name,
+            sys_user.nick_name,
+            tb_club.club_id,
+            tb_club.`name` as club_name,
+            tb_announcement.created_at
+        FROM
+            tb_announcement
+                INNER JOIN sys_user ON tb_announcement.publisher_id = sys_user.user_id
+                INNER JOIN tb_club ON tb_announcement.club_id = tb_club.club_id
+        WHERE
+           tb_announcement.announcement_id = #{announcementId}
+        ORDER BY
+            tb_announcement.created_at DESC;-- 按发布时间倒序排列
+    </select>
+
+<!--  查看社团内部公告列表  -->
+    <select id="selectInnerNoticeByClubId" resultMap="NoticeResultMap">
+        SELECT
+            tb_announcement.announcement_id,
+            tb_announcement.title,
+            tb_announcement.created_at,
+            tb_announcement.content
+        FROM
+            tb_announcement
+        WHERE
+            tb_announcement.club_id = #{clubId}
+        and tb_announcement.type = 'internal'
+    </select>
+<!--  查看社团公开公告列表   -->
+    <select id="selectPublicNoticeByClubId" resultMap="NoticeResultMap">
+        SELECT
+            tb_announcement.announcement_id,
+            tb_announcement.title,
+            tb_announcement.created_at,
+            tb_announcement.content
+        FROM
+            tb_announcement
+        WHERE
+            tb_announcement.club_id = #{clubId}
+          and tb_announcement.type = 'public'
+    </select>
+</mapper>

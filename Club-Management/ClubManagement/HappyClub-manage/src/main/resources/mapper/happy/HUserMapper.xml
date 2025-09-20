@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.guet.happy.mapper.HUserMapper">
+    <!-- 修改后的 selectUserById -->
+    <select id="selectUserById" parameterType="int" resultType="com.guet.happy.domain.HUser">
+        SELECT sys_user.user_id     AS userId,
+               sys_user.user_name   AS username,
+               sys_user.nick_name   AS nickName,
+               sys_user.email       AS email,
+               sys_user.phonenumber AS phonenumber,
+               sys_user.sex         AS sex,
+               sys_user.avatar      AS avatar,
+               sys_dept.dept_id     AS deptId,
+               sys_dept.dept_name   AS deptName
+        FROM sys_user
+                 LEFT JOIN sys_dept ON sys_user.dept_id = sys_dept.dept_id
+        WHERE sys_user.user_id = #{userId}
+    </select>
+    <!-- 编辑个人信息 -->
+    <update id="updateUserInfo" parameterType="com.guet.happy.domain.HUser">
+        UPDATE sys_user
+        SET nick_name   = #{nickName, jdbcType=VARCHAR},
+            email       = #{email, jdbcType=VARCHAR},
+            phonenumber = #{phonenumber, jdbcType=VARCHAR},
+            sex         = #{sex, jdbcType=CHAR},
+            dept_id     = #{deptId, jdbcType=BIGINT},
+            password    = IF(#{password} IS NOT NULL AND #{password} != '', #{password}, password)
+        WHERE user_id = #{userId, jdbcType=INTEGER}
+    </update>
+
+    <!-- 获取本人加入的社团列表 -->
+    <select id="getJoinedClubs" parameterType="int" resultType="com.guet.happy.domain.HClub">
+        SELECT c.club_id AS clubId,
+               c.name    AS name ,
+               c.`logo_url` as logoUrl,
+               c.description as description,
+               m.join_time as joinTime
+        FROM tb_membership m
+                 LEFT JOIN tb_club c ON m.club_id = c.club_id
+        WHERE m.user_id = #{userId}
+          AND m.status IN ('active', 'probation')
+    </select>
+<!--    -->
+</mapper>
