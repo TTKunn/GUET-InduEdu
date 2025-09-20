@@ -1,0 +1,167 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.container.data-v-194b27bf {
+  background-color: #f5f5f7;
+  min-height: 100vh;
+}
+.header.data-v-194b27bf {
+  height: 88rpx;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  box-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.05);
+}
+.header .back-btn.data-v-194b27bf {
+  width: 40rpx;
+  height: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+.header .title.data-v-194b27bf {
+  flex: 1;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+}
+.notice-container.data-v-194b27bf {
+  padding: 20rpx;
+}
+.notice-card.data-v-194b27bf {
+  background-color: white;
+  border-radius: 16rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0, 0, 0, 0.05);
+}
+.notice-card .notice-title.data-v-194b27bf {
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 20rpx;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.notice-card .status-tag.data-v-194b27bf {
+  padding: 6rpx 16rpx;
+  border-radius: 18rpx;
+  font-size: 24rpx;
+  color: white;
+}
+.notice-card .status-tag.public.data-v-194b27bf {
+  background-color: #34C759;
+}
+.notice-card .status-tag.internal.data-v-194b27bf {
+  background-color: #646cff;
+}
+.notice-card .notice-meta.data-v-194b27bf {
+  display: flex;
+  align-items: center;
+  color: #999;
+  font-size: 26rpx;
+  margin-bottom: 30rpx;
+}
+.notice-card .notice-meta .author.data-v-194b27bf, .notice-card .notice-meta .date.data-v-194b27bf {
+  display: flex;
+  align-items: center;
+  margin-right: 40rpx;
+}
+.notice-card .notice-meta .author ._i.data-v-194b27bf, .notice-card .notice-meta .date ._i.data-v-194b27bf {
+  margin-right: 10rpx;
+  color: #7d79f4;
+}
+.notice-card .notice-content.data-v-194b27bf {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.6;
+}
+.notice-card .notice-content ._img.data-v-194b27bf {
+  max-width: 100%;
+  height: auto;
+  margin: 20rpx 0;
+  border-radius: 8rpx;
+}
+.notice-card .notice-content ._p.data-v-194b27bf {
+  margin-bottom: 20rpx;
+}
+.notice-card .notice-content ._h1.data-v-194b27bf, .notice-card .notice-content ._h2.data-v-194b27bf, .notice-card .notice-content ._h3.data-v-194b27bf, .notice-card .notice-content ._h4.data-v-194b27bf, .notice-card .notice-content ._h5.data-v-194b27bf, .notice-card .notice-content ._h6.data-v-194b27bf {
+  color: #333;
+  font-weight: 500;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+}
+.notice-card .notice-content ._ul.data-v-194b27bf, .notice-card .notice-content ._ol.data-v-194b27bf {
+  margin-left: 40rpx;
+  margin-bottom: 20rpx;
+}
+.notice-card .notice-content ._li.data-v-194b27bf {
+  margin-bottom: 10rpx;
+}
+.loading-container.data-v-194b27bf {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60rpx 0;
+}
+.loading-container .loading-spinner.data-v-194b27bf {
+  width: 60rpx;
+  height: 60rpx;
+  border: 6rpx solid #7d79f4;
+  border-radius: 50%;
+  border-top-color: transparent;
+  -webkit-animation: spin-data-v-194b27bf 1s linear infinite;
+          animation: spin-data-v-194b27bf 1s linear infinite;
+  margin-bottom: 20rpx;
+}
+.loading-container text.data-v-194b27bf {
+  font-size: 28rpx;
+  color: #999;
+}
+@-webkit-keyframes spin-data-v-194b27bf {
+0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}
+@keyframes spin-data-v-194b27bf {
+0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+}
+100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+}
+}

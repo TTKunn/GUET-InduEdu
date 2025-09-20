@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#7d79f4",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "成果详情",
+  "enablePullDownRefresh": false,
+  "usingComponents": {}
+}

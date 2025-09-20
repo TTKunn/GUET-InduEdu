@@ -1,0 +1,259 @@
+@charset "UTF-8";
+/**
+ * 这里是uni-app内置的常用样式变量
+ *
+ * uni-app 官方扩展插件及插件市场（https://ext.dcloud.net.cn）上很多三方插件均使用了这些样式变量
+ * 如果你是插件开发者，建议你使用scss预处理，并在插件代码中直接使用这些变量（无需 import 这个文件），方便用户通过搭积木的方式开发整体风格一致的App
+ *
+ */
+/**
+ * 如果你是App开发者（插件使用者），你可以通过修改这些变量来定制自己的插件主题，实现自定义主题功能
+ *
+ * 如果你的项目同样使用了scss预处理，你也可以直接在你的 scss 代码中使用如下变量，同时无需 import 这个文件
+ */
+/* 颜色变量 */
+/* 行为相关颜色 */
+/* 文字基本颜色 */
+/* 背景颜色 */
+/* 边框颜色 */
+/* 尺寸变量 */
+/* 文字尺寸 */
+/* 图片尺寸 */
+/* Border Radius */
+/* 水平间距 */
+/* 垂直间距 */
+/* 透明度 */
+/* 文章场景相关 */
+.container.data-v-768286c3 {
+  background: #F8F8F8;
+  min-height: 100vh;
+}
+.header.data-v-768286c3 {
+  height: 100rpx;
+  background: #FFF;
+  display: flex;
+  align-items: center;
+  padding: 0 30rpx;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+.header .back-btn.data-v-768286c3 {
+  width: 60rpx;
+  height: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .back-btn ._i.data-v-768286c3 {
+  font-size: 32rpx;
+  color: #222;
+}
+.header .title.data-v-768286c3 {
+  flex: 1;
+  text-align: center;
+  font-size: 36rpx;
+  font-weight: 500;
+  color: #222;
+}
+.status-tabs.data-v-768286c3 {
+  display: flex;
+  background: #FFF;
+  height: 90rpx;
+  border-bottom: 1rpx solid #F0F0F0;
+}
+.status-tabs .tab-item.data-v-768286c3 {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28rpx;
+  color: #666;
+  position: relative;
+}
+.status-tabs .tab-item.data-v-768286c3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 60rpx;
+  height: 6rpx;
+  background: #7d79f4;
+  border-radius: 3rpx;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.status-tabs .tab-item.active.data-v-768286c3 {
+  color: #7d79f4;
+  font-weight: 500;
+}
+.status-tabs .tab-item.active.data-v-768286c3::after {
+  opacity: 1;
+}
+.loading.data-v-768286c3, .loading-more.data-v-768286c3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0;
+}
+.loading .loading-icon.data-v-768286c3, .loading-more .loading-icon.data-v-768286c3 {
+  margin-bottom: 16rpx;
+}
+.loading .loading-icon ._i.data-v-768286c3, .loading-more .loading-icon ._i.data-v-768286c3 {
+  font-size: 36rpx;
+  color: #7d79f4;
+}
+.loading .loading-text.data-v-768286c3, .loading-more .loading-text.data-v-768286c3 {
+  font-size: 28rpx;
+  color: #666;
+}
+.no-more-data.data-v-768286c3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40rpx 0;
+}
+.no-more-data .line.data-v-768286c3 {
+  flex: 1;
+  height: 1rpx;
+  background: #E5E5E5;
+}
+.no-more-data .text.data-v-768286c3 {
+  font-size: 26rpx;
+  color: #999;
+  margin: 0 20rpx;
+}
+.activity-list.data-v-768286c3 {
+  padding: 20rpx;
+}
+.section.data-v-768286c3 {
+  margin-bottom: 30rpx;
+}
+.section .section-title.data-v-768286c3 {
+  font-size: 30rpx;
+  font-weight: 500;
+  color: #222;
+  padding: 20rpx;
+  background: #FFF;
+  border-radius: 20rpx 20rpx 0 0;
+}
+.section .activity-items.data-v-768286c3 {
+  background: #FFF;
+  border-radius: 0 0 20rpx 20rpx;
+}
+.activity-item.data-v-768286c3 {
+  display: flex;
+  padding: 20rpx;
+  border-bottom: 1rpx solid #F5F5F5;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.activity-item.data-v-768286c3:last-child {
+  border-bottom: none;
+}
+.activity-item.data-v-768286c3:hover {
+  -webkit-transform: translateY(-4rpx);
+          transform: translateY(-4rpx);
+}
+.activity-item .activity-cover.data-v-768286c3 {
+  width: 200rpx;
+  height: 160rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  position: relative;
+}
+.activity-item .activity-cover .default-cover.data-v-768286c3 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.activity-item .activity-cover .default-cover ._i.data-v-768286c3 {
+  font-size: 48rpx;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8rpx;
+}
+.activity-item .activity-cover .default-cover .cover-initial.data-v-768286c3 {
+  font-size: 40rpx;
+  font-weight: bold;
+  color: white;
+}
+.activity-item .activity-cover .status-badge.data-v-768286c3 {
+  position: absolute;
+  top: 10rpx;
+  left: 10rpx;
+  padding: 4rpx 16rpx;
+  border-radius: 20rpx;
+  font-size: 22rpx;
+  color: #FFF;
+}
+.activity-item .activity-cover .upcoming.data-v-768286c3 {
+  background: #409EFF;
+}
+.activity-item .activity-cover .ongoing.data-v-768286c3 {
+  background: #36CFC9;
+}
+.activity-item .activity-cover .completed.data-v-768286c3 {
+  background: #999;
+}
+.activity-item .activity-info.data-v-768286c3 {
+  flex: 1;
+  margin-left: 20rpx;
+}
+.activity-item .activity-info .activity-title.data-v-768286c3 {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 12rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.activity-item .activity-info .activity-time.data-v-768286c3, .activity-item .activity-info .activity-place.data-v-768286c3, .activity-item .activity-info .activity-club.data-v-768286c3 {
+  font-size: 26rpx;
+  color: #666;
+  margin-bottom: 8rpx;
+  display: flex;
+  align-items: center;
+}
+.activity-item .activity-info .activity-time ._i.data-v-768286c3, .activity-item .activity-info .activity-place ._i.data-v-768286c3, .activity-item .activity-info .activity-club ._i.data-v-768286c3 {
+  width: 32rpx;
+  color: #7d79f4;
+}
+.empty-state.data-v-768286c3 {
+  padding: 100rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.empty-state .empty-img.data-v-768286c3 {
+  width: 360rpx;
+  height: 360rpx;
+  margin-bottom: 40rpx;
+}
+.empty-state .empty-text.data-v-768286c3 {
+  font-size: 32rpx;
+  font-weight: 500;
+  color: #222;
+  margin-bottom: 16rpx;
+}
+.empty-state .empty-subtext.data-v-768286c3 {
+  font-size: 28rpx;
+  color: #666;
+  margin-bottom: 40rpx;
+}
+.empty-state .explore-btn.data-v-768286c3 {
+  padding: 16rpx 60rpx;
+  background: #7d79f4;
+  color: #FFF;
+  border-radius: 50rpx;
+  font-size: 30rpx;
+  box-shadow: 0 8rpx 24rpx rgba(125, 121, 244, 0.3);
+}

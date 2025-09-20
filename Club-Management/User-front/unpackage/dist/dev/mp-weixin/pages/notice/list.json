@@ -1,0 +1,7 @@
+{
+  "navigationBarBackgroundColor": "#7d79f4",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "公告与活动",
+  "enablePullDownRefresh": true,
+  "usingComponents": {}
+}
