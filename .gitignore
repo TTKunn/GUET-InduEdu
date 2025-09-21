@@ -5,3 +5,6 @@
 .env.production
 .env.test
 .augment/
+
+# 忽略所有.log文件
+*.log
