@@ -5,3 +5,7 @@
 .env.production
 .env.test
 .augment/
+
+# Python cache
+__pycache__/
+*.pyc
