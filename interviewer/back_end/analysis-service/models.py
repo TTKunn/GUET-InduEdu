@@ -23,6 +23,11 @@ class PersonalInfo(BaseModel):
     location: Optional[str] = None
     age: Optional[int] = None
     gender: Optional[str] = None
+    # 新增字段
+    ethnicity: Optional[str] = None  # 民族
+    political_status: Optional[str] = None  # 政治面貌
+    university: Optional[str] = None  # 院校
+    major: Optional[str] = None  # 专业
 
 class Education(BaseModel):
     """教育经历"""
@@ -88,7 +93,11 @@ class CandidateProfile(BaseModel):
     extracted_keywords: List[str] = Field(default_factory=list, description="兼容字段")
     technical_keywords: List[str] = Field(default_factory=list, description="兼容字段")
     domain_keywords: List[str] = Field(default_factory=list, description="兼容字段")
-    
+
+    # 新增详细经验字段（JSON格式存储）
+    work_experience_detail: List[Dict[str, str]] = Field(default_factory=list, description="工作经验详细内容")
+    project_experience_detail: List[Dict[str, str]] = Field(default_factory=list, description="项目经验详细内容")
+
     # 元数据
     created_at: datetime = Field(default_factory=datetime.now)
     updated_at: datetime = Field(default_factory=datetime.now)

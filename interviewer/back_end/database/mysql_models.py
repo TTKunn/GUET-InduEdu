@@ -24,7 +24,17 @@ class CandidateProfile(Base):
     phone = Column(String(20), nullable=True, comment='电话')
     email = Column(String(100), nullable=True, comment='邮箱')
     location = Column(String(200), nullable=True, comment='地址')
-    
+
+    # 新增个人基本信息字段
+    gender = Column(String(10), nullable=True, comment='性别')
+    age = Column(Integer, nullable=True, comment='年龄')
+    ethnicity = Column(String(50), nullable=True, comment='民族')
+    political_status = Column(String(50), nullable=True, comment='政治面貌')
+
+    # 新增教育信息字段
+    university = Column(String(200), nullable=True, comment='院校')
+    major = Column(String(100), nullable=True, comment='专业')
+
     # 教育背景
     education = Column(Text, nullable=True, comment='教育背景')
 
@@ -35,6 +45,10 @@ class CandidateProfile(Base):
     technical_skills_json = Column(Text, nullable=True, comment='技术技能JSON存储')
     projects_keywords_json = Column(Text, nullable=True, comment='项目关键词JSON存储')
     education_json = Column(Text, nullable=True, comment='教育背景JSON存储')
+
+    # 新增详细经验字段（JSON格式）
+    work_experience_detail_json = Column(Text, nullable=True, comment='工作经验详细内容JSON存储')
+    project_experience_detail_json = Column(Text, nullable=True, comment='项目经验详细内容JSON存储')
 
     # 时间字段
     created_at = Column(TIMESTAMP, server_default=func.now(), comment='创建时间')

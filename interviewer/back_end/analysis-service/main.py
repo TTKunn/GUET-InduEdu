@@ -89,8 +89,8 @@ async def lifespan(app: FastAPI):
 # 创建FastAPI应用
 app = FastAPI(
     title="简历分析服务",
-    description="PDF简历解析、结构化信息提取和存储服务",
-    version="1.0.0",
+    description="PDF简历解析、结构化信息提取和存储服务 - 支持8个扩展字段提取，为Dify工作流提供丰富的面试题目生成依据",
+    version="1.2.0",
     lifespan=lifespan
 )
 
@@ -160,7 +160,16 @@ async def analyze_resume(
     extraction_mode: str = Form("comprehensive"),
     overwrite: bool = Form(True)
 ):
-    """分析简历文件"""
+    """
+    分析简历文件
+
+    使用LLM分析简历内容并提取结构化信息，支持8个扩展字段：
+    - 个人基本信息：gender, age, ethnicity, political_status
+    - 教育信息：university, major
+    - 详细经验：work_experience_detail, project_experience_detail
+
+    返回完整的候选人档案信息，为Dify工作流提供丰富的面试题目生成依据。
+    """
     start_time = time.time()
     
     try:
@@ -208,6 +217,13 @@ async def analyze_resume(
         # 填充结构化信息
         if "personal_info" in structured_info:
             profile.personal_info = profile.personal_info.parse_obj(structured_info["personal_info"])
+
+        # 填充详细经验字段
+        if "work_experience_detail" in structured_info:
+            profile.work_experience_detail = structured_info["work_experience_detail"]
+
+        if "project_experience_detail" in structured_info:
+            profile.project_experience_detail = structured_info["project_experience_detail"]
         
         # 5. 保存到数据库
         logger.info("步骤5: 保存到数据库")

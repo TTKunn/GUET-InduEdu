@@ -129,6 +129,15 @@ class MySQLClient:
                 profile_data.get('education', []),
                 ensure_ascii=False
             )
+            # 新增详细经验字段的JSON序列化
+            work_experience_detail_json = json.dumps(
+                profile_data.get('work_experience_detail', []),
+                ensure_ascii=False
+            )
+            project_experience_detail_json = json.dumps(
+                profile_data.get('project_experience_detail', []),
+                ensure_ascii=False
+            )
             logger.info(f"✅ JSON序列化成功: {profile_data['user_id']}")
         except Exception as e:
             logger.error(f"⚠️  JSON序列化失败: {e}")
@@ -136,6 +145,8 @@ class MySQLClient:
             technical_skills_json = "[]"
             projects_keywords_json = "[]"
             education_json_optimized = "[]"
+            work_experience_detail_json = "[]"
+            project_experience_detail_json = "[]"
 
         profile = CandidateProfile(
             user_id=profile_data['user_id'],
@@ -143,12 +154,23 @@ class MySQLClient:
             phone=personal_info.get('phone'),
             email=personal_info.get('email'),
             location=personal_info.get('location'),
+            # 新增个人基本信息字段
+            gender=personal_info.get('gender'),
+            age=personal_info.get('age'),
+            ethnicity=personal_info.get('ethnicity'),
+            political_status=personal_info.get('political_status'),
+            # 新增教育信息字段
+            university=personal_info.get('university'),
+            major=personal_info.get('major'),
             education=education_json,
             direction=profile_data.get('direction'),
-            # 新增JSON字段
+            # JSON字段
             technical_skills_json=technical_skills_json,
             projects_keywords_json=projects_keywords_json,
-            education_json=education_json_optimized
+            education_json=education_json_optimized,
+            # 新增详细经验字段
+            work_experience_detail_json=work_experience_detail_json,
+            project_experience_detail_json=project_experience_detail_json
         )
         session.add(profile)
         session.flush()  # 获取主键ID
@@ -230,6 +252,14 @@ class MySQLClient:
         existing_profile.phone = personal_info.get('phone')
         existing_profile.email = personal_info.get('email')
         existing_profile.location = personal_info.get('location')
+        # 更新新增个人基本信息字段
+        existing_profile.gender = personal_info.get('gender')
+        existing_profile.age = personal_info.get('age')
+        existing_profile.ethnicity = personal_info.get('ethnicity')
+        existing_profile.political_status = personal_info.get('political_status')
+        # 更新新增教育信息字段
+        existing_profile.university = personal_info.get('university')
+        existing_profile.major = personal_info.get('major')
         # 将education列表转换为JSON字符串
         education_data = profile_data.get('education', [])
         existing_profile.education = json.dumps(education_data, ensure_ascii=False) if education_data else None
@@ -247,6 +277,15 @@ class MySQLClient:
             )
             existing_profile.education_json = json.dumps(
                 profile_data.get('education', []),
+                ensure_ascii=False
+            )
+            # 更新新增详细经验字段
+            existing_profile.work_experience_detail_json = json.dumps(
+                profile_data.get('work_experience_detail', []),
+                ensure_ascii=False
+            )
+            existing_profile.project_experience_detail_json = json.dumps(
+                profile_data.get('project_experience_detail', []),
                 ensure_ascii=False
             )
             logger.info(f"✅ JSON字段更新成功: {profile_data['user_id']}")
@@ -347,7 +386,15 @@ class MySQLClient:
                         'name': profile.name,
                         'phone': profile.phone,
                         'email': profile.email,
-                        'location': profile.location
+                        'location': profile.location,
+                        # 新增个人基本信息字段
+                        'gender': profile.gender,
+                        'age': profile.age,
+                        'ethnicity': profile.ethnicity,
+                        'political_status': profile.political_status,
+                        # 新增教育信息字段
+                        'university': profile.university,
+                        'major': profile.major
                     },
                     'education': profile.education,
                     'direction': profile.direction,
@@ -356,6 +403,9 @@ class MySQLClient:
                     'technical_skills': [],
                     'projects_keywords': [],
                     'extracted_keywords': [],
+                    # 新增详细经验字段
+                    'work_experience_detail': [],
+                    'project_experience_detail': [],
                     'created_at': profile.created_at,
                     'updated_at': profile.updated_at
                 }
@@ -392,6 +442,24 @@ class MySQLClient:
                         logger.debug(f"✅ 从JSON读取教育背景: {len(education)}条记录")
                     except json.JSONDecodeError as e:
                         logger.warning(f"⚠️  教育背景JSON解析失败: {e}")
+
+                # 尝试从JSON字段读取工作经验详细内容
+                if profile.work_experience_detail_json:
+                    try:
+                        work_experience_detail = json.loads(profile.work_experience_detail_json)
+                        result['work_experience_detail'] = work_experience_detail
+                        logger.debug(f"✅ 从JSON读取工作经验详细内容: {len(work_experience_detail)}条记录")
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"⚠️  工作经验详细内容JSON解析失败: {e}")
+
+                # 尝试从JSON字段读取项目经验详细内容
+                if profile.project_experience_detail_json:
+                    try:
+                        project_experience_detail = json.loads(profile.project_experience_detail_json)
+                        result['project_experience_detail'] = project_experience_detail
+                        logger.debug(f"✅ 从JSON读取项目经验详细内容: {len(project_experience_detail)}条记录")
+                    except json.JSONDecodeError as e:
+                        logger.warning(f"⚠️  项目经验详细内容JSON解析失败: {e}")
 
                 # 如果JSON数据可用，直接返回（性能优化）
                 if json_data_available and result['technical_skills'] and result['projects_keywords']:

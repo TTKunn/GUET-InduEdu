@@ -6,9 +6,43 @@
 import os
 import logging
 from typing import List, Optional
-from langchain_huggingface import HuggingFaceEmbeddings
+from sentence_transformers import SentenceTransformer
 
 logger = logging.getLogger(__name__)
+
+# BGE嵌入模型类
+class BGEEmbeddings:
+    """BGE嵌入模型"""
+
+    def __init__(self, model_name: str = "BAAI/bge-small-zh-v1.5", device: str = "cpu", normalize_embeddings: bool = True):
+        self.model_name = model_name
+        self.device = device
+        self.normalize_embeddings = normalize_embeddings
+
+        try:
+            self.model = SentenceTransformer(model_name, device=device)
+            logger.info(f"BGE嵌入模型初始化成功: {model_name}")
+        except Exception as e:
+            logger.error(f"BGE嵌入模型初始化失败: {str(e)}")
+            raise
+
+    def embed_documents(self, texts: List[str]) -> List[List[float]]:
+        """嵌入多个文档"""
+        try:
+            embeddings = self.model.encode(texts, normalize_embeddings=self.normalize_embeddings)
+            return embeddings.tolist()
+        except Exception as e:
+            logger.error(f"BGE文档嵌入失败: {str(e)}")
+            raise
+
+    def embed_query(self, text: str) -> List[float]:
+        """嵌入单个查询"""
+        try:
+            embedding = self.model.encode([text], normalize_embeddings=self.normalize_embeddings)
+            return embedding[0].tolist()
+        except Exception as e:
+            logger.error(f"BGE查询嵌入失败: {str(e)}")
+            raise
 
 # 智谱AI嵌入模型类
 class ZhipuAIEmbeddings:
@@ -75,13 +109,10 @@ class EmbeddingService:
         if self._bge_embedding is None:
             logger.info(f"初始化BGE嵌入模型: {self.bge_model_name}")
 
-            model_kwargs = {"device": self.bge_device}
-            encode_kwargs = {"normalize_embeddings": self.bge_normalize}
-
-            self._bge_embedding = HuggingFaceEmbeddings(
+            self._bge_embedding = BGEEmbeddings(
                 model_name=self.bge_model_name,
-                model_kwargs=model_kwargs,
-                encode_kwargs=encode_kwargs
+                device=self.bge_device,
+                normalize_embeddings=self.bge_normalize
             )
             logger.info("BGE嵌入模型初始化完成")
 
