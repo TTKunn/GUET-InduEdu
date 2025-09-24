@@ -123,7 +123,11 @@ class LLMService:
         "email": "邮箱地址",
         "location": "所在地",
         "age": null,
-        "gender": "性别"
+        "gender": "性别",
+        "ethnicity": "民族",
+        "political_status": "政治面貌",
+        "university": "院校",
+        "major": "专业"
     },
     "education": [
         {
@@ -181,7 +185,19 @@ class LLMService:
         "awards": ["获奖情况"],
         "publications": ["发表文章"],
         "volunteer_experience": ["志愿经历"]
-    }
+    },
+    "work_experience_detail": [
+        {
+            "title": "工作经验标题（如：高级后端开发工程师 - 腾讯科技）",
+            "content": "工作经验详细描述，包括具体职责、技术栈、项目成果等"
+        }
+    ],
+    "project_experience_detail": [
+        {
+            "title": "项目经验标题（如：分布式电商系统）",
+            "content": "项目经验详细描述，包括技术架构、解决方案、技术挑战等"
+        }
+    ]
 }
 
 提取要求：
@@ -190,10 +206,14 @@ class LLMService:
 3. 技术技能要详细分类，便于后续面试题目生成
 4. 项目经验要包含业务场景和技术挑战，用于生成项目相关面试题
 5. 业务领域要准确识别，用于生成领域相关问题
-6. 如果某个字段信息不存在，设为null或空数组
-7. 字符串值必须用双引号包围
-8. 不要使用单引号、不要有尾随逗号
-9. 确保所有括号和大括号正确匹配
+6. **重要：work_experience_detail和project_experience_detail必须包含详细的文本描述，用于面试题目生成**
+7. 详细经验字段格式：{"title": "标题", "content": "详细内容描述"}
+8. **对于project_experience_detail，即使projects数组为空，也要从简历中提取项目相关的详细描述**
+9. **对于work_experience_detail，如果没有正式工作经验，可以从实习、兼职等经历中提取**
+10. 如果某个字段信息不存在，设为null或空数组
+9. 字符串值必须用双引号包围
+10. 不要使用单引号、不要有尾随逗号
+11. 确保所有括号和大括号正确匹配
 
 示例输出格式：
 {"personal_info":{"name":"张三","phone":"13800138000"},"education":[],"work_experience":[]}
@@ -260,12 +280,18 @@ class LLMService:
     def _get_default_structure(self) -> Dict[str, Any]:
         """获取默认的数据结构"""
         return {
-            "personal_info": {"name": None, "phone": None, "email": None, "location": None, "age": None, "gender": None},
+            "personal_info": {
+                "name": None, "phone": None, "email": None, "location": None,
+                "age": None, "gender": None, "ethnicity": None, "political_status": None,
+                "university": None, "major": None
+            },
             "education": [],
             "work_experience": [],
             "projects": [],
             "technical_skills": {"programming_languages": [], "frameworks": [], "databases": [], "tools": [], "certifications": []},
-            "additional_info": {"languages": [], "hobbies": [], "awards": [], "publications": [], "volunteer_experience": []}
+            "additional_info": {"languages": [], "hobbies": [], "awards": [], "publications": [], "volunteer_experience": []},
+            "work_experience_detail": [],
+            "project_experience_detail": []
         }
     
     def extract_keywords(self, structured_info: Dict[str, Any]) -> Dict[str, Any]:

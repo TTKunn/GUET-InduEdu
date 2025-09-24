@@ -1,0 +1,31 @@
+# 向量存储服务依赖包
+
+# Web框架
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# 数据验证
+pydantic==2.5.0
+
+# 环境变量
+python-dotenv==1.0.0
+
+# HTTP客户端
+httpx==0.25.2
+
+# Langchain相关 - 最小化版本
+langchain-core==0.1.52
+langchain-community==0.0.38
+
+# 向量数据库
+pymilvus>=2.3.0
+
+# 嵌入模型 - 直接使用HuggingFace
+sentence-transformers>=2.6.0
+transformers>=4.36.0
+
+# 智谱AI
+zhipuai>=2.0.1
+
+# 工具库
+numpy>=1.24.0
