@@ -35,8 +35,18 @@ class InterviewService:
     # ==================== Dify专用业务逻辑 ====================
     
     def dify_create_interview(self, user_id: str, session_name: Optional[str] = None, session_type: str = "technical",
-                             difficulty_level: str = "medium") -> Optional[Dict[str, Any]]:
-        """Dify专用：创建面试记录"""
+                             difficulty_level: str = "medium", estimated_duration: int = 45, 
+                             total_questions: int = 15) -> Optional[Dict[str, Any]]:
+        """Dify专用：创建面试记录
+        
+        Args:
+            user_id: 用户ID
+            session_name: 面试名称（可选）
+            session_type: 面试类型
+            difficulty_level: 面试难度
+            estimated_duration: 预计时长（分钟），默认45分钟
+            total_questions: 总题目数量，由前端用户指定，默认15题
+        """
         try:
             # 如果没有提供session_name，生成一个默认名称
             if not session_name:
@@ -44,12 +54,14 @@ class InterviewService:
                 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
                 session_name = f"面试_{session_type}_{timestamp}"
 
-            # 创建面试会话
+            # 创建面试会话，传递 estimated_duration 和 total_questions
             session_id = self.db.create_session(
                 user_id=user_id,
                 session_name=session_name,
                 session_type=session_type,
-                difficulty_level=difficulty_level
+                difficulty_level=difficulty_level,
+                estimated_duration=estimated_duration,
+                total_questions=total_questions
             )
             
             if not session_id:
@@ -65,7 +77,11 @@ class InterviewService:
                 "session_id": session_id,
                 "user_id": user_id,
                 "session_name": session_name,
+                "session_type": session_type,
+                "difficulty_level": difficulty_level,
                 "status": "created",
+                "estimated_duration": estimated_duration,
+                "total_questions": total_questions,
                 "created_at": session_info["created_at"].isoformat() if session_info["created_at"] else None,
                 "message": "面试记录创建成功"
             }
@@ -343,7 +359,11 @@ class InterviewService:
             }
     
     def get_session_detail(self, session_id: str) -> Dict[str, Any]:
-        """获取面试会话详情"""
+        """获取面试会话详情（简化版）
+        
+        返回会话基本信息和统计数据，不包含完整的题目和回答列表
+        用于前端概览页面展示
+        """
         try:
             session_info = self.db.get_interview_session(session_id)
             if not session_info:
@@ -352,24 +372,40 @@ class InterviewService:
                     "message": "面试会话不存在"
                 }
             
-            # 获取题目列表
+            # 获取题目统计信息
             questions = self.db.get_session_questions(session_id)
+            question_count = len(questions)
             
-            # 获取回答详情
-            answers = []
-            for question in questions:
-                answer_detail = self.db.get_answer_detail(question["question_id"])
-                if answer_detail:
-                    answers.append(answer_detail)
+            # 计算平均分（如果有评分的题目）
+            scored_questions = [q for q in questions if q.get("overall_score") is not None]
+            average_score = None
+            if scored_questions:
+                total_score = sum(q["overall_score"] for q in scored_questions)
+                average_score = round(total_score / len(scored_questions), 2)
             
-            session_info.update({
-                "questions": questions,
-                "answers": answers
-            })
+            # 构建简化的会话详情
+            session_detail = {
+                "session_id": session_info.get("session_id"),
+                "user_id": session_info.get("user_id"),
+                "session_name": session_info.get("session_name"),
+                "session_type": session_info.get("session_type"),
+                "difficulty_level": session_info.get("difficulty_level"),
+                "status": session_info.get("status"),
+                "estimated_duration": session_info.get("estimated_duration"),
+                "actual_duration": session_info.get("actual_duration"),
+                "total_questions": session_info.get("total_questions"),
+                "completed_questions": session_info.get("completed_questions"),
+                "question_count": question_count,  # 实际题目数量
+                "average_score": average_score,  # 计算得到的平均分
+                "start_time": session_info.get("start_time").isoformat() if session_info.get("start_time") else None,
+                "end_time": session_info.get("end_time").isoformat() if session_info.get("end_time") else None,
+                "created_at": session_info.get("created_at").isoformat() if session_info.get("created_at") else None,
+                "updated_at": session_info.get("updated_at").isoformat() if session_info.get("updated_at") else None
+            }
             
             return {
                 "success": True,
-                "session": session_info,
+                "session": session_detail,
                 "message": "获取面试会话详情成功"
             }
             

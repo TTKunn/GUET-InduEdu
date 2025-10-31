@@ -156,13 +156,16 @@ async def health_check():
 async def dify_create_interview(request: DifyCreateInterviewRequest):
     """Dify专用：创建面试记录"""
     try:
-        logger.info(f"Dify创建面试记录: user_id={request.user_id}, session_name={request.session_name}")
+        logger.info(f"Dify创建面试记录: user_id={request.user_id}, session_name={request.session_name}, "
+                   f"estimated_duration={request.estimated_duration}, total_questions={request.total_questions}")
         
         result = interview_service.dify_create_interview(
             user_id=request.user_id,
             session_name=request.session_name,
             session_type=request.session_type.value,
-            difficulty_level=request.difficulty_level.value
+            difficulty_level=request.difficulty_level.value,
+            estimated_duration=request.estimated_duration,
+            total_questions=request.total_questions
         )
         
         if not result or not result.get("success"):

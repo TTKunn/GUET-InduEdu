@@ -227,8 +227,18 @@ class DatabaseService:
     # ==================== 面试会话操作 ====================
     
     def create_session(self, user_id: str, session_name: str, session_type: str = "technical", 
-                      difficulty_level: str = "medium", estimated_duration: int = 60) -> Optional[str]:
-        """创建面试会话"""
+                      difficulty_level: str = "medium", estimated_duration: int = 60,
+                      total_questions: int = 0) -> Optional[str]:
+        """创建面试会话
+        
+        Args:
+            user_id: 用户ID
+            session_name: 会话名称
+            session_type: 面试类型
+            difficulty_level: 面试难度
+            estimated_duration: 预计时长（分钟）
+            total_questions: 总题目数量
+        """
         try:
             with self.get_session() as session:
                 session_id = self.generate_session_id()
@@ -240,13 +250,14 @@ class DatabaseService:
                     session_type=session_type,
                     status="pending",
                     difficulty_level=difficulty_level,
-                    estimated_duration=estimated_duration
+                    estimated_duration=estimated_duration,
+                    total_questions=total_questions
                 )
                 
                 session.add(interview_session)
                 session.flush()
                 
-                logger.info(f"✅ 创建面试会话成功: {session_id}")
+                logger.info(f"✅ 创建面试会话成功: {session_id}, 预计题目数: {total_questions}")
                 return session_id
                 
         except Exception as e:

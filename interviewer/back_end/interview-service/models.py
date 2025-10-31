@@ -132,6 +132,8 @@ class DifyCreateInterviewRequest(BaseModel):
     session_name: Optional[str] = Field(None, description="面试名称（可选）")
     session_type: SessionType = Field(..., description="面试类型（必填）")
     difficulty_level: DifficultyLevel = Field(..., description="面试难度（必填）")
+    estimated_duration: Optional[int] = Field(45, ge=10, le=300, description="预计面试时长（分钟），默认45分钟")
+    total_questions: int = Field(15, ge=1, le=50, description="总题目数量，由用户指定，默认15题")
 
 class DifyAddQARequest(BaseModel):
     """Dify添加题目和回答请求"""
@@ -151,7 +153,11 @@ class DifyCreateInterviewResponse(BaseModel):
     session_id: str
     user_id: str
     session_name: str
+    session_type: str
+    difficulty_level: str
     status: str
+    estimated_duration: int
+    total_questions: int
     created_at: str
     message: str
 
