@@ -108,6 +108,9 @@ export default {
   methods: {
     // 获取完整图片路径
     getClubLogo(logoPath) {
+		if (!logoPath.startsWith('http')){
+				  return '/static/default-club.png';
+		}
       return logoPath ? `${this.baseUrl}${logoPath}` : '/static/default-club-logo.png';
     },
     // 加载社团列表
@@ -239,6 +242,7 @@ $shadow-level2: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
 }
 
 .club-card {
+	height:200rpx;
   position: relative;
   background: $bg-white;
   border-radius: $radius;
@@ -260,6 +264,8 @@ $shadow-level2: 0 8rpx 32rpx rgba(0, 0, 0, 0.1);
   position: relative;
   
   .club-logo {
+	  margin-left: 15rpx;
+	  margin-top:15rpx ;
     width: 100%;
     height: 100%;
     border-radius: $radius;

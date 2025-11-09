@@ -483,12 +483,22 @@ export default {
   methods: {
     // 获取社团封面图
     getClubCover(coverPath) {
-      console.log('coverPath:', coverPath);
+		if (!coverPath){
+			return  '/static/default-club.png';
+		}
+		if (!coverPath.startsWith('http')){
+				  return '/static/default-club.png';
+		}
       return coverPath ? `${this.baseUrl}${coverPath}` : '/static/default-club-cover.png';
     },
     // 获取社团Logo
     getClubLogo(logoPath) {
-      console.log('logoPath:', logoPath);
+		if (!logoPath){
+			return  '/static/default-club.png';
+		}
+		if (!logoPath.startsWith('http')){
+				  return '/static/default-club.png';
+		}
       return logoPath ? `${this.baseUrl}${logoPath}` : '/static/default-club-logo.png';
     },
     // 获取用户头像
@@ -1005,16 +1015,16 @@ export default {
       if (this.currentTab !== tabName) {
         this.currentTab = tabName;
         // 添加选项卡切换动画
-        const panels = uni.createSelectorQuery().selectAll('.tab-panel');
-        panels.boundingClientRect((rects) => {
-          rects.forEach((rect, index) => {
-            const panel = uni.createSelectorQuery().select(`.tab-panel:nth-child(${index + 1})`);
-            panel.animation({
-              opacity: this.currentTab === tabName ? 1 : 0,
-              duration: 300
-            }).exec();
-          });
-        }).exec();
+        // const panels = uni.createSelectorQuery().selectAll('.tab-panel');
+        // panels.boundingClientRect((rects) => {
+        //   rects.forEach((rect, index) => {
+        //     const panel = uni.createSelectorQuery().select(`.tab-panel:nth-child(${index + 1})`);
+        //     panel.animation({
+        //       opacity: this.currentTab === tabName ? 1 : 0,
+        //       duration: 300
+        //     }).exec();
+        //   });
+        // }).exec();
       }
     },
     

@@ -253,7 +253,10 @@ export default {
     // 获取完整图片URL
     getFullImageUrl(relativeUrl) {
       // 检查是否是绝对URL
-      if (!relativeUrl) return '/static/default-club.png';
+      if (!relativeUrl) return '../static/default-club.png';
+	  if (!relativeUrl.startsWith('http')){
+		  return '/static/default-club.png';
+	  }
       if (relativeUrl.startsWith('http') || relativeUrl.startsWith('https')) {
         return relativeUrl;
       }

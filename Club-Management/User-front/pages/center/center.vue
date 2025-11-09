@@ -1,6 +1,5 @@
 <template>
   <view class="container">
-    <!-- 顶部个人信息卡片 -->
     <view class="profile-card">
       <view class="avatar-container">
         <image :src="getFullImageUrl(userInfo.avatar)" class="avatar" mode="aspectFill"/>
@@ -15,11 +14,6 @@
           <text class="stat-value">5</text>
           <text class="stat-label">活动</text>
         </view>
-		<!-- 2025/5/20 古烜坤写的假数据嘻嘻哈哈哈 -->
-<!--        <view class="stat-item">
-          <text class="stat-value">0</text>
-          <text class="stat-label">公告</text>
-        </view> -->
       </view>
     </view>
     
@@ -131,8 +125,11 @@ export default {
     // 获取完整图片URL
     getFullImageUrl(relativeUrl) {
       if (!relativeUrl) {
-        return '/static/avatar.png';
+        return '/static/default-avatar.jpg';
       }
+	  if (!relativeUrl.startsWith('http')){
+	  	return '/static/default-avatar.jpg';
+	  }
       return `${this.baseUrl}${relativeUrl}`;
     },
 

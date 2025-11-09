@@ -142,6 +142,9 @@ export default {
   methods: {
     // 获取完整图片URL
     getFullImageUrl(relativeUrl) {
+		if (!relativeUrl.startsWith('http')){
+			return '/static/default-avatar.jpg';
+		}
       if (!relativeUrl) {
         return '/static/avatar.png';
       }

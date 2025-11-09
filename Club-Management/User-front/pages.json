@@ -143,8 +143,8 @@
             },
             {
                 "pagePath": "pages/notice/list",
-                // "iconPath": "static/tabs/notice.png",
-                // "selectedIconPath": "static/tabs/notice_act.png",
+                "iconPath": "static/tabs/notice.png",
+                "selectedIconPath": "static/tabs/notice_act.png",
                 "text": "公告与活动"
             },
             {

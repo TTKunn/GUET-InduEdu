@@ -162,6 +162,9 @@ export default {
 
     // 获取完整图片URL
     getFullImageUrl(relativeUrl) {
+	 if (!relativeUrl.startsWith('http')){
+	 		  return '/static/default-club.png';
+	 }
       if (!relativeUrl) return '/static/default-club.png';
       return `${this.baseUrl}${relativeUrl}`;
     }
