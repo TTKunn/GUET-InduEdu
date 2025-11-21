@@ -30,7 +30,7 @@
     </insert>
 <!--  查询本人最新的签到记录（未签退）  -->
 <select id="selectLatestUncheckedInAttendance" resultMap="HAttendanceResultMap">
-    SELECT attendance_id FROM tb_attendance
+    SELECT * FROM tb_attendance
     WHERE user_id = #{userId}
       AND status = '正常'
       AND clock_out_time IS NULL
@@ -39,7 +39,7 @@
 </select>
 <!--  签退  -->
     <update id="updateAttendance">
-        update tb_attendance set clock_out_time = NOW(), notes = #{notes} where attendance_id = #{attendanceId}
+        update tb_attendance set clock_out_time = NOW(), notes = #{notes} ,study_duration = #{studyDuration} where attendance_id = #{attendanceId}
     </update>
 <!--  本月考勤记录统计  -->
 <select id="selectAttendanceStatsByMonth" resultType="com.guet.happy.domain.attendanceStats">

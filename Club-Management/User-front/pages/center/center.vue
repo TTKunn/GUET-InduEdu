@@ -54,6 +54,10 @@
       <button class="edit-btn" @click="navigateToEdit">
         <text class="btn-text">修改个人信息</text>
       </button>
+	  
+	  <button class="edit-btn" style="margin-top: 10rpx;" @click="logout">
+	    <text class="btn-text">退出登录</text>
+	  </button>
     </view>
     
     <!-- 社团活动快捷入口 -->
@@ -72,13 +76,11 @@
 
 <script>
 import { mapState } from 'vuex'
+import { mapMutations } from 'vuex'
 
 export default {
   data() {
     return {
-		// 以后还是要把基础地址分离出来，我开发小程序这个只花了4天，我不是很会前端，所有没有配置api地址到配置文件，望谅解
-      // 后期 api统一分离出来
-	  // 2025-5-20
 	  baseUrl: "http://localhost:8080" // 后端API基础地址
     }
   },
@@ -89,6 +91,8 @@ export default {
     this.loadUserInfo();
   },
   methods: {
+	//清除用户信息
+	...mapMutations(['clearUserInfo']),
     // 加载用户信息
     loadUserInfo() {
       const userId = this.userInfo.userId;
@@ -150,7 +154,7 @@ export default {
     // 导航到社团页面
     navigateToClubs() {
       uni.switchTab({
-          url: '/pages/club/list' // 确保这个路径是在 app.json 的 tabBar.list 中配置的
+          url: '/pages/club/list'
         })
     },
     
@@ -159,7 +163,22 @@ export default {
       uni.navigateTo({
         url: '/pages/activity/my'
       })
-    }
+    },
+	
+	// 退出登录
+	logout() {
+		this.clearUserInfo();
+		uni.clearStorageSync('userInfo');
+		
+		uni.redirectTo({
+		  url: '/pages/login/login'
+		});
+		
+		uni.showToast({
+		  title: '已退出登录',
+		  icon: 'success'
+		});
+	}
   }
 }
 </script>

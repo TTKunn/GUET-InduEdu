@@ -11,7 +11,10 @@ export default new Vuex.Store({
   mutations: {
     setUserInfo(state, userInfo) {
       state.userInfo = userInfo
-    }
+    },
+	clearUserInfo(state){
+		state.userInfo = {}
+	}
   },
   getters: {
     userId: state => state.userInfo.userId

@@ -66,11 +66,8 @@
       <!-- 空状态 -->
       <view class="empty-state" v-if="filteredClubs.length === 0">
         <image src="/static/no-club.svg" class="empty-img" mode="aspectFit" />
-        <text class="empty-title">暂无加入的社团</text>
-        <text class="empty-subtitle">点击下方按钮发现更多精彩社团</text>
-        <button class="explore-btn" @click="goToClubList">
-          <text>探索社团</text>
-        </button>
+        <view class="mid"><text class="empty-title">暂无加入的社团</text></view>
+        <view class="mid"><text class="empty-subtitle">去首页发现更多精彩社团</text></view>
       </view>
     </view>
   </view>
