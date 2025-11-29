@@ -432,10 +432,11 @@
 
 <script>
 import { mapState } from 'vuex';
+import {baseUrl} from '../../api/request.js'
+
 export default {
   data() {
     return {
-      baseUrl: "http://localhost:8080",
       clubId: '',
       clubInfo: {},
       clubMembers: [],

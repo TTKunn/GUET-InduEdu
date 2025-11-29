@@ -75,10 +75,11 @@
 
 <script>
 import { mapState } from 'vuex';
+import {baseUrl} from '../../api/request.js'
+import {RequestLoadClubsList} from '../../api/club/list.js'
 export default {
   data() {
     return {
-      baseUrl: "http://localhost:8080",
       userId: null,
       clubList: [],
       searchKeyword: '',
@@ -113,17 +114,27 @@ export default {
     // 加载社团列表
     loadClubList() {
       this.isLoading = true;
-      uni.request({
-        url: `${this.baseUrl}/happy/clubs/${this.userId}`,
-        success: (res) => {
-          if (res.data.code === 200) {
-            this.clubList = res.data.data || [];
-          } else {
-            uni.showToast({ title: '加载失败，请重试', icon: 'none' });
-          }
-        },
-        complete: () => this.isLoading = false
-      });
+	  
+	  RequestLoadClubsList(this.userId).then((res=>{
+		if (res.data.code === 200) {
+		  this.clubList = res.data.data || [];
+		} else {
+		  uni.showToast({ title: '加载失败，请重试', icon: 'none' });
+		} 
+	  })).finally(()=>{
+		  this.isLoading = false
+	  })
+	  // uni.request({
+   //      url: `${this.baseUrl}/happy/clubs/${this.userId}`,
+   //      success: (res) => {
+   //        if (res.data.code === 200) {
+   //          this.clubList = res.data.data || [];
+   //        } else {
+   //          uni.showToast({ title: '加载失败，请重试', icon: 'none' });
+   //        }
+   //      },
+   //      complete: () => this.isLoading = false
+   //    });
     },
     // 格式化日期
     formatDate(timestamp) {

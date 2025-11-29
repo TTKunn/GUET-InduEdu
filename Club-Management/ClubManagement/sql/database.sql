@@ -21,14 +21,14 @@ CREATE TABLE `tb_club` (
                            KEY `idx_advisor` (`primary_advisor_id`),
                            KEY `idx_dept` (`dept_id`),
                            KEY `idx_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团主表';
+) COMMENT='社团主表';
 
 CREATE TABLE `tb_club_advisor` (
                                    `club_id`     bigint   NOT NULL COMMENT '社团ID',
                                    `advisor_id`  bigint   NOT NULL COMMENT '老师ID',
                                    `deleted_at`  datetime DEFAULT NULL COMMENT '软删除时间',
                                    PRIMARY KEY (`club_id`, `advisor_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团指导老师关联';
+) COMMENT='社团指导老师关联';
 
 CREATE TABLE `tb_category` (
                                `category_id`   bigint       NOT NULL AUTO_INCREMENT COMMENT '分类主键ID',
@@ -40,7 +40,7 @@ CREATE TABLE `tb_category` (
                                `deleted_at`    datetime     DEFAULT NULL COMMENT '软删除时间',
                                PRIMARY KEY (`category_id`),
                                KEY `idx_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团分类表';
+) COMMENT='社团分类表';
 
 CREATE TABLE `tb_attendance` (
                                  `attendance_id`  bigint       NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -57,7 +57,7 @@ CREATE TABLE `tb_attendance` (
                                  PRIMARY KEY (`attendance_id`),
                                  KEY `idx_attendance_club` (`club_id`),
                                  KEY `idx_attendance_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团考勤表';
+) COMMENT='社团考勤表';
 
 CREATE TABLE `tb_announcement` (
                                    `announcement_id` bigint       NOT NULL AUTO_INCREMENT COMMENT '公告主键ID',
@@ -72,14 +72,14 @@ CREATE TABLE `tb_announcement` (
                                    PRIMARY KEY (`announcement_id`),
                                    KEY `idx_ann_club` (`club_id`),
                                    KEY `idx_ann_publisher` (`publisher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团公告表';
+) COMMENT='社团公告表';
 
 CREATE TABLE `tb_activity_visibility` (
                                           `activity_id` bigint NOT NULL COMMENT '活动ID',
                                           `club_id`     bigint NOT NULL COMMENT '可见社团ID',
                                           PRIMARY KEY (`activity_id`, `club_id`),          -- 联合主键防重复
                                           KEY `idx_av_club` (`club_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='活动可见性关联表';
+) COMMENT='活动可见性关联表';
 
 CREATE TABLE `tb_activity` (
                                `activity_id`  bigint       NOT NULL AUTO_INCREMENT COMMENT '活动主键ID',
@@ -103,7 +103,7 @@ CREATE TABLE `tb_activity` (
                                KEY `idx_act_organizer` (`organizer_id`),
                                KEY `idx_act_status` (`status`),
                                KEY `idx_act_ended` (`is_ended`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团活动表';
+) COMMENT='社团活动表';
 
 ALTER TABLE tb_activity_visibility
     ADD CONSTRAINT fk_av_activity FOREIGN KEY (activity_id) REFERENCES tb_activity (activity_id),
@@ -124,7 +124,7 @@ CREATE TABLE `tb_achievement` (
                                   PRIMARY KEY (`achievement_id`),
                                   KEY `idx_ach_club`     (`club_id`),
                                   KEY `idx_ach_publisher`(`publisher_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社团荣誉表';
+) COMMENT='社团荣誉表';
 
 CREATE TABLE `tb_membership` (
                                  `membership_id`        bigint       NOT NULL AUTO_INCREMENT COMMENT '主键ID',
@@ -141,7 +141,7 @@ CREATE TABLE `tb_membership` (
                                  UNIQUE KEY `uk_user_club` (`user_id`, `club_id`),  -- 一人同一社团仅一条记录
                                  KEY `idx_ms_club` (`club_id`),
                                  KEY `idx_ms_status` (`status`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='社员加入记录表';
+) COMMENT='社员加入记录表';
 
 CREATE TABLE `tb_activity_participation` (
                                              `activity_id`      bigint NOT NULL COMMENT '活动ID',
@@ -149,7 +149,7 @@ CREATE TABLE `tb_activity_participation` (
                                              `participation_time` datetime DEFAULT CURRENT_TIMESTAMP COMMENT '参与时间',
                                              PRIMARY KEY (`activity_id`, `user_id`),          -- 联合主键防重复
                                              KEY `idx_ap_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='活动参与记录表';
+) COMMENT='活动参与记录表';
 
 CREATE TABLE `tb_achievement_member` (
                                          `achievement_id` bigint NOT NULL COMMENT '荣誉ID',
@@ -158,8 +158,23 @@ CREATE TABLE `tb_achievement_member` (
                                          `contribution`   text COMMENT '贡献描述',
                                          PRIMARY KEY (`achievement_id`, `user_id`),
                                          KEY `idx_am_user` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='荣誉参与成员关联表';
+) COMMENT='荣誉参与成员关联表';
 
+CREATE TABLE IF NOT EXISTS `tb_application`
+(
+    `id`          BIGINT UNSIGNED NOT NULL AUTO_INCREMENT COMMENT '主键',
+    `user_id`     BIGINT UNSIGNED NOT NULL COMMENT '申请人用户ID',
+    `club_id`     BIGINT UNSIGNED NOT NULL COMMENT '社团ID',
+    `type`        ENUM('join','quit','transfer') DEFAULT 'join' COMMENT '申请类型',
+    `status`      ENUM('pending','approved','rejected','cancelled') DEFAULT 'pending' COMMENT '审批状态',
+    `user_remark` VARCHAR(255) COMMENT '申请人填写的备注',
+    `created_at`  DATETIME DEFAULT CURRENT_TIMESTAMP COMMENT '创建时间',
+    `updated_at`  DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
+    PRIMARY KEY (`id`),
+    KEY `idx_user` (`user_id`),
+    KEY `idx_club` (`club_id`),
+    KEY `idx_status` (`status`)
+) COMMENT = '社团申请表';
 
 INSERT INTO `tb_category` (`name`, `description`, `status`) VALUES
                                                                 ('学术科技', '学术研究、科技创新类社团', 0),

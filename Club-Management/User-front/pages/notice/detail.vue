@@ -42,6 +42,8 @@
 </template>
 
 <script>
+import {RequestGetNotice} from '../../api/notice/detail.js'	
+
 export default {
   data() {
     return {
@@ -57,29 +59,23 @@ export default {
         title: '加载中...'
       });
       
-      uni.request({
-        url: `http://localhost:8080/happy/notices/${id}`,
-        method: 'GET',
-        success: (res) => {
-          if (res.data.code === 200) {
-            this.notice = res.data.data;
-          } else {
-            uni.showToast({
-              title: '获取公告详情失败',
-              icon: 'none'
-            });
-          }
-        },
-        fail: () => {
-          uni.showToast({
-            title: '网络错误',
-            icon: 'none'
-          });
-        },
-        complete: () => {
-          uni.hideLoading();
-        }
-      });
+	  RequestGetNotice(id).then((res)=>{
+		if (res.data.code === 200) {
+		  this.notice = res.data.data;
+		} else {
+		  uni.showToast({
+		    title: '获取公告详情失败',
+		    icon: 'none'
+		  });
+		}  
+	  }).catch(()=>{
+		uni.showToast({
+		  title: '网络错误',
+		  icon: 'none'
+		});  
+	  }).finally(()=>{
+		 uni.hideLoading();  
+	  })
     },
     
     formatDate(timeStr) {

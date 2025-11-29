@@ -97,6 +97,7 @@
 
 <script>
 import { mapState } from 'vuex';
+import {RequestActivityDetail,RequestActivitiesJoin} from '../../api/activity/detail.js' 
 
 export default {
   computed: {
@@ -118,33 +119,55 @@ export default {
         title: '加载中...'
       });
       
-      uni.request({
-        url: `http://localhost:8080/happy/activities/${id}`,
-        method: 'GET',
-        success: (res) => {
-          if (res.data.code === 200) {
-            this.activity = res.data.data;
-            // 根据活动状态决定是否显示报名按钮
-            if (this.activity.isEnded !== 0) { // 非未开始状态
-              this.showJoinButton = false;
-            }
-          } else {
-            uni.showToast({
-              title: '获取活动详情失败',
-              icon: 'none'
-            });
-          }
-        },
-        fail: () => {
-          uni.showToast({
-            title: '网络错误',
-            icon: 'none'
-          });
-        },
-        complete: () => {
-          uni.hideLoading();
-        }
-      });
+	  RequestActivityDetail(id).then((res)=>{
+		if (res.data.code === 200) {
+		  this.activity = res.data.data;
+		  // 根据活动状态决定是否显示报名按钮
+		  if (this.activity.isEnded !== 0) { // 非未开始状态
+		    this.showJoinButton = false;
+		  }
+		} else {
+		  uni.showToast({
+		    title: '获取活动详情失败',
+		    icon: 'none'
+		  });
+		}  
+	  }).catch(()=>{
+		uni.showToast({
+		  title: '网络错误',
+		  icon: 'none'
+		});  
+	  }).finally(()=>{
+		uni.hideLoading();  
+	  })
+	  
+      // uni.request({
+      //   url: `http://localhost:8080/happy/activities/${id}`,
+      //   method: 'GET',
+      //   success: (res) => {
+      //     if (res.data.code === 200) {
+      //       this.activity = res.data.data;
+      //       // 根据活动状态决定是否显示报名按钮
+      //       if (this.activity.isEnded !== 0) { // 非未开始状态
+      //         this.showJoinButton = false;
+      //       }
+      //     } else {
+      //       uni.showToast({
+      //         title: '获取活动详情失败',
+      //         icon: 'none'
+      //       });
+      //     }
+      //   },
+      //   fail: () => {
+      //     uni.showToast({
+      //       title: '网络错误',
+      //       icon: 'none'
+      //     });
+      //   },
+      //   complete: () => {
+      //     uni.hideLoading();
+      //   }
+      // });
     },
     
     joinActivity() {
@@ -169,37 +192,59 @@ export default {
         title: '报名中...'
       });
       
-      uni.request({
-        url: 'http://localhost:8080/happy/activities/join',
-        method: 'POST',
-        data: {
-          activityId: this.activity.activityId,
-          userId: userId
-        },
-        success: (res) => {
-          if (res.data.code === 200) {
-            uni.showToast({
-              title: '报名成功',
-              icon: 'success'
-            });
-            this.showJoinButton = false; // 报名成功后隐藏报名按钮
-          } else {
-            uni.showToast({
-              title: res.data.msg || '报名失败',
-              icon: 'none'
-            });
-          }
-        },
-        fail: () => {
-          uni.showToast({
-            title: '网络错误',
-            icon: 'none'
-          });
-        },
-        complete: () => {
-          uni.hideLoading();
-        }
-      });
+	  RequestActivitiesJoin(this.activity.activityId,userId).then((res)=>{
+		if (res.data.code === 200) {
+		  uni.showToast({
+		    title: '报名成功',
+		    icon: 'success'
+		  });
+		  this.showJoinButton = false; // 报名成功后隐藏报名按钮
+		} else {
+		  uni.showToast({
+		    title: res.data.msg || '报名失败',
+		    icon: 'none'
+		  });
+		}  
+	  }).catch(()=>{
+		  uni.showToast({
+		    title: '网络错误',
+		    icon: 'none'
+		  });
+	  }).finally(()=>{
+		uni.hideLoading();  
+	  })
+	  
+      // uni.request({
+      //   url: 'http://localhost:8080/happy/activities/join',
+      //   method: 'POST',
+      //   data: {
+      //     activityId: this.activity.activityId,
+      //     userId: userId
+      //   },
+      //   success: (res) => {
+      //     if (res.data.code === 200) {
+      //       uni.showToast({
+      //         title: '报名成功',
+      //         icon: 'success'
+      //       });
+      //       this.showJoinButton = false; // 报名成功后隐藏报名按钮
+      //     } else {
+      //       uni.showToast({
+      //         title: res.data.msg || '报名失败',
+      //         icon: 'none'
+      //       });
+      //     }
+      //   },
+      //   fail: () => {
+      //     uni.showToast({
+      //       title: '网络错误',
+      //       icon: 'none'
+      //     });
+      //   },
+      //   complete: () => {
+      //     uni.hideLoading();
+      //   }
+      // });
     },
     
     formatDateTime(dateStr) {

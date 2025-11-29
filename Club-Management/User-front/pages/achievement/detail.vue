@@ -42,10 +42,12 @@
 
 <script>
 import { mapState } from 'vuex';
+import {baseUrl} from '../../api/request.js'
+import {RequstLoadAchievement} from '../../api/achievement/detail.js' 
+
 export default {
   data() {
     return {
-      baseUrl: "http://localhost:8080",
       achievementId: '',
       achievement: {},
       isLoading: true
@@ -85,27 +87,44 @@ export default {
     loadAchievementDetail(achievementId) {
       this.isLoading = true;
       console.log('请求的成果ID:', this.achievementId);
-      uni.request({
-        url: `${this.baseUrl}/happy/achievements/detail/${achievementId}`,
-        success: (res) => {
-          console.log('获取成果详情响应:', res);
-          if (res.data.code === 200) {
-            this.achievement = res.data.data || {};
-            // 格式化日期
-            if (this.achievement.achieveDate) {
-              this.achievement.achieveDate = new Date(this.achievement.achieveDate);
-            }
-          } else {
-            uni.showToast({ title: res.data.msg || '获取成果详情失败', icon: 'none' });
-          }
-        },
-        fail: () => {
-          uni.showToast({ title: '网络错误，获取成果详情失败', icon: 'none' });
-        },
-        complete: () => {
-          this.isLoading = false;
-        }
-      });
+	  RequstLoadAchievement(achievementId).then((res)=>{
+		console.log('获取成果详情响应:', res);
+		if (res.data.code === 200) {
+		  this.achievement = res.data.data || {};
+		  // 格式化日期
+		  if (this.achievement.achieveDate) {
+		    this.achievement.achieveDate = new Date(this.achievement.achieveDate);
+		  }
+		} else {
+		  uni.showToast({ title: res.data.msg || '获取成果详情失败', icon: 'none' });
+		}  
+	  }).catch(()=>{
+		uni.showToast({ title: '网络错误，获取成果详情失败', icon: 'none' });  
+	  }).finally(()=>{
+		this.isLoading = false;  
+	  })
+	  
+      // uni.request({
+      //   url: `${this.baseUrl}/happy/achievements/detail/${achievementId}`,
+      //   success: (res) => {
+      //     console.log('获取成果详情响应:', res);
+      //     if (res.data.code === 200) {
+      //       this.achievement = res.data.data || {};
+      //       // 格式化日期
+      //       if (this.achievement.achieveDate) {
+      //         this.achievement.achieveDate = new Date(this.achievement.achieveDate);
+      //       }
+      //     } else {
+      //       uni.showToast({ title: res.data.msg || '获取成果详情失败', icon: 'none' });
+      //     }
+      //   },
+      //   fail: () => {
+      //     uni.showToast({ title: '网络错误，获取成果详情失败', icon: 'none' });
+      //   },
+      //   complete: () => {
+      //     this.isLoading = false;
+      //   }
+      // });
     },
     
     // 格式化日期

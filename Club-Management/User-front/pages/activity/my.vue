@@ -294,11 +294,12 @@
 
 <script>
 import { mapState } from 'vuex';
+import {RequestClubParticipated} from '../../api/activity/my.js' 
+import {baseUrl} from '../../api/request.js'
 
 export default {
   data() {
     return {
-      baseUrl: "http://localhost:8080",
       currentStatus: 'all', // 当前筛选状态
       activities: [], // 所有活动
       isLoading: true,
@@ -396,36 +397,56 @@ export default {
       this.isLoading = true;
       this.activityIdSet.clear(); // 清空ID集合
       
-      uni.request({
-        url: `${this.baseUrl}/happy/activities/participated`,
-        method: 'GET',
-        data: {
-          userId: this.userInfo.userId,
-          page: this.page,
-          pageSize: this.pageSize
-        },
-        success: (res) => {
-          if (res.data.code === 200) {
-            const newActivities = res.data.data || [];
+	  RequestClubParticipated(this.userInfo.userId,this.page,this.pageSize).then((res)=>{
+		if (res.data.code === 200) {
+		  const newActivities = res.data.data || [];
+		  
+		  // 处理活动时间
+		  this.activities = this.processActivities(newActivities);
+		  
+		  // 判断是否还有更多数据
+		  this.hasMore = newActivities.length >= this.pageSize;
+		  
+		  console.log('我的活动加载成功:', this.activities);
+		} else {
+		  uni.showToast({ title: res.data.msg || '获取活动失败', icon: 'none' });
+		}  
+	  }).catch(()=>{
+		uni.showToast({ title: '网络错误，获取活动失败', icon: 'none' });  
+	  }).finally(()=>{
+		this.isLoading = false;  
+	  })
+	  
+      // uni.request({
+      //   url: `${this.baseUrl}/happy/activities/participated`,
+      //   method: 'GET',
+      //   data: {
+      //     userId: this.userInfo.userId,
+      //     page: this.page,
+      //     pageSize: this.pageSize
+      //   },
+      //   success: (res) => {
+      //     if (res.data.code === 200) {
+      //       const newActivities = res.data.data || [];
             
-            // 处理活动时间
-            this.activities = this.processActivities(newActivities);
+      //       // 处理活动时间
+      //       this.activities = this.processActivities(newActivities);
             
-            // 判断是否还有更多数据
-            this.hasMore = newActivities.length >= this.pageSize;
+      //       // 判断是否还有更多数据
+      //       this.hasMore = newActivities.length >= this.pageSize;
             
-            console.log('我的活动加载成功:', this.activities);
-          } else {
-            uni.showToast({ title: res.data.msg || '获取活动失败', icon: 'none' });
-          }
-        },
-        fail: () => {
-          uni.showToast({ title: '网络错误，获取活动失败', icon: 'none' });
-        },
-        complete: () => {
-          this.isLoading = false;
-        }
-      });
+      //       console.log('我的活动加载成功:', this.activities);
+      //     } else {
+      //       uni.showToast({ title: res.data.msg || '获取活动失败', icon: 'none' });
+      //     }
+      //   },
+      //   fail: () => {
+      //     uni.showToast({ title: '网络错误，获取活动失败', icon: 'none' });
+      //   },
+      //   complete: () => {
+      //     this.isLoading = false;
+      //   }
+      // });
     },
     
     // 处理活动数据，适配后端接口返回的数据结构
@@ -559,39 +580,62 @@ export default {
     loadMoreActivities() {
       this.isLoadingMore = true;
       
-      uni.request({
-        url: `${this.baseUrl}/happy/activities/participated`,
-        method: 'GET',
-        data: {
-          userId: this.userInfo.userId,
-          page: this.page,
-          pageSize: this.pageSize
-        },
-        success: (res) => {
-          if (res.data.code === 200) {
-            const newActivities = res.data.data || [];
+	  RequestClubParticipated(this.userInfo.userId,this.page,this.pageSize).then((res)=>{
+		if (res.data.code === 200) {
+		  const newActivities = res.data.data || [];
+		  
+		  // 处理活动时间
+		  const processedActivities = this.processActivities(newActivities);
+		  
+		  // 合并新旧数据
+		  this.activities = [...this.activities, ...processedActivities];
+		  
+		  // 判断是否还有更多数据
+		  this.hasMore = newActivities.length >= this.pageSize;
+		  
+		  console.log('加载更多活动成功:', processedActivities);
+		} else {
+		  uni.showToast({ title: res.data.msg || '获取活动失败', icon: 'none' });
+		}  
+	  }).catch(()=>{
+		uni.showToast({ title: '网络错误，获取活动失败', icon: 'none' });  
+	  }).finnaly(()=>{
+		this.isLoadingMore = false;  
+	  })
+	  
+      // uni.request({
+      //   url: `${this.baseUrl}/happy/activities/participated`,
+      //   method: 'GET',
+      //   data: {
+      //     userId: this.userInfo.userId,
+      //     page: this.page,
+      //     pageSize: this.pageSize
+      //   },
+      //   success: (res) => {
+      //     if (res.data.code === 200) {
+      //       const newActivities = res.data.data || [];
             
-            // 处理活动时间
-            const processedActivities = this.processActivities(newActivities);
+      //       // 处理活动时间
+      //       const processedActivities = this.processActivities(newActivities);
             
-            // 合并新旧数据
-            this.activities = [...this.activities, ...processedActivities];
+      //       // 合并新旧数据
+      //       this.activities = [...this.activities, ...processedActivities];
             
-            // 判断是否还有更多数据
-            this.hasMore = newActivities.length >= this.pageSize;
+      //       // 判断是否还有更多数据
+      //       this.hasMore = newActivities.length >= this.pageSize;
             
-            console.log('加载更多活动成功:', processedActivities);
-          } else {
-            uni.showToast({ title: res.data.msg || '获取活动失败', icon: 'none' });
-          }
-        },
-        fail: () => {
-          uni.showToast({ title: '网络错误，获取活动失败', icon: 'none' });
-        },
-        complete: () => {
-          this.isLoadingMore = false;
-        }
-      });
+      //       console.log('加载更多活动成功:', processedActivities);
+      //     } else {
+      //       uni.showToast({ title: res.data.msg || '获取活动失败', icon: 'none' });
+      //     }
+      //   },
+      //   fail: () => {
+      //     uni.showToast({ title: '网络错误，获取活动失败', icon: 'none' });
+      //   },
+      //   complete: () => {
+      //     this.isLoadingMore = false;
+      //   }
+      // });
     }
   }
 };

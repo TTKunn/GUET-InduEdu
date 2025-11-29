@@ -144,6 +144,8 @@
 </template>
 
 <script>
+import {RequestClubRegister} from '../../api/register/register.js'
+
 export default {
   data() {
     return {
@@ -233,46 +235,74 @@ export default {
       this.loading = true
       this.message = ''
       
-      uni.request({
-        url: 'http://localhost:8080/happy/register',
-        method: 'POST',
-        data: {
-          username: this.username,
-          password: this.password,
-          name: this.name,
-          deptId: this.deptId, // 保存deptId而非deptName
-          gender: this.gender
-        },
-        success: (res) => {
-          if (res.data.code === 200) {
-            // 注册成功
-            uni.showToast({
-              title: '注册成功，请登录',
-              icon: 'success',
-              duration: 2000
-            })
+	  RequestClubRegister(this.username,this.password,this.name,this.deptId,this.gender).then((res)=>{
+		if (res.data.code === 200) {
+		  // 注册成功
+		  uni.showToast({
+		    title: '注册成功，请登录',
+		    icon: 'success',
+		    duration: 2000
+		  })
+		  
+		  // 延迟跳转到登录页面
+		  setTimeout(() => {
+		    uni.navigateTo({
+		      url: '/pages/login/login'
+		    })
+		  }, 2000)
+		} else {
+		  // 注册失败
+		  this.showError(res.data.msg || '注册失败，请重试')
+		}  
+	  }).catch((err)=>{
+		// 请求失败
+		this.showError('网络请求失败，请稍后重试')
+		console.error('注册请求失败:', err)  
+	  }).finnaly(()=>{
+		// 隐藏加载状态
+		this.loading = false  
+	  })
+	  
+      // uni.request({
+      //   url: 'http://localhost:8080/happy/register',
+      //   method: 'POST',
+      //   data: {
+      //     username: this.username,
+      //     password: this.password,
+      //     name: this.name,
+      //     deptId: this.deptId, // 保存deptId而非deptName
+      //     gender: this.gender
+      //   },
+      //   success: (res) => {
+      //     if (res.data.code === 200) {
+      //       // 注册成功
+      //       uni.showToast({
+      //         title: '注册成功，请登录',
+      //         icon: 'success',
+      //         duration: 2000
+      //       })
             
-            // 延迟跳转到登录页面
-            setTimeout(() => {
-              uni.navigateTo({
-                url: '/pages/login/login'
-              })
-            }, 2000)
-          } else {
-            // 注册失败
-            this.showError(res.data.msg || '注册失败，请重试')
-          }
-        },
-        fail: (err) => {
-          // 请求失败
-          this.showError('网络请求失败，请稍后重试')
-          console.error('注册请求失败:', err)
-        },
-        complete: () => {
-          // 隐藏加载状态
-          this.loading = false
-        }
-      })
+      //       // 延迟跳转到登录页面
+      //       setTimeout(() => {
+      //         uni.navigateTo({
+      //           url: '/pages/login/login'
+      //         })
+      //       }, 2000)
+      //     } else {
+      //       // 注册失败
+      //       this.showError(res.data.msg || '注册失败，请重试')
+      //     }
+      //   },
+      //   fail: (err) => {
+      //     // 请求失败
+      //     this.showError('网络请求失败，请稍后重试')
+      //     console.error('注册请求失败:', err)
+      //   },
+      //   complete: () => {
+      //     // 隐藏加载状态
+      //     this.loading = false
+      //   }
+      // })
     },
     
     showError(msg) {
